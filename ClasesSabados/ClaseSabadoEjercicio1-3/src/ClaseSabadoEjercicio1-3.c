@@ -30,22 +30,28 @@ d) La edad y legajo del que cursa más materias. (Sin importar su género)
 int main(void) {
 
 	setbuf(stdout,NULL);
+
 	char respuesta;
+
+	//punto a
 	int legajoMejorPromedioM;
-	int mejorNotaM;
+	float mejorNotaM;
+	//punto b
 	char primerIngresoM;
 	char primerIngresoH;
 	int legajoHombreJovenLibre;
 	int edadHombreMasJovenLibre;
+	//punto c
 	int contadorHombres;
-	int acumuladorNotasHombres;
+	float acumuladorNotasHombres;
 	float promedioNotasHombres;
 	int contadorMujeres;
-	int acumuladorNotasMujeres;
+	float acumuladorNotasMujeres;
 	float promedioNotasMujeres;
 	int contadorNoBinarios;
-	int acumuladorNotasNoBinarios;
+	float acumuladorNotasNoBinarios;
 	float promedioNotasNoBinarios;
+	//punto d
 	int mayorCantidadMaterias;
 	int legajoMasMaterias;
 	char primerIngreso;
@@ -148,7 +154,6 @@ int main(void) {
 
 				contadorHombres+=1;
 				acumuladorNotasHombres+=notaPromedio;
-
 				break;
 			case 'F':
 				if(primerIngresoM=='s'||notaPromedio>mejorNotaM)
@@ -187,12 +192,12 @@ int main(void) {
 
 	}
 
-	printf("El legado de la estudiante con mejor promedio es %d", legajoMejorPromedioM);
-	printf("La edad del hombre mas joven en cursada libre es %d", legajoHombreJovenLibre);
+	printf("El legado de la estudiante con mejor promedio es %d\n", legajoMejorPromedioM);
+	printf("El legajo del hombre mas joven en cursada libre es %d\n", legajoHombreJovenLibre);
 
 	if(contadorHombres>0)
 	{
-		promedioNotasHombres=acumuladorNotasHombres/contadorHombres;
+		promedioNotasHombres= acumuladorNotasHombres/contadorHombres;
 	} else
 	{
 		promedioNotasHombres=0;
@@ -213,13 +218,11 @@ int main(void) {
 		promedioNotasNoBinarios=0;
 	}
 
-	printf("El promedio de notas de los hombres es %f\n El promedio de las mujeres es %f"
-			"\n El promedio de los no binarios es %f",promedioNotasHombres,promedioNotasMujeres,
+	printf("El promedio de notas de los hombres es %.2f\nEl promedio de las mujeres es %.2f"
+			"\nEl promedio de los no binarios es %.2f\n",promedioNotasHombres,promedioNotasMujeres,
 			promedioNotasNoBinarios);
 
-	printf("El legajo del estudiante con mas materias es %d y su edad es %d",legajoMasMaterias,edadMasMaterias);
-
-
+	printf("El legajo del estudiante con mas materias es %d y su edad es %d\n",legajoMasMaterias,edadMasMaterias);
 
 
 	return EXIT_SUCCESS;
