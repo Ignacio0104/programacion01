@@ -1,0 +1,47 @@
+/*
+ ============================================================================
+Pedir 5 números y dar como resultado máximo y mínimo
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numero;
+	int maximo;
+	int minimo;
+	int primerNumero;
+	int i;
+
+	primerNumero='s';
+
+	for(i=0;i<5;i++)
+	{
+		printf("Ingrese un número: ");
+		scanf("%d",&numero);
+
+		if (primerNumero="s")
+		{
+			maximo=numero;
+			minimo=numero;
+			primerNumero='n';
+		} else
+		{
+			if(numero>maximo)
+			{
+				maximo=numero;
+			} else
+			{
+				if(numero<minimo)
+				{
+					minimo=numero;
+				}
+			}
+		}
+	}
+
+	return EXIT_SUCCESS;
+}
