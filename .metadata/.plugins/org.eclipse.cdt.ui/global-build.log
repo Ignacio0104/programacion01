@@ -1,9 +1,5 @@
-11:53:19 **** Incremental Build of configuration Debug for project Clase02Grabada ****
+13:43:41 **** Incremental Build of configuration Debug for project Clase1Ejercicio004 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase02Grabada.o" "..\\src\\Clase02Grabada.c" 
-gcc -o Clase02Grabada.exe "src\\Clase02Grabada.o" 
-Info: Nothing to build for Clase02Grabada
-18:45:53 **** Incremental Build of configuration Debug for project Clase02Grabada ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase02Grabada.o" "..\\src\\Clase02Grabada.c" 
-gcc -o Clase02Grabada.exe "src\\Clase02Grabada.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clase1Ejercici004.o" "..\\src\\clase1Ejercici004.c" 
+gcc -o Clase1Ejercicio004.exe "src\\clase1Ejercici004.o" 
+Info: Nothing to build for Clase1Ejercicio004
