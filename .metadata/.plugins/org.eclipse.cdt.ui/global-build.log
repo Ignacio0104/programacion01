@@ -1,118 +1,80 @@
-23:05:54 **** Incremental Build of configuration Debug for project Clase03 ****
+00:11:01 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-Info: Nothing to build for Clase03
-23:06:22 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+..\src\Clase03bis.c: In function 'main':
+..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
+   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
+      |                  ^~~~~~~
+      |                  dividr
+..\src\Clase03bis.c: In function 'dividr':
+..\src\Clase03bis.c:90:3: error: invalid type argument of unary '*' (have 'int')
+   90 |   *retorno=(float)operador1/operador2;
+      |   ^~~~~~~~
+00:11:25 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-Info: Nothing to build for Clase03
-23:07:16 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+..\src\Clase03bis.c: In function 'main':
+..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
+   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
+      |                  ^~~~~~~
+      |                  dividr
+..\src\Clase03bis.c: In function 'dividr':
+..\src\Clase03bis.c:85:6: warning: unused variable 'retorno' [-Wunused-variable]
+   85 |  int retorno;
+      |      ^~~~~~~
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
+collect2.exe: error: ld returned 1 exit status
+00:14:33 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:29:8: error: redeclaration of 'resultadoOperacion' with no linkage
-   29 |  float resultadoOperacion;
-      |        ^~~~~~~~~~~~~~~~~~
-..\src\Clase03.c:28:8: note: previous declaration of 'resultadoOperacion' was here
-   28 |  float resultadoOperacion;
-      |        ^~~~~~~~~~~~~~~~~~
-..\src\Clase03.c:43:2: error: 'resultadoDivision' undeclared (first use in this function); did you mean 'resultadoOperacion'?
-   43 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos,&resultadoOperacion);
-      |  ^~~~~~~~~~~~~~~~~
-      |  resultadoOperacion
-..\src\Clase03.c:43:2: note: each undeclared identifier is reported only once for each function it appears in
-23:07:29 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+..\src\Clase03bis.c: In function 'main':
+..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
+   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
+      |                  ^~~~~~~
+      |                  dividr
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
+collect2.exe: error: ld returned 1 exit status
+00:18:03 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-23:07:41 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+..\src\Clase03bis.c: In function 'main':
+..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
+   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
+      |                  ^~~~~~~
+      |                  dividr
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
+collect2.exe: error: ld returned 1 exit status
+00:18:20 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-Info: Nothing to build for Clase03
-Info: Nothing to build for Clase03
-Info: Nothing to build for Clase03
-23:08:15 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+Info: Nothing to build for Clase03bis
+Info: Nothing to build for Clase03bis
+00:23:00 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-Info: Nothing to build for Clase03
-Info: Nothing to build for Clase03
-Info: Nothing to build for Clase03
-23:11:15 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+Info: Nothing to build for Clase03bis
+00:23:37 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:44:20: error: too few arguments to function 'dividirEnteros'
-   44 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos);
-      |                    ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: declared here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c:30:8: warning: variable 'resultadoDivision' set but not used [-Wunused-but-set-variable]
-   30 |  float resultadoDivision;
-      |        ^~~~~~~~~~~~~~~~~
-23:11:35 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+Info: Nothing to build for Clase03bis
+Info: Nothing to build for Clase03bis
+00:24:18 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:44:20: error: too few arguments to function 'dividirEnteros'
-   44 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos);
-      |                    ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: declared here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c:31:8: warning: unused variable 'resultadoOperacion' [-Wunused-variable]
-   31 |  float resultadoOperacion;
-      |        ^~~~~~~~~~~~~~~~~~
-23:11:44 **** Incremental Build of configuration Debug for project Clase03 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+Info: Nothing to build for Clase03bis
+Info: Nothing to build for Clase03bis
+00:25:06 **** Incremental Build of configuration Debug for project Clase03bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:43:20: error: too few arguments to function 'dividirEnteros'
-   43 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos);
-      |                    ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: declared here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-23:12:22 **** Incremental Build of configuration Debug for project Clase03 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:43:20: error: too few arguments to function 'dividirEnteros'
-   43 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos);
-      |                    ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: declared here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c: At top level:
-..\src\Clase03.c:84:5: error: conflicting types for 'dividirEnteros'
-   84 | int dividirEnteros (int numUno, int numDos)//Puntero
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: previous declaration of 'dividirEnteros' was here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-23:12:34 **** Incremental Build of configuration Debug for project Clase03 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-..\src\Clase03.c: In function 'main':
-..\src\Clase03.c:43:20: error: too few arguments to function 'dividirEnteros'
-   43 |  resultadoDivision=dividirEnteros(numeroUno,numeroDos);
-      |                    ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: declared here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c: At top level:
-..\src\Clase03.c:84:5: error: conflicting types for 'dividirEnteros'
-   84 | int dividirEnteros (int numUno, int numDos)//Puntero
-      |     ^~~~~~~~~~~~~~
-..\src\Clase03.c:18:5: note: previous declaration of 'dividirEnteros' was here
-   18 | int dividirEnteros(int numUno, int numDos, float* resultado);
-      |     ^~~~~~~~~~~~~~
-23:12:59 **** Incremental Build of configuration Debug for project Clase03 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03.o" "..\\src\\Clase03.c" 
-gcc -o Clase03.exe "src\\Clase03.o" 
-Info: Nothing to build for Clase03
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
+gcc -o Clase03bis.exe "src\\Clase03bis.o" 
+Info: Nothing to build for Clase03bis
