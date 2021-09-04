@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+int promediar (int operadorUno, int operadorDos,float*direccionVariable);
 
 int main(void) {
 	setbuf(stdout,NULL);
@@ -14,6 +15,7 @@ int main(void) {
 	int maximo;
 	int minimo;
 	float promedio;
+	float resultadoPromedio;
 	int i;
 	char primerIngreso;
 	int acumuladorNumeros;
@@ -27,6 +29,7 @@ int main(void) {
 	{
 		printf("Ingrese el número: \n");
 		scanf("%d",&numeroIngresado);
+
 
 		acumuladorNumeros+=numeroIngresado;
 		contadorNumeros+=1;
@@ -53,14 +56,31 @@ int main(void) {
 
 	printf("El valor máximo ingresado fue %d. Y el valor mínimo fue %d\n",maximo,minimo);
 
-	if(acumuladorNumeros>0)
+	promedio=promediar(acumuladorNumeros,contadorNumeros,&resultadoPromedio);
+
+
+	if(promedio==0) //Bien hecho pero innecesario, no debería nunca dar cero el contador de numeros
 	{
-		promedio=(float)acumuladorNumeros/contadorNumeros;
-		printf("El promedio de los números ingresados es %.2f",promedio);
-	} else
-	{
-		printf("No se ingresó ningún valor");
+		printf("El promedio de los números ingresados es %.2f",resultadoPromedio);
+	} else {
+		printf("Error, no se puede dividir por cero");
 	}
 
 	return EXIT_SUCCESS;
+}
+
+int promediar (int operadorUno, int operadorDos,float*direccionVariable)
+{
+	int huboError;
+
+	if(operadorDos!=0)
+	{
+		*direccionVariable=(float)operadorUno/operadorDos;
+		huboError=0;
+	} else
+	{
+		huboError=1;
+	}
+
+	return huboError;
 }

@@ -1,80 +1,369 @@
-00:11:01 **** Incremental Build of configuration Debug for project Clase03bis ****
+21:19:21 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-..\src\Clase03bis.c: In function 'main':
-..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
-   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
-      |                  ^~~~~~~
-      |                  dividr
-..\src\Clase03bis.c: In function 'dividr':
-..\src\Clase03bis.c:90:3: error: invalid type argument of unary '*' (have 'int')
-   90 |   *retorno=(float)operador1/operador2;
-      |   ^~~~~~~~
-00:11:25 **** Incremental Build of configuration Debug for project Clase03bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:26:5: error: too many arguments to function 'pedirNumero'
+   26 |  if(pedirNumero(&numeroUno,0.0,1000.0,REINTENTOS)==1)
+      |     ^~~~~~~~~~~
+..\src\Clase04.c:14:5: note: declared here
+   14 | int pedirNumero(float*pNumero1, float minimo, float maximo);
+      |     ^~~~~~~~~~~
+..\src\Clase04.c:30:5: error: too many arguments to function 'pedirNumero'
+   30 |  if(pedirNumero(&numeroDos,0.0,1000.0, REINTENTOS)==1)
+      |     ^~~~~~~~~~~
+..\src\Clase04.c:14:5: note: declared here
+   14 | int pedirNumero(float*pNumero1, float minimo, float maximo);
+      |     ^~~~~~~~~~~
+..\src\Clase04.c: At top level:
+..\src\Clase04.c:49:5: error: conflicting types for 'pedirNumero'
+   49 | int pedirNumero(float*pNumero1, float minimo, float maximo, int intentos)
+      |     ^~~~~~~~~~~
+..\src\Clase04.c:14:5: note: previous declaration of 'pedirNumero' was here
+   14 | int pedirNumero(float*pNumero1, float minimo, float maximo);
+      |     ^~~~~~~~~~~
+21:19:36 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-..\src\Clase03bis.c: In function 'main':
-..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
-   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
-      |                  ^~~~~~~
-      |                  dividr
-..\src\Clase03bis.c: In function 'dividr':
-..\src\Clase03bis.c:85:6: warning: unused variable 'retorno' [-Wunused-variable]
-   85 |  int retorno;
-      |      ^~~~~~~
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:21:27 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+21:31:05 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:68:4: error: 'else' without a previous 'if'
+   68 |  } else
+      |    ^~~~
+21:31:25 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:92:1: error: expected declaration or statement at end of input
+   92 | }
+      | ^
+..\src\Clase04.c:92:1: warning: control reaches end of non-void function [-Wreturn-type]
+   92 | }
+      | ^
+At top level:
+..\src\Clase04.c:76:7: warning: 'dividir' defined but not used [-Wunused-function]
+   76 | float dividir (float operador1,float operador2,float*direccionVariable)
+      |       ^~~~~~~
+21:31:44 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:92:1: error: expected declaration or statement at end of input
+   92 | }
+      | ^
+..\src\Clase04.c:92:1: warning: control reaches end of non-void function [-Wreturn-type]
+   92 | }
+      | ^
+At top level:
+..\src\Clase04.c:76:7: warning: 'dividir' defined but not used [-Wunused-function]
+   76 | float dividir (float operador1,float operador2,float*direccionVariable)
+      |       ^~~~~~~
+21:32:44 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:92:1: error: expected declaration or statement at end of input
+   92 | }
+      | ^
+..\src\Clase04.c:92:1: warning: control reaches end of non-void function [-Wreturn-type]
+   92 | }
+      | ^
+At top level:
+..\src\Clase04.c:76:7: warning: 'dividir' defined but not used [-Wunused-function]
+   76 | float dividir (float operador1,float operador2,float*direccionVariable)
+      |       ^~~~~~~
+21:32:46 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:92:1: error: expected declaration or statement at end of input
+   92 | }
+      | ^
+..\src\Clase04.c:92:1: warning: control reaches end of non-void function [-Wreturn-type]
+   92 | }
+      | ^
+At top level:
+..\src\Clase04.c:76:7: warning: 'dividir' defined but not used [-Wunused-function]
+   76 | float dividir (float operador1,float operador2,float*direccionVariable)
+      |       ^~~~~~~
+21:33:09 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:74:1: error: expected declaration or statement at end of input
+   74 | }
+      | ^
+..\src\Clase04.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+   74 | }
+      | ^
+21:33:29 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:75:1: warning: control reaches end of non-void function [-Wreturn-type]
+   75 | }
+      | ^
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:34:26 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+   73 | }
+      | ^
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:35:37 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+..\src\Clase04.c: In function 'pedirNumero':
+..\src\Clase04.c:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+   73 | }
+      | ^
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:38:32 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:24:6: warning: unused variable 'retornoDivision' [-Wunused-variable]
+   24 |  int retornoDivision;
+      |      ^~~~~~~~~~~~~~~
+..\src\Clase04.c:23:8: warning: unused variable 'resultadoDivision' [-Wunused-variable]
+   23 |  float resultadoDivision;
+      |        ^~~~~~~~~~~~~~~~~
+..\src\Clase04.c:22:8: warning: unused variable 'numeroDos' [-Wunused-variable]
+   22 |  float numeroDos;
+      |        ^~~~~~~~~
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+21:39:51 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+21:40:39 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase04.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-00:14:33 **** Incremental Build of configuration Debug for project Clase03bis ****
+21:40:44 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-..\src\Clase03bis.c: In function 'main':
-..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
-   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
-      |                  ^~~~~~~
-      |                  dividr
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+21:41:33 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:42:44 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:35:14: error: invalid operands to binary != (have 'float' and 'void *')
+   35 |  if(numeroUno!=NULL&&numeroDos!=NULL)
+      |              ^~
+..\src\Clase04.c:35:31: error: invalid operands to binary != (have 'float' and 'void *')
+   35 |  if(numeroUno!=NULL&&numeroDos!=NULL)
+      |                               ^~
+21:43:03 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+..\src\Clase04.c: In function 'main':
+..\src\Clase04.c:35:31: error: lvalue required as left operand of assignment
+   35 |  if(numeroUno=!NULL&&numeroDos=!NULL)
+      |                               ^
+21:45:37 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+21:59:15 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+21:59:48 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+22:01:10 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+22:01:51 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+22:02:08 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+22:05:03 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+22:05:13 **** Incremental Build of configuration Debug for project Clase04 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase04.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-00:18:03 **** Incremental Build of configuration Debug for project Clase03bis ****
+22:05:18 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-..\src\Clase03bis.c: In function 'main':
-..\src\Clase03bis.c:43:18: warning: implicit declaration of function 'dividir'; did you mean 'dividr'? [-Wimplicit-function-declaration]
-   43 |  retornoDivision=dividir(numeroUno,numeroDos,&resultadoDivision);
-      |                  ^~~~~~~
-      |                  dividr
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase03bis.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase03bis\Debug/../src/Clase03bis.c:43: undefined reference to `dividir'
-collect2.exe: error: ld returned 1 exit status
-00:18:20 **** Incremental Build of configuration Debug for project Clase03bis ****
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+22:07:04 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-Info: Nothing to build for Clase03bis
-Info: Nothing to build for Clase03bis
-00:23:00 **** Incremental Build of configuration Debug for project Clase03bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+22:07:20 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-Info: Nothing to build for Clase03bis
-00:23:37 **** Incremental Build of configuration Debug for project Clase03bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+Info: Nothing to build for Clase04
+22:09:03 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-Info: Nothing to build for Clase03bis
-Info: Nothing to build for Clase03bis
-00:24:18 **** Incremental Build of configuration Debug for project Clase03bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04
+22:10:00 **** Incremental Build of configuration Debug for project Clase04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-Info: Nothing to build for Clase03bis
-Info: Nothing to build for Clase03bis
-00:25:06 **** Incremental Build of configuration Debug for project Clase03bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03bis.o" "..\\src\\Clase03bis.c" 
-gcc -o Clase03bis.exe "src\\Clase03bis.o" 
-Info: Nothing to build for Clase03bis
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase04.o" "..\\src\\Clase04.c" 
+gcc -o Clase04.exe "src\\Clase04.o" 
+Info: Nothing to build for Clase04

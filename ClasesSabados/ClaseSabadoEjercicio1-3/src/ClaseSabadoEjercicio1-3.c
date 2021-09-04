@@ -192,8 +192,22 @@ int main(void) {
 
 	}
 
-	printf("El legado de la estudiante con mejor promedio es %d\n", legajoMejorPromedioM);
-	printf("El legajo del hombre mas joven en cursada libre es %d\n", legajoHombreJovenLibre);
+	if(primerIngresoM=='s')
+	{
+		printf("No hubo mujeres inscriptas\n");
+	} else
+	{
+		printf("El legado de la estudiante con mejor promedio es %d\n", legajoMejorPromedioM);
+	}
+
+
+	if(primerIngresoH=='s')
+	{
+		printf("No hubo hombres inscriptos en modalidad libres\n");
+	} else
+	{
+		printf("El legajo del hombre mas joven en cursada libre es %d\n", legajoHombreJovenLibre);
+	}
 
 	if(contadorHombres>0)
 	{
