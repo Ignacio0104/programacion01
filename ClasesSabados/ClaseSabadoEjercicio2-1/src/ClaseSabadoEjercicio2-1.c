@@ -68,7 +68,10 @@ int positivoNegativo (int numeroUno)
 	return retorno;
 }
 
-
-
+/// \fn int positivoNegativo(int)
+/// \brief (verifica del signo(+,- o 0) del número recibido
+/// \param numero El numero ingresado
+/// \return 1[si es positivo], 0 [si es cero] o -1[si es negativo]
+///
 
 
