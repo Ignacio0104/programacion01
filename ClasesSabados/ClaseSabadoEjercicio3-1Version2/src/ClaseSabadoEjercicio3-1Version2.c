@@ -57,14 +57,6 @@ int determinarParidad (int numero)
 	return esPar;
 }
 
-void cargarArrayEnteros(int numeros[],int tamano)
-{
-	int i;
-	for(i=0;i<tamano;i++)
-	{
-		numeros[i]=ingresarEntero("Ingrese un numero: "); //Funcion de pedir numero y validar. HACERLA
-	}
-}
 
 void mostrarArrayEnteros (int numeros[], int tamano)
 {

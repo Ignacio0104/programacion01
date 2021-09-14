@@ -11,6 +11,12 @@
 #include <stdlib.h>
 #include "utn_biblioteca.h"
 
+void cargarArrayEnteros(int numeros[],int tamano, int max, int minimo,char* variableTexto,char* textoError);
+int utn_pedirIntSinIntentos(char* variableTexto, char* textoError, int maximo, int minimo);
+
+
+/*
+
 float utn_dividir (int operador1,int operador2,float*direccionVariable);
 int utn_pedirFloatAUsuario(float* pResultado, float min, float max, char* variableTexto, char* textoError);
 //ponindo utn_ se accede mas rapido a la funcion
@@ -22,7 +28,8 @@ void utn_inicializarArrayFloat(float array[], int len, int valorInicial);
 void modificarArray (int pArray[], int indice, int modificacion);
 void evaluarNegativosPositivos (int *pContadorNegativos, int *pContadorPositivos, int cadena [], int posicion);
 void sumatoriaDePares (int* pAcumulador,int cadena [], int indice);
-int mayorDeImpares (int*pMayorDeImpares,int cadena[], int posicion, char* pBandera);
+int mayorDeImpares (int*pMayorDeImpares,int cadena[], int posicion, char* pBandera);*/
+
 
 
 #endif /* UTN_BIBLIOTECA_H_ */

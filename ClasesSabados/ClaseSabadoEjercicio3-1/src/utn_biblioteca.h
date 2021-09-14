@@ -11,18 +11,17 @@
 #include <stdlib.h>
 #include "utn_biblioteca.h"
 
-float utn_dividir (int operador1,int operador2,float*direccionVariable);
-int utn_pedirFloatAUsuario(float* pResultado, float min, float max, char* variableTexto, char* textoError);
-//ponindo utn_ se accede mas rapido a la funcion
-int utn_pedirIntAUsuario(int* pResultado, int min, int max, char* variableTexto, char* textoError);
-//int utn_pedirCharAUsuario(char* pResultado, char min, char max, char* variableTexto, char* textoError);
+
+void cargarArrayEnteros(int numeros[],int tamano, int max, int minimo,char* variableTexto,char* textoError);
+int utn_pedirIntSinIntentos(char* variableTexto, char* textoError, int maximo, int minimo);
 void imprimirArray (int *pArray, int len);
-void imprimirArrayEdadesVersionDos(int edades[], int len);
-void utn_inicializarArrayFloat(float array[], int len, int valorInicial);
-void modificarArray (int pArray[], int indice, int modificacion);
-void evaluarNegativosPositivos (int *pContadorNegativos, int *pContadorPositivos, int cadena [], int posicion);
-void sumatoriaDePares (int* pAcumulador,int cadena [], int indice);
-int mayorDeImpares (int*pMayorDeImpares,int cadena[], int posicion, char* pBandera);
+int esPar (int numero);
+int sumarPares (int numeros[], int tamano, int* pMayorImpar);
+int negativoPositivo (int numero);
+int contadorNegativosPositivos (int numeros[], int tamano, int* pContadorNegativos, int* pContadorPositivos);
+void imprimirArrayDePares (int *pArray, int len);
+
+
 
 
 #endif /* UTN_BIBLIOTECA_H_ */

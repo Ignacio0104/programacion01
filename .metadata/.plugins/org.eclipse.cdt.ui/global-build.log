@@ -1,689 +1,184 @@
-20:28:19 **** Incremental Build of configuration Debug for project Clase06bis ****
+14:52:26 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:29:22 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+14:53:01 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-20:31:58 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+14:54:41 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:32:30 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+14:54:56 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:34:37 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+14:58:15 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:37:41 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+14:59:44 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
-..\src\utn_biblioteca.c: In function 'imprimirArray':
-..\src\utn_biblioteca.c:13:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   13 | {
-      | ^
-..\src\utn_biblioteca.c:45:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   45 | {
-      | ^
-..\src\utn_biblioteca.c:76:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   76 | {
-      | ^
-..\src\utn_biblioteca.c:108:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  108 | {
-      | ^
-..\src\utn_biblioteca.c:127:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  127 | {
-      | ^
-..\src\utn_biblioteca.c:140:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  140 | {
-      | ^
-..\src\utn_biblioteca.c:152:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  152 | {
-      | ^
-..\src\utn_biblioteca.c:162:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  162 | {
-      | ^
-In file included from ..\src\utn_biblioteca.c:8:
-..\src\utn_biblioteca.h:19:6: error: old-style parameter declarations in prototyped function definition
-   19 | void imprimirArray (int *pArray, int len)
-      |      ^~~~~~~~~~~~~
-..\src\utn_biblioteca.c:174: error: expected '{' at end of input
-20:38:53 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:36: error: expected expression before ']' token
-   37 |    imprimirArray(arrayTemperaturas[], TEMERATURAS_LEN);
-      |                                    ^
-..\src\Clase06bis.c:37:39: error: 'TEMERATURAS_LEN' undeclared (first use in this function); did you mean 'TEMPERATURAS_LEN'?
-   37 |    imprimirArray(arrayTemperaturas[], TEMERATURAS_LEN);
-      |                                       ^~~~~~~~~~~~~~~
-      |                                       TEMPERATURAS_LEN
-..\src\Clase06bis.c:37:39: note: each undeclared identifier is reported only once for each function it appears in
-20:39:22 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:19: error: 'arrayEdades' undeclared (first use in this function)
-   37 |    imprimirArray(*arrayEdades, TEMERATURAS_LEN);
-      |                   ^~~~~~~~~~~
-..\src\Clase06bis.c:37:19: note: each undeclared identifier is reported only once for each function it appears in
-..\src\Clase06bis.c:37:32: error: 'TEMERATURAS_LEN' undeclared (first use in this function); did you mean 'TEMPERATURAS_LEN'?
-   37 |    imprimirArray(*arrayEdades, TEMERATURAS_LEN);
-      |                                ^~~~~~~~~~~~~~~
-      |                                TEMPERATURAS_LEN
-20:39:31 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:19: error: 'arrayEdades' undeclared (first use in this function)
-   37 |    imprimirArray(*arrayEdades, TEMPERATURAS_LEN);
-      |                   ^~~~~~~~~~~
-..\src\Clase06bis.c:37:19: note: each undeclared identifier is reported only once for each function it appears in
-20:39:42 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:18: error: incompatible type for argument 1 of 'imprimirArray'
-   37 |    imprimirArray(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                  ^~~~~~~~~~~~~~~~~~
-      |                  |
-      |                  float
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:26: note: expected 'int *' but argument is of type 'float'
-   19 | void imprimirArray (int *pArray, int len);
-      |                     ~~~~~^~~~~~
-20:40:17 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:21:6: error: conflicting types for 'imprimirArray'
-   21 | void imprimirArray (float pArray[], int len);
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:36: error: expected expression before ']' token
-   37 |    imprimirArray(arrayTemperaturas[], TEMPERATURAS_LEN);
-      |                                    ^
-..\src\Clase06bis.c: At top level:
-..\src\Clase06bis.c:57:6: error: conflicting types for 'imprimirArray'
-   57 | void imprimirArray (float pArray[], int len) //(int pArrayEdades []) sintaxis alternativa
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:63:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-   63 |    printf("%d\n",pArray[indice]);
-      |            ~^    ~~~~~~~~~~~~~~
-      |             |          |
-      |             int        double
-      |            %f
-20:41:04 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:21:6: error: conflicting types for 'imprimirArray'
-   21 | void imprimirArray (float pArray[], int len);
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:36: error: expected expression before ']' token
-   37 |    imprimirArray(arrayTemperaturas[], TEMPERATURAS_LEN);
-      |                                    ^
-..\src\Clase06bis.c: At top level:
-..\src\Clase06bis.c:57:6: error: conflicting types for 'imprimirArray'
-   57 | void imprimirArray (float pArray[], int len) //(int pArrayEdades []) sintaxis alternativa
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:63:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-   63 |    printf("%d\n",pArray[indice]);
-      |            ~^    ~~~~~~~~~~~~~~
-      |             |          |
-      |             int        double
-      |            %f
-20:42:30 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:23:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   23 | int main(void) {
-      |                ^
-..\src\Clase06bis.c:45:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   45 | {
-      | ^
-..\src\Clase06bis.c:58:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   58 | {
-      | ^
-20:42:42 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:18: error: incompatible type for argument 1 of 'imprimirArray'
-   37 |    imprimirArray(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                  ^~~~~~~~~~~~~~~~~~
-      |                  |
-      |                  float
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:26: note: expected 'int *' but argument is of type 'float'
-   19 | void imprimirArray (int *pArray, int len);
-      |                     ~~~~~^~~~~~
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:65:3: error: expected declaration or statement at end of input
-   65 |   }
-      |   ^
-20:43:00 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:21:6: error: conflicting types for 'imprimirArray'
-   21 | void imprimirArray (float *pArray, int len);
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:18: error: incompatible type for argument 1 of 'imprimirArray'
-   37 |    imprimirArray(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                  ^~~~~~~~~~~~~~~~~~
-      |                  |
-      |                  float
-..\src\Clase06bis.c:21:28: note: expected 'float *' but argument is of type 'float'
-   21 | void imprimirArray (float *pArray, int len);
-      |                     ~~~~~~~^~~~~~
-..\src\Clase06bis.c: At top level:
-..\src\Clase06bis.c:57:6: error: conflicting types for 'imprimirArray'
-   57 | void imprimirArray (float *pArray, int len) //(int pArrayEdades []) sintaxis alternativa
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:63:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-   63 |    printf("%d\n",pArray[indice]);
-      |            ~^    ~~~~~~~~~~~~~~
-      |             |          |
-      |             int        double
-      |            %f
-..\src\Clase06bis.c:65:3: error: expected declaration or statement at end of input
-   65 |   }
-      |   ^
-20:43:11 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:21:6: error: conflicting types for 'imprimirArray'
-   21 | void imprimirArray (float *pArray, int len);
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:18: error: incompatible type for argument 1 of 'imprimirArray'
-   37 |    imprimirArray(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                  ^~~~~~~~~~~~~~~~~~
-      |                  |
-      |                  float
-..\src\Clase06bis.c:21:28: note: expected 'float *' but argument is of type 'float'
-   21 | void imprimirArray (float *pArray, int len);
-      |                     ~~~~~~~^~~~~~
-..\src\Clase06bis.c: At top level:
-..\src\Clase06bis.c:57:6: error: conflicting types for 'imprimirArray'
-   57 | void imprimirArray (float *pArray, int len) //(int pArrayEdades []) sintaxis alternativa
-      |      ^~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:18:
-..\src\utn_biblioteca.h:19:6: note: previous declaration of 'imprimirArray' was here
-   19 | void imprimirArray (int *pArray, int len);
-      |      ^~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'imprimirArray':
-..\src\Clase06bis.c:63:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-   63 |    printf("%d\n",pArray[indice]);
-      |            ~^    ~~~~~~~~~~~~~~
-      |             |          |
-      |             int        double
-      |            %f
-20:45:06 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:23: error: incompatible type for argument 1 of 'imprimirArrayFloat'
-   37 |    imprimirArrayFloat(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                       ^~~~~~~~~~~~~~~~~~
-      |                       |
-      |                       float
-..\src\Clase06bis.c:21:33: note: expected 'float *' but argument is of type 'float'
-   21 | void imprimirArrayFloat (float *pArray, int len);
-      |                          ~~~~~~~^~~~~~
-..\src\Clase06bis.c: In function 'imprimirArrayFloat':
-..\src\Clase06bis.c:63:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
-   63 |    printf("%d\n",pArray[indice]);
-      |            ~^    ~~~~~~~~~~~~~~
-      |             |          |
-      |             int        double
-      |            %f
-20:45:15 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:23: error: incompatible type for argument 1 of 'imprimirArrayFloat'
-   37 |    imprimirArrayFloat(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                       ^~~~~~~~~~~~~~~~~~
-      |                       |
-      |                       float
-..\src\Clase06bis.c:21:33: note: expected 'float *' but argument is of type 'float'
-   21 | void imprimirArrayFloat (float *pArray, int len);
-      |                          ~~~~~~~^~~~~~
-20:45:51 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:23: error: incompatible type for argument 1 of 'imprimirArrayFloat'
-   37 |    imprimirArrayFloat(*arrayTemperaturas, TEMPERATURAS_LEN);
-      |                       ^~~~~~~~~~~~~~~~~~
-      |                       |
-      |                       float
-..\src\Clase06bis.c:21:33: note: expected 'float *' but argument is of type 'float'
-   21 | void imprimirArrayFloat (float *pArray, int len);
-      |                          ~~~~~~~^~~~~~
-20:46:25 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:37:41: error: expected expression before ']' token
-   37 |    imprimirArrayFloat(arrayTemperaturas[], TEMPERATURAS_LEN);
-      |                                         ^
-20:48:43 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:49:16 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:49:29 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:31:28: error: 'arrayTemperaturas' undeclared (first use in this function); did you mean 'arrayTemperatu1ras'?
-   31 |  utn_inicializarArrayFloat(arrayTemperaturas, TEMPERATURAS_LEN, 0);
-      |                            ^~~~~~~~~~~~~~~~~
-      |                            arrayTemperatu1ras
-..\src\Clase06bis.c:31:28: note: each undeclared identifier is reported only once for each function it appears in
-..\src\Clase06bis.c:27:8: warning: unused variable 'arrayTemperatu1ras' [-Wunused-variable]
-   27 |  float arrayTemperatu1ras[31];
-      |        ^~~~~~~~~~~~~~~~~~
-20:49:38 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-20:49:46 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-20:52:15 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:42:11: warning: implicit declaration of function 'pedirIntUsuario'; did you mean 'utn_pedirIntAUsuario'? [-Wimplicit-function-declaration]
-   42 |    printf(pedirIntUsuario());
-      |           ^~~~~~~~~~~~~~~
-      |           utn_pedirIntAUsuario
-..\src\Clase06bis.c:42:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
-   42 |    printf(pedirIntUsuario());
-      |           ^~~~~~~~~~~~~~~~~
-      |           |
-      |           int
-In file included from ..\src\Clase06bis.c:16:
-c:\mingw\include\stdio.h:462:46: note: expected 'const char *' but argument is of type 'int'
-  462 | _CRTIMP __cdecl __MINGW_NOTHROW  int printf (const char *, ...);
-      |                                              ^~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-20:52:30 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:43:11: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
-   43 |    printf(pedirIntUsuario());
-      |           ^~~~~~~~~~~~~~~~~
-      |           |
-      |           int
-In file included from ..\src\Clase06bis.c:16:
-c:\mingw\include\stdio.h:462:46: note: expected 'const char *' but argument is of type 'int'
-  462 | _CRTIMP __cdecl __MINGW_NOTHROW  int printf (const char *, ...);
-      |                                              ^~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-20:53:36 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-21:04:36 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:30:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   30 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'modificarArray':
-..\src\Clase06bis.c:89:8: error: subscripted value is neither array nor pointer nor vector
-   89 |  pArray[indice]=
-      |        ^
-..\src\Clase06bis.c:90:1: error: expected expression before '}' token
-   90 | }
-      | ^
-..\src\Clase06bis.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
-   90 | }
-      | ^
-21:07:16 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'pedirFloatUsuario':
-..\src\Clase06bis.c:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   25 | int main(void) {
-      |                ^
-..\src\Clase06bis.c:59:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   59 | {
-      | ^
-..\src\Clase06bis.c:72:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   72 | {
-      | ^
-..\src\Clase06bis.c:83:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   83 | {
-      | ^
-..\src\Clase06bis.c:92:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-   92 | {
-      | ^
-..\src\Clase06bis.c:103:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
-  103 | {
-      | ^
-..\src\Clase06bis.c:106: error: expected '{' at end of input
-  106 | 
-      | 
-..\src\Clase06bis.c:105:1: warning: control reaches end of non-void function [-Wreturn-type]
-  105 | }
-      | ^
-21:07:26 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:32:8: warning: variable 'modificacionUsuario' set but not used [-Wunused-but-set-variable]
-   32 |  float modificacionUsuario;
-      |        ^~~~~~~~~~~~~~~~~~~
-..\src\Clase06bis.c:31:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   31 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-..\src\Clase06bis.c: In function 'modificarArray':
-..\src\Clase06bis.c:104:8: error: subscripted value is neither array nor pointer nor vector
-  104 |  pArray[indice]=modificacion;
-      |        ^
-21:07:55 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:32:8: warning: variable 'modificacionUsuario' set but not used [-Wunused-but-set-variable]
-   32 |  float modificacionUsuario;
-      |        ^~~~~~~~~~~~~~~~~~~
-..\src\Clase06bis.c:31:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   31 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-21:09:18 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:48:4: warning: implicit declaration of function 'modificarArray' [-Wimplicit-function-declaration]
-   48 |    modificarArray (arrayTemperaturas, retornoPedirInt, modificacionUsuario);
-      |    ^~~~~~~~~~~~~~
-..\src\Clase06bis.c: At top level:
-..\src\Clase06bis.c:105:6: warning: conflicting types for 'modificarArray'
-  105 | void modificarArray (float pArray[], int indice, int modificacion)
-      |      ^~~~~~~~~~~~~~
-..\src\Clase06bis.c:48:4: note: previous implicit declaration of 'modificarArray' was here
-   48 |    modificarArray (arrayTemperaturas, retornoPedirInt, modificacionUsuario);
-      |    ^~~~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-21:09:45 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:10:39 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:11:27 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:12:48 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:108:6: error: conflicting types for 'modificarArray'
-  108 | void modificarArray (float pArray[], int indice, float modificacion)
-      |      ^~~~~~~~~~~~~~
-..\src\Clase06bis.c:24:6: note: previous declaration of 'modificarArray' was here
-   24 | void modificarArray (float pArray[], int indice, int modificacion);
-      |      ^~~~~~~~~~~~~~
-21:12:49 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:108:6: error: conflicting types for 'modificarArray'
-  108 | void modificarArray (float pArray[], int indice, float modificacion)
-      |      ^~~~~~~~~~~~~~
-..\src\Clase06bis.c:24:6: note: previous declaration of 'modificarArray' was here
-   24 | void modificarArray (float pArray[], int indice, int modificacion);
-      |      ^~~~~~~~~~~~~~
-21:12:54 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c:108:6: error: conflicting types for 'modificarArray'
-  108 | void modificarArray (float pArray[], int indice, float modificacion)
-      |      ^~~~~~~~~~~~~~
-..\src\Clase06bis.c:24:6: note: previous declaration of 'modificarArray' was here
-   24 | void modificarArray (float pArray[], int indice, int modificacion);
-      |      ^~~~~~~~~~~~~~
-21:13:05 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+..\src\TestFunciones.c: In function 'main':
+..\src\TestFunciones.c:21:5: warning: implicit declaration of function 'utn_pedirFloatAUsuarioSinLimites'; did you mean 'utn_pedirFloatAUsuario'? [-Wimplicit-function-declaration]
+   21 |  if(utn_pedirFloatAUsuarioSinLimites(&numeroUno, 0, 10, 500, "Ingrese el numero", "Error")==0)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     utn_pedirFloatAUsuario
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:21: undefined reference to `utn_pedirFloatAUsuarioSinLimites'
 collect2.exe: error: ld returned 1 exit status
-21:13:11 **** Incremental Build of configuration Debug for project Clase06bis ****
+14:59:58 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:14:07 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:02:37 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:55:40: error: expected ';' before 'break'
-   55 |     printf("Saliendo del programa....")
-      |                                        ^
-      |                                        ;
-   56 |     break;
-      |     ~~~~~                               
-21:14:15 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TestFunciones.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:14:19 **** Incremental Build of configuration Debug for project Clase06bis ****
+15:02:42 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:15:07 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:04:53 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:16:08 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:07:58 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:17:14 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+..\src\TestFunciones.c: In function 'main':
+..\src\TestFunciones.c:19:6: warning: unused variable 'salidaScanf' [-Wunused-variable]
+   19 |  int salidaScanf;
+      |      ^~~~~~~~~~~
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+15:08:06 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-21:20:51 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:08:28 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:21:55 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:10:05 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:22:00 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:12:41 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:25:15 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:14:02 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:28:55 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:14:27 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:54:27: error: 'diaElegidoUsuario' undeclared (first use in this function); did you mean 'diaElegidoUsaurio'?
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, "Ingrese el número del día: ", "Error, día fuera de rango");
-      |                           ^~~~~~~~~~~~~~~~~
-      |                           diaElegidoUsaurio
-..\src\Clase06bis.c:54:27: note: each undeclared identifier is reported only once for each function it appears in
-..\src\Clase06bis.c:54:53: warning: passing argument 4 of 'utn_pedirIntAUsuario' makes integer from pointer without a cast [-Wint-conversion]
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, "Ingrese el número del día: ", "Error, día fuera de rango");
-      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                     |
-      |                                                     char *
-In file included from ..\src\Clase06bis.c:17:
-..\src\utn_biblioteca.h:17:65: note: expected 'int' but argument is of type 'char *'
-   17 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
-      |                                                             ~~~~^~~~~~~~~~
-..\src\Clase06bis.c:54:5: error: too few arguments to function 'utn_pedirIntAUsuario'
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, "Ingrese el número del día: ", "Error, día fuera de rango");
-      |     ^~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:17:
-..\src\utn_biblioteca.h:17:5: note: declared here
-   17 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
-      |     ^~~~~~~~~~~~~~~~~~~~
-..\src\Clase06bis.c:32:6: warning: unused variable 'diaElegidoUsaurio' [-Wunused-variable]
-   32 |  int diaElegidoUsaurio;
-      |      ^~~~~~~~~~~~~~~~~
-21:29:11 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:17:59 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:54:53: warning: passing argument 4 of 'utn_pedirIntAUsuario' makes integer from pointer without a cast [-Wint-conversion]
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, "Ingrese el número del día: ", "Error, día fuera de rango");
-      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                                                     |
-      |                                                     char *
-In file included from ..\src\Clase06bis.c:17:
-..\src\utn_biblioteca.h:17:65: note: expected 'int' but argument is of type 'char *'
-   17 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
-      |                                                             ~~~~^~~~~~~~~~
-..\src\Clase06bis.c:54:5: error: too few arguments to function 'utn_pedirIntAUsuario'
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, "Ingrese el número del día: ", "Error, día fuera de rango");
-      |     ^~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase06bis.c:17:
-..\src\utn_biblioteca.h:17:5: note: declared here
-   17 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
-      |     ^~~~~~~~~~~~~~~~~~~~
-21:29:27 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:21:03 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:54:53: error: expected expression before ',' token
-   54 |     utn_pedirIntAUsuario(&diaElegidoUsuario, 1, 31, , "Ingrese el número del día: ", "Error, día fuera de rango");
-      |                                                     ^
-21:29:35 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:22:31 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:29:41 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:22:53 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:30:25 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+15:23:08 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-21:31:31 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:31:33 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:31:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   31 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:31:36 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+..\src\TestFunciones.c: In function 'main':
+..\src\TestFunciones.c:21:28: warning: passing argument 1 of 'utn_pedirFloatSinIntentos' from incompatible pointer type [-Wincompatible-pointer-types]
+   21 |  utn_pedirFloatSinIntentos("Ingrese numero", "Error");
+      |                            ^~~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+..\src\TestFunciones.c:13:38: note: expected 'float *' but argument is of type 'char *'
+   13 | int utn_pedirFloatSinIntentos(float* pResultado, char* variableTexto, char* textoError);
+      |                               ~~~~~~~^~~~~~~~~~
+..\src\TestFunciones.c:21:2: error: too few arguments to function 'utn_pedirFloatSinIntentos'
+   21 |  utn_pedirFloatSinIntentos("Ingrese numero", "Error");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\TestFunciones.c:13:5: note: declared here
+   13 | int utn_pedirFloatSinIntentos(float* pResultado, char* variableTexto, char* textoError);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\TestFunciones.c: At top level:
+..\src\TestFunciones.c:29:5: error: conflicting types for 'utn_pedirFloatSinIntentos'
+   29 | int utn_pedirFloatSinIntentos(char* variableTexto, char* textoError)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\TestFunciones.c:13:5: note: previous declaration of 'utn_pedirFloatSinIntentos' was here
+   13 | int utn_pedirFloatSinIntentos(float* pResultado, char* variableTexto, char* textoError);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\TestFunciones.c: In function 'utn_pedirFloatSinIntentos':
+..\src\TestFunciones.c:32:6: warning: unused variable 'retorno' [-Wunused-variable]
+   32 |  int retorno;
+      |      ^~~~~~~
+15:31:54 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-21:34:11 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+..\src\TestFunciones.c: In function 'main':
+..\src\TestFunciones.c:23:2: warning: 'numero' is used uninitialized in this function [-Wuninitialized]
+   23 |  printf("%f",numero);
+      |  ^~~~~~~~~~~~~~~~~~~
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+15:32:12 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:31:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   31 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase06bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:34:16 **** Incremental Build of configuration Debug for project Clase06bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+15:33:38 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
-22:11:46 **** Incremental Build of configuration Debug for project Clase06bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase06bis.o" "..\\src\\Clase06bis.c" 
-..\src\Clase06bis.c: In function 'main':
-..\src\Clase06bis.c:31:6: warning: variable 'retornoPedirInt' set but not used [-Wunused-but-set-variable]
-   31 |  int retornoPedirInt;
-      |      ^~~~~~~~~~~~~~~
-gcc -o Clase06bis.exe "src\\Clase06bis.o" "src\\utn_biblioteca.o" 
-Info: Nothing to build for Clase06bis
-Info: Nothing to build for Clase06bis
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones

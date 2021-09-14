@@ -8,7 +8,7 @@
 #include "utn_biblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 int utn_pedirFloatAUsuario(float* pResultado, float min, float max, char* variableTexto, char* textoError)
 {
 	float buffer;
@@ -218,10 +218,40 @@ int mayorDeImpares (int*pMayorDeImpares,int cadena[], int posicion, char* pBande
 
 	return retorno;
 
+}*/
+
+void cargarArrayEnteros(int numeros[],int tamano, int max, int minimo,char* variableTexto,char* textoError)
+{
+	int i;
+
+	for(i=0;i<tamano;i++)
+	{
+		numeros[i]=utn_pedirIntSinIntentos(variableTexto, textoError, max, minimo);
+	}
 }
 
 
 
+int utn_pedirIntSinIntentos(char* variableTexto, char* textoError, int maximo,int minimo)
+{
+	int numero;
+	int salidaScanf;
+	if(variableTexto != NULL && textoError != NULL && maximo>minimo)
+	{
+		printf("%s",variableTexto);
+		salidaScanf=scanf("%d", &numero);
+
+		while(salidaScanf!=1)
+			{
+				printf("%s\n",textoError);
+				printf("%s",variableTexto);
+				fflush(stdin);
+				salidaScanf=scanf("%d", &numero);
+			}
+
+	}
+	return numero;
+}
 
 
 
