@@ -10,39 +10,86 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int utn_pedirFloatSinIntentos(char* variableTexto, char* textoError);
+
+int calculadora_pedirChar (char mensaje[],char* textoError,char*pRespuesta, char opcionUno, char opcionDos);
+int calculadora_factorial (float operadorUno, int*pResultado);
+
 
 
 int main(void) {
 
 	setbuf(stdout,NULL);
-	float numero;
+	float numeroUno;
+	float numeroDos;
 
-	numero=utn_pedirFloatSinIntentos("Ingrese numero", "Error");
+	int factorialUno;
+	int factorialDos;
 
-	printf("%f",numero);
+	numeroUno=20.00;
+	numeroDos=50.00;
+
+	calculadora_factorial (numeroUno, &factorialUno);
+	calculadora_factorial (numeroDos, &factorialDos);
+
+	printf("El factorial uno es %d y el dos es %d",factorialUno,factorialDos);
 
 	return EXIT_SUCCESS;
 }
 
-
-int utn_pedirFloatSinIntentos(char* variableTexto, char* textoError)
+int calculadora_factorial (float operadorUno, int*pResultado)
 {
-	float numero;
-	int salidaScanf;
-	if(variableTexto != NULL && textoError != NULL)
-	{
-		printf("%s",variableTexto);
-		salidaScanf=scanf("%f", &numero);
 
-		while(salidaScanf!=1)
-			{
-				printf("%s\n",textoError);
-				printf("%s",variableTexto);
-				fflush(stdin);
-				salidaScanf=scanf("%f", &numero);
-			}
+	int huboError;
+	int factUno;
+	int i;
+
+	huboError=-1;
+
+	factUno=1;
+	if(pResultado!= NULL&&operadorUno>0)
+	{
+		for(i=1;i<=(int)operadorUno;i++)
+		{
+			factUno=factUno*i;
+			huboError=0;
+		}
 
 	}
-	return numero;
+
+	*pResultado=factUno;
+	return huboError;
+
+}
+
+
+
+int calculadora_pedirChar (char mensaje[],char* textoError,char*pRespuesta, char opcionUno, char opcionDos)
+{
+
+	char respuesta;
+	int huboError;
+
+	huboError=-1;
+
+	if(mensaje != NULL && textoError != NULL)
+	{
+		printf("%s",mensaje);
+		fflush(stdin);
+		scanf("%c", &respuesta);
+
+
+		while(respuesta!=opcionUno&&respuesta!=opcionDos)
+
+				{
+					printf("%s\n",textoError);
+					printf("%s",mensaje);
+					fflush(stdin);
+					scanf("%c", &respuesta);
+				}
+
+		*pRespuesta=respuesta;
+		huboError=0;
+
+	}
+	return huboError;
 }
