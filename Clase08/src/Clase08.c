@@ -39,10 +39,18 @@ int main(void) {
 								// Copia los datos de una cadena a otra. Se asigna de izquierda a derecha.
 								//Siempre verificar que el argumento de destino no sea menor que el argumento dos.
 
-	strncpy(cadenaUno,cadenaDos,sizeof(cadenaUno)); //La diferencia es que se le pasa un parametro mas. El tamano del destino, de esta forma no es posible pasarse
+	strncpy(cadenaUno,cadenaDos,sizeof(cadenaUno)-1); //La diferencia es que se le pasa un parametro mas. El tamano del destino, de esta forma no es posible pasarse
 													//Si se le pasa sizeof(cadenaUno)-1 se le deja un lugar para \0, sino no va a tener espacio.
 													//SIEMPRE SE PONE EL TAMANO DE DESTINO - 1 >>> sizeof(cadenaUno)-1 <<<
 
+	strncat(cadenaUno, "Lalalala", sizeof(cadenaUno));
+
+	//Primer argumento = La variable a la que vamos a concatenar la otra
+	//Segundo argumento = valor, cadena o dato a concatenar
+	//Tamano
+
+	//sprintf(cadenaUno, "Mi size of es de %d",sideof(cadenaUno); //Se imprime un valor DENTRO de la variable
+	//snprintf()//Idem pero con limite de tamano
 	puts(cadenaUno);
 	puts(cadenaDos);
 

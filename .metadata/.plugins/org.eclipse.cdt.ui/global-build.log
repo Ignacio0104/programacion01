@@ -1,156 +1,396 @@
-21:23:48 **** Incremental Build of configuration Debug for project Clase08bis ****
+19:34:19 **** Rebuild of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:25:38 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:79:6: warning: unused variable 'salidaScanf' [-Wunused-variable]
+   79 |  int salidaScanf;
+      |      ^~~~~~~~~~~
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:213:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  213 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:213:19: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:19:5: warning: implicit declaration of function 'utn_pedirTextoAUsuario'; did you mean 'utn_pedirIntAUsuario'? [-Wimplicit-function-declaration]
+   19 |  if(utn_pedirTextoAUsuario(cadena,sizeof(cadena), 3, "Ingresa tu nombre", "Error")==0)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+      |     utn_pedirIntAUsuario
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+19:35:00 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'myStrCpy':
-..\src\Clase08bis.c:54:6: warning: type of 'cadena' defaults to 'int' [-Wimplicit-int]
-   54 | void myStrCpy (cadena,cadena) //
-      |      ^~~~~~~~
-..\src\Clase08bis.c:54:6: error: multiple parameters named 'cadena'
-..\src\Clase08bis.c:56: error: expected '{' at end of input
-   56 | 
-      | 
-21:25:44 **** Incremental Build of configuration Debug for project Clase08bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:29:16 **** Incremental Build of configuration Debug for project Clase08bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:30:33 **** Incremental Build of configuration Debug for project Clase08bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'myStrCpy':
-..\src\Clase08bis.c:69:5: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-   69 |  aux=cadenaDos;
-      |     ^
-..\src\Clase08bis.c:71:11: warning: assignment to 'char *' from 'char' makes pointer from integer without a cast [-Wint-conversion]
-   71 |  cadenaUno=aux;
-      |           ^
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-21:31:19 **** Incremental Build of configuration Debug for project Clase08bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c:65:6: error: conflicting types for 'myStrCpy'
-   65 | void myStrCpy (char *cadenaUno[],char* cadenaDos[])
-      |      ^~~~~~~~
-..\src\Clase08bis.c:17:6: note: previous declaration of 'myStrCpy' was here
-   17 | void myStrCpy (char cadenaUno[],char cadenaDos[]);
-      |      ^~~~~~~~
-..\src\Clase08bis.c: In function 'myStrCpy':
-..\src\Clase08bis.c:69:5: warning: assignment to 'char' from 'char **' makes integer from pointer without a cast [-Wint-conversion]
-   69 |  aux=cadenaDos;
-      |     ^
-..\src\Clase08bis.c:71:11: warning: assignment to 'char **' from 'char' makes pointer from integer without a cast [-Wint-conversion]
-   71 |  cadenaUno=aux;
-      |           ^
-21:33:14 **** Incremental Build of configuration Debug for project Clase08bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'main':
-..\src\Clase08bis.c:33:2: warning: implicit declaration of function 'myStrCpy' [-Wimplicit-function-declaration]
-   33 |  myStrCpy(cadenaUno,cadenaDos);
-      |  ^~~~~~~~
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase08bis.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase08bis\Debug/../src/Clase08bis.c:33: undefined reference to `myStrCpy'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:79:6: warning: unused variable 'salidaScanf' [-Wunused-variable]
+   79 |  int salidaScanf;
+      |      ^~~~~~~~~~~
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:213:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  213 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:213:19: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:33:25 **** Incremental Build of configuration Debug for project Clase08bis ****
+19:35:05 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:34:20 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+19:38:15 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'myPuts':
-..\src\Clase08bis.c:62:6: warning: unused variable 'contador' [-Wunused-variable]
-   62 |  int contador;
-      |      ^~~~~~~~
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:34:47 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+20:01:38 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:34:59 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:97:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   97 |     indexFinal = strlen(pResultado)-1;
+      |                  ^~~~~~
+..\src\utn_biblioteca.c:97:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+..\src\utn_biblioteca.c:79:6: warning: unused variable 'salidaScanf' [-Wunused-variable]
+   79 |  int salidaScanf;
+      |      ^~~~~~~~~~~
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:155:19: warning: incompatible implicit declaration of built-in function 'strlen'
+  155 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:155:19: note: include '<string.h>' or provide a declaration of 'strlen'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:26:13: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   26 |   for(i=0;i<strlen(cadena);i++)
+      |             ^~~~~~
+..\src\Clase09.c:26:13: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\Clase09.c:14:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   13 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+   14 | 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:02:14 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:40:07 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+20:02:31 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:40:17 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+20:02:47 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:46:14 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:80:6: warning: unused variable 'indexFinal' [-Wunused-variable]
+   80 |  int indexFinal;
+      |      ^~~~~~~~~~
+..\src\utn_biblioteca.c:79:6: warning: unused variable 'salidaScanf' [-Wunused-variable]
+   79 |  int salidaScanf;
+      |      ^~~~~~~~~~~
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:155:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  155 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:155:19: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+20:03:24 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:50:42 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:96:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   96 |     indexFinal = strlen(pResultado)-1;
+      |                  ^~~~~~
+..\src\utn_biblioteca.c:96:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:154:19: warning: incompatible implicit declaration of built-in function 'strlen'
+  154 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:154:19: note: include '<string.h>' or provide a declaration of 'strlen'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:22:6: warning: unused variable 'i' [-Wunused-variable]
+   22 |  int i;
+      |      ^
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:03:31 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:51:14 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:09:00 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:51:58 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:86:7: warning: implicit declaration of function 'myGets' [-Wimplicit-function-declaration]
+   86 |    if(myGets(pResultado,lenght)==0)
+      |       ^~~~~~
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:167:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  167 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:167:19: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+..\src\utn_biblioteca.c: In function 'myGets':
+..\src\utn_biblioteca.c:194:16: warning: incompatible implicit declaration of built-in function 'strlen'
+  194 |   indexFinal = strlen(pResultado)-1;
+      |                ^~~~~~
+..\src\utn_biblioteca.c:194:16: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:202:1: error: expected declaration or statement at end of input
+  202 | }
+      | ^
+..\src\utn_biblioteca.c:79:6: warning: unused variable 'indexFinal' [-Wunused-variable]
+   79 |  int indexFinal;
+      |      ^~~~~~~~~~
+..\src\utn_biblioteca.c:202:1: warning: control reaches end of non-void function [-Wreturn-type]
+  202 | }
+      | ^
+At top level:
+..\src\utn_biblioteca.c:185:5: warning: 'myGets' defined but not used [-Wunused-function]
+  185 | int myGets(char pResultado[], int len)
+      |     ^~~~~~
+..\src\utn_biblioteca.c:159:5: warning: 'esNumerica' defined but not used [-Wunused-function]
+  159 | int esNumerica (char cadena[])
+      |     ^~~~~~~~~~
+..\src\utn_biblioteca.c:127:5: warning: 'utn_pedirCharAUsuario' defined but not used [-Wunused-function]
+  127 | int utn_pedirCharAUsuario(char* pResultado, char min, char max, int reintentos, char* variableTexto, char* textoError)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+20:11:37 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase08bis.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c: In function 'esNumerica':
+..\src\utn_biblioteca.c:141:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  141 |  if(cadena!=NULL&&strlen(cadena)>0)
+      |                   ^~~~~~
+..\src\utn_biblioteca.c:141:19: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\utn_biblioteca.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
+    8 | #include "utn_biblioteca.h"
+  +++ |+#include <string.h>
+    9 | #include <stdio.h>
+..\src\utn_biblioteca.c: In function 'myGets':
+..\src\utn_biblioteca.c:168:16: warning: incompatible implicit declaration of built-in function 'strlen'
+  168 |   indexFinal = strlen(pResultado)-1;
+      |                ^~~~~~
+..\src\utn_biblioteca.c:168:16: note: include '<string.h>' or provide a declaration of 'strlen'
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:12:05 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:15:13 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:26:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+   26 |   printf("El numero es %d",cadena);
+      |                        ~^  ~~~~~~
+      |                         |  |
+      |                         |  char *
+      |                         int
+      |                        %s
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+20:15:18 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+21:05:08 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:23:26: warning: passing argument 1 of 'utn_pedirIntAUsuario' makes pointer from integer without a cast [-Wint-conversion]
+   23 |  if(utn_pedirIntAUsuario(numero, 1, 120, 3, "Ingrese la edad", "Error")==0)
+      |                          ^~~~~~
+      |                          |
+      |                          int
+In file included from ..\src\Clase09.c:15:
+..\src\utn_biblioteca.h:18:31: note: expected 'int *' but argument is of type 'int'
+   18 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
+      |                          ~~~~~^~~~~~~~~~
+..\src\Clase09.c:23:5: warning: 'numero' is used uninitialized in this function [-Wuninitialized]
+   23 |  if(utn_pedirIntAUsuario(numero, 1, 120, 3, "Ingrese la edad", "Error")==0)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c:85:5: error: conflicting types for 'utn_pedirTextoAUsuario'
+   85 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, char* variableTexto, char* textoError)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\utn_biblioteca.c:8:
+..\src\utn_biblioteca.h:23:5: note: previous declaration of 'utn_pedirTextoAUsuario' was here
+   23 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\utn_biblioteca.c: In function 'utn_pedirTextoAUsuario':
+..\src\utn_biblioteca.c:97:5: error: break statement not within loop or switch
+   97 |     break;
+      |     ^~~~~
+..\src\utn_biblioteca.c:88:6: warning: unused variable 'i' [-Wunused-variable]
+   88 |  int i;
+      |      ^
+21:05:39 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c:85:5: error: conflicting types for 'utn_pedirTextoAUsuario'
+   85 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, char* variableTexto, char* textoError)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\utn_biblioteca.c:8:
+..\src\utn_biblioteca.h:23:5: note: previous declaration of 'utn_pedirTextoAUsuario' was here
+   23 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+21:06:23 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+..\src\utn_biblioteca.c:88:5: error: conflicting types for 'utn_pedirTextoAUsuario'
+   88 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, char* variableTexto, char* textoError)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\utn_biblioteca.c:8:
+..\src\utn_biblioteca.h:23:5: note: previous declaration of 'utn_pedirTextoAUsuario' was here
+   23 | int utn_pedirTextoAUsuario(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+21:06:43 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:23:26: warning: passing argument 1 of 'utn_pedirIntAUsuario' makes pointer from integer without a cast [-Wint-conversion]
+   23 |  if(utn_pedirIntAUsuario(numero, 1, 120, 3, "Ingrese la edad", "Error")==0)
+      |                          ^~~~~~
+      |                          |
+      |                          int
+In file included from ..\src\Clase09.c:15:
+..\src\utn_biblioteca.h:18:31: note: expected 'int *' but argument is of type 'int'
+   18 | int utn_pedirIntAUsuario(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
+      |                          ~~~~~^~~~~~~~~~
+..\src\Clase09.c:23:5: warning: 'numero' is used uninitialized in this function [-Wuninitialized]
+   23 |  if(utn_pedirIntAUsuario(numero, 1, 120, 3, "Ingrese la edad", "Error")==0)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+21:07:01 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+21:08:09 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:52:00 **** Incremental Build of configuration Debug for project Clase08bis ****
+21:08:12 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-Info: Nothing to build for Clase08bis
-21:53:02 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:10:14 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:54:20 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+..\src\Clase09.c: In function 'main':
+..\src\Clase09.c:22:7: warning: unused variable 'cadenaNumeros' [-Wunused-variable]
+   22 |  char cadenaNumeros[12];
+      |       ^~~~~~~~~~~~~
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:10:21 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:58:08 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09.o" "..\\src\\Clase09.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:12:18 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'main':
-..\src\Clase08bis.c:24:7: warning: unused variable 'cadenaDos' [-Wunused-variable]
-   24 |  char cadenaDos[20]= "Holaaaaaa";
-      |       ^~~~~~~~~
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
-21:58:25 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+21:19:04 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-..\src\Clase08bis.c: In function 'main':
-..\src\Clase08bis.c:24:7: warning: unused variable 'cadenaDos' [-Wunused-variable]
-   24 |  char cadenaDos[20]= "Holaaaaaa";
-      |       ^~~~~~~~~
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-21:58:44 **** Incremental Build of configuration Debug for project Clase08bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:19:29 **** Incremental Build of configuration Debug for project Clase09 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08bis.o" "..\\src\\Clase08bis.c" 
-gcc -o Clase08bis.exe "src\\Clase08bis.o" 
-Info: Nothing to build for Clase08bis
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:19:53 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:19:54 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+21:20:24 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:20:26 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:20:47 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:20:48 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+21:21:05 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
+Info: Nothing to build for Clase09
+21:22:02 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_biblioteca.o" "..\\src\\utn_biblioteca.c" 
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase09.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:22:03 **** Incremental Build of configuration Debug for project Clase09 ****
+Info: Internal Builder is used for build
+gcc -o Clase09.exe "src\\Clase09.o" "src\\utn_biblioteca.o" 
+Info: Nothing to build for Clase09
