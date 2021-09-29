@@ -1,451 +1,415 @@
-14:54:32 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-14:56:37 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-15:00:41 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c:180:12: warning: 'esFloat' defined but not used [-Wunused-function]
-  180 | static int esFloat (char cadena[])
-      |            ^~~~~~~
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:01:07 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-15:05:54 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirFloat':
-..\src\biblioteca_input.c:36:17: error: 'min' undeclared (first use in this function)
-   36 |      if(buffer>=min&&buffer<=max)
-      |                 ^~~
-..\src\biblioteca_input.c:36:17: note: each undeclared identifier is reported only once for each function it appears in
-..\src\biblioteca_input.c:36:30: error: 'max' undeclared (first use in this function)
-   36 |      if(buffer>=min&&buffer<=max)
-      |                              ^~~
-..\src\biblioteca_input.c:22:6: warning: unused variable 'i' [-Wunused-variable]
-   22 |  int i;
-      |      ^
-15:06:48 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-15:07:44 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:20:2: warning: implicit declaration of function 'pedirInt'; did you mean 'pedirFloat'? [-Wimplicit-function-declaration]
-   20 |  pedirInt(&numero, "Ingrese un numero", "Error");
-      |  ^~~~~~~~
-      |  pedirFloat
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:07:57 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-15:09:56 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:20:13: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   20 |  pedirTexto(&cadena, "Ingrese un texto", "Error");
-      |             ^~~~~~~
-      |             |
-      |             char (*)[20]
-In file included from ..\src\TestFunciones.c:8:
-..\src\biblioteca_input.h:19:21: note: expected 'char *' but argument is of type 'char (*)[20]'
-   19 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\TestFunciones.c:20:22: warning: passing argument 2 of 'pedirTexto' makes integer from pointer without a cast [-Wint-conversion]
-   20 |  pedirTexto(&cadena, "Ingrese un texto", "Error");
-      |                      ^~~~~~~~~~~~~~~~~~
-      |                      |
-      |                      char *
-In file included from ..\src\TestFunciones.c:8:
-..\src\biblioteca_input.h:19:38: note: expected 'int' but argument is of type 'char *'
-   19 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                                  ~~~~^~~~~~
-..\src\TestFunciones.c:20:2: error: too few arguments to function 'pedirTexto'
-   20 |  pedirTexto(&cadena, "Ingrese un texto", "Error");
-      |  ^~~~~~~~~~
-In file included from ..\src\TestFunciones.c:8:
-..\src\biblioteca_input.h:19:5: note: declared here
-   19 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |     ^~~~~~~~~~
-15:10:35 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-15:18:25 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'esChar':
-..\src\biblioteca_input.c:356:21: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
-  356 |    if(cadena[i]>='A'&& cadena[i]<='Z'||cadena[i]>='a'&&cadena[i]<='z')
-      |       ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
-At top level:
-..\src\biblioteca_input.c:343:12: warning: 'esChar' defined but not used [-Wunused-function]
-  343 | static int esChar (char cadena[])
-      |            ^~~~~~
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:20:51 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c:343:12: warning: 'esChar' defined but not used [-Wunused-function]
-  343 | static int esChar (char cadena[])
-      |            ^~~~~~
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:24:44 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'esChar':
-..\src\biblioteca_input.c:357:21: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
-  357 |    if(cadena[i]>='A'&&cadena[i]<='Z'|| cadena[i]>='a'&&cadena[i]<='z')
-      |       ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-At top level:
-..\src\biblioteca_input.c:344:12: warning: 'esChar' defined but not used [-Wunused-function]
-  344 | static int esChar (char cadena[])
-      |            ^~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:28:23 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:256:13: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  256 |       buffer=bufferCadenaAux;
-      |             ^
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:29:06 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:256:13: error: assignment to expression with array type
-  256 |       buffer=bufferCadenaAux;
-      |             ^
-..\src\biblioteca_input.c:257:16: warning: comparison between pointer and integer
-  257 |       if(buffer>=min&&buffer<=max)
-      |                ^~
-..\src\biblioteca_input.c:257:29: warning: comparison between pointer and integer
-  257 |       if(buffer>=min&&buffer<=max)
-      |                             ^~
-..\src\biblioteca_input.c:260:19: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  260 |        *pResultado=buffer;
-      |                   ^
-15:29:25 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:256:13: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  256 |       buffer=bufferCadenaAux;
-      |             ^
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:31:49 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:256:13: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  256 |       buffer=bufferCadenaAux;
-      |             ^
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:33:29 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:255:25: warning: comparison between pointer and integer
-  255 |       if(bufferCadenaAux>=min&&bufferCadenaAux<=max)
-      |                         ^~
-..\src\biblioteca_input.c:255:47: warning: comparison between pointer and integer
-  255 |       if(bufferCadenaAux>=min&&bufferCadenaAux<=max)
-      |                                               ^~
-..\src\biblioteca_input.c:258:19: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  258 |        *pResultado=bufferCadenaAux;
-      |                   ^
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:34:45 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:36:10 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:20:89: error: expected ';' before 'printf'
-   20 |  pedirCharAUsuarioIntentosRango(&eleccion, 'a', 'z', 1000, "Ingrese una letra", "Error")
-      |                                                                                         ^
-      |                                                                                         ;
-   21 | 
-   22 |  printf("%c", eleccion);
-      |  ~~~~~~                                                                                  
-15:36:18 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-15:40:14 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:20:52: error: expected ';' before 'printf'
-   20 |  pedirChar(&eleccion, "Ingrese una letra", "Error")
-      |                                                    ^
-      |                                                    ;
-   21 | 
-   22 |  printf("%c", eleccion);
-      |  ~~~~~~                                             
-15:40:20 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirChar':
-..\src\biblioteca_input.c:243:6: warning: unused variable 'i' [-Wunused-variable]
-  243 |  int i;
-      |      ^
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:40:28 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-15:46:03 **** Incremental Build of configuration Debug for project TestFunciones ****
+19:30:48 **** Rebuild of configuration Debug for project Clase10 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c:438:12: warning: 'esAlfaNumerica' defined but not used [-Wunused-function]
-  438 | static int esAlfaNumerica (char cadena[])
-      |            ^~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'esChar':
-..\src\TestFunciones.c:38:19: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-   38 |  if(cadena!=NULL&&strlen(cadena)>0)
-      |                   ^~~~~~
-..\src\TestFunciones.c:38:19: warning: incompatible implicit declaration of built-in function 'strlen'
-..\src\TestFunciones.c:9:1: note: include '<string.h>' or provide a declaration of 'strlen'
-    8 | #include "biblioteca_input.h"
-  +++ |+#include <string.h>
-    9 | #include <stdio.h>
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-15:46:51 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-15:47:01 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-15:56:05 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:19:6: warning: unused variable 'retorno' [-Wunused-variable]
-   19 |  int retorno;
-      |      ^~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-..\src\biblioteca_arrays.c: In function 'imprimirArray':
-..\src\biblioteca_arrays.c:46:5: warning: implicit declaration of function 'imprimirElemento' [-Wimplicit-function-declaration]
-   46 |     imprimirElemento(pArray[indice],indice);
-      |     ^~~~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c: At top level:
-..\src\biblioteca_arrays.c:56:6: warning: conflicting types for 'imprimirElemento'
-   56 | void imprimirElemento (int elemento, int indice)
-      |      ^~~~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c:46:5: note: previous implicit declaration of 'imprimirElemento' was here
-   46 |     imprimirElemento(pArray[indice],indice);
-      |     ^~~~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c: In function 'borrarImpares':
-..\src\biblioteca_arrays.c:84:5: warning: implicit declaration of function 'modificarArray' [-Wimplicit-function-declaration]
-   84 |     modificarArray(pArray, indice,reemplazo);
-      |     ^~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c: At top level:
-..\src\biblioteca_arrays.c:89:6: warning: conflicting types for 'modificarArray'
-   89 | void modificarArray (int pArray[], int indice, int modificacion)
-      |      ^~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c:84:5: note: previous implicit declaration of 'modificarArray' was here
-   84 |     modificarArray(pArray, indice,reemplazo);
-      |     ^~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c: In function 'pedirCharAUsuarioIntentosRango':
-..\src\biblioteca_input.c:292:9: warning: implicit declaration of function 'esChar' [-Wimplicit-function-declaration]
-  292 |      if(esChar(bufferCadenaAux)==0)
-      |         ^~~~~~
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\biblioteca_input.o: in function `pedirCharAUsuarioIntentosRango':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/biblioteca_input.c:292: undefined reference to `esChar'
-collect2.exe: error: ld returned 1 exit status
-15:56:20 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\biblioteca_input.o: in function `pedirCharAUsuarioIntentosRango':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/biblioteca_input.c:292: undefined reference to `esChar'
-collect2.exe: error: ld returned 1 exit status
-15:56:22 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\biblioteca_input.o: in function `pedirCharAUsuarioIntentosRango':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/biblioteca_input.c:292: undefined reference to `esChar'
-collect2.exe: error: ld returned 1 exit status
-15:56:46 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-..\src\biblioteca_arrays.c: In function 'imprimirArray':
-..\src\biblioteca_arrays.c:46:5: warning: implicit declaration of function 'imprimirElemento' [-Wimplicit-function-declaration]
-   46 |     imprimirElemento(pArray[indice],indice);
-      |     ^~~~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c: At top level:
-..\src\biblioteca_arrays.c:56:6: warning: conflicting types for 'imprimirElemento'
-   56 | void imprimirElemento (int elemento, int indice)
-      |      ^~~~~~~~~~~~~~~~
-..\src\biblioteca_arrays.c:46:5: note: previous implicit declaration of 'imprimirElemento' was here
-   46 |     imprimirElemento(pArray[indice],indice);
-      |     ^~~~~~~~~~~~~~~~
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\biblioteca_input.o: in function `pedirCharAUsuarioIntentosRango':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/biblioteca_input.c:292: undefined reference to `esChar'
-collect2.exe: error: ld returned 1 exit status
-15:57:30 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\biblioteca_input.o: in function `pedirCharAUsuarioIntentosRango':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/biblioteca_input.c:292: undefined reference to `esChar'
-collect2.exe: error: ld returned 1 exit status
-15:58:01 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:07:02 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-..\src\biblioteca_arrays.c:147:3: error: expected identifier or '(' before '/' token
-  147 | }*/
-      |   ^
-16:07:20 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:08:47 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:14:09 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:15:01 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:23: undefined reference to `ordernarArray'
-collect2.exe: error: ld returned 1 exit status
-16:15:02 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:23: undefined reference to `ordernarArray'
-collect2.exe: error: ld returned 1 exit status
-16:15:22 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-..\src\TestFunciones.c: In function 'main':
-..\src\TestFunciones.c:23:2: warning: implicit declaration of function 'ordernarArray'; did you mean 'ordenarArray'? [-Wimplicit-function-declaration]
-   23 |  ordernarArray (cadena, 10);
-      |  ^~~~~~~~~~~~~
-      |  ordenarArray
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:23: undefined reference to `ordernarArray'
-collect2.exe: error: ld returned 1 exit status
-16:15:43 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:23: undefined reference to `ordernarArray'
-collect2.exe: error: ld returned 1 exit status
-16:16:46 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:20:03 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TestFunciones.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TestFunciones\Debug/../src/TestFunciones.c:23: undefined reference to `ordenarArray'
-collect2.exe: error: ld returned 1 exit status
-16:20:15 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-16:21:32 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-18:18:21 **** Incremental Build of configuration Debug for project TestFunciones ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-18:21:00 **** Incremental Build of configuration Debug for project TestFunciones ****
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+19:49:47 **** Incremental Build of configuration Debug for project Clase10 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TestFunciones.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:25:21: error: 'unTriangulo' redeclared as different kind of symbol
+   25 |  eTrianguloEscaleno unTriangulo;
+      |                     ^~~~~~~~~~~
+..\src\estructuras.c:23:41: note: previous definition of 'unTriangulo' was here
+   23 | void trianguloCarga (eTrianguloEscaleno unTriangulo) //
+      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+..\src\estructuras.c:27:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   27 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:28:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   28 |  pedirInt(unTriangulo.ladoDos, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:29:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   29 |  pedirInt(unTriangulo.ladoTres, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+19:50:11 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:32:2: warning: implicit declaration of function 'trianguloMostrarValor' [-Wimplicit-function-declaration]
+   32 |  trianguloMostrarValor(nuevoTriangulo);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+..\src\Clase10.c:34:2: warning: implicit declaration of function 'trianguloCarga' [-Wimplicit-function-declaration]
+   34 |  trianguloCarga(nuevoTriangulo);
+      |  ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:25:21: error: 'unTriangulo' redeclared as different kind of symbol
+   25 |  eTrianguloEscaleno unTriangulo;
+      |                     ^~~~~~~~~~~
+..\src\estructuras.c:23:41: note: previous definition of 'unTriangulo' was here
+   23 | void trianguloCarga (eTrianguloEscaleno unTriangulo) //
+      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+19:50:48 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:24:21: error: 'unTriangulo' redeclared as different kind of symbol
+   24 |  eTrianguloEscaleno unTriangulo;
+      |                     ^~~~~~~~~~~
+..\src\estructuras.c:22:41: note: previous definition of 'unTriangulo' was here
+   22 | void trianguloCarga (eTrianguloEscaleno unTriangulo)
+      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+19:51:22 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+19:51:56 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+19:52:26 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:25:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   25 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:26:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   26 |  pedirInt(unTriangulo.ladoDos, "Ingrese lado 2", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:27:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   27 |  pedirInt(unTriangulo.ladoTres, "Ingrese lado 3", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+20:20:28 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:22:37: error: unknown type name 'unTriangulo'
+   22 | void trianguloMostrarPorReferencia (unTriangulo ladoUno)
+      |                                     ^~~~~~~~~~~
+20:20:30 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:22:37: error: unknown type name 'unTriangulo'
+   22 | void trianguloMostrarPorReferencia (unTriangulo ladoUno)
+      |                                     ^~~~~~~~~~~
+21:08:42 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase10.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase10\Debug/../src/Clase10.c:27: undefined reference to `trianguloCarga'
 collect2.exe: error: ld returned 1 exit status
-18:21:04 **** Incremental Build of configuration Debug for project TestFunciones ****
+21:09:12 **** Incremental Build of configuration Debug for project Clase10 ****
 Info: Internal Builder is used for build
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-Info: Nothing to build for TestFunciones
-18:24:33 **** Incremental Build of configuration Debug for project TestFunciones ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:32:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   32 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+21:09:50 **** Incremental Build of configuration Debug for project Clase10 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for TestFunciones
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:32:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
+   32 |  pedirInt(&unTriangulo->ladoUno, "Ingrese lado 1", "Error");
+      |                       ^~
+..\src\estructuras.c:33:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
+   33 |  pedirInt(&unTriangulo->ladoDos, "Ingrese lado 2", "Error");
+      |                       ^~
+..\src\estructuras.c:34:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
+   34 |  pedirInt(&unTriangulo->ladoTres, "Ingrese lado 3", "Error");
+      |                       ^~
+21:11:01 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
+   29 | void trianguloCarga (eTrianguloEscaleno * unTriangulo)
+      |      ^~~~~~~~~~~~~~
+In file included from ..\src\estructuras.c:11:
+..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
+   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
+      |      ^~~~~~~~~~~~~~
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:32:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   32 |  pedirInt(unTriangulo->ladoUno, "Ingrese lado 1", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:33:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   33 |  pedirInt(unTriangulo->ladoDos, "Ingrese lado 2", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+..\src\estructuras.c:34:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
+   34 |  pedirInt(unTriangulo->ladoTres, "Ingrese lado 3", "Error");
+      |           ~~~~~~~~~~~^~~~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\estructuras.c:8:
+..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
+   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
+      |              ~~~~~^~~~~~~~~~
+21:11:13 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
+   29 | void trianguloCarga (eTrianguloEscaleno * unTriangulo)
+      |      ^~~~~~~~~~~~~~
+In file included from ..\src\estructuras.c:11:
+..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
+   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
+      |      ^~~~~~~~~~~~~~
+21:11:33 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
+   29 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo)
+      |      ^~~~~~~~~~~~~~
+In file included from ..\src\estructuras.c:11:
+..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
+   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
+      |      ^~~~~~~~~~~~~~
+21:12:04 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:27:17: error: incompatible type for argument 1 of 'trianguloCarga'
+   27 |  trianguloCarga(nuevoTriangulo);
+      |                 ^~~~~~~~~~~~~~
+      |                 |
+      |                 eTrianguloEscaleno {aka struct <anonymous>}
+In file included from ..\src\Clase10.c:14:
+..\src\Triangulos.h:27:43: note: expected 'eTrianguloEscaleno *' {aka 'struct <anonymous> *'} but argument is of type 'eTrianguloEscaleno' {aka 'struct <anonymous>'}
+   27 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo);
+      |                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+21:12:55 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:27:18: error: expected expression before 'eTrianguloEscaleno'
+   27 |  trianguloCarga (eTrianguloEscaleno * nuevoTriangulo);
+      |                  ^~~~~~~~~~~~~~~~~~
+21:13:44 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:27:17: error: expected expression before 'eTrianguloEscaleno'
+   27 |  trianguloCarga(eTrianguloEscaleno &nuevoTriangulo);
+      |                 ^~~~~~~~~~~~~~~~~~
+21:13:50 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:27:17: error: expected expression before 'eTrianguloEscaleno'
+   27 |  trianguloCarga(eTrianguloEscaleno * nuevoTriangulo);
+      |                 ^~~~~~~~~~~~~~~~~~
+21:24:48 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:27:2: warning: implicit declaration of function 'trianguloMostrarValor' [-Wimplicit-function-declaration]
+   27 |  trianguloMostrarValor(nuevoTriangulo);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:25:13 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:26:01 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:26:19 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:29:41 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+Info: Nothing to build for Clase10
+21:37:01 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c:28:5: error: conflicting types for 'trianguloCarga'
+   28 | int trianguloCarga (eTrianguloEscaleno * pUnTriangulo)
+      |     ^~~~~~~~~~~~~~
+In file included from ..\src\estructuras.c:11:
+..\src\Triangulos.h:28:6: note: previous declaration of 'trianguloCarga' was here
+   28 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo);
+      |      ^~~~~~~~~~~~~~
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:30:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+   30 |  int retorno;
+      |      ^~~~~~~
+..\src\estructuras.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+   44 | }
+      | ^
+21:37:14 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'trianguloCarga':
+..\src\estructuras.c:30:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+   30 |  int retorno;
+      |      ^~~~~~~
+..\src\estructuras.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+   44 | }
+      | ^
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+21:37:27 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:41:00 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+21:41:15 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+21:45:18 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+Info: Nothing to build for Clase10
+22:02:22 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+22:02:38 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase10.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:02:40 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
+22:11:09 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'cargaTriangulosLista':
+..\src\estructuras.c:79:14: error: incompatible types when assigning to type 'eTrianguloEscaleno' {aka 'struct <anonymous>'} from type 'int (*)(eTrianguloEscaleno *)' {aka 'int (*)(struct <anonymous> *)'}
+   79 |    cadena[i]=trianguloCarga;
+      |              ^~~~~~~~~~~~~~
+22:12:36 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'cargaTriangulosLista':
+..\src\estructuras.c:79:29: error: invalid type argument of unary '*' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
+   79 |    cadena[i]=trianguloCarga(*cadena[i]);
+      |                             ^~~~~~~~~~
+22:13:49 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
+..\src\estructuras.c: In function 'cargaTriangulosLista':
+..\src\estructuras.c:79:14: error: incompatible types when assigning to type 'eTrianguloEscaleno' {aka 'struct <anonymous>'} from type 'int'
+   79 |    cadena[i]=trianguloCarga(pUnTriangulo);
+      |              ^~~~~~~~~~~~~~
+22:14:09 **** Incremental Build of configuration Debug for project Clase10 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+..\src\Clase10.c: In function 'main':
+..\src\Clase10.c:32:2: error: too few arguments to function 'cargaTriangulosLista'
+   32 |  cargaTriangulosLista(listaDeTriangulos,TAM);
+      |  ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Clase10.c:14:
+..\src\Triangulos.h:31:5: note: declared here
+   31 | int cargaTriangulosLista (eTrianguloEscaleno cadena[],int largo,eTrianguloEscaleno * pUnTriangulo);
+      |     ^~~~~~~~~~~~~~~~~~~~
+..\src\Clase10.c:34:17: warning: passing argument 1 of 'imprimirArray' from incompatible pointer type [-Wincompatible-pointer-types]
+   34 |  imprimirArray (listaDeTriangulos,TAM);
+      |                 ^~~~~~~~~~~~~~~~~
+      |                 |
+      |                 eTrianguloEscaleno * {aka struct <anonymous> *}
+In file included from ..\src\biblioteca_input.h:12,
+                 from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Clase10.c:11:
+..\src\biblioteca_arrays.h:19:25: note: expected 'int *' but argument is of type 'eTrianguloEscaleno *' {aka 'struct <anonymous> *'}
+   19 | int imprimirArray (int *pArray, int len);
+      |                    ~~~~~^~~~~~
+..\src\Clase10.c:26:6: warning: unused variable 'area' [-Wunused-variable]
+   26 |  int area;
+      |      ^~~~
+..\src\Clase10.c:25:6: warning: unused variable 'perimetro' [-Wunused-variable]
+   25 |  int perimetro;
+      |      ^~~~~~~~~
