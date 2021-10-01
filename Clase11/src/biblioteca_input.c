@@ -17,7 +17,7 @@ static int esNumerica (char cadena[]);
 static int myGets(char pResultado[], int len);
 static int esFloat (char cadena[]);
 static int esTexto (char cadena[]);
-//static int esAlfaNumerica (char cadena[]);
+static int esAlfaNumerica (char cadena[]);
 
 int pedirFloat(float* pResultado, char* variableTexto, char* textoError)
 {
@@ -238,6 +238,31 @@ int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoErr
 
 }
 
+int pedirTextoAlfaNumerico(char pResultado[],int lenght, char* variableTexto, char* textoError)
+{
+	int retorno=-1;
+
+	if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
+	{
+
+			printf("%s",variableTexto);
+
+			if(myGets(pResultado,lenght)==0)
+			{
+				retorno = 0;
+			} 	else
+			{
+				retorno=-1;
+				printf("%s\n",textoError);
+			}
+
+
+	}
+	return retorno;
+
+}
+
+
 int pedirChar(char* pResultado, char* variableTexto, char* textoError)
 {
 	char buffer;
@@ -440,7 +465,7 @@ static int myGets(char pResultado[], int len)
 	}
 	return retorno;
 }
-/*
+
 static int esAlfaNumerica (char cadena[])
 {
 	int retorno;
@@ -475,5 +500,4 @@ static int esAlfaNumerica (char cadena[])
 	return retorno;
 
 }
-*/
 

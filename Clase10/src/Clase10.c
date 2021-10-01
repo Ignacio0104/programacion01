@@ -15,37 +15,62 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define TAM 10
+#define TAM 3
 
 
 int main(void) {
 
 	setbuf(stdout,NULL);
 
-	//int perimetro;
+	//int perimetros[TAM];
+	int perimetroMayor;
+	int indexDeTrianguloMayor;
 	//int area;
 
-	//eTrianguloEscaleno nuevoTriangulo;
+	eTriangulo triangulos[TAM];
 
-	eTrianguloEscaleno listaDeTriangulos[TAM];
+	for(int i=0;i<TAM;i++)
+	{
+		trianguloCarga(&triangulos[i]);
+		//perimetros[i]=trianguloPerimetro(&triangulos[i]);
+	}
 
-	cargaTriangulosLista(listaDeTriangulos,TAM,&nuevoTriangulo);
 
-	imprimirArray (listaDeTriangulos,TAM);
 
-	/*trianguloCarga (&nuevoTriangulo);
+	perimetroMayor = trianguloPerimetro(&triangulos[0]); // tomo la primera como mayor
+	indexDeTrianguloMayor = 0;
+	for(int i=1; i<TAM ; i++)
+	{
+		if(trianguloPerimetro(&triangulos[i]) > perimetroMayor)
+		{
+			// encontre un nuevo mayor!
+			perimetroMayor = trianguloPerimetro(&triangulos[i]);
+			indexDeTrianguloMayor = i;
+		}
+	}
 
-	trianguloMostrarValor(nuevoTriangulo);
-	printf("\n\n");
-	trianguloMostrarPorReferencia (&nuevoTriangulo);
+	trianguloMostrarPorReferencia(&triangulos[indexDeTrianguloMayor]);
 
-	perimetro=trianguloPerimetro(&nuevoTriangulo);
 
-	printf("\nEl perimetro es %d",perimetro);
+	/*eTriangulo nuevoTriangulo1;
+	eTriangulonuevoTriangulo2;
+	eTriangulo nuevoTriangulo3;
 
-	area= trianguloArea(&nuevoTriangulo);
+	trianguloCarga (&nuevoTriangulo1);
+	trianguloCarga (&nuevoTriangulo2);
+	trianguloCarga (&nuevoTriangulo3);
 
-	printf("\nEl area es %d",area);*/
+	trianguloMostrarPorReferencia (&nuevoTriangulo1);
+	trianguloMostrarPorReferencia (&nuevoTriangulo2);
+	trianguloMostrarPorReferencia (&nuevoTriangulo3);*/
+
+
+
+	//area= trianguloArea(&nuevoTriangulo);
+	//printf("\nEl perimetro es %d\n\n",perimetro);
+	//printf("\nEl area es %d\n\n",area);
+
+
 
 
 	return EXIT_SUCCESS;

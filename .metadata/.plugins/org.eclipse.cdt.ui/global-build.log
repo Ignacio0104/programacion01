@@ -1,415 +1,483 @@
-19:30:48 **** Rebuild of configuration Debug for project Clase10 ****
+21:27:52 **** Incremental Build of configuration Debug for project Clase11 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase11
+21:28:55 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_initList':
+..\src\Pantallas.c:27:20: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   27 |    &displaysList[i]->flagEmpty=1;
+      |                    ^~
+..\src\Pantallas.c: At top level:
+..\src\Pantallas.c:34:5: error: conflicting types for 'disp_print'
+   34 | int disp_print(eDisplay * displaysList[],int DISPLAYS_LEN)
+      |     ^~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:30:5: note: previous declaration of 'disp_print' was here
+   30 | int disp_print(eDisplay displaysList[],int DISPLAYS_LEN);
+      |     ^~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_print':
+..\src\Pantallas.c:45:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   45 |    printf("%d",&displaysList[i]->flagEmpty);
+      |            ~^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |  |
+      |             |  int *
+      |             int
+      |            %n
+21:29:06 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:16:5: error: conflicting types for 'disp_initList'
+   16 | int disp_initList(eDisplay * displaysList[],int DISPLAYS_LEN)
+      |     ^~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:29:5: note: previous declaration of 'disp_initList' was here
+   29 | int disp_initList(eDisplay displaysList[],int DISPLAYS_LEN);
+      |     ^~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_initList':
+..\src\Pantallas.c:27:31: error: lvalue required as left operand of assignment
+   27 |    &displaysList[i]->flagEmpty=1;
+      |                               ^
+..\src\Pantallas.c: At top level:
+..\src\Pantallas.c:34:5: error: conflicting types for 'disp_print'
+   34 | int disp_print(eDisplay * displaysList[],int DISPLAYS_LEN)
+      |     ^~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:30:5: note: previous declaration of 'disp_print' was here
+   30 | int disp_print(eDisplay displaysList[],int DISPLAYS_LEN);
+      |     ^~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_print':
+..\src\Pantallas.c:45:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   45 |    printf("%d",&displaysList[i]->flagEmpty);
+      |            ~^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |  |
+      |             |  int *
+      |             int
+      |            %n
+21:29:21 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+21:32:33 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase11
+21:34:05 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase11
+21:49:26 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+   22 |  int id=0;
+      |        ^
+..\src\Pantallas.c: In function 'disp_initList':
+..\src\Pantallas.c:27:19: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+   27 |    displaysList[i].flagEmpty=1;
+      |                   ^
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:51:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   51 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:53:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   53 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:55:6: error: 'diplaysList' undeclared (first use in this function); did you mean 'displaysList'?
+   55 |      diplaysList[0]->type=typeAux;
+      |      ^~~~~~~~~~~
+      |      displaysList
+..\src\Pantallas.c:55:6: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Pantallas.c:45:6: warning: unused variable 'flagEmptyAux' [-Wunused-variable]
+   45 |  int flagEmptyAux; //0=ocupado 1=libre
+      |      ^~~~~~~~~~~~
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+..\src\Pantallas.c: In function 'disp_print':
+..\src\Pantallas.c:81:31: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+   81 |    printf("%d",displaysList[i].flagEmpty);
+      |                               ^
+21:49:52 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-19:49:47 **** Incremental Build of configuration Debug for project Clase10 ****
+..\src\biblioteca_input.c:469:12: warning: 'esAlfaNumerica' defined but not used [-Wunused-function]
+  469 | static int esAlfaNumerica (char cadena[])
+      |            ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
+In file included from ..\src\Clase11.c:14:
+..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+   22 |  int id=0;
+      |        ^
+21:51:54 **** Incremental Build of configuration Debug for project Clase11 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:25:21: error: 'unTriangulo' redeclared as different kind of symbol
-   25 |  eTrianguloEscaleno unTriangulo;
-      |                     ^~~~~~~~~~~
-..\src\estructuras.c:23:41: note: previous definition of 'unTriangulo' was here
-   23 | void trianguloCarga (eTrianguloEscaleno unTriangulo) //
-      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-..\src\estructuras.c:27:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   27 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~
-      |                      |
-      |                      int
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
+In file included from ..\src\Clase11.c:14:
+..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
+   22 |  int id=0;
+      |        ^
+21:52:12 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:28:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   28 |  pedirInt(unTriangulo.ladoDos, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:29:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   29 |  pedirInt(unTriangulo.ladoTres, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:54:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   54 |      displaysList[0]->type=typeAux;
+      |                     ^~
+..\src\Pantallas.c:55:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   55 |      displaysList[0]->pricePerDay=pricePerDayAux;
+      |                     ^~
+..\src\Pantallas.c:56:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   56 |      displaysList[0]->id=0000;
+      |                     ^~
+..\src\Pantallas.c:57:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   57 |      displaysList[0]->name=nameAux;
+      |                     ^~
+..\src\Pantallas.c:58:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   58 |      displaysList[0]->address=addressAux;
+      |                     ^~
+..\src\Pantallas.c:59:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   59 |      displaysList[0]->flagEmpty=0;
+      |                     ^~
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:52:31 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-19:50:11 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:32:2: warning: implicit declaration of function 'trianguloMostrarValor' [-Wimplicit-function-declaration]
-   32 |  trianguloMostrarValor(nuevoTriangulo);
-      |  ^~~~~~~~~~~~~~~~~~~~~
-..\src\Clase10.c:34:2: warning: implicit declaration of function 'trianguloCarga' [-Wimplicit-function-declaration]
-   34 |  trianguloCarga(nuevoTriangulo);
-      |  ^~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:25:21: error: 'unTriangulo' redeclared as different kind of symbol
-   25 |  eTrianguloEscaleno unTriangulo;
-      |                     ^~~~~~~~~~~
-..\src\estructuras.c:23:41: note: previous definition of 'unTriangulo' was here
-   23 | void trianguloCarga (eTrianguloEscaleno unTriangulo) //
-      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-19:50:48 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:24:21: error: 'unTriangulo' redeclared as different kind of symbol
-   24 |  eTrianguloEscaleno unTriangulo;
-      |                     ^~~~~~~~~~~
-..\src\estructuras.c:22:41: note: previous definition of 'unTriangulo' was here
-   22 | void trianguloCarga (eTrianguloEscaleno unTriangulo)
-      |                      ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-19:51:22 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-19:51:56 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-19:52:26 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:25:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   25 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:26:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   26 |  pedirInt(unTriangulo.ladoDos, "Ingrese lado 2", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:54:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   54 |      &displaysList[0]->type=typeAux;
+      |                      ^~
+..\src\Pantallas.c:55:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   55 |      &displaysList[0]->pricePerDay=pricePerDayAux;
+      |                      ^~
+..\src\Pantallas.c:56:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   56 |      &displaysList[0]->id=0000;
+      |                      ^~
+..\src\Pantallas.c:57:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   57 |      &displaysList[0]->name=nameAux;
+      |                      ^~
+..\src\Pantallas.c:58:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   58 |      &displaysList[0]->address=addressAux;
+      |                      ^~
+..\src\Pantallas.c:59:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   59 |      &displaysList[0]->flagEmpty=0;
+      |                      ^~
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:52:57 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:27:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   27 |  pedirInt(unTriangulo.ladoTres, "Ingrese lado 3", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-20:20:28 **** Incremental Build of configuration Debug for project Clase10 ****
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:57:26: error: assignment to expression with array type
+   57 |      displaysList[0].name=nameAux;
+      |                          ^
+..\src\Pantallas.c:58:29: error: assignment to expression with array type
+   58 |      displaysList[0].address=addressAux;
+      |                             ^
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:53:54 **** Incremental Build of configuration Debug for project Clase11 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:22:37: error: unknown type name 'unTriangulo'
-   22 | void trianguloMostrarPorReferencia (unTriangulo ladoUno)
-      |                                     ^~~~~~~~~~~
-20:20:30 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:22:37: error: unknown type name 'unTriangulo'
-   22 | void trianguloMostrarPorReferencia (unTriangulo ladoUno)
-      |                                     ^~~~~~~~~~~
-21:08:42 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase10.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Clase10\Debug/../src/Clase10.c:27: undefined reference to `trianguloCarga'
-collect2.exe: error: ld returned 1 exit status
-21:09:12 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:32:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   32 |  pedirInt(unTriangulo.ladoUno, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~
-      |                      |
-      |                      int
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-21:09:50 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:32:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
-   32 |  pedirInt(&unTriangulo->ladoUno, "Ingrese lado 1", "Error");
-      |                       ^~
-..\src\estructuras.c:33:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
-   33 |  pedirInt(&unTriangulo->ladoDos, "Ingrese lado 2", "Error");
-      |                       ^~
-..\src\estructuras.c:34:23: error: invalid type argument of '->' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
-   34 |  pedirInt(&unTriangulo->ladoTres, "Ingrese lado 3", "Error");
-      |                       ^~
-21:11:01 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
-   29 | void trianguloCarga (eTrianguloEscaleno * unTriangulo)
-      |      ^~~~~~~~~~~~~~
-In file included from ..\src\estructuras.c:11:
-..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
-   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
-      |      ^~~~~~~~~~~~~~
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:32:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   32 |  pedirInt(unTriangulo->ladoUno, "Ingrese lado 1", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~~
-      |                      |
-      |                      int
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
 In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:33:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   33 |  pedirInt(unTriangulo->ladoDos, "Ingrese lado 2", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~~
-      |                      |
-      |                      int
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-..\src\estructuras.c:34:22: warning: passing argument 1 of 'pedirInt' makes pointer from integer without a cast [-Wint-conversion]
-   34 |  pedirInt(unTriangulo->ladoTres, "Ingrese lado 3", "Error");
-      |           ~~~~~~~~~~~^~~~~~~~~~
-      |                      |
-      |                      int
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\estructuras.c:8:
-..\src\biblioteca_input.h:25:19: note: expected 'int *' but argument is of type 'int'
-   25 | int pedirInt(int* pResultado, char* variableTexto, char* textoError);
-      |              ~~~~~^~~~~~~~~~
-21:11:13 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
-   29 | void trianguloCarga (eTrianguloEscaleno * unTriangulo)
-      |      ^~~~~~~~~~~~~~
-In file included from ..\src\estructuras.c:11:
-..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
-   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
-      |      ^~~~~~~~~~~~~~
-21:11:33 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:29:6: error: conflicting types for 'trianguloCarga'
-   29 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo)
-      |      ^~~~~~~~~~~~~~
-In file included from ..\src\estructuras.c:11:
-..\src\Triangulos.h:27:6: note: previous declaration of 'trianguloCarga' was here
-   27 | void trianguloCarga (eTrianguloEscaleno unTriangulo);
-      |      ^~~~~~~~~~~~~~
-21:12:04 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:27:17: error: incompatible type for argument 1 of 'trianguloCarga'
-   27 |  trianguloCarga(nuevoTriangulo);
-      |                 ^~~~~~~~~~~~~~
-      |                 |
-      |                 eTrianguloEscaleno {aka struct <anonymous>}
-In file included from ..\src\Clase10.c:14:
-..\src\Triangulos.h:27:43: note: expected 'eTrianguloEscaleno *' {aka 'struct <anonymous> *'} but argument is of type 'eTrianguloEscaleno' {aka 'struct <anonymous>'}
-   27 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo);
-      |                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
-21:12:55 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:27:18: error: expected expression before 'eTrianguloEscaleno'
-   27 |  trianguloCarga (eTrianguloEscaleno * nuevoTriangulo);
-      |                  ^~~~~~~~~~~~~~~~~~
-21:13:44 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:27:17: error: expected expression before 'eTrianguloEscaleno'
-   27 |  trianguloCarga(eTrianguloEscaleno &nuevoTriangulo);
-      |                 ^~~~~~~~~~~~~~~~~~
-21:13:50 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:27:17: error: expected expression before 'eTrianguloEscaleno'
-   27 |  trianguloCarga(eTrianguloEscaleno * nuevoTriangulo);
-      |                 ^~~~~~~~~~~~~~~~~~
-21:24:48 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:27:2: warning: implicit declaration of function 'trianguloMostrarValor' [-Wimplicit-function-declaration]
-   27 |  trianguloMostrarValor(nuevoTriangulo);
-      |  ^~~~~~~~~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:25:13 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:26:01 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:26:19 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:29:41 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-Info: Nothing to build for Clase10
-21:37:01 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c:28:5: error: conflicting types for 'trianguloCarga'
-   28 | int trianguloCarga (eTrianguloEscaleno * pUnTriangulo)
-      |     ^~~~~~~~~~~~~~
-In file included from ..\src\estructuras.c:11:
-..\src\Triangulos.h:28:6: note: previous declaration of 'trianguloCarga' was here
-   28 | void trianguloCarga (eTrianguloEscaleno * pUnTriangulo);
-      |      ^~~~~~~~~~~~~~
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:30:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
-   30 |  int retorno;
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:57:42: error: expected ')' before ';' token
+   57 |      strncpy(displaysList[0].name,nameAux;sizeof(displaysList[0].name));
+      |                                          ^
+      |                                          )
+..\src\Pantallas.c:57:6: error: too few arguments to function 'strncpy'
+   57 |      strncpy(displaysList[0].name,nameAux;sizeof(displaysList[0].name));
       |      ^~~~~~~
-..\src\estructuras.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
-   44 | }
-      | ^
-21:37:14 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'trianguloCarga':
-..\src\estructuras.c:30:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
-   30 |  int retorno;
-      |      ^~~~~~~
-..\src\estructuras.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
-   44 | }
-      | ^
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-21:37:27 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:41:00 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-21:41:15 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-21:45:18 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-Info: Nothing to build for Clase10
-22:02:22 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-22:02:38 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase10.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:02:40 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -o Clase10.exe "src\\Clase10.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" "src\\estructuras.o" 
-22:11:09 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'cargaTriangulosLista':
-..\src\estructuras.c:79:14: error: incompatible types when assigning to type 'eTrianguloEscaleno' {aka 'struct <anonymous>'} from type 'int (*)(eTrianguloEscaleno *)' {aka 'int (*)(struct <anonymous> *)'}
-   79 |    cadena[i]=trianguloCarga;
-      |              ^~~~~~~~~~~~~~
-22:12:36 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'cargaTriangulosLista':
-..\src\estructuras.c:79:29: error: invalid type argument of unary '*' (have 'eTrianguloEscaleno' {aka 'struct <anonymous>'})
-   79 |    cadena[i]=trianguloCarga(*cadena[i]);
-      |                             ^~~~~~~~~~
-22:13:49 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructuras.o" "..\\src\\estructuras.c" 
-..\src\estructuras.c: In function 'cargaTriangulosLista':
-..\src\estructuras.c:79:14: error: incompatible types when assigning to type 'eTrianguloEscaleno' {aka 'struct <anonymous>'} from type 'int'
-   79 |    cadena[i]=trianguloCarga(pUnTriangulo);
-      |              ^~~~~~~~~~~~~~
-22:14:09 **** Incremental Build of configuration Debug for project Clase10 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10.o" "..\\src\\Clase10.c" 
-..\src\Clase10.c: In function 'main':
-..\src\Clase10.c:32:2: error: too few arguments to function 'cargaTriangulosLista'
-   32 |  cargaTriangulosLista(listaDeTriangulos,TAM);
-      |  ^~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase10.c:14:
-..\src\Triangulos.h:31:5: note: declared here
-   31 | int cargaTriangulosLista (eTrianguloEscaleno cadena[],int largo,eTrianguloEscaleno * pUnTriangulo);
-      |     ^~~~~~~~~~~~~~~~~~~~
-..\src\Clase10.c:34:17: warning: passing argument 1 of 'imprimirArray' from incompatible pointer type [-Wincompatible-pointer-types]
-   34 |  imprimirArray (listaDeTriangulos,TAM);
-      |                 ^~~~~~~~~~~~~~~~~
-      |                 |
-      |                 eTrianguloEscaleno * {aka struct <anonymous> *}
-In file included from ..\src\biblioteca_input.h:12,
+In file included from ..\src\biblioteca_arrays.h:15,
+                 from ..\src\biblioteca_input.h:12,
                  from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Clase10.c:11:
-..\src\biblioteca_arrays.h:19:25: note: expected 'int *' but argument is of type 'eTrianguloEscaleno *' {aka 'struct <anonymous> *'}
-   19 | int imprimirArray (int *pArray, int len);
-      |                    ~~~~~^~~~~~
-..\src\Clase10.c:26:6: warning: unused variable 'area' [-Wunused-variable]
-   26 |  int area;
-      |      ^~~~
-..\src\Clase10.c:25:6: warning: unused variable 'perimetro' [-Wunused-variable]
-   25 |  int perimetro;
-      |      ^~~~~~~~~
+                 from ..\src\Pantallas.c:8:
+c:\mingw\include\string.h:86:40: note: declared here
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\Pantallas.c:58:29: error: assignment to expression with array type
+   58 |      displaysList[0].address=addressAux;
+      |                             ^
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:54:21 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:57:30: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+   57 |      strncpy(&displaysList[0]->name,nameAux,sizeof(displaysList[0].name));
+      |                              ^~
+..\src\Pantallas.c:58:29: error: assignment to expression with array type
+   58 |      displaysList[0].address=addressAux;
+      |                             ^
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:54:31 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:57:14: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |      strncpy(&displaysList[0].name,nameAux,sizeof(displaysList[0].name));
+      |              ^~~~~~~~~~~~~~~~~~~~~
+      |              |
+      |              char (*)[128]
+In file included from ..\src\biblioteca_arrays.h:15,
+                 from ..\src\biblioteca_input.h:12,
+                 from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+c:\mingw\include\string.h:86:40: note: expected 'char *' but argument is of type 'char (*)[128]'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\Pantallas.c:58:29: error: assignment to expression with array type
+   58 |      displaysList[0].address=addressAux;
+      |                             ^
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:54:46 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:58:29: error: assignment to expression with array type
+   58 |      displaysList[0].address=addressAux;
+      |                             ^
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:55:06 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:58:72: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'addres'; did you mean 'address'?
+   58 |      strncpy(displaysList[0].address,addressAux,sizeof(displaysList[0].addres));
+      |                                                                        ^~~~~~
+      |                                                                        address
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+21:55:17 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
+      |                  ^~~~~~~~
+      |                  |
+      |                  char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
+      |                   ^~~~~~~~~~~
+      |                   |
+      |                   char (*)[60]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Pantallas.c:8:
+..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
+   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+21:55:32 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_loadDisplay':
+..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
+   42 |  int idAux;
+      |      ^~~~~
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+21:55:58 **** Incremental Build of configuration Debug for project Clase11 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase11

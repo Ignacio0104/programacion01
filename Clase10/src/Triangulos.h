@@ -19,15 +19,16 @@ typedef struct {
 	int ladoUno;
 	int ladoDos;
 	int ladoTres;
+	int perimetro;
 
-}eTrianguloEscaleno;
+}eTriangulo;
 
 
-void trianguloMostrarValor(eTrianguloEscaleno unTriangulo);
-void trianguloMostrarPorReferencia (eTrianguloEscaleno * pUnTriangulo);
-int trianguloCarga (eTrianguloEscaleno * pUnTriangulo);
-int trianguloPerimetro(eTrianguloEscaleno * pUnTriangulo);
-int trianguloArea(eTrianguloEscaleno * pUnTriangulo);
-int cargaTriangulosLista (eTrianguloEscaleno cadena[],int largo,eTrianguloEscaleno * pUnTriangulo);
+void trianguloMostrarValor(eTriangulo unTriangulo);
+void trianguloMostrarPorReferencia (eTriangulo * pUnTriangulo);
+int trianguloCarga (eTriangulo * pUnTriangulo);
+int trianguloPerimetro(eTriangulo * pUnTriangulo);
+int trianguloArea(eTriangulo* pUnTriangulo);
+int cargaTriangulosLista (eTriangulo cadena[],int largo,eTriangulo * pUnTriangulo);
 
 #endif /* TRIANGULOS_H_ */
