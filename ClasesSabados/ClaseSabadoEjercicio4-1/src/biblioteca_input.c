@@ -17,18 +17,17 @@ static int esNumerica (char cadena[]);
 static int myGets(char pResultado[], int len);
 static int esFloat (char cadena[]);
 static int esTexto (char cadena[]);
-//static int esAlfaNumerica (char cadena[]);
+static int esAlfaNumerica (char cadena[]);
 
-int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* textoError)
+int pedirFloat(float* pResultado, char* variableTexto, char* textoError)
 {
 	float buffer;
 	int retorno=-1;
-	int i;
 	char bufferCadenaAux[16];
 
-	if(pResultado != NULL && reintentos >=0 && variableTexto != NULL && textoError != NULL)
+	if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
 	{
-		for (i=0; i<=reintentos; i++)
+		while(retorno!=0)
 		{
 			printf("%s",variableTexto);
 
@@ -41,7 +40,6 @@ int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* tex
 					*pResultado=buffer;
 					break;
 
-					}else
 					{
 						printf("%s\n",textoError);
 					}
@@ -52,22 +50,20 @@ int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* tex
 				}
 
 			}
-
 		}
+	}
 	return retorno;
 }
 
-
-int pedirInt(int* pResultado, int reintentos, char* variableTexto, char* textoError)
+int pedirInt(int* pResultado, char* variableTexto, char* textoError)
 {
-	int buffer;
+	float buffer;
 	int retorno=-1;
-	int i;
 	char bufferCadenaAux[16];
 
-	if(pResultado != NULL && reintentos >=0 && variableTexto != NULL && textoError != NULL)
+	if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
 	{
-		for (i=0; i<=reintentos; i++)
+		while(retorno!=0)
 		{
 			printf("%s",variableTexto);
 
@@ -75,12 +71,11 @@ int pedirInt(int* pResultado, int reintentos, char* variableTexto, char* textoEr
 			{
 				if(esNumerica(bufferCadenaAux)==0)
 				{
-					buffer=atoi(bufferCadenaAux); //atof es para float
-
+					buffer=atoi(bufferCadenaAux);
 					retorno = 0; // OK
 					*pResultado=buffer;
 					break;
-					}else
+
 					{
 						printf("%s\n",textoError);
 					}
@@ -93,9 +88,10 @@ int pedirInt(int* pResultado, int reintentos, char* variableTexto, char* textoEr
 			}
 
 		}
-
+	}
 	return retorno;
 }
+
 
 
 int pedirFloatIntentosRango(float* pResultado, float min, float max, int reintentos, char* variableTexto, char* textoError)
@@ -218,80 +214,89 @@ int pedirIntIntentosRango(int* pResultado, int min, int max, int reintentos, cha
 	return retorno;
 }
 
-int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError)
 {
 	int retorno=-1;
-	char bufferCadenaAux[128];
-	int i;
 
-	if(pResultado != NULL && reintentos >0 && lenght>0 && variableTexto != NULL && textoError != NULL)
+	if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
 	{
 
-		for (i=0; i<=reintentos; i++)
-		{
 			printf("%s",variableTexto);
 
-			if (myGets(bufferCadenaAux,sizeof(bufferCadenaAux))==0)
+			if(myGets(pResultado,lenght)==0)
 			{
-				if(esTexto(bufferCadenaAux)==0)
-				{
-
-					retorno = 0; // OK
-					*pResultado=bufferCadenaAux;
-					break;
-					}else
-					{
-						printf("%s\n",textoError);
-					}
-
-				} else
-				{
-					printf("%s\n",textoError);
-				}
-
+				retorno = 0;
+			} 	else
+			{
+				retorno=-1;
+				printf("%s\n",textoError);
 			}
+
 
 	}
 	return retorno;
 
 }
 
-int pedirChar(char* pResultado, int reintentos, char* variableTexto, char* textoError)
+int pedirTextoAlfaNumerico(char pResultado[],int lenght, char* variableTexto, char* textoError)
 {
 	int retorno=-1;
-	char bufferCadenaAux[128];
-	int i;
 
-	if(pResultado != NULL && reintentos >0 && variableTexto != NULL && textoError != NULL)
+	if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
 	{
-		for (i=0; i<=reintentos; i++)
-		{
+
 			printf("%s",variableTexto);
 
-			if (myGets(bufferCadenaAux,sizeof(bufferCadenaAux))==0)
+			if(myGets(pResultado,lenght)==0)
 			{
-				if(esTexto(bufferCadenaAux)==0)
-				{
-
-					retorno = 0; // OK
-					*pResultado=bufferCadenaAux;
-					break;
-					}else
-					{
-						printf("%s\n",textoError);
-					}
-
-				} else
-				{
-					printf("%s\n",textoError);
-				}
-
+				retorno = 0;
+			} 	else
+			{
+				retorno=-1;
+				printf("%s\n",textoError);
 			}
+
 
 	}
 	return retorno;
 
 }
+
+
+int pedirChar(char* pResultado, char* variableTexto, char* textoError)
+{
+	char buffer;
+	int retorno=-1;
+	char bufferCadenaAux[16];
+
+		if(pResultado != NULL && variableTexto != NULL && textoError != NULL)
+		{
+			while(retorno==-1)
+			{
+				printf("%s",variableTexto);
+
+				if (myGets(bufferCadenaAux,sizeof(bufferCadenaAux))==0)
+				{
+					if(esTexto(bufferCadenaAux)==0)
+					{
+						buffer=bufferCadenaAux[0];
+						retorno = 0; // OK
+						*pResultado=buffer;
+						break;
+
+						}else
+						{
+							printf("%s\n",textoError);
+						}
+
+				}
+
+			}
+		}
+
+		return retorno;
+}
+
 
 
 
@@ -383,11 +388,6 @@ static int esFloat (char cadena[])
 		retorno=0;
 		while(cadena[i]!='\0')
 		{
-			if(cadena[0]=='-')
-			{
-				i=1;
-			}
-
 			if(cadena[i]<'.'|| cadena[i]>'9'||cadena[i]=='/')
 			{
 				retorno=-1;
@@ -465,7 +465,7 @@ static int myGets(char pResultado[], int len)
 	}
 	return retorno;
 }
-/*
+
 static int esAlfaNumerica (char cadena[])
 {
 	int retorno;
@@ -500,5 +500,4 @@ static int esAlfaNumerica (char cadena[])
 	return retorno;
 
 }
-*/
 

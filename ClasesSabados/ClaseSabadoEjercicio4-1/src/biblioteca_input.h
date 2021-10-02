@@ -21,8 +21,8 @@ int pedirIntIntentosRango(int* pResultado, int min, int max, int reintentos, cha
 int pedirCharAUsuarioIntentosRango(char* pResultado, char min, char max, int reintentos, char* variableTexto, char* textoError);
 int pedirTextoAUsuario(char pResultado[],int lenght, char* variableTexto, char* textoError);
 int pedirCharAUsuarioIntentosRango(char* pResultado, char min, char max, int reintentos, char* variableTexto, char* textoError);
-int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* textoError);
-int pedirInt(int* pResultado, int reintentos, char* variableTexto, char* textoError);
+int pedirFloat(float* pResultado, char* variableTexto, char* textoError);
+int pedirInt(int* pResultado, char* variableTexto, char* textoError);
 int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
 int pedirChar(char* pResultado, char* variableTexto, char* textoError);
 
