@@ -1,483 +1,69 @@
-21:27:52 **** Incremental Build of configuration Debug for project Clase11 ****
+20:36:18 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+20:37:00 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+20:52:05 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:51:10: warning: too many arguments for format [-Wformat-extra-args]
+   51 |   printf("El ID solicitado está en la posicion: ",idPedido);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+20:52:21 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+Info: Nothing to build for Clase12bis
+20:53:47 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase11
-21:28:55 **** Incremental Build of configuration Debug for project Clase11 ****
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+20:55:21 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_initList':
-..\src\Pantallas.c:27:20: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   27 |    &displaysList[i]->flagEmpty=1;
-      |                    ^~
-..\src\Pantallas.c: At top level:
-..\src\Pantallas.c:34:5: error: conflicting types for 'disp_print'
-   34 | int disp_print(eDisplay * displaysList[],int DISPLAYS_LEN)
-      |     ^~~~~~~~~~
-In file included from ..\src\Pantallas.c:11:
-..\src\Pantallas.h:30:5: note: previous declaration of 'disp_print' was here
-   30 | int disp_print(eDisplay displaysList[],int DISPLAYS_LEN);
-      |     ^~~~~~~~~~
-..\src\Pantallas.c: In function 'disp_print':
-..\src\Pantallas.c:45:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-   45 |    printf("%d",&displaysList[i]->flagEmpty);
-      |            ~^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |             |  |
-      |             |  int *
-      |             int
-      |            %n
-21:29:06 **** Incremental Build of configuration Debug for project Clase11 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+20:56:10 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c:16:5: error: conflicting types for 'disp_initList'
-   16 | int disp_initList(eDisplay * displaysList[],int DISPLAYS_LEN)
-      |     ^~~~~~~~~~~~~
-In file included from ..\src\Pantallas.c:11:
-..\src\Pantallas.h:29:5: note: previous declaration of 'disp_initList' was here
-   29 | int disp_initList(eDisplay displaysList[],int DISPLAYS_LEN);
-      |     ^~~~~~~~~~~~~
-..\src\Pantallas.c: In function 'disp_initList':
-..\src\Pantallas.c:27:31: error: lvalue required as left operand of assignment
-   27 |    &displaysList[i]->flagEmpty=1;
-      |                               ^
-..\src\Pantallas.c: At top level:
-..\src\Pantallas.c:34:5: error: conflicting types for 'disp_print'
-   34 | int disp_print(eDisplay * displaysList[],int DISPLAYS_LEN)
-      |     ^~~~~~~~~~
-In file included from ..\src\Pantallas.c:11:
-..\src\Pantallas.h:30:5: note: previous declaration of 'disp_print' was here
-   30 | int disp_print(eDisplay displaysList[],int DISPLAYS_LEN);
-      |     ^~~~~~~~~~
-..\src\Pantallas.c: In function 'disp_print':
-..\src\Pantallas.c:45:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-   45 |    printf("%d",&displaysList[i]->flagEmpty);
-      |            ~^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |             |  |
-      |             |  int *
-      |             int
-      |            %n
-21:29:21 **** Incremental Build of configuration Debug for project Clase11 ****
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:13:31 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:50:2: warning: implicit declaration of function 'imprimirCompleto' [-Wimplicit-function-declaration]
+   50 |  imprimirCompleto(displaysList,DISPLAYS_LEN);
+      |  ^~~~~~~~~~~~~~~~
+..\src\Clase12bis.c:26:6: warning: unused variable 'idPedido' [-Wunused-variable]
+   26 |  int idPedido;
+      |      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+21:13:58 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-21:32:33 **** Incremental Build of configuration Debug for project Clase11 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:15:21 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase11
-21:34:05 **** Incremental Build of configuration Debug for project Clase11 ****
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:15:26 **** Incremental Build of configuration Debug for project Clase12bis ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase11
-21:49:26 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-In file included from ..\src\Pantallas.c:11:
-..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
-   22 |  int id=0;
-      |        ^
-..\src\Pantallas.c: In function 'disp_initList':
-..\src\Pantallas.c:27:19: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
-   27 |    displaysList[i].flagEmpty=1;
-      |                   ^
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:51:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   51 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:53:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   53 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:55:6: error: 'diplaysList' undeclared (first use in this function); did you mean 'displaysList'?
-   55 |      diplaysList[0]->type=typeAux;
-      |      ^~~~~~~~~~~
-      |      displaysList
-..\src\Pantallas.c:55:6: note: each undeclared identifier is reported only once for each function it appears in
-..\src\Pantallas.c:45:6: warning: unused variable 'flagEmptyAux' [-Wunused-variable]
-   45 |  int flagEmptyAux; //0=ocupado 1=libre
-      |      ^~~~~~~~~~~~
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-..\src\Pantallas.c: In function 'disp_print':
-..\src\Pantallas.c:81:31: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
-   81 |    printf("%d",displaysList[i].flagEmpty);
-      |                               ^
-21:49:52 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-..\src\biblioteca_input.c:469:12: warning: 'esAlfaNumerica' defined but not used [-Wunused-function]
-  469 | static int esAlfaNumerica (char cadena[])
-      |            ^~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
-In file included from ..\src\Clase11.c:14:
-..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
-   22 |  int id=0;
-      |        ^
-21:51:54 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
-In file included from ..\src\Clase11.c:14:
-..\src\Pantallas.h:22:8: error: expected ':', ',', ';', '}' or '__attribute__' before '=' token
-   22 |  int id=0;
-      |        ^
-21:52:12 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase11.o" "..\\src\\Clase11.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:54:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   54 |      displaysList[0]->type=typeAux;
-      |                     ^~
-..\src\Pantallas.c:55:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   55 |      displaysList[0]->pricePerDay=pricePerDayAux;
-      |                     ^~
-..\src\Pantallas.c:56:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   56 |      displaysList[0]->id=0000;
-      |                     ^~
-..\src\Pantallas.c:57:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   57 |      displaysList[0]->name=nameAux;
-      |                     ^~
-..\src\Pantallas.c:58:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   58 |      displaysList[0]->address=addressAux;
-      |                     ^~
-..\src\Pantallas.c:59:21: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   59 |      displaysList[0]->flagEmpty=0;
-      |                     ^~
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:52:31 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:54:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   54 |      &displaysList[0]->type=typeAux;
-      |                      ^~
-..\src\Pantallas.c:55:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   55 |      &displaysList[0]->pricePerDay=pricePerDayAux;
-      |                      ^~
-..\src\Pantallas.c:56:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   56 |      &displaysList[0]->id=0000;
-      |                      ^~
-..\src\Pantallas.c:57:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   57 |      &displaysList[0]->name=nameAux;
-      |                      ^~
-..\src\Pantallas.c:58:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   58 |      &displaysList[0]->address=addressAux;
-      |                      ^~
-..\src\Pantallas.c:59:22: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   59 |      &displaysList[0]->flagEmpty=0;
-      |                      ^~
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:52:57 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:57:26: error: assignment to expression with array type
-   57 |      displaysList[0].name=nameAux;
-      |                          ^
-..\src\Pantallas.c:58:29: error: assignment to expression with array type
-   58 |      displaysList[0].address=addressAux;
-      |                             ^
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:53:54 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:57:42: error: expected ')' before ';' token
-   57 |      strncpy(displaysList[0].name,nameAux;sizeof(displaysList[0].name));
-      |                                          ^
-      |                                          )
-..\src\Pantallas.c:57:6: error: too few arguments to function 'strncpy'
-   57 |      strncpy(displaysList[0].name,nameAux;sizeof(displaysList[0].name));
-      |      ^~~~~~~
-In file included from ..\src\biblioteca_arrays.h:15,
-                 from ..\src\biblioteca_input.h:12,
-                 from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-c:\mingw\include\string.h:86:40: note: declared here
-   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
-      |                                        ^~~~~~~
-..\src\Pantallas.c:58:29: error: assignment to expression with array type
-   58 |      displaysList[0].address=addressAux;
-      |                             ^
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:54:21 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:57:30: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
-   57 |      strncpy(&displaysList[0]->name,nameAux,sizeof(displaysList[0].name));
-      |                              ^~
-..\src\Pantallas.c:58:29: error: assignment to expression with array type
-   58 |      displaysList[0].address=addressAux;
-      |                             ^
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:54:31 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:57:14: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
-   57 |      strncpy(&displaysList[0].name,nameAux,sizeof(displaysList[0].name));
-      |              ^~~~~~~~~~~~~~~~~~~~~
-      |              |
-      |              char (*)[128]
-In file included from ..\src\biblioteca_arrays.h:15,
-                 from ..\src\biblioteca_input.h:12,
-                 from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-c:\mingw\include\string.h:86:40: note: expected 'char *' but argument is of type 'char (*)[128]'
-   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
-      |                                        ^~~~~~~
-..\src\Pantallas.c:58:29: error: assignment to expression with array type
-   58 |      displaysList[0].address=addressAux;
-      |                             ^
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:54:46 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:58:29: error: assignment to expression with array type
-   58 |      displaysList[0].address=addressAux;
-      |                             ^
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:55:06 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:58:72: error: 'eDisplay' {aka 'struct <anonymous>'} has no member named 'addres'; did you mean 'address'?
-   58 |      strncpy(displaysList[0].address,addressAux,sizeof(displaysList[0].addres));
-      |                                                                        ^~~~~~
-      |                                                                        address
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-21:55:17 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:50:18: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   50 |    if(pedirTexto(&nameAux,128, "Ingrese el nombre: ", "Error")==0)
-      |                  ^~~~~~~~
-      |                  |
-      |                  char (*)[128]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[128]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:52:19: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
-   52 |     if(pedirTexto(&addressAux,60, "Ingrese la direccion: ", "Error")==0)
-      |                   ^~~~~~~~~~~
-      |                   |
-      |                   char (*)[60]
-In file included from ..\src\biblioteca_calculadora.h:11,
-                 from ..\src\Pantallas.c:8:
-..\src\biblioteca_input.h:26:21: note: expected 'char *' but argument is of type 'char (*)[60]'
-   26 | int pedirTexto(char pResultado[],int lenght, char* variableTexto, char* textoError);
-      |                ~~~~~^~~~~~~~~~~~
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-21:55:32 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'disp_loadDisplay':
-..\src\Pantallas.c:42:6: warning: unused variable 'idAux' [-Wunused-variable]
-   42 |  int idAux;
-      |      ^~~~~
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-21:55:58 **** Incremental Build of configuration Debug for project Clase11 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase11.exe "src\\Clase11.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase11
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis

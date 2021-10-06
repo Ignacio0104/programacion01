@@ -16,12 +16,13 @@ int main(void) {
 
 	setbuf(stdout,NULL);
 
-	int cadena[10];
+	char texto[40];
+	int retorno;
 
-	cargarArrayEnteros(cadena,10,"Ingrese un numero","Error");
-	imprimirArray (cadena, 10);
-	ordenarArray (cadena,10);
-	imprimirArray (cadena, 10);
+	retorno=pedirTexto(texto,40, 5, "Ingrese el texto", "Error");
+
+	printf("El retorno fue %d y el texto %s",retorno,texto);
+
 
 	return EXIT_SUCCESS;
 }

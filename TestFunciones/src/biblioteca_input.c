@@ -57,6 +57,44 @@ int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* tex
 	return retorno;
 }
 
+int pedirFloatExclusivo(float* pResultado, int reintentos, char* variableTexto, char* textoError)
+{
+	float buffer;
+	int retorno=-1;
+	int i;
+	char bufferCadenaAux[16];
+
+	if(pResultado != NULL && reintentos >=0 && variableTexto != NULL && textoError != NULL)
+	{
+		for (i=0; i<=reintentos; i++)
+		{
+			printf("%s",variableTexto);
+
+			if (myGets(bufferCadenaAux,sizeof(bufferCadenaAux))==0)
+			{
+				if(esFloat(bufferCadenaAux)==0)
+				{
+					buffer=atof(bufferCadenaAux);
+					retorno = 0; // OK
+					*pResultado=buffer;
+					break;
+					}else
+					{
+						printf("%s\n",textoError);
+					}
+
+				} else
+				{
+					printf("%s\n",textoError);
+				}
+
+
+
+		}
+	}
+	return retorno;
+}
+
 
 int pedirInt(int* pResultado, int reintentos, char* variableTexto, char* textoError)
 {
@@ -237,7 +275,7 @@ int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto
 				{
 
 					retorno = 0; // OK
-					*pResultado=bufferCadenaAux;
+					strncpy (pResultado,bufferCadenaAux,sizeof(pResultado[0]));
 					break;
 					}else
 					{
@@ -255,7 +293,7 @@ int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto
 	return retorno;
 
 }
-
+/*
 int pedirChar(char* pResultado, int reintentos, char* variableTexto, char* textoError)
 {
 	int retorno=-1;
@@ -292,8 +330,7 @@ int pedirChar(char* pResultado, int reintentos, char* variableTexto, char* texto
 	return retorno;
 
 }
-
-
+*/
 
 int pedirCharAUsuarioIntentosRango(char* pResultado, char min, char max, int reintentos, char* variableTexto, char* textoError)
 {

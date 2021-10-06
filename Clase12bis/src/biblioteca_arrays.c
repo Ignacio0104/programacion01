@@ -12,7 +12,7 @@
 #include <string.h>
 
 
-int cargarArrayEnteros(int numeros[], int reintentos , int tamano,char* variableTexto,char* textoError)
+int cargarArrayEnteros(int numeros[],int tamano,char* variableTexto,char* textoError)
 {
 	int i;
 	int retorno;
@@ -24,7 +24,7 @@ int cargarArrayEnteros(int numeros[], int reintentos , int tamano,char* variable
 		retorno=0;
 		for(i=0;i<tamano;i++)
 		{
-			pedirInt(&numeros[i],reintentos, variableTexto, textoError);
+			pedirInt(&numeros[i], variableTexto, textoError);
 		}
 	}
 

@@ -8,10 +8,10 @@
  ============================================================================
  */
 
-#include "biblioteca_calculadora.h"
+//#include "biblioteca_calculadora.h"
 #include "biblioteca_input.h"
-#include "biblioteca_arrays.h"
-#include "Pantallas.h"
+//#include "biblioteca_arrays.h"
+//#include "Pantallas.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,18 +21,23 @@
 int main(void) {
 
 	setbuf(stdout,NULL);
-
+/*
 	eDisplay displaysList [DISPLAYS_LEN];
 
 	disp_initList(displaysList,DISPLAYS_LEN);
 
 	disp_loadDisplay(displaysList);
 
-	//TAREA!!!!
-	//Hacer funcion para buscar lugar libre en el array.
-	//Hacer funcion para modificar: Pedir un ID y realizar funcion que busque por ID. Llamar a funcion que modifica
+	disp_print(displaysList,DISPLAYS_LEN);*/
 
-	disp_print(displaysList,DISPLAYS_LEN);
+	char texto [100];
+	int retorno;
+
+	retorno=pedirTexto(texto,100, "Ingrese texto", "Texto");
+
+	printf("El retorno es %d",retorno);
+
+	printf("El texto es %s",texto);
 
 
 	return EXIT_SUCCESS;
