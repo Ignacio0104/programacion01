@@ -1,223 +1,255 @@
-20:36:18 **** Incremental Build of configuration Debug for project Clase12bis ****
+12:14:43 **** Rebuild of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-20:37:00 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-20:52:05 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:51:10: warning: too many arguments for format [-Wformat-extra-args]
-   51 |   printf("El ID solicitado está en la posicion: ",idPedido);
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-20:52:21 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-Info: Nothing to build for Clase12bis
-20:53:47 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-20:55:21 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-20:56:10 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:13:31 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:50:2: warning: implicit declaration of function 'imprimirCompleto' [-Wimplicit-function-declaration]
-   50 |  imprimirCompleto(displaysList,DISPLAYS_LEN);
-      |  ^~~~~~~~~~~~~~~~
-..\src\Clase12bis.c:26:6: warning: unused variable 'idPedido' [-Wunused-variable]
-   26 |  int idPedido;
-      |      ^~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-21:13:58 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:15:21 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:15:26 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:24:01 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:25:32 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-Info: Nothing to build for Clase12bis
-21:32:10 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-..\src\Pantallas.c: In function 'modificarPantalla':
-..\src\Pantallas.c:128:4: error: too few arguments to function 'disp_loadDisplay'
-  128 |    disp_loadDisplay(displaysList, posicionPedida);
-      |    ^~~~~~~~~~~~~~~~
-..\src\Pantallas.c:37:5: note: declared here
-   37 | int disp_loadDisplay(eDisplay *pDisplay, int posicion, int tamano)
-      |     ^~~~~~~~~~~~~~~~
-21:32:50 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:33:56 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:34:49 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-21:35:13 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:35:42 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:37:40 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:37:54 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:39:07 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:39:08 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-21:53:15 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-22:11:50 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
-   28 |  int seguir;
-      |      ^~~~~~
-..\src\Clase12bis.c:27:6: warning: unused variable 'i' [-Wunused-variable]
-   27 |  int i;
-      |      ^
-..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
-   25 |  int posicionLibre;
-      |      ^~~~~~~~~~~~~
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-Info: Nothing to build for Clase12bis
-22:13:24 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:30:8: warning: unused variable 'numero' [-Wunused-variable]
-   30 |  float numero;
-      |        ^~~~~~
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-22:19:47 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:35:40: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
-   35 |  printf("El retorno es &d y el numero %f",retorno, numero);
-      |                                       ~^  ~~~~~~~
-      |                                        |  |
-      |                                        |  int
-      |                                        double
-      |                                       %d
-..\src\Clase12bis.c:35:9: warning: too many arguments for format [-Wformat-extra-args]
-   35 |  printf("El retorno es &d y el numero %f",retorno, numero);
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
-   28 |  int seguir;
-      |      ^~~~~~
-..\src\Clase12bis.c:27:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-   27 |  int i;
-      |      ^
-..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
-   25 |  int posicionLibre;
-      |      ^~~~~~~~~~~~~
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-22:20:33 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
-..\src\Clase12bis.c: In function 'main':
-..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
-   28 |  int seguir;
-      |      ^~~~~~
-..\src\Clase12bis.c:27:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
-   27 |  int i;
-      |      ^
-..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
-   25 |  int posicionLibre;
-      |      ^~~~~~~~~~~~~
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-22:30:01 **** Incremental Build of configuration Debug for project Clase12bis ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-22:33:00 **** Incremental Build of configuration Debug for project Clase12bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+12:22:19 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
-22:34:11 **** Incremental Build of configuration Debug for project Clase12bis ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+..\src\TestFunciones.c: In function 'main':
+..\src\TestFunciones.c:24:40: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'char (*)[40]' [-Wformat=]
+   24 |  printf("El retorno fue %d y el texto %s",retorno,&texto);
+      |                                       ~^          ~~~~~~
+      |                                        |          |
+      |                                        char *     char (*)[40]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:22:46 **** Incremental Build of configuration Debug for project TestFunciones ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+12:26:27 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c: In function 'esTexto':
+..\src\biblioteca_input.c:385:17: warning: character constant too long for its type
+  385 |    if(cadena[i=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |                 ^~~~~~~~~
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:26:41 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c: In function 'esTexto':
+..\src\biblioteca_input.c:385:18: warning: character constant too long for its type
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |                  ^~~~~~~~~
+..\src\biblioteca_input.c:385:59: error: expected ')' before ']' token
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |      ~                                                    ^
+      |                                                           )
+..\src\biblioteca_input.c:385:59: error: expected statement before ']' token
+..\src\biblioteca_input.c:385:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |    ^~
+..\src\biblioteca_input.c:385:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |                                                            ^
+..\src\biblioteca_input.c:385:60: error: expected statement before ')' token
+12:27:09 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c: In function 'esTexto':
+..\src\biblioteca_input.c:385:18: warning: character constant too long for its type
+  385 |    if(cadena[i]=='espacio')||(cadena[i]=='.')||(cadena[i]==',']))
+      |                  ^~~~~~~~~
+..\src\biblioteca_input.c:385:28: error: expected expression before '||' token
+  385 |    if(cadena[i]=='espacio')||(cadena[i]=='.')||(cadena[i]==',']))
+      |                            ^~
+..\src\biblioteca_input.c:385:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  385 |    if(cadena[i]=='espacio')||(cadena[i]=='.')||(cadena[i]==',']))
+      |    ^~
+..\src\biblioteca_input.c:385:64: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  385 |    if(cadena[i]=='espacio')||(cadena[i]=='.')||(cadena[i]==',']))
+      |                                                                ^
+..\src\biblioteca_input.c:385:64: error: expected statement before ')' token
+..\src\biblioteca_input.c:385:65: error: expected statement before ')' token
+  385 |    if(cadena[i]=='espacio')||(cadena[i]=='.')||(cadena[i]==',']))
+      |                                                                 ^
+12:27:22 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c: In function 'esTexto':
+..\src\biblioteca_input.c:385:18: warning: character constant too long for its type
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |                  ^~~~~~~~~
+..\src\biblioteca_input.c:385:59: error: expected ')' before ']' token
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |      ~                                                    ^
+      |                                                           )
+..\src\biblioteca_input.c:385:59: error: expected statement before ']' token
+..\src\biblioteca_input.c:385:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |    ^~
+..\src\biblioteca_input.c:385:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  385 |    if(cadena[i]=='espacio'||cadena[i]=='.'||cadena[i]==','])
+      |                                                            ^
+..\src\biblioteca_input.c:385:60: error: expected statement before ')' token
+12:28:13 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c: In function 'esTexto':
+..\src\biblioteca_input.c:385:52: error: expected ')' before ']' token
+  385 |    if(cadena[i]==32||cadena[i]=='.'||cadena[i]==','])
+      |      ~                                             ^
+      |                                                    )
+..\src\biblioteca_input.c:385:52: error: expected statement before ']' token
+..\src\biblioteca_input.c:385:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  385 |    if(cadena[i]==32||cadena[i]=='.'||cadena[i]==','])
+      |    ^~
+..\src\biblioteca_input.c:385:53: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  385 |    if(cadena[i]==32||cadena[i]=='.'||cadena[i]==','])
+      |                                                     ^
+..\src\biblioteca_input.c:385:53: error: expected statement before ')' token
+12:29:05 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c: In function 'pedirTexto':
+..\src\biblioteca_input.c:200:48: warning: 'sizeof' on array function parameter 'pResultado' will return size of 'char *' [-Wsizeof-array-argument]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+..\src\biblioteca_input.c:181:21: note: declared here
+  181 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError)
+      |                ~~~~~^~~~~~~~~~~~
+..\src\biblioteca_input.c:200:48: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  200 |      strncpy (pResultado,bufferCadenaAux,sizeof(pResultado));
+      |                                                ^
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:36:48 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+12:44:14 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+12:45:39 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+13:37:00 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TestFunciones.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:37:05 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+13:38:23 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+13:42:29 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+13:42:54 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+13:44:43 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TestFunciones.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:44:47 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+Info: Nothing to build for TestFunciones
+13:46:03 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TestFunciones.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:46:06 **** Incremental Build of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -o TestFunciones.exe "src\\TestFunciones.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for TestFunciones

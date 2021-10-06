@@ -16,7 +16,6 @@
 
 
 int pedirFloatIntentosRango(float* pResultado, float min, float max, int reintentos, char* variableTexto, char* textoError);
-int pedirFloatIntentosRangoExclusivo(float* pResultado, float min, float max, int reintentos, char* variableTexto, char* textoError);
 int pedirIntIntentosRango(int* pResultado, int min, int max, int reintentos, char* variableTexto, char* textoError);
 int pedirCharAUsuarioIntentosRango(char* pResultado, char min, char max, int reintentos, char* variableTexto, char* textoError);
 int pedirTextoAUsuario(char pResultado[],int lenght, char* variableTexto, char* textoError);
