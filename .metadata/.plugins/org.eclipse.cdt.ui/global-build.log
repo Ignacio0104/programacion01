@@ -67,3 +67,157 @@ collect2.exe: error: ld returned 1 exit status
 Info: Internal Builder is used for build
 gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
 Info: Nothing to build for Clase12bis
+21:24:01 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:25:32 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+Info: Nothing to build for Clase12bis
+21:32:10 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'modificarPantalla':
+..\src\Pantallas.c:128:4: error: too few arguments to function 'disp_loadDisplay'
+  128 |    disp_loadDisplay(displaysList, posicionPedida);
+      |    ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:37:5: note: declared here
+   37 | int disp_loadDisplay(eDisplay *pDisplay, int posicion, int tamano)
+      |     ^~~~~~~~~~~~~~~~
+21:32:50 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:33:56 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:34:49 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+21:35:13 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:35:42 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:37:40 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:37:54 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:39:07 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase12bis.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:39:08 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+21:53:15 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+22:11:50 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
+   28 |  int seguir;
+      |      ^~~~~~
+..\src\Clase12bis.c:27:6: warning: unused variable 'i' [-Wunused-variable]
+   27 |  int i;
+      |      ^
+..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   25 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+Info: Nothing to build for Clase12bis
+22:13:24 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:30:8: warning: unused variable 'numero' [-Wunused-variable]
+   30 |  float numero;
+      |        ^~~~~~
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+22:19:47 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:35:40: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   35 |  printf("El retorno es &d y el numero %f",retorno, numero);
+      |                                       ~^  ~~~~~~~
+      |                                        |  |
+      |                                        |  int
+      |                                        double
+      |                                       %d
+..\src\Clase12bis.c:35:9: warning: too many arguments for format [-Wformat-extra-args]
+   35 |  printf("El retorno es &d y el numero %f",retorno, numero);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
+   28 |  int seguir;
+      |      ^~~~~~
+..\src\Clase12bis.c:27:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   27 |  int i;
+      |      ^
+..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   25 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+22:20:33 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+..\src\Clase12bis.c: In function 'main':
+..\src\Clase12bis.c:28:6: warning: unused variable 'seguir' [-Wunused-variable]
+   28 |  int seguir;
+      |      ^~~~~~
+..\src\Clase12bis.c:27:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   27 |  int i;
+      |      ^
+..\src\Clase12bis.c:25:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   25 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+22:30:01 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase12bis.o" "..\\src\\Clase12bis.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+22:33:00 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis
+22:34:11 **** Incremental Build of configuration Debug for project Clase12bis ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Clase12bis

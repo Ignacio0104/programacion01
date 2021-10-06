@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define VACIO 1
+#define OCUPADO 0
 
 static int dameUnIdNuevo (void);
 
@@ -27,7 +29,7 @@ int disp_initList(eDisplay *displaysList,int lenght)
 		retorno=0;
 		for(int i=0;i<lenght;i++)
 		{
-			displaysList[i].flagEmpty=1;
+			displaysList[i].flagEmpty=VACIO;
 		}
 	}
 
@@ -61,7 +63,7 @@ int disp_loadDisplay(eDisplay *pDisplay, int posicion)
 						pDisplay[posicion].id=dameUnIdNuevo();
 						strncpy(pDisplay[posicion].name,nameAux,sizeof(pDisplay[posicion].name));
 						strncpy(pDisplay[posicion].address,addressAux,sizeof(pDisplay[posicion].address));
-						pDisplay[posicion].flagEmpty=0;
+						pDisplay[posicion].flagEmpty=OCUPADO;
 						retorno=0;
 					}
 
@@ -93,7 +95,7 @@ int buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght)
 		retorno=0;
 		for(int i=0;i<lenght;i++)
 		{
-			if(displaysList[i].flagEmpty==1)
+			if(displaysList[i].flagEmpty==VACIO)
 			{
 				posicionLibre=i;
 				break;
@@ -108,6 +110,25 @@ int buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght)
 
 }
 
+/*
+  int buscarLibre (Display *unDisplay, int len)  VERSION CLASE
+ {
+	 int retorno=-1;
+	 if(unDisplay!=NULL && len>0)
+	 {
+		 for (int i = 0;  i< len; ++i)
+		 {
+			if(unDisplay[i].flagEmpty==LIBRE)
+			{
+				retorno=i;
+				break;
+			}
+		 }
+	 }
+	 return retorno;
+ }
+ */
+
 int modificarPantalla(eDisplay *displaysList,int lenght)
 {
 	int retorno;
@@ -117,12 +138,41 @@ int modificarPantalla(eDisplay *displaysList,int lenght)
 	if(displaysList!=NULL&&lenght>0)
 	{
 		retorno=0;
-		if(buscarPorId (displaysList, &posicionPedida, lenght)==0)
+		if(buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==OCUPADO)
 		{
 			printf("Se van a modificar los datos del ID %d",posicionPedida);
 
 			disp_loadDisplay(displaysList, posicionPedida);
 
+		}
+
+	}
+
+	return retorno;
+
+}
+
+int cargarPantalla(eDisplay *displaysList,int lenght)
+{
+	int retorno;
+	int posicionPedida;
+
+	retorno=-1;
+	if(displaysList!=NULL&&lenght>0)
+	{
+		retorno=0;
+		if(buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==VACIO)
+		{
+			printf("Se van a cargar los datos de la posición %d",posicionPedida);
+
+			disp_loadDisplay(displaysList, posicionPedida);
+
+		} else
+		{
+			if(buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+			{
+				printf("Error, ID inexistente");
+			}
 		}
 
 	}
@@ -141,14 +191,17 @@ int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 	{
 		retorno=0;
 		int idIngresada;
-		pedirIntIntentosRango(&idIngresada, 0, 1000, 3, "Ingrese el ID", "Error");
+		pedirIntIntentosRango(&idIngresada, 0, 10000, 3, "Ingrese el ID", "Error");
 
 		for(int i=0;i<lenght;i++)
 		{
-			if(displaysList[i].id==idIngresada)
+			if(displaysList[i].id==idIngresada&&displaysList->flagEmpty==VACIO)
 			{
 				posicionPedida=i;
 				break;
+			} else
+			{
+				retorno=-1;
 			}
 
 		}
@@ -159,6 +212,25 @@ int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 	return retorno;
 
 }
+/*
+int buscarPorId(Display* pDisplay, int len, int IdBuscado)  VERSION DE CLASE
+{
+	int retorno=-1;
+	int i;
+
+	if(pDisplay!=NULL && len>0 && IdBuscado>0)
+	{
+		for(i=0;i<len;i++)
+		{
+			if(pDisplay[i].id==IdBuscado && pDisplay[i].flagEmpty==OCUPADO)
+			{
+				retorno=i;
+				break;
+			}
+		}
+	}
+	return retorno;
+}*/
 
 int imprimirCompleto(eDisplay *displaysList, int lenght)
 {
@@ -177,7 +249,6 @@ int imprimirCompleto(eDisplay *displaysList, int lenght)
 						displaysList[i].type, displaysList[i].pricePerDay, displaysList[i].id,
 						displaysList[i].name,displaysList[i].address, displaysList[i].flagEmpty);
 			}
-
 
 		}
 

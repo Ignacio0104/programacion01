@@ -33,5 +33,6 @@ int imprimirLista (eDisplay *displaysList,int lenght);
 int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght);
 int modificarPantalla(eDisplay *displaysList,int lenght);
 int imprimirCompleto(eDisplay *displaysList, int lenght);
+int cargarPantalla(eDisplay *displaysList,int lenght);
 
 #endif /* PANTALLAS_H_ */

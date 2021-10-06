@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define DISPLAYS_LEN 5
+#define DISPLAYS_LEN 3
 
 
 int main(void) {
@@ -24,25 +24,30 @@ int main(void) {
 
 	int posicionLibre;
 
-
+	int i;
 	int seguir;
+
+	i=0;
 
 	eDisplay displaysList [DISPLAYS_LEN];
 
 	disp_initList(displaysList,DISPLAYS_LEN);
 
-	printf("Desea seguir? 1 si 0 no");
+
+	printf("Desea cargar? 1 si 0 no");
 	scanf("%d",&seguir);
 
-	while(seguir==1)
+	while(i<DISPLAYS_LEN&&seguir==1)
 	{
+
 		buscarDisponible(displaysList, &posicionLibre, DISPLAYS_LEN);
 
 		printf("La posicion es %d\n",posicionLibre);
 
 		disp_loadDisplay(displaysList, posicionLibre);
 
-		printf("Desea seguir? 1 si 0 no");
+		i++;
+		printf("Desea cargar? 1 si 0 no");
 		scanf("%d",&seguir);
 	}
 

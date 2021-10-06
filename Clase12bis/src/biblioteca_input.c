@@ -401,7 +401,7 @@ static int esFloat (char cadena[])
 		}
 	}
 
-	if(contadorPuntos!=1)
+	if(contadorPuntos>1)
 	{
 		retorno=-1;
 	}
