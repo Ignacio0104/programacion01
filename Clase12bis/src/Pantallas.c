@@ -54,9 +54,9 @@ int disp_loadDisplay(eDisplay *pDisplay, int posicion)
 		{
 			if(pedirFloatIntentosRango(&pricePerDayAux,0, 100000, 10, "Ingrese el precio:  ", "Error")==0)
 			{
-				if(pedirTexto(nameAux,128, "Ingrese el nombre: ", "Error")==0)
+				if(pedirTexto(nameAux,sizeof(nameAux), 3, "Ingrese el nombre: ", "Error")==0)
 				{
-					if(pedirTexto(addressAux,60, "Ingrese la direccion: ", "Error")==0)
+					if(pedirTexto(addressAux,sizeof(nameAux), 3, "Ingrese la direccion: ", "Error")==0)
 					{
 						pDisplay[posicion].type=typeAux;
 						pDisplay[posicion].pricePerDay=pricePerDayAux;

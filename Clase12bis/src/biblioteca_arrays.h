@@ -14,8 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-int cargarArrayEnteros(int numeros[],int tamano,char* variableTexto,char* textoError);
+int cargarArrayEnteros(int numeros[], int reintentos , int tamano,char* variableTexto,char* textoError);
 int imprimirArray (int *pArray, int len);
 void imprimirElemento (int elemento, int indice);
 int modificarArray (int pArray[], int indice, int modificacion);
