@@ -276,27 +276,6 @@ int disp_imprimirCompleto(eDisplay *displaysList, int lenght)
 
 }
 
-int menuOperaciones (void)
-{
-	int eleccion;
-
-	printf("Opciones:\n\n"
-			"1)Alta de pantalla\n"
-			"2)Modificar datos de pantalla\n"
-			"3)Baja de pantalla\n"
-			"4)Contratar una publicidad\n"
-			"5)Modificar condiciones de publicacion\n"
-			"6)Cancelar contratación\n"
-			"7)Consulta facturacion\n"
-			"8)Lista contrataciones\n"
-			"9)Lista pantallas\n"
-			"10)Informar\n"
-			"11)Salir\n");
-
-	pedirIntIntentosRango(&eleccion, 1, 11, 20, "Ingrese aquí su elección", "Error");
-
-	return eleccion;
-}
 
 void disp_altaForzada(eDisplay *pDisplay,int tipo, float precio, int id, char nombre[], char direccion[], int indice)
 {

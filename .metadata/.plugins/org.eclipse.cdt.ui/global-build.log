@@ -1380,3 +1380,199 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
 gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
 Info: Nothing to build for Parcial01_2017
+15:42:12 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+15:43:00 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:43:52 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:46:04 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:46:06 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+15:53:41 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:53:47 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+15:55:22 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:55:24 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+16:05:45 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+16:06:05 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+16:06:46 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:06:50 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+16:08:21 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+16:10:54 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'imprimirFacturacionPorCliente':
+..\src\Informes.c:102:41: error: incompatible type for argument 2 of 'strcmp'
+  102 |      if(strcmp(contList[i].name,contList[i-1])==0)
+      |                                 ~~~~~~~~^~~~~
+      |                                         |
+      |                                         eContratacion {aka struct <anonymous>}
+In file included from ..\src\biblioteca_arrays.h:15,
+                 from ..\src\biblioteca_input.h:12,
+                 from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Informes.c:9:
+c:\mingw\include\string.h:77:60: note: expected 'const char *' but argument is of type 'eContratacion' {aka 'struct <anonymous>'}
+   77 | _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+      |                                                            ^~~~~~~~~~~~
+16:11:01 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:11:05 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+16:12:31 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:12:34 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+16:22:54 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:22:55 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+17:07:35 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+17:08:36 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:08:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+17:11:31 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:11:36 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+17:22:42 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+17:28:30 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+18:06:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:167:4: error: too many arguments to function 'imprimirFacturacionPorCliente'
+  167 |    imprimirFacturacionPorCliente (contList,DISPLAYS_LEN,displaysList,DISPLAYS_LEN, &indiceMaximo, &cantidadMaximo);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Parcial01_2017.c:17:
+..\src\Informes.h:23:7: note: declared here
+   23 | float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18:06:59 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+18:07:59 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:08:01 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+18:10:16 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:10:18 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+18:25:21 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:25:34 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+19:05:11 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017

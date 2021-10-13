@@ -13,11 +13,12 @@
 #include "biblioteca_input.h"
 #include "biblioteca_arrays.h"
 #include "Contratacion.h"
-#include "Pantallas.h"
 #include "Informes.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "estructuraPrincipal.h"
 #define DISPLAYS_LEN 20
 
 int main(void) {

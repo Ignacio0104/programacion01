@@ -5,8 +5,8 @@
  *      Author: Nacho
  */
 
-#ifndef PANTALLAS_H_
-#define PANTALLAS_H_
+#ifndef ESTRUCTURAPRINCIPAL_H_
+#define ESTRUCTURAPRINCIPAL_H_
 #include "biblioteca_calculadora.h"
 #include "biblioteca_input.h"
 #include "biblioteca_arrays.h"
@@ -23,7 +23,7 @@ typedef struct {
 	char address[128];
 	int flagEmpty; //0=ocupado 1=libre
 
-}eDisplay;
+}ePrincipal;
 
 int disp_initList(eDisplay *displaysList,int lenght);
 int disp_loadDisplay(eDisplay *pDisplay);
@@ -36,4 +36,4 @@ int disp_remove (eDisplay *displaysList, int lenght, int idIngresada);
 void disp_altaForzada(eDisplay *pDisplay,int tipo, float precio, int id, char nombre[], char direccion[], int indice);
 int disp_imprimirCompleto(eDisplay *displaysList, int lenght);
 
-#endif /* PANTALLAS_H_ */
+#endif /* ESTRUCTURAPRINCIPAL_H_ */
