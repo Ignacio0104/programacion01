@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define DISPLAYS_LEN 3
+#define DISPLAYS_LEN 20
 
 
 int main(void) {
@@ -44,7 +44,7 @@ int main(void) {
 
 		printf("La posicion es %d\n",posicionLibre);
 
-		disp_loadDisplay(displaysList, posicionLibre);
+		disp_loadDisplay(&displaysList[posicionLibre]);
 
 		i++;
 		printf("Desea cargar? 1 si 0 no");
@@ -55,10 +55,6 @@ int main(void) {
 	imprimirCompleto(displaysList,DISPLAYS_LEN);
 
 	modificarPantalla(displaysList,DISPLAYS_LEN);
-
-	imprimirCompleto(displaysList,DISPLAYS_LEN);
-
-
 
 
 	return EXIT_SUCCESS;

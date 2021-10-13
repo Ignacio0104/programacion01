@@ -1,5 +1,1382 @@
-14:25:33 **** Incremental Build of configuration Debug for project Clase12bis ****
+15:46:18 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Clase12bis.exe "src\\Clase12bis.o" "src\\Pantallas.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Clase12bis
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:48:22 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:49:18 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:49:41 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:51:16 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+15:51:57 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:52:01 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+15:56:10 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+15:56:44 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:26:6: warning: unused variable 'retorno' [-Wunused-variable]
+   26 |  int retorno;
+      |      ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:56:45 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+16:36:46 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:45:3: error: case label not within a switch statement
+   45 |   case 1:
+      |   ^~~~
+..\src\Parcial01_2017.c:47:33: error: incompatible type for argument 1 of 'disp_loadDisplay'
+   47 |    disp_loadDisplay(displaysList[posicionLibre]);
+      |                     ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 eDisplay {aka struct <anonymous>}
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Pantallas.h:30:32: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eDisplay' {aka 'struct <anonymous>'}
+   30 | int disp_loadDisplay(eDisplay *pDisplay);
+      |                      ~~~~~~~~~~^~~~~~~~
+..\src\Parcial01_2017.c:50:3: error: case label not within a switch statement
+   50 |   case 2:
+      |   ^~~~
+..\src\Parcial01_2017.c:54:3: error: case label not within a switch statement
+   54 |   case 3:
+      |   ^~~~
+..\src\Parcial01_2017.c:58:3: error: case label not within a switch statement
+   58 |   case 4:
+      |   ^~~~
+..\src\Parcial01_2017.c:61:3: error: case label not within a switch statement
+   61 |   case 5:
+      |   ^~~~
+..\src\Parcial01_2017.c:64:3: error: case label not within a switch statement
+   64 |   case 6:
+      |   ^~~~
+..\src\Parcial01_2017.c:67:3: error: case label not within a switch statement
+   67 |   case 7:
+      |   ^~~~
+..\src\Parcial01_2017.c:70:3: error: case label not within a switch statement
+   70 |   case 8:
+      |   ^~~~
+..\src\Parcial01_2017.c:73:3: error: case label not within a switch statement
+   73 |   case 9:
+      |   ^~~~
+..\src\Parcial01_2017.c:76:3: error: case label not within a switch statement
+   76 |   case 10:
+      |   ^~~~
+..\src\Parcial01_2017.c:79:3: error: case label not within a switch statement
+   79 |   case 11:
+      |   ^~~~
+..\src\Parcial01_2017.c:32:6: warning: unused variable 'seguir' [-Wunused-variable]
+   32 |  int seguir;
+      |      ^~~~~~
+..\src\Parcial01_2017.c:31:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   31 |  int i;
+      |      ^
+..\src\Parcial01_2017.c:27:6: warning: variable 'eleccionUsuario' set but not used [-Wunused-but-set-variable]
+   27 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\Parcial01_2017.c:26:6: warning: unused variable 'retorno' [-Wunused-variable]
+   26 |  int retorno;
+      |      ^~~~~~~
+16:37:39 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_remove':
+..\src\Pantallas.c:172:8: warning: implicit declaration of function 'pedirCharSiNo'; did you mean 'pedirChar'? [-Wimplicit-function-declaration]
+  172 |     if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+      |        ^~~~~~~~~~~~~
+      |        pedirChar
+..\src\Pantallas.c:190:5: error: break statement not within loop or switch
+  190 |     break;
+      |     ^~~~~
+16:38:20 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_remove':
+..\src\Pantallas.c:190:5: error: break statement not within loop or switch
+  190 |     break;
+      |     ^~~~~
+16:38:36 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:49:33: error: incompatible type for argument 1 of 'disp_loadDisplay'
+   49 |    disp_loadDisplay(displaysList[posicionLibre]);
+      |                     ~~~~~~~~~~~~^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 eDisplay {aka struct <anonymous>}
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Pantallas.h:30:32: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eDisplay' {aka 'struct <anonymous>'}
+   30 | int disp_loadDisplay(eDisplay *pDisplay);
+      |                      ~~~~~~~~~~^~~~~~~~
+..\src\Parcial01_2017.c:32:6: warning: unused variable 'seguir' [-Wunused-variable]
+   32 |  int seguir;
+      |      ^~~~~~
+..\src\Parcial01_2017.c:31:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   31 |  int i;
+      |      ^
+..\src\Parcial01_2017.c:26:6: warning: unused variable 'retorno' [-Wunused-variable]
+   26 |  int retorno;
+      |      ^~~~~~~
+16:39:09 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+16:39:41 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+17:17:39 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:21:19: error: unknown type name 'eContratacion'
+   21 | int cont_initList(eContratacion *displaysList,int lenght)
+      |                   ^~~~~~~~~~~~~
+..\src\Contratacion.c:39:22: error: unknown type name 'eContratacion'
+   39 | int cont_loadDisplay(eContratacion *pDisplay)
+      |                      ^~~~~~~~~~~~~
+..\src\Contratacion.c:87:27: error: unknown type name 'eContratacion'
+   87 | int cont_buscarDisponible(eContratacion *displaysList, int *pPosicionVacia, int lenght)
+      |                           ^~~~~~~~~~~~~
+..\src\Contratacion.c:117:23: error: unknown type name 'eContratacion'
+  117 | int cont_buscarPorId (eContratacion *displaysList, int *pPosicionSolicitada, int lenght)
+      |                       ^~~~~~~~~~~~~
+..\src\Contratacion.c:154:18: error: unknown type name 'eContratacion'
+  154 | int cont_remove (eContratacion *displaysList, int lenght)
+      |                  ^~~~~~~~~~~~~
+..\src\Contratacion.c:202:28: error: unknown type name 'eContratacion'
+  202 | int cont_modificarPantalla(eContratacion *displaysList,int lenght)
+      |                            ^~~~~~~~~~~~~
+..\src\Contratacion.c:234:25: error: unknown type name 'eContratacion'
+  234 | int cont_cargarPantalla(eContratacion *displaysList,int lenght)
+      |                         ^~~~~~~~~~~~~
+..\src\Contratacion.c:263:27: error: unknown type name 'eContratacion'
+  263 | int cont_imprimirCompleto(eContratacion *displaysList, int lenght)
+      |                           ^~~~~~~~~~~~~
+..\src\Contratacion.c:81:12: warning: 'dameUnIdNuevo' defined but not used [-Wunused-function]
+   81 | static int dameUnIdNuevo (void)
+      |            ^~~~~~~~~~~~~
+17:18:04 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Pantallas.o: in function `menuOperaciones':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Pantallas.c:290: multiple definition of `menuOperaciones'; src\Contratacion.o:C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:291: first defined here
+collect2.exe: error: ld returned 1 exit status
+17:19:33 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+17:20:09 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:31:11: warning: unused variable 'displaysList' [-Wunused-variable]
+   31 |  eDisplay displaysList [DISPLAYS_LEN];
+      |           ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:21:15 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:33:2: error: unknown type name 'eContratacion'
+   33 |  eContratacion contList [DISPLAYS_LEN];
+      |  ^~~~~~~~~~~~~
+..\src\Parcial01_2017.c:35:2: warning: implicit declaration of function 'cont_initList'; did you mean 'disp_initList'? [-Wimplicit-function-declaration]
+   35 |  cont_initList(contList,DISPLAYS_LEN);
+      |  ^~~~~~~~~~~~~
+      |  disp_initList
+..\src\Parcial01_2017.c:44:4: warning: implicit declaration of function 'cont_buscarDisponible'; did you mean 'disp_buscarDisponible'? [-Wimplicit-function-declaration]
+   44 |    cont_buscarDisponible(contList,&posicionLibre,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    disp_buscarDisponible
+..\src\Parcial01_2017.c:45:4: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+   45 |    cont_loadDisplay(&contList[posicionLibre]);
+      |    ^~~~~~~~~~~~~~~~
+      |    disp_loadDisplay
+..\src\Parcial01_2017.c:49:4: warning: implicit declaration of function 'cont_modificarPantalla'; did you mean 'disp_modificarPantalla'? [-Wimplicit-function-declaration]
+   49 |    cont_modificarPantalla(contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+      |    disp_modificarPantalla
+..\src\Parcial01_2017.c:53:4: warning: implicit declaration of function 'cont_remove' [-Wimplicit-function-declaration]
+   53 |    cont_remove (contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~
+..\src\Parcial01_2017.c:31:11: warning: unused variable 'displaysList' [-Wunused-variable]
+   31 |  eDisplay displaysList [DISPLAYS_LEN];
+      |           ^~~~~~~~~~~~
+17:21:27 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:31:11: warning: unused variable 'displaysList' [-Wunused-variable]
+   31 |  eDisplay displaysList [DISPLAYS_LEN];
+      |           ^~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:07:11 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadDisplay':
+..\src\Contratacion.c:59:21: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |       if(pedirTexto(&nameAux,sizeof(nameAux), 3, "Ingrese el nombre del video: ", "Error")==0)
+      |                     ^~~~~~~~
+      |                     |
+      |                     char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Contratacion.c:8:
+..\src\biblioteca_input.h:25:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   25 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_imprimirCompleto':
+..\src\Contratacion.c:271:12: warning: unknown escape sequence: '\T'
+  271 |     printf("\Tipo: %02d. CUIT: %18.2f. Cantidad de dias: %d.   Nombre: %15s.\n\n",
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:35:16: warning: passing argument 1 of 'disp_initList' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |  disp_initList(contList,DISPLAYS_LEN);
+      |                ^~~~~~~~
+      |                |
+      |                eContratacion * {aka struct <anonymous> *}
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Pantallas.h:28:29: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eContratacion *' {aka 'struct <anonymous> *'}
+   28 | int disp_initList(eDisplay *displaysList,int lenght);
+      |                   ~~~~~~~~~~^~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Pantallas.o: in function `menuOperaciones':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Pantallas.c:290: multiple definition of `menuOperaciones'; src\Contratacion.o:C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:284: first defined here
+collect2.exe: error: ld returned 1 exit status
+19:07:40 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadDisplay':
+..\src\Contratacion.c:59:21: warning: passing argument 1 of 'pedirTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |       if(pedirTexto(&nameAux,sizeof(nameAux), 3, "Ingrese el nombre del video: ", "Error")==0)
+      |                     ^~~~~~~~
+      |                     |
+      |                     char (*)[128]
+In file included from ..\src\biblioteca_calculadora.h:11,
+                 from ..\src\Contratacion.c:8:
+..\src\biblioteca_input.h:25:21: note: expected 'char *' but argument is of type 'char (*)[128]'
+   25 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Pantallas.o: in function `menuOperaciones':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Pantallas.c:290: multiple definition of `menuOperaciones'; src\Contratacion.o:C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:284: first defined here
+collect2.exe: error: ld returned 1 exit status
+19:08:25 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Pantallas.o: in function `menuOperaciones':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Pantallas.c:290: multiple definition of `menuOperaciones'; src\Contratacion.o:C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:284: first defined here
+collect2.exe: error: ld returned 1 exit status
+19:08:53 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:35:16: warning: passing argument 1 of 'disp_initList' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |  disp_initList(contList,DISPLAYS_LEN);
+      |                ^~~~~~~~
+      |                |
+      |                eContratacion * {aka struct <anonymous> *}
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Pantallas.h:28:29: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eContratacion *' {aka 'struct <anonymous> *'}
+   28 | int disp_initList(eDisplay *displaysList,int lenght);
+      |                   ~~~~~~~~~~^~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+19:09:14 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+19:27:43 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:29:1: warning: data definition has no type or storage class
+   29 | cont_loadContract(eContratacion *list, eDisplay * pDisplay, int lenghtDisplay);
+      | ^~~~~~~~~~~~~~~~~
+..\src\Contratacion.h:29:1: warning: type defaults to 'int' in declaration of 'cont_loadContract' [-Wimplicit-int]
+..\src\Contratacion.c:38:5: error: conflicting types for 'cont_loadContract'
+   38 | int cont_loadContract(eContratacion *pList, eDisplay* pDisplay)
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:29:1: note: previous declaration of 'cont_loadContract' was here
+   29 | cont_loadContract(eContratacion *list, eDisplay * pDisplay, int lenghtDisplay);
+      | ^~~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:210:79: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+  210 |     printf("Se van a cargar la pantalla del ID %d\n", pDisplay[posicionPedida]->name);
+      |                                                                               ^~
+..\src\Contratacion.c:211:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  211 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+19:28:10 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:58:58: error: expected ';' before 'eleccionUsuario'
+   58 |    cont_loadContract(contList, displaysList,DISPLAYS_LEN)
+      |                                                          ^
+      |                                                          ;
+   59 |    eleccionUsuario=menuOperaciones();
+      |    ~~~~~~~~~~~~~~~                                        
+19:28:20 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:38:5: error: conflicting types for 'cont_loadContract'
+   38 | int cont_loadContract(eContratacion *pList, eDisplay* pDisplay)
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:29:5: note: previous declaration of 'cont_loadContract' was here
+   29 | int cont_loadContract(eContratacion *list, eDisplay * pDisplay, int lenghtDisplay);
+      |     ^~~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:210:79: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+  210 |     printf("Se van a cargar la pantalla del ID %d\n", pDisplay[posicionPedida]->name);
+      |                                                                               ^~
+..\src\Contratacion.c:211:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  211 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+19:29:18 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:168:79: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+  168 |     printf("Se van a cargar la pantalla del ID %d\n", pDisplay[posicionPedida]->name);
+      |                                                                               ^~
+..\src\Contratacion.c:169:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  169 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+19:29:36 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:168:80: error: invalid type argument of '->' (have 'eDisplay' {aka 'struct <anonymous>'})
+  168 |     printf("Se van a cargar la pantalla del ID %d\n", &pDisplay[posicionPedida]->name);
+      |                                                                                ^~
+..\src\Contratacion.c:169:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  169 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+19:29:42 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:168:49: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  168 |     printf("Se van a cargar la pantalla del ID %d\n", pDisplay[posicionPedida].name);
+      |                                                ~^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |                             |
+      |                                                 int                           char *
+      |                                                %s
+..\src\Contratacion.c:169:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  169 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Contratacion.o: in function `cont_loadContract':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:169: undefined reference to `cont_loadDisplay'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Contratacion.o: in function `cont_cargarPantalla':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:199: undefined reference to `cont_loadDisplay'
+collect2.exe: error: ld returned 1 exit status
+19:29:54 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadContract':
+..\src\Contratacion.c:169:5: warning: implicit declaration of function 'cont_loadDisplay'; did you mean 'disp_loadDisplay'? [-Wimplicit-function-declaration]
+  169 |     cont_loadDisplay(&list[posicionPedida]);
+      |     ^~~~~~~~~~~~~~~~
+      |     disp_loadDisplay
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Contratacion.o: in function `cont_loadContract':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:169: undefined reference to `cont_loadDisplay'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Contratacion.o: in function `cont_cargarPantalla':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Contratacion.c:199: undefined reference to `cont_loadDisplay'
+collect2.exe: error: ld returned 1 exit status
+19:44:19 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:58:4: warning: implicit declaration of function 'cont_loadContract' [-Wimplicit-function-declaration]
+   58 |    cont_loadContract(contList, displaysList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Parcial01_2017.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Parcial01_2017.c:58: undefined reference to `cont_loadContract'
+collect2.exe: error: ld returned 1 exit status
+19:45:12 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+19:46:16 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:156:7: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  156 |   int retorno;
+      |       ^~~~~~~
+..\src\Contratacion.c: At top level:
+..\src\Contratacion.c:200:3: error: expected identifier or '(' before 'return'
+  200 |   return retorno;
+      |   ^~~~~~
+..\src\Contratacion.c:202:2: error: expected identifier or '(' before '}' token
+  202 |  }
+      |  ^
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:198:3: warning: control reaches end of non-void function [-Wreturn-type]
+  198 |   }
+      |   ^
+19:46:24 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:178:41: warning: 'idAux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  178 |          list[posicionPedida].idPantalla=idAux;
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+Info: Nothing to build for Parcial01_2017
+Info: Nothing to build for Parcial01_2017
+19:49:35 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_remove':
+..\src\Contratacion.c:120:3: error: too few arguments to function 'cont_buscarPorId'
+  120 |   cont_buscarPorId (list, &posicionSolicitada, lenght);
+      |   ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c:70:5: note: declared here
+   70 | int cont_buscarPorId (eContratacion *list, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:163:7: error: redeclaration of 'idAux' with no linkage
+  163 |   int idAux;
+      |       ^~~~~
+..\src\Contratacion.c:159:7: note: previous declaration of 'idAux' was here
+  159 |   int idAux;
+      |       ^~~~~
+..\src\Contratacion.c:170:8: error: too many arguments to function 'disp_buscarPorId'
+  170 |     if(disp_buscarPorId (pDisplay, &posicionPedida, lenghtDisplay,&idAux)==0)
+      |        ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.h:13,
+                 from ..\src\Contratacion.c:11:
+..\src\Pantallas.h:31:5: note: declared here
+   31 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+19:49:50 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_remove':
+..\src\Contratacion.c:120:3: error: too few arguments to function 'cont_buscarPorId'
+  120 |   cont_buscarPorId (list, &posicionSolicitada, lenght);
+      |   ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c:70:5: note: declared here
+   70 | int cont_buscarPorId (eContratacion *list, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:169:8: error: too many arguments to function 'disp_buscarPorId'
+  169 |     if(disp_buscarPorId (pDisplay, &posicionPedida, lenghtDisplay,&idAux)==0)
+      |        ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.h:13,
+                 from ..\src\Contratacion.c:11:
+..\src\Pantallas.h:31:5: note: declared here
+   31 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+19:52:11 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:70:5: error: conflicting types for 'cont_buscarPorId'
+   70 | int cont_buscarPorId (eContratacion *list, int *pPosicionSolicitada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:31:5: note: previous declaration of 'cont_buscarPorId' was here
+   31 | int cont_buscarPorId (eContratacion *list, int *pPosicionSolicitada, int lenght, int* pIdIngresada);
+      |     ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:168:8: error: too few arguments to function 'disp_buscarPorId'
+  168 |     if(disp_buscarPorId (pDisplay, &posicionPedida, lenghtDisplay)==0)
+      |        ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.h:13,
+                 from ..\src\Contratacion.c:11:
+..\src\Pantallas.h:31:5: note: declared here
+   31 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada);
+      |     ^~~~~~~~~~~~~~~~
+19:52:17 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:168:8: error: too few arguments to function 'disp_buscarPorId'
+  168 |     if(disp_buscarPorId (pDisplay, &posicionPedida, lenghtDisplay)==0)
+      |        ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.h:13,
+                 from ..\src\Contratacion.c:11:
+..\src\Pantallas.h:31:5: note: declared here
+   31 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada);
+      |     ^~~~~~~~~~~~~~~~
+19:52:28 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_remove':
+..\src\Pantallas.c:167:3: error: too few arguments to function 'disp_buscarPorId'
+  167 |   disp_buscarPorId (displaysList, &posicionSolicitada, lenght);
+      |   ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:212:6: error: too few arguments to function 'disp_buscarPorId'
+  212 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:244:6: error: too few arguments to function 'disp_buscarPorId'
+  244 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==VACIO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:252:7: error: too few arguments to function 'disp_buscarPorId'
+  252 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+19:53:17 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:246:6: error: too few arguments to function 'disp_buscarPorId'
+  246 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==VACIO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:254:7: error: too few arguments to function 'disp_buscarPorId'
+  254 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght, int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+19:59:25 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadInformation':
+..\src\Contratacion.c:168:8: error: too many arguments to function 'disp_buscarPorId'
+  168 |     if(disp_buscarPorId (pDisplay, &posicionPedida, lenghtDisplay,&idAux)==0)
+      |        ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.h:13,
+                 from ..\src\Contratacion.c:11:
+..\src\Pantallas.h:31:5: note: declared here
+   31 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+20:05:25 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:70:5: error: conflicting types for 'cont_buscarPorId'
+   70 | int cont_buscarPorId (eDisplay *list, int *pPosicionSolicitada, int lenght,int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:31:5: note: previous declaration of 'cont_buscarPorId' was here
+   31 | int cont_buscarPorId (eContratacion *list, int *pPosicionSolicitada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_remove':
+..\src\Contratacion.c:120:21: warning: passing argument 1 of 'cont_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+  120 |   cont_buscarPorId (list, &posicionSolicitada, lenght);
+      |                     ^~~~
+      |                     |
+      |                     eContratacion * {aka struct <anonymous> *}
+..\src\Contratacion.c:70:33: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eContratacion *' {aka 'struct <anonymous> *'}
+   70 | int cont_buscarPorId (eDisplay *list, int *pPosicionSolicitada, int lenght,int* pIdIngresada)
+      |                       ~~~~~~~~~~^~~~
+..\src\Contratacion.c:120:3: error: too few arguments to function 'cont_buscarPorId'
+  120 |   cont_buscarPorId (list, &posicionSolicitada, lenght);
+      |   ^~~~~~~~~~~~~~~~
+..\src\Contratacion.c:70:5: note: declared here
+   70 | int cont_buscarPorId (eDisplay *list, int *pPosicionSolicitada, int lenght,int* pIdIngresada)
+      |     ^~~~~~~~~~~~~~~~
+20:05:52 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+20:07:48 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+20:09:26 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+00:22:01 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:59:4: warning: implicit declaration of function 'cont_loadInformation' [-Wimplicit-function-declaration]
+   59 |    cont_loadInformation(contList,DISPLAYS_LEN, displaysList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~
+..\src\Parcial01_2017.c:72:4: warning: implicit declaration of function 'cont_imprimirCompleto'; did you mean 'disp_imprimirCompleto'? [-Wimplicit-function-declaration]
+   72 |    cont_imprimirCompleto(contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    disp_imprimirCompleto
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadCont':
+..\src\Contratacion.c:85:30: error: 'cantidadDias' undeclared (first use in this function); did you mean 'cantidadDiasAux'?
+   85 |    if(pedirIntIntentosRango(&cantidadDias,1, 365, 10, "Ingrese la cantidad de dias:  ", "Error")==0)
+      |                              ^~~~~~~~~~~~
+      |                              cantidadDiasAux
+..\src\Contratacion.c:85:30: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Contratacion.c: In function 'cont_buscarPorId':
+..\src\Contratacion.c:121:32: error: 'idIngresada' undeclared (first use in this function); did you mean 'cuitIngresado'?
+  121 |    if(contList[i].cuitCliente==idIngresada)
+      |                                ^~~~~~~~~~~
+      |                                cuitIngresado
+00:22:17 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadCont':
+..\src\Contratacion.c:85:30: error: 'cantidadDias' undeclared (first use in this function); did you mean 'cantidadDiasAux'?
+   85 |    if(pedirIntIntentosRango(&cantidadDias,1, 365, 10, "Ingrese la cantidad de dias:  ", "Error")==0)
+      |                              ^~~~~~~~~~~~
+      |                              cantidadDiasAux
+..\src\Contratacion.c:85:30: note: each undeclared identifier is reported only once for each function it appears in
+00:27:57 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:192:28: error: unknown type name 'eDisplay'
+  192 | int disp_modificarPantalla(eDisplay *displaysList,int lenght)
+      |                            ^~~~~~~~
+00:31:43 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:59:4: warning: implicit declaration of function 'cont_loadInformation' [-Wimplicit-function-declaration]
+   59 |    cont_loadInformation(contList,DISPLAYS_LEN, displaysList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~
+..\src\Parcial01_2017.c:72:4: warning: implicit declaration of function 'cont_imprimirCompleto'; did you mean 'disp_imprimirCompleto'? [-Wimplicit-function-declaration]
+   72 |    cont_imprimirCompleto(contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    disp_imprimirCompleto
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Parcial01_2017.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Parcial01_2017.c:59: undefined reference to `cont_loadInformation'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2017\Debug/../src/Parcial01_2017.c:72: undefined reference to `cont_imprimirCompleto'
+collect2.exe: error: ld returned 1 exit status
+00:35:28 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_remove':
+..\src\Pantallas.c:168:56: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  168 |   disp_buscarPorId (displaysList, &posicionSolicitada, lenght, &idSolicitada);
+      |                                                        ^~~~~~
+      |                                                        |
+      |                                                        int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:168:64: warning: passing argument 4 of 'disp_buscarPorId' makes integer from pointer without a cast [-Wint-conversion]
+  168 |   disp_buscarPorId (displaysList, &posicionSolicitada, lenght, &idSolicitada);
+      |                                                                ^~~~~~~~~~~~~
+      |                                                                |
+      |                                                                int *
+..\src\Pantallas.c:117:96: note: expected 'int' but argument is of type 'int *'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                                            ~~~~^~~~~~
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:213:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:213:6: error: too few arguments to function 'disp_buscarPorId'
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:245:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:245:6: error: too few arguments to function 'disp_buscarPorId'
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:253:56: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |                                                        ^~~~~~
+      |                                                        |
+      |                                                        int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:253:7: error: too few arguments to function 'disp_buscarPorId'
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+00:36:00 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:61:18: error: expected expression before 'eContratacion'
+   61 |    cont_loadCont(eContratacion *pCont, int id);
+      |                  ^~~~~~~~~~~~~
+..\src\Parcial01_2017.c:61:4: error: too few arguments to function 'cont_loadCont'
+   61 |    cont_loadCont(eContratacion *pCont, int id);
+      |    ^~~~~~~~~~~~~
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Contratacion.h:28:5: note: declared here
+   28 | int cont_loadCont(eContratacion *pCont, int id);
+      |     ^~~~~~~~~~~~~
+..\src\Parcial01_2017.c:74:4: warning: implicit declaration of function 'cont_imprimirCompleto'; did you mean 'disp_imprimirCompleto'? [-Wimplicit-function-declaration]
+   74 |    cont_imprimirCompleto(contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    disp_imprimirCompleto
+..\src\Parcial01_2017.c:27:6: warning: unused variable 'idSolicitada' [-Wunused-variable]
+   27 |  int idSolicitada;
+      |      ^~~~~~~~~~~~
+00:40:22 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:213:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:213:6: error: too few arguments to function 'disp_buscarPorId'
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:245:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:245:6: error: too few arguments to function 'disp_buscarPorId'
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:253:56: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |                                                        ^~~~~~
+      |                                                        |
+      |                                                        int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:253:7: error: too few arguments to function 'disp_buscarPorId'
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+00:40:39 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:213:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:213:6: error: too few arguments to function 'disp_buscarPorId'
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:245:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:245:6: error: too few arguments to function 'disp_buscarPorId'
+  245 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:253:56: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |                                                        ^~~~~~
+      |                                                        |
+      |                                                        int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:253:7: error: too few arguments to function 'disp_buscarPorId'
+  253 |    if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+00:41:41 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:213:55: warning: passing argument 3 of 'disp_buscarPorId' makes pointer from integer without a cast [-Wint-conversion]
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |                                                       ^~~~~~
+      |                                                       |
+      |                                                       int
+..\src\Pantallas.c:117:78: note: expected 'int *' but argument is of type 'int'
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |                                                                         ~~~~~^~~~~~~~~~~~
+..\src\Pantallas.c:213:6: error: too few arguments to function 'disp_buscarPorId'
+  213 |   if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_cargarPantalla':
+..\src\Pantallas.c:246:63: error: expected ')' before 'lenght'
+  246 |   if(disp_buscarPorId (displaysList, &posicionPedida,&idPedida lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |                                                               ^~~~~~~
+      |                                                               )
+..\src\Pantallas.c:246:6: error: too few arguments to function 'disp_buscarPorId'
+  246 |   if(disp_buscarPorId (displaysList, &posicionPedida,&idPedida lenght)==0 && displaysList->flagEmpty==INACTIVO)
+      |      ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:254:64: error: expected ')' before 'lenght'
+  254 |    if(disp_buscarPorId (displaysList, &posicionPedida,&idPedida lenght)==-1)
+      |                                                                ^~~~~~~
+      |                                                                )
+..\src\Pantallas.c:254:7: error: too few arguments to function 'disp_buscarPorId'
+  254 |    if(disp_buscarPorId (displaysList, &posicionPedida,&idPedida lenght)==-1)
+      |       ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c:117:5: note: declared here
+  117 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght)
+      |     ^~~~~~~~~~~~~~~~
+00:42:26 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+00:46:12 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+00:50:02 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:64:27: error: incompatible type for argument 1 of 'cont_loadCont'
+   64 |     cont_loadCont(contList[posicionLibre], idSolicitada);
+      |                   ~~~~~~~~^~~~~~~~~~~~~~~
+      |                           |
+      |                           eContratacion {aka struct <anonymous>}
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Contratacion.h:28:34: note: expected 'eContratacion *' {aka 'struct <anonymous> *'} but argument is of type 'eContratacion' {aka 'struct <anonymous>'}
+   28 | int cont_loadCont(eContratacion *pCont, int id);
+      |                   ~~~~~~~~~~~~~~~^~~~~
+00:50:18 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+01:18:32 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_facturacion':
+..\src\Contratacion.c:250:7: warning: unused variable 'userChoice' [-Wunused-variable]
+  250 |  char userChoice;
+      |       ^~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+01:19:17 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:19:19 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+01:24:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_facturacion':
+..\src\Contratacion.c:250:7: warning: unused variable 'userChoice' [-Wunused-variable]
+  250 |  char userChoice;
+      |       ^~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:24:41 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:12:49 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:136:5: error: conflicting types for 'disp_buscarPorId'
+  136 | int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada)
+      |     ^~~~~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:32:5: note: previous declaration of 'disp_buscarPorId' was here
+   32 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_buscarPorId':
+..\src\Pantallas.c:139:6: warning: unused variable 'posicionPedida' [-Wunused-variable]
+  139 |  int posicionPedida;
+      |      ^~~~~~~~~~~~~~
+..\src\Pantallas.c: At top level:
+..\src\Pantallas.c:168:5: error: conflicting types for 'disp_remove'
+  168 | int disp_remove (eDisplay *displaysList, int lenght, int idIngresada)
+      |     ^~~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:36:5: note: previous declaration of 'disp_remove' was here
+   36 | int disp_remove (eDisplay *displaysList, int lenght);
+      |     ^~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_remove':
+..\src\Pantallas.c:173:6: warning: unused variable 'idSolicitada' [-Wunused-variable]
+  173 |  int idSolicitada;
+      |      ^~~~~~~~~~~~
+11:13:14 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_loadCont':
+..\src\Contratacion.c:79:6: warning: unused variable 'idCliente' [-Wunused-variable]
+   79 |  int idCliente;
+      |      ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:47:2: warning: implicit declaration of function 'cont_altaForzada'; did you mean 'disp_altaForzada'? [-Wimplicit-function-declaration]
+   47 |  cont_altaForzada(contList,10, 20646, 64, "Juan", 1);
+      |  ^~~~~~~~~~~~~~~~
+      |  disp_altaForzada
+..\src\Parcial01_2017.c:28:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   28 |  int posicionSolicitada;
+      |      ^~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:136:5: error: conflicting types for 'disp_buscarPorId'
+  136 | int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada)
+      |     ^~~~~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:32:5: note: previous declaration of 'disp_buscarPorId' was here
+   32 | int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int* pIdIngresada, int lenght);
+      |     ^~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_buscarPorId':
+..\src\Pantallas.c:139:6: warning: unused variable 'posicionPedida' [-Wunused-variable]
+  139 |  int posicionPedida;
+      |      ^~~~~~~~~~~~~~
+..\src\Pantallas.c: At top level:
+..\src\Pantallas.c:168:5: error: conflicting types for 'disp_remove'
+  168 | int disp_remove (eDisplay *displaysList, int lenght, int idIngresada)
+      |     ^~~~~~~~~~~
+In file included from ..\src\Pantallas.c:11:
+..\src\Pantallas.h:36:5: note: previous declaration of 'disp_remove' was here
+   36 | int disp_remove (eDisplay *displaysList, int lenght);
+      |     ^~~~~~~~~~~
+11:15:52 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:79:4: error: too few arguments to function 'disp_remove'
+   79 |    disp_remove (displaysList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~
+In file included from ..\src\Parcial01_2017.c:16:
+..\src\Pantallas.h:36:5: note: declared here
+   36 | int disp_remove (eDisplay *displaysList, int lenght, int idIngresada);
+      |     ^~~~~~~~~~~
+11:16:24 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c: In function 'disp_buscarPorId':
+..\src\Pantallas.c:139:6: warning: unused variable 'posicionPedida' [-Wunused-variable]
+  139 |  int posicionPedida;
+      |      ^~~~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:17:05 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+11:17:57 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:18:01 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:19:50 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:19:51 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:21:43 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+11:22:56 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:286:6: error: conflicting types for 'cont_altaForzada'
+  286 | void cont_altaForzada(eContratacion *contList,int idCliente, int id, float cuit, int dias, char nombre[], int indice)
+      |      ^~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:34:6: note: previous declaration of 'cont_altaForzada' was here
+   34 | void cont_altaForzada(eContratacion *contList,int id, float cuit, int dias, char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~~
+11:23:09 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:23:11 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:28:20 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:39:15 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:112:5: warning: implicit declaration of function 'imprimirPantallasPorCuit' [-Wimplicit-function-declaration]
+  112 |     imprimirPantallasPorCuit (contList,DISPLAYS_LEN, cuitAux,displaysList,DISPLAYS_LEN);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:39:35 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+11:40:28 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:112:11: warning: too many arguments for format [-Wformat-extra-args]
+  112 |    printf("f",cuitAux);
+      |           ^~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:40:34 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:40:35 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:45:40 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:111:5: error: conflicting types for 'askForCuit'
+  111 | int askForCuit ()
+      |     ^~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:35:7: note: previous declaration of 'askForCuit' was here
+   35 | float askForCuit ();
+      |       ^~~~~~~~~~
+..\src\Contratacion.c:127:5: error: conflicting types for 'cont_buscarPorCuit'
+  127 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+      |     ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:31:5: note: previous declaration of 'cont_buscarPorCuit' was here
+   31 | int cont_buscarPorCuit (eContratacion *contList, int lenght);
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_buscarPorCuit':
+..\src\Contratacion.c:131:8: error: 'cuitIngresado' redeclared as different kind of symbol
+  131 |  float cuitIngresado;
+      |        ^~~~~~~~~~~~~
+..\src\Contratacion.c:127:68: note: previous definition of 'cuitIngresado' was here
+  127 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+      |                                                              ~~~~~~^~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_remove':
+..\src\Contratacion.c:171:22: error: too few arguments to function 'cont_buscarPorCuit'
+  171 |   posicionSolicitada=cont_buscarPorCuit (contList, lenght);
+      |                      ^~~~~~~~~~~~~~~~~~
+..\src\Contratacion.c:127:5: note: declared here
+  127 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+      |     ^~~~~~~~~~~~~~~~~~
+11:46:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:111:12: error: too few arguments to function 'cont_buscarPorCuit'
+  111 |    cuitAux=cont_buscarPorCuit (contList,DISPLAYS_LEN);
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Contratacion.h:31:5: note: declared here
+   31 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado);
+      |     ^~~~~~~~~~~~~~~~~~
+11:48:02 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_buscarPorCuit':
+..\src\Contratacion.c:131:8: error: 'cuitIngresado' redeclared as different kind of symbol
+  131 |  float cuitIngresado;
+      |        ^~~~~~~~~~~~~
+..\src\Contratacion.c:127:68: note: previous definition of 'cuitIngresado' was here
+  127 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+      |                                                              ~~~~~~^~~~~~~~~~~~~
+..\src\Contratacion.c: In function 'cont_remove':
+..\src\Contratacion.c:171:22: error: too few arguments to function 'cont_buscarPorCuit'
+  171 |   posicionSolicitada=cont_buscarPorCuit (contList, lenght);
+      |                      ^~~~~~~~~~~~~~~~~~
+..\src\Contratacion.c:127:5: note: declared here
+  127 | int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+      |     ^~~~~~~~~~~~~~~~~~
+11:49:15 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c:158:5: error: conflicting types for 'cont_remove'
+  158 | int cont_remove (eContratacion*contList, int lenght, float cuitIngresado)
+      |     ^~~~~~~~~~~
+In file included from ..\src\Contratacion.c:11:
+..\src\Contratacion.h:32:5: note: previous declaration of 'cont_remove' was here
+   32 | int cont_remove (eContratacion*contList, int lenght);
+      |     ^~~~~~~~~~~
+11:49:34 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:118:4: error: too few arguments to function 'cont_remove'
+  118 |    cont_remove (contList,DISPLAYS_LEN);
+      |    ^~~~~~~~~~~
+In file included from ..\src\Parcial01_2017.c:15:
+..\src\Contratacion.h:32:5: note: declared here
+   32 | int cont_remove (eContratacion*contList, int lenght, float cuitIngresado);
+      |     ^~~~~~~~~~~
+11:49:58 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:50:02 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+11:51:12 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017
+11:53:02 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:53:05 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:06:42 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:06:45 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:09:38 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:09:42 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:10:58 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:11:03 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:12:09 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:12:12 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:13:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:13:40 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:18:23 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:114:18: error: too few arguments to function 'askForId'
+  114 |     idSolicitada=askForId ();
+      |                  ^~~~~~~~
+In file included from ..\src\Parcial01_2017.c:16:
+..\src\Pantallas.h:30:5: note: declared here
+   30 | int askForId (eDisplay *list, int lenght);
+      |     ^~~~~~~~
+12:18:59 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+..\src\Contratacion.c: In function 'cont_modificarContratacion':
+..\src\Contratacion.c:214:18: warning: implicit declaration of function 'disp_buscarPorId'; did you mean 'cont_buscarPorId'? [-Wimplicit-function-declaration]
+  214 |   posicionPedida=disp_buscarPorId (contList,lenght, idIngresada);
+      |                  ^~~~~~~~~~~~~~~~
+      |                  cont_buscarPorId
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:19:27 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:19:29 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:20:32 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:117:6: warning: implicit declaration of function 'cont_modificarContratacion' [-Wimplicit-function-declaration]
+  117 |      cont_modificarContratacion(contList,DISPLAYS_LEN, idSolicitada);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:20:51 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:20:55 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+12:23:33 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
+gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2017

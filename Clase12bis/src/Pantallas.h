@@ -21,13 +21,13 @@ typedef struct {
 	float pricePerDay;
 	int id;
 	char name[128];
-	char address[60];
+	char address[128];
 	int flagEmpty; //0=ocupado 1=libre
 
 }eDisplay;
 
 int disp_initList(eDisplay displaysList[],int lenght);
-int disp_loadDisplay(eDisplay *pDisplay, int posicion);
+int disp_loadDisplay(eDisplay *pDisplay);
 int buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght);
 int imprimirLista (eDisplay *displaysList,int lenght);
 int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght);

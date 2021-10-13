@@ -18,7 +18,7 @@
 static int dameUnIdNuevo (void);
 
 
-int disp_initList(eDisplay *displaysList,int lenght)
+int disp_initList(eContratacion *displaysList,int lenght)
 {
 	int retorno;
 
@@ -36,7 +36,7 @@ int disp_initList(eDisplay *displaysList,int lenght)
 	return retorno;
 }
 
-int disp_loadDisplay(eDisplay *pDisplay)
+int disp_loadDisplay(eContratacion *pDisplay)
 {
 	int retorno;
 
@@ -84,7 +84,7 @@ static int dameUnIdNuevo (void)
 	return (contador++);
 }
 
-int buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght)
+int disp_buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght)
 {
 	int retorno;
 	int posicionLibre;
@@ -114,7 +114,7 @@ int buscarDisponible(eDisplay *displaysList, int *pPosicionVacia, int lenght)
 
 }
 
-int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
+int disp_buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 {
 	int retorno;
 	int posicionPedida;
@@ -122,7 +122,6 @@ int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 
 	if(displaysList!=NULL&&lenght>0)
 	{
-		retorno=0;
 		int idIngresada;
 		pedirIntIntentosRango(&idIngresada, 0, 10000, 3, "Ingrese el ID", "Error");
 
@@ -130,9 +129,11 @@ int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 		{
 			if(displaysList[i].id==idIngresada)
 			{
+
 				if(displaysList[i].flagEmpty==OCUPADO)
 				{
 					posicionPedida=i;
+					retorno=0;
 					break;
 				}
 
@@ -150,25 +151,55 @@ int buscarPorId (eDisplay *displaysList, int *pPosicionSolicitada, int lenght)
 
 }
 
-/*
-  int buscarLibre (Display *unDisplay, int len)  VERSION CLASE
- {
-	 int retorno=-1;
-	 if(unDisplay!=NULL && len>0)
-	 {
-		 for (int i = 0;  i< len; ++i)
-		 {
-			if(unDisplay[i].flagEmpty==LIBRE)
-			{
-				retorno=i;
-				break;
-			}
-		 }
-	 }
-	 return retorno;
- }*/
+int disp_remove (eDisplay *displaysList, int lenght)
+{
+	int retorno;
+	char userChoice;
+	int posicionSolicitada;
 
-int modificarPantalla(eDisplay *displaysList,int lenght)
+	retorno=-1;
+
+	if(displaysList!=NULL&&lenght>0)
+	{
+		retorno=-2;
+
+		disp_buscarPorId (displaysList, &posicionSolicitada, lenght);
+
+				printf("\nSe va a eliminar al siguiente empleado: \n\n"
+						"Tipo: %02d. Precio: %18.2f. ID: %d.   Nombre: %15s.  Direccion: %15s.\n\n",
+						displaysList[posicionSolicitada].type,displaysList[posicionSolicitada].pricePerDay,displaysList[posicionSolicitada].id ,displaysList[posicionSolicitada].name,displaysList[posicionSolicitada].address);
+
+				if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+						"Error, dato ingresado inválido\n")==0)
+				{
+					if(userChoice=='s')
+					{
+						displaysList[posicionSolicitada].flagEmpty=VACIO;
+						printf("Empleado borrado exitosamente.\n");
+						retorno=0;
+					} else
+					{
+						if(userChoice=='n')
+						{
+							printf("No se borrará al empleado. Volviendo al menú principal...\n");
+							retorno=0;
+						}
+					}
+
+				}
+			}
+
+		if(retorno==-2)
+		{
+			printf("\nNo se pudo realizar la acción\n");
+		}
+
+	return retorno;
+
+}
+
+
+int disp_modificarPantalla(eDisplay *displaysList,int lenght)
 {
 	int retorno;
 	int posicionPedida;
@@ -177,16 +208,16 @@ int modificarPantalla(eDisplay *displaysList,int lenght)
 	if(displaysList!=NULL&&lenght>0)
 	{
 		retorno=0;
-		if(buscarPorId (displaysList, &posicionPedida, lenght)==0)
+		if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0)
 		{
 			if(displaysList[posicionPedida].flagEmpty==OCUPADO)
 			{
-				printf("Se van a modificar los datos del ID %d",posicionPedida);
+				printf("Se van a modificar los datos del ID %d\n",posicionPedida);
 
 				disp_loadDisplay(&displaysList[posicionPedida]);
 			} else
 			{
-				printf("Aca está falland");
+				printf("Aca está fallando");
 			}
 
 		} else
@@ -200,7 +231,7 @@ int modificarPantalla(eDisplay *displaysList,int lenght)
 
 }
 
-int cargarPantalla(eDisplay *displaysList,int lenght)
+int disp_cargarPantalla(eDisplay *displaysList,int lenght)
 {
 	int retorno;
 	int posicionPedida;
@@ -209,7 +240,7 @@ int cargarPantalla(eDisplay *displaysList,int lenght)
 	if(displaysList!=NULL&&lenght>0)
 	{
 		retorno=0;
-		if(buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==VACIO)
+		if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==0 && displaysList->flagEmpty==VACIO)
 		{
 			printf("Se van a cargar los datos de la posición %d",posicionPedida);
 
@@ -217,7 +248,7 @@ int cargarPantalla(eDisplay *displaysList,int lenght)
 
 		} else
 		{
-			if(buscarPorId (displaysList, &posicionPedida, lenght)==-1)
+			if(disp_buscarPorId (displaysList, &posicionPedida, lenght)==-1)
 			{
 				printf("Error, ID inexistente");
 			}
@@ -229,28 +260,7 @@ int cargarPantalla(eDisplay *displaysList,int lenght)
 
 }
 
-
-/*
-int buscarPorId(Display* pDisplay, int len, int IdBuscado)  VERSION DE CLASE
-{
-	int retorno=-1;
-	int i;
-
-	if(pDisplay!=NULL && len>0 && IdBuscado>0)
-	{
-		for(i=0;i<len;i++)
-		{
-			if(pDisplay[i].id==IdBuscado && pDisplay[i].flagEmpty==OCUPADO)
-			{
-				retorno=i;
-				break;
-			}
-		}
-	}
-	return retorno;
-}*/
-
-int imprimirCompleto(eDisplay *displaysList, int lenght)
+int disp_imprimirCompleto(eDisplay *displaysList, int lenght)
 {
 	int retorno;
 	retorno=-1;
@@ -263,9 +273,9 @@ int imprimirCompleto(eDisplay *displaysList, int lenght)
 
 			if(displaysList[i].flagEmpty==0)
 			{
-				printf("Tipo: %d. Precio: %f. ID: %d. Nombre: %s. Direccion: %s. Vacio: %d\n",
+				printf("Tipo: %d. Precio: %f. ID: %d. Nombre: %s. Direccion: %s.\n",
 						displaysList[i].type, displaysList[i].pricePerDay, displaysList[i].id,
-						displaysList[i].name,displaysList[i].address, displaysList[i].flagEmpty);
+						displaysList[i].name,displaysList[i].address);
 			}
 
 		}
@@ -274,5 +284,27 @@ int imprimirCompleto(eDisplay *displaysList, int lenght)
 
 	return retorno;
 
+}
+
+int menuOperaciones (void)
+{
+	int eleccion;
+
+	printf("Opciones:\n\n"
+			"1)Alta de pantalla\n"
+			"2)Modificar datos de pantalla\n"
+			"3)Baja de pantalla\n"
+			"4)Contratar una publicidad\n"
+			"5)Modificar condiciones de publicacion\n"
+			"6)Cancelar contratación\n"
+			"7)Consulta facturacion\n"
+			"8)Lista contrataciones\n"
+			"9)Lista pantallas\n"
+			"10)Informar\n"
+			"11)Salir\n");
+
+	pedirIntIntentosRango(&eleccion, 1, 11, 20, "Ingrese aquí su elección", "Error");
+
+	return eleccion;
 }
 
