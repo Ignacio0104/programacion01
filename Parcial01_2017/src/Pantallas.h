@@ -27,7 +27,7 @@ typedef struct {
 
 int disp_initList(eDisplay *displaysList,int lenght);
 int disp_loadDisplay(eDisplay *pDisplay);
-int askForId (eDisplay *list, int lenght);
+int disp_askForId (void);
 int disp_buscarDisponible(eDisplay *displaysList, int lenght);
 int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada);
 int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada);

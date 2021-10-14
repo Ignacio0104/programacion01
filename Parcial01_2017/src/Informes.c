@@ -13,6 +13,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define DISPLAYS_LEN 100
+#define CONTRATACIONES_LEN 1000
+
 
 #define INACTIVO 1
 #define ACTIVO 0
@@ -94,7 +97,13 @@ float calcularFacturacionPorCuit (eContratacion*contList, int lenght, float cuit
 					indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
 
 					totalFacturacion+=contList[i].cantidadDeDias*displaysList[indiceArrayPantalla].pricePerDay;
-
+					printf("\nID: %d - Archivo: %s - Cuit: %f - Dias: %d - IdPantalla: %d - Importe %.2f"
+																				,contList[i].idCliente
+																				,contList[i].name
+																				,contList[i].cuitCliente
+																				,contList[i].cantidadDeDias
+																				,contList[i].idPantalla
+																				,totalFacturacion);
 
 				}
 
@@ -106,52 +115,92 @@ float calcularFacturacionPorCuit (eContratacion*contList, int lenght, float cuit
 	return retorno;
 }
 
-float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay, int* pIndiceMaximo, float* pCantidadMaximo)
+float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay)
 {
-	float retorno;
-	int idPantalla;
-	int indiceArrayPantalla;
-	float totalFacturacion;
-	int indiceMaximo;
-	float cantidadMaximo;
-	char flagPrimerIngreso;
+	int retorno = -1;
+	//char listaCuit[CANTIDAD_CLIENTES][CUIT_LEN];
+	float listaCuit[CONTRATACIONES_LEN];
+	int i;
+	int j;
+	char flagExisteCuit;
+	int indiceCuitLibre = 0;
+	float auxiliarDeuda;
+	float deudaMaxima;
+	int indiceClienteDeudaMaxima;
 
-	retorno=-1;
-	totalFacturacion=0;
-	flagPrimerIngreso='s';
-
-	if(contList!=NULL&&lenght>0&&displaysList!=NULL&&lenghtDisplay>0)
+	for(i=0;i<lenght;i++)
+	{
+		flagExisteCuit = 'n';
+		if(contList[i].flagEmpty == ACTIVO)
 		{
-			retorno=0;
-			for(int i=0;i<lenght;i++)
+			for(j=0;j<indiceCuitLibre;j++)
 			{
-					{
-						if(contList[i].flagEmpty==ACTIVO)
-						{
-							idPantalla=contList[i].idPantalla;
-							indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
-
-							totalFacturacion=contList[i].cantidadDeDias*displaysList[indiceArrayPantalla].pricePerDay;
-
-							printf("El cliente %f tiene un importe a pagar de %f\n",contList[i].cuitCliente,totalFacturacion);
-
-							if(totalFacturacion>cantidadMaximo||flagPrimerIngreso=='s')
-							{
-								indiceMaximo=i;
-								cantidadMaximo=totalFacturacion;
-							}
-						}
-
-					}
-
-					flagPrimerIngreso='n';
+				if(listaCuit[j]==contList[i].cuitCliente)
+				{
+					flagExisteCuit = 's';
+					break;
 				}
-
 			}
-			*pIndiceMaximo=indiceMaximo;
-			*pCantidadMaximo=cantidadMaximo;
-			retorno=totalFacturacion;
 
+			if(flagExisteCuit == 'n')
+			{
+				listaCuit[j]=contList[i].cuitCliente;
+				indiceCuitLibre++;
+			}
+		}
+	}
+
+	for(j=0;j<indiceCuitLibre;j++)
+	{
+		printf("\n\n El cliente con cuit %f\n",listaCuit[j]);
+		calcularFacturacionPorCuit (contList,lenght, listaCuit[j],displaysList,lenghtDisplay);
+
+	}
+
+
+
+	for(j=0;j<indiceCuitLibre;j++)
+	{
+
+		info_calcularDeudaCliente(contList,lenght,displaysList,lenghtDisplay,listaCuit[j], &auxiliarDeuda);
+		if(j == 0|| (auxiliarDeuda > deudaMaxima))
+		{
+			deudaMaxima = auxiliarDeuda;
+			indiceClienteDeudaMaxima = j;
+		}
+
+	}
+	printf("\n\n El cliente con mas deuda es cuit %f - debe %.2f\n",listaCuit[indiceClienteDeudaMaxima],deudaMaxima);
+
+	return retorno;
+
+}
+
+
+int info_calcularDeudaCliente(eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay,float auxiliarCuit, float* deuda)
+{
+	int retorno = -1;
+	int i;
+	int indiceArrayPantalla;
+	int idPantalla;
+	float auxiliarDeuda=0;
+	if(contList != NULL && lenght > 0 && displaysList != NULL && lenghtDisplay > 0)
+	{
+		for(i=0;i<lenght;i++)
+		{
+			if(contList[i].flagEmpty==ACTIVO)
+			{
+				if(contList[i].cuitCliente == auxiliarCuit)
+				{
+					idPantalla = contList[i].idPantalla;
+					indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+					auxiliarDeuda = auxiliarDeuda + (contList[i].cantidadDeDias* displaysList[indiceArrayPantalla].pricePerDay);
+				}
+			}
+		}
+		retorno = 0;
+		*deuda=auxiliarDeuda;
+	}
 	return retorno;
 }
 

@@ -32,7 +32,7 @@ int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado
 int cont_remove (eContratacion*contList, int lenght, int idIngresada);
 int cont_imprimirCompleto(eContratacion *contList, int lenght);
 void cont_altaForzada(eContratacion *contList,int idCliente, int id, float cuit, int dias, char nombre[], int indice);
-float askForCuit ();
+float cont_askForCuit ();
 int cont_buscarPorId (eContratacion *contList, int lenght, int idIngresada);
 int cont_askForId ();
 int cont_modificarContratacion(eContratacion *contList,int lenght, int idIngresada);

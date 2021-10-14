@@ -44,9 +44,8 @@ int disp_loadDisplay(eDisplay *pDisplay)
 
 	int typeAux;
 	float pricePerDayAux;
-	//int idAux;
 	char nameAux[128];
-	char addressAux[60];
+	char addressAux[128];
 
 	if(pDisplay!=NULL)
 	{
@@ -58,6 +57,7 @@ int disp_loadDisplay(eDisplay *pDisplay)
 				{
 					if(pedirTexto(addressAux,sizeof(nameAux), 3, "Ingrese la direccion: ", "Error")==0)
 					{
+
 						pDisplay->type=typeAux;
 						pDisplay->pricePerDay=pricePerDayAux;
 						pDisplay->id=dameUnIdNuevo();
@@ -112,15 +112,11 @@ int disp_buscarDisponible(eDisplay *displaysList, int lenght)
 
 }
 
-int askForId (eDisplay *list, int lenght)
+int disp_askForId (void)
 {
 	int retorno;
 	int requestedId;
 
-	retorno=-1;
-	if(list!=NULL&&lenght>0)
-		{
-			retorno=0;
 			if(pedirIntIntentosRango(&requestedId, 0, 100000, 3, "Ingrese el ID: ", "Error, dato ingresado invalido")==0)
 			{
 				retorno=requestedId;
@@ -128,7 +124,7 @@ int askForId (eDisplay *list, int lenght)
 			{
 				retorno=-2;
 			}
-		}
+
 
 	return retorno;
 }
@@ -226,7 +222,7 @@ int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada)
 	{
 		retorno=0;
 		posicionPedida=disp_buscarPorId (displaysList,lenght, idIngresada);
-		if(posicionPedida>0)
+		if(posicionPedida>=0)
 		{
 			if(displaysList[posicionPedida].flagEmpty==ACTIVO)
 			{
@@ -263,6 +259,7 @@ int disp_imprimirCompleto(eDisplay *displaysList, int lenght)
 
 			if(displaysList[i].flagEmpty==ACTIVO)
 			{
+
 				printf("Tipo: %d. Precio: %f. ID: %d. Nombre: %s. Direccion: %s.\n",
 						displaysList[i].type, displaysList[i].pricePerDay, displaysList[i].id,
 						displaysList[i].name,displaysList[i].address);

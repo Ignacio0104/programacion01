@@ -108,7 +108,7 @@ int cont_loadCont(eContratacion *pCont, int idPantalla)
 
 }
 
-float askForCuit ()
+float cont_askForCuit ()
 {
 	float retorno;
 	float requestedId;
@@ -213,24 +213,28 @@ int cont_modificarContratacion(eContratacion *contList,int lenght, int idIngresa
 	{
 		retorno=0;
 		posicionPedida=cont_buscarPorId (contList,lenght, idIngresada);
-		if(posicionPedida>0)
+		if(posicionPedida>=0)
 		{
-			if(contList[posicionPedida].flagEmpty==ACTIVO)
+			if(idIngresada==contList[posicionPedida].idCliente)
 			{
-				if(pedirIntIntentosRango(&cantidadDiasAux,1, 365, 10, "Ingrese la nueva cantidad de dias:  ", "Error")==0)
-					{
-						contList[posicionPedida].cantidadDeDias=cantidadDiasAux;
-					}
+				if(contList[posicionPedida].flagEmpty==ACTIVO)
+						{
+							if(pedirIntIntentosRango(&cantidadDiasAux,1, 365, 10, "Ingrese la nueva cantidad de dias:  ", "Error")==0)
+								{
+									contList[posicionPedida].cantidadDeDias=cantidadDiasAux;
+								}
 
-			} else
-			{
-				printf("Aca está fallando");
+						} else
+						{
+							printf("Aca está fallando");
+						}
+
+					} else
+					{
+						printf("ID ingresada no coincide con Cliente\n");
+					}
 			}
 
-		} else
-		{
-			printf("Acá está el error");
-		}
 
 	}
 
@@ -254,31 +258,35 @@ int cont_remove (eContratacion*contList, int lenght, int idIngresada)
 
 		posicionSolicitada=cont_buscarPorId (contList,lenght, idIngresada);
 
-		if(posicionSolicitada>0)
+		if(posicionSolicitada>=0)
 		{
-			printf("\nSe va a eliminar la siguiente contratacion: \n\n"
-					"ID Pantalla: %d ID Cliente: %d. CUIT: %f. Cantidad de dias: %d.   Nombre: %s. \n\n",
-					contList[posicionSolicitada].idCliente,contList[posicionSolicitada].idPantalla,contList[posicionSolicitada].cuitCliente,
-					contList[posicionSolicitada].cantidadDeDias ,contList[posicionSolicitada].name);
-
-			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
-					"Error, dato ingresado inválido\n")==0)
+			if(idIngresada==contList[posicionSolicitada].idCliente)
 			{
-				if(userChoice=='s')
-				{
-					contList[posicionSolicitada].flagEmpty=INACTIVO;
-					printf("Publicidad borrada exitosamente.\n");
-					retorno=0;
-				} else
-				{
-					if(userChoice=='n')
-					{
-						printf("No se borrará la publicidad. Volviendo al menú principal...\n");
-						retorno=0;
-					}
-				}
+				printf("\nSe va a eliminar la siguiente contratacion: \n\n"
+						"ID Pantalla: %d ID Cliente: %d. CUIT: %f. Cantidad de dias: %d.   Nombre: %s. \n\n",
+						contList[posicionSolicitada].idCliente,contList[posicionSolicitada].idPantalla,contList[posicionSolicitada].cuitCliente,
+						contList[posicionSolicitada].cantidadDeDias ,contList[posicionSolicitada].name);
 
-			}
+				if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+						"Error, dato ingresado inválido\n")==0)
+				{
+					if(userChoice=='s')
+					{
+						contList[posicionSolicitada].flagEmpty=INACTIVO;
+						printf("Publicidad borrada exitosamente.\n");
+						retorno=0;
+					} else
+					{
+						if(userChoice=='n')
+						{
+							printf("No se borrará la publicidad. Volviendo al menú principal...\n");
+							retorno=0;
+						}
+					}
+
+				}
+			} printf("ID ingresada no coincide con Cliente\n");
+
 			}
 
 		}

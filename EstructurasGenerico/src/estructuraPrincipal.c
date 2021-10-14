@@ -84,7 +84,7 @@ static int dameUnIdNuevo (void)
 	return (contador++);
 }
 
-int disp_buscarDisponible(ePrincipal *principalList, int lenghtPrincipal)
+int princ_buscarDisponible(ePrincipal *principalList, int lenghtPrincipal)
 {
 	int retorno;
 	retorno=-1;
@@ -112,13 +112,13 @@ int disp_buscarDisponible(ePrincipal *principalList, int lenghtPrincipal)
 
 }
 
-int askForId (ePrincipal *list, int lenghtPrincipal)
+int princ_askForId (ePrincipal *principalList, int lenghtPrincipal)
 {
 	int retorno;
 	int requestedId;
 
 	retorno=-1;
-	if(list!=NULL&&lenghtPrincipal>0)
+	if(principalList!=NULL&&lenghtPrincipal>0)
 		{
 			retorno=0;
 			if(pedirIntIntentosRango(&requestedId, 0, 100000, 3, "Ingrese el ID: ", "Error, dato ingresado invalido")==0)
@@ -133,7 +133,7 @@ int askForId (ePrincipal *list, int lenghtPrincipal)
 	return retorno;
 }
 
-int disp_buscarPorId (ePrincipal *principalList, int lenghtPrincipal, int idIngresada)
+int princ_buscarPorId (ePrincipal *principalList, int lenghtPrincipal, int idIngresada)
 {
 	int retorno;
 	retorno=-1;
@@ -164,7 +164,7 @@ int disp_buscarPorId (ePrincipal *principalList, int lenghtPrincipal, int idIngr
 
 }
 
-int disp_remove (ePrincipal *principalList, int lenghtPrincipal, int idIngresada)
+int princ_remove (ePrincipal *principalList, int lenghtPrincipal, int idIngresada)
 {
 	int retorno;
 	char userChoice;
@@ -176,7 +176,7 @@ int disp_remove (ePrincipal *principalList, int lenghtPrincipal, int idIngresada
 	{
 		retorno=-2;
 
-		posicionSolicitada=disp_buscarPorId (principalList,lenghtPrincipal, idIngresada);
+		posicionSolicitada=princ_buscarPorId (principalList,lenghtPrincipal, idIngresada);
 
 		if(posicionSolicitada>0)
 		{
@@ -190,13 +190,13 @@ int disp_remove (ePrincipal *principalList, int lenghtPrincipal, int idIngresada
 						if(userChoice=='s')
 						{
 							principalList[posicionSolicitada].flagEmpty=INACTIVO;
-							printf("Empleado borrado exitosamente.\n");
+							printf("Dato borrado exitosamente.\n");
 							retorno=0;
 						} else
 						{
 							if(userChoice=='n')
 							{
-								printf("No se borrará al empleado. Volviendo al menú principal...\n");
+								printf("No se borrará el dato. Volviendo al menú principal...\n");
 								retorno=0;
 							}
 						}
@@ -216,7 +216,7 @@ int disp_remove (ePrincipal *principalList, int lenghtPrincipal, int idIngresada
 }
 
 
-int disp_modificarPantalla(ePrincipal *principalList,int lenghtPrincipal, int idIngresada)
+int princ_modificarPrincipal(ePrincipal *principalList,int lenghtPrincipal, int idIngresada)
 {
 	int retorno;
 	int posicionPedida;
@@ -225,14 +225,14 @@ int disp_modificarPantalla(ePrincipal *principalList,int lenghtPrincipal, int id
 	if(principalList!=NULL&&lenghtPrincipal>0)
 	{
 		retorno=0;
-		posicionPedida=disp_buscarPorId (principalList,lenghtPrincipal, idIngresada);
+		posicionPedida=princ_buscarPorId (principalList,lenghtPrincipal, idIngresada);
 		if(posicionPedida>0)
 		{
 			if(principalList[posicionPedida].flagEmpty==ACTIVO)
 			{
 				printf("Se van a modificar los datos del ID %d\n",posicionPedida);
 
-				disp_loadDisplay(&principalList[posicionPedida]);
+				princ_loadDisplay(&principalList[posicionPedida]);
 			} else
 			{
 				printf("Aca está fallando");
@@ -250,7 +250,7 @@ int disp_modificarPantalla(ePrincipal *principalList,int lenghtPrincipal, int id
 }
 
 
-int disp_imprimirCompleto(ePrincipal *principalList, int lenghtPrincipal)
+int princ_imprimirCompleto(ePrincipal *principalList, int lenghtPrincipal)
 {
 	int retorno;
 	retorno=-1;
@@ -277,14 +277,14 @@ int disp_imprimirCompleto(ePrincipal *principalList, int lenghtPrincipal)
 }
 
 
-void disp_altaForzada(ePrincipal *pDisplay,int tipo, float precio, int id, char nombre[], char direccion[], int indice)
+void princ_altaForzada(ePrincipal *principalList,int tipo, float precio, int id, char nombre[], char direccion[], int indice)
 {
-	pDisplay[indice].type=tipo;
-	pDisplay[indice].pricePerDay=precio;
-	pDisplay[indice].id=id;
-	strncpy(pDisplay[indice].name,nombre,sizeof(pDisplay[indice].name));
-	strncpy(pDisplay[indice].address,direccion,sizeof(pDisplay[indice].address));
-	pDisplay[indice].flagEmpty=ACTIVO;
+	principalList[indice].type=tipo;
+	principalList[indice].pricePerDay=precio;
+	principalList[indice].id=id;
+	strncpy(principalList[indice].name,nombre,sizeof(principalList[indice].name));
+	strncpy(principalList[indice].address,direccion,sizeof(principalList[indice].address));
+	principalList[indice].flagEmpty=ACTIVO;
 
 }
 

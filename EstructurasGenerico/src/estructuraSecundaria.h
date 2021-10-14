@@ -23,7 +23,7 @@ typedef struct {
 	char name[128];
 	int flagEmpty; //0=ocupado 1=libre
 
-}eContratacion;
+}eSecundaria;
 
 int cont_initList(eContratacion *contList,int lenght);
 int cont_buscarDisponible(eContratacion* contList, int lenght);

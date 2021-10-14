@@ -21,7 +21,6 @@
 int imprimirPantallasPorCuit (eContratacion*contList, int lenght, float cuit,eDisplay *displaysList,int lenghtDisplay);
 int menuOperaciones (void);
 float calcularFacturacionPorCuit (eContratacion*contList, int lenght, float cuit,eDisplay *displaysList,int lenghtDisplay);
-float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay, int* pIndiceMaximo, float* pCantidadMaximo);
-
-
+float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay);
+int info_calcularDeudaCliente(eContratacion*contList, int lenght,eDisplay *displaysList,int lenghtDisplay,float auxiliarCuit, float* deuda);
 #endif /* INFORMES_H_ */

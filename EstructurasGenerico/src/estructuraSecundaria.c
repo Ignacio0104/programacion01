@@ -5,10 +5,10 @@
  *      Author: Nacho
  */
 
+#include "estructuraSecundaria.h"
 #include "biblioteca_calculadora.h"
 #include "biblioteca_input.h"
 #include "biblioteca_arrays.h"
-#include "Contratacion.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,35 +23,35 @@ static int dameUnIdNuevo (void)
 	return (contador++);
 }
 
-int cont_initList(eContratacion *contList,int lenght)
+int cont_initList(eSecundaria *secundariaList,int lenghtSecundaria)
 {
 	int retorno;
 
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenght;i++)
+		for(int i=0;i<lenghtSecundaria;i++)
 		{
-			contList[i].flagEmpty=INACTIVO;
+			secundariaList[i].flagEmpty=INACTIVO;
 		}
 	}
 
 	return retorno;
 }
 
-int cont_buscarDisponible(eContratacion* contList, int lenght)
+int cont_buscarDisponible(eSecundaria* secundariaList, int lenghtSecundaria)
 {
 	int retorno;
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenght;i++)
+		for(int i=0;i<lenghtSecundaria;i++)
 		{
-			if(contList[i].flagEmpty==INACTIVO)
+			if(secundariaList[i].flagEmpty==INACTIVO)
 			{
 				retorno=i;
 				break;
@@ -70,7 +70,7 @@ int cont_buscarDisponible(eContratacion* contList, int lenght)
 }
 
 
-int cont_loadCont(eContratacion *pCont, int idPantalla)
+int cont_loadCont(eSecundaria *pCont, int idPantalla)
 {
 	int retorno;
 
@@ -124,20 +124,20 @@ float askForCuit ()
 	return retorno;
 }
 
-int cont_buscarPorCuit (eContratacion *contList, int lenght, float cuitIngresado)
+int cont_buscarPorCuit (eSecundaria *secundariaList, int lenghtSecundaria, float cuitIngresado)
 {
 	int retorno;
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 
-		for(int i=0;i<lenght;i++)
+		for(int i=0;i<lenghtSecundaria;i++)
 		{
-			if(contList[i].cuitCliente==cuitIngresado)
+			if(secundariaList[i].cuitCliente==cuitIngresado)
 			{
 
-				if(contList[i].flagEmpty==ACTIVO)
+				if(secundariaList[i].flagEmpty==ACTIVO)
 				{
 					retorno=i;
 					break;
@@ -171,20 +171,20 @@ int cont_askForId ()
 	return retorno;
 }
 
-int cont_buscarPorId (eContratacion *contList, int lenght, int idIngresada)
+int cont_buscarPorId (eSecundaria *secundariaList, int lenghtSecundaria, int idIngresada)
 {
 	int retorno;
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 
-		for(int i=0;i<lenght;i++)
+		for(int i=0;i<lenghtSecundaria;i++)
 		{
-			if(contList[i].idCliente==idIngresada)
+			if(secundariaList[i].idCliente==idIngresada)
 			{
 
-				if(contList[i].flagEmpty==ACTIVO)
+				if(secundariaList[i].flagEmpty==ACTIVO)
 				{
 					retorno=i;
 					break;
@@ -202,24 +202,24 @@ int cont_buscarPorId (eContratacion *contList, int lenght, int idIngresada)
 	return retorno;
 }
 
-int cont_modificarContratacion(eContratacion *contList,int lenght, int idIngresada)
+int cont_modificarContratacion(eSecundaria *secundariaList,int lenghtSecundaria, int idIngresada)
 {
 	int retorno;
 	int posicionPedida;
 	int cantidadDiasAux;
 
 	retorno=-1;
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 		retorno=0;
-		posicionPedida=cont_buscarPorId (contList,lenght, idIngresada);
+		posicionPedida=cont_buscarPorId (secundariaList,lenghtSecundaria, idIngresada);
 		if(posicionPedida>0)
 		{
-			if(contList[posicionPedida].flagEmpty==ACTIVO)
+			if(secundariaList[posicionPedida].flagEmpty==ACTIVO)
 			{
 				if(pedirIntIntentosRango(&cantidadDiasAux,1, 365, 10, "Ingrese la nueva cantidad de dias:  ", "Error")==0)
 					{
-						contList[posicionPedida].cantidadDeDias=cantidadDiasAux;
+						secundariaList[posicionPedida].cantidadDeDias=cantidadDiasAux;
 					}
 
 			} else
@@ -240,7 +240,7 @@ int cont_modificarContratacion(eContratacion *contList,int lenght, int idIngresa
 
 
 
-int cont_remove (eContratacion*contList, int lenght, int idIngresada)
+int cont_remove (eSecundaria*secundariaList, int lenghtSecundaria, int idIngresada)
 {
 	int retorno;
 	char userChoice;
@@ -248,25 +248,25 @@ int cont_remove (eContratacion*contList, int lenght, int idIngresada)
 
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 		retorno=-2;
 
-		posicionSolicitada=cont_buscarPorId (contList,lenght, idIngresada);
+		posicionSolicitada=cont_buscarPorId (secundariaList,lenghtSecundaria, idIngresada);
 
 		if(posicionSolicitada>0)
 		{
 			printf("\nSe va a eliminar la siguiente contratacion: \n\n"
 					"ID Pantalla: %d ID Cliente: %d. CUIT: %f. Cantidad de dias: %d.   Nombre: %s. \n\n",
-					contList[posicionSolicitada].idCliente,contList[posicionSolicitada].idPantalla,contList[posicionSolicitada].cuitCliente,
-					contList[posicionSolicitada].cantidadDeDias ,contList[posicionSolicitada].name);
+					secundariaList[posicionSolicitada].idCliente,secundariaList[posicionSolicitada].idPantalla,secundariaList[posicionSolicitada].cuitCliente,
+					secundariaList[posicionSolicitada].cantidadDeDias ,secundariaList[posicionSolicitada].name);
 
 			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
 					"Error, dato ingresado inválido\n")==0)
 			{
 				if(userChoice=='s')
 				{
-					contList[posicionSolicitada].flagEmpty=INACTIVO;
+					secundariaList[posicionSolicitada].flagEmpty=INACTIVO;
 					printf("Publicidad borrada exitosamente.\n");
 					retorno=0;
 				} else
@@ -293,22 +293,22 @@ int cont_remove (eContratacion*contList, int lenght, int idIngresada)
 }
 
 
-int cont_imprimirCompleto(eContratacion *contList, int lenght)
+int cont_imprimirCompleto(eSecundaria *secundariaList, int lenghtSecundaria)
 {
 	int retorno;
 	retorno=-1;
 
-	if(contList!=NULL&&lenght>0)
+	if(secundariaList!=NULL&&lenghtSecundaria>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenght;i++)
+		for(int i=0;i<lenghtSecundaria;i++)
 		{
 
-			if(contList[i].flagEmpty==ACTIVO)
+			if(secundariaList[i].flagEmpty==ACTIVO)
 			{
 				printf("Id Cliente: %d. Id Pantalla: %d. CUIT: %f. Cantidad de dias: %d.   Nombre: %s. \n\n",
-						contList[i].idCliente,contList[i].idPantalla,contList[i].cuitCliente,
-						contList[i].cantidadDeDias ,contList[i].name);
+						secundariaList[i].idCliente,secundariaList[i].idPantalla,secundariaList[i].cuitCliente,
+						secundariaList[i].cantidadDeDias ,secundariaList[i].name);
 			}
 
 		}
@@ -320,14 +320,14 @@ int cont_imprimirCompleto(eContratacion *contList, int lenght)
 }
 
 
-void cont_altaForzada(eContratacion *contList,int idCliente, int id, float cuit, int dias, char nombre[], int indice)
+void cont_altaForzada(eSecundaria *secundariaList,int idCliente, int id, float cuit, int dias, char nombre[], int indice)
 {
-	contList[indice].idCliente=idCliente;
-	contList[indice].idPantalla=id;
-	contList[indice].cuitCliente=cuit;
-	contList[indice].cantidadDeDias=dias;
-	strncpy(contList[indice].name,nombre,sizeof(contList[indice].name));
-	contList[indice].flagEmpty=ACTIVO;
+	secundariaList[indice].idCliente=idCliente;
+	secundariaList[indice].idPantalla=id;
+	secundariaList[indice].cuitCliente=cuit;
+	secundariaList[indice].cantidadDeDias=dias;
+	strncpy(secundariaList[indice].name,nombre,sizeof(secundariaList[indice].name));
+	secundariaList[indice].flagEmpty=ACTIVO;
 }
 
 
