@@ -53,9 +53,9 @@ int main(void) {
 	cont_altaForzada(contList,4,12, 20345, 20, "Musica.avi", 3);
 	cont_altaForzada(contList,20,13, 20345, 30, "Solos.avi", 4);
 	cont_altaForzada(contList,30,14, 20345, 40, "Publicidad.avi", 5);
-	cont_altaForzada(contList,40,15, 20345, 60, "Animales.avi", 6);
+	cont_altaForzada(contList,40,15, 78566, 60, "Animales.avi", 6);
 	cont_altaForzada(contList,6,10, 78566, 25, "Avengers.avi", 7);
-	cont_altaForzada(contList,100,13, 90734, 100, "Museo.avi", 8);
+	cont_altaForzada(contList,100,13, 78566, 100, "Museo.avi", 8);
 
 	eleccionUsuario=menuOperaciones();
 
@@ -92,13 +92,19 @@ int main(void) {
 			idSolicitada=disp_askForId();
 			if(idSolicitada>0)
 			{
-				posicionLibre=cont_buscarDisponible(contList, CONTRATACIONES_LEN);
-				if(posicionLibre>=0)
+				if(disp_buscarPorId(displaysList,DISPLAYS_LEN, idSolicitada)>0)
 				{
-					cont_loadCont(&contList[posicionLibre], idSolicitada);
+					posicionLibre=cont_buscarDisponible(contList, CONTRATACIONES_LEN);
+					if(posicionLibre>=0)
+					{
+						cont_loadCont(&contList[posicionLibre], idSolicitada);
+					} else
+					{
+						printf("No hay lugar disponible");
+					}
 				} else
 				{
-					printf("No hay lugar disponible");
+					printf("ID no coincide con ninguna pantalla");
 				}
 
 			} else
@@ -117,7 +123,6 @@ int main(void) {
 				posicionSolicitada=cont_buscarPorId (contList,CONTRATACIONES_LEN, idSolicitada);
 				if(posicionSolicitada>=0)
 				{
-
 					cont_modificarContratacion(contList,CONTRATACIONES_LEN, idSolicitada);
 				}
 			} else

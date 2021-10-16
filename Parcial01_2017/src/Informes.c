@@ -16,7 +16,6 @@
 #define DISPLAYS_LEN 100
 #define CONTRATACIONES_LEN 1000
 
-
 #define INACTIVO 1
 #define ACTIVO 0
 
@@ -158,7 +157,6 @@ float imprimirFacturacionPorCliente (eContratacion*contList, int lenght,eDisplay
 	}
 
 
-
 	for(j=0;j<indiceCuitLibre;j++)
 	{
 
@@ -184,6 +182,7 @@ int info_calcularDeudaCliente(eContratacion*contList, int lenght,eDisplay *displ
 	int indiceArrayPantalla;
 	int idPantalla;
 	float auxiliarDeuda=0;
+
 	if(contList != NULL && lenght > 0 && displaysList != NULL && lenghtDisplay > 0)
 	{
 		for(i=0;i<lenght;i++)

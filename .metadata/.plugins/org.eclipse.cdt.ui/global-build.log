@@ -1,29 +1,161 @@
-17:41:55 **** Rebuild of configuration Debug for project Parcial01_2017 ****
+02:45:16 **** Rebuild of configuration Debug for project Parcial01_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_arrays.o" "..\\src\\biblioteca_arrays.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contratacion.o" "..\\src\\Contratacion.c" 
-gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Parcial01_2017
-17:45:33 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_remove':
+..\src\Salon.c:168:22: warning: implicit declaration of function 'disp_buscarPorId'; did you mean 'salon_buscarPorId'? [-Wimplicit-function-declaration]
+  168 |   posicionSolicitada=disp_buscarPorId (salonList,lenghtSalon, idIngresada);
+      |                      ^~~~~~~~~~~~~~~~
+      |                      salon_buscarPorId
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+..\src\Parcial01_2021.c: In function 'main':
+..\src\Parcial01_2021.c:51:6: warning: implicit declaration of function 'salon_loadDisplay'; did you mean 'salon_loadSalon'? [-Wimplicit-function-declaration]
+   51 |      salon_loadDisplay(&salonList[posicionLibre]);
+      |      ^~~~~~~~~~~~~~~~~
+      |      salon_loadSalon
+..\src\Parcial01_2021.c:56:17: warning: implicit declaration of function 'disp_askForId' [-Wimplicit-function-declaration]
+   56 |    idSolicitada=disp_askForId();
+      |                 ^~~~~~~~~~~~~
+..\src\Parcial01_2021.c:59:5: warning: implicit declaration of function 'disp_modificarPantalla' [-Wimplicit-function-declaration]
+   59 |     disp_modificarPantalla(salonList,SALON_LEN, idSolicitada);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\Parcial01_2021.c:67:5: warning: implicit declaration of function 'disp_remove' [-Wimplicit-function-declaration]
+   67 |     disp_remove (salonList,SALON_LEN,idSolicitada);
+      |     ^~~~~~~~~~~
+..\src\Parcial01_2021.c:32:8: warning: unused variable 'totalFacturacion' [-Wunused-variable]
+   32 |  float totalFacturacion;
+      |        ^~~~~~~~~~~~~~~~
+..\src\Parcial01_2021.c:30:8: warning: unused variable 'cuitAux' [-Wunused-variable]
+   30 |  float cuitAux;
+      |        ^~~~~~~
+..\src\Parcial01_2021.c:28:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   28 |  int posicionSolicitada;
+      |      ^~~~~~~~~~~~~~~~~~
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Parcial01_2021.o: in function `main':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:51: undefined reference to `salon_loadDisplay'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:56: undefined reference to `disp_askForId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:59: undefined reference to `disp_modificarPantalla'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:64: undefined reference to `disp_askForId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:67: undefined reference to `disp_remove'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Salon.o: in function `salon_remove':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Salon.c:168: undefined reference to `disp_buscarPorId'
 collect2.exe: error: ld returned 1 exit status
-17:45:37 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+02:46:19 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-17:46:25 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
-gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2017.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Salon.o: in function `salon_remove':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Salon.c:168: undefined reference to `disp_buscarPorId'
 collect2.exe: error: ld returned 1 exit status
-17:46:27 **** Incremental Build of configuration Debug for project Parcial01_2017 ****
+02:46:37 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2017.exe "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\Parcial01_2017.o" "src\\biblioteca_arrays.o" "src\\biblioteca_calculadora.o" "src\\biblioteca_input.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:46:58 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2021
+02:48:30 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:48:33 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:49:12 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+..\src\Parcial01_2021.c:21:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
+   21 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
+      |                   ^~~~~~~~~
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:50:20 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:50:58 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:51:02 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:51:36 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_imprimirCompleto':
+..\src\Salon.c:224:51: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  224 |     printf("Nombre: %15s. Direccion: %15s. Tipo: %s. ID de Salon: %d.  \n\n",
+      |                                                  ~^
+      |                                                   |
+      |                                                   char *
+      |                                                  %d
+......
+  227 |       salonList[i].type,
+      |       ~~~~~~~~~~~~~~~~~                            
+      |                   |
+      |                   int
+At top level:
+..\src\Salon.c:15:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
+   15 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
+      |                   ^~~~~~~~~
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:51:40 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:53:29 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_imprimirCompleto':
+..\src\Salon.c:224:51: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  224 |     printf("Nombre: %15s. Direccion: %15s. Tipo: %s. ID de Salon: %d.  \n\n",
+      |                                                  ~^
+      |                                                   |
+      |                                                   char *
+      |                                                  %d
+......
+  227 |       salonList[i].type,
+      |       ~~~~~~~~~~~~~~~~~                            
+      |                   |
+      |                   int
+At top level:
+..\src\Salon.c:15:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
+   15 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
+      |                   ^~~~~~~~~
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:55:04 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for Parcial01_2021
+Info: Nothing to build for Parcial01_2021
+02:56:02 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:56:05 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+02:56:37 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:56:41 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+Info: Internal Builder is used for build
+gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
