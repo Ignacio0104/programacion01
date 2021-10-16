@@ -359,8 +359,6 @@ int arc_imprimirJuegos(eArcade *arcadeList, int lenghtArcade)
 
 
 
-
-
 void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice)
 {
 
@@ -446,6 +444,179 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 	}
 
 	return retorno;
+}
+
+int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order)
+{
+	int i;
+	int retorno;
+	eArcade aux;
+	int j;
+
+	retorno=-1;
+
+	if(arcadeList!=NULL&&lenghtArcade>0)
+	{
+		retorno=0;
+		if(order==1)
+		{
+			for(i=0;i<lenghtArcade-1;i++)
+			{
+				for(j=i+1;j<lenghtArcade;j++)
+				{
+					if(strcmp(arcadeList[i].gameName,arcadeList[j].gameName)>0)
+					{
+						aux = arcadeList[i];
+						arcadeList[i] = arcadeList[j];
+						arcadeList[j] = aux;
+					}
+
+				}
+			}
+
+		}else
+
+		{
+			if(order==2)
+			{
+				for(i=0;i<lenghtArcade-1;i++)
+				{
+					for(j=i+1;j<lenghtArcade;j++)
+					{
+						if(arcadeList[i].idSalon>arcadeList[j].idSalon)
+						{
+							aux = arcadeList[i];
+							arcadeList[i] = arcadeList[j];
+							arcadeList[j] = aux;
+						}
+
+					}
+				}
+
+			}
+		}
+
+
+	}
+	return retorno;
+}
+
+int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
+{
+	int retorno;
+	retorno=-1;
+
+	arc_ordenarArcades (arcadeList, lenghtArcade,1);
+
+
+	if(arcadeList!=NULL&&lenghtArcade>0)
+	{
+		retorno=0;
+		for(int i=0;i<lenghtArcade;i++)
+		{
+			if(arcadeList[i].flagEmpty==ACTIVO)
+			{
+				if(strncmp(arcadeList[i].gameName,arcadeList[i+1].gameName,63)==0)
+				{
+					continue;
+
+				}else
+				{
+					printf("Nombre del juego %s\n\n",arcadeList[i].gameName);
+				}
+
+			}
+
+		}
+
+	}
+
+
+	return retorno;
+
+}
+
+int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
+{
+	int retorno;
+	char userChoice;
+	int contador;
+
+	contador=0;
+
+
+	if(arcadeList!=NULL&&lenghtArcade>0)
+	{
+		retorno=-2;
+
+		printf("\n >>>Se van a eliminar a los siguientes arcades asociados: <<< \n");
+
+		for(int i=0;i<lenghtArcade;i++)
+		{
+			if(arcadeList[i].flagEmpty==ACTIVO)
+			{
+				if(idIngresada==arcadeList[i].idSalon)
+				{
+
+					printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %d. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+							"ID del Salon: %d Nombre del juego %s\n\n",
+							arcadeList[i].idArcade,
+							arcadeList[i].nationality,
+							arcadeList[i].soundType,
+							arcadeList[i].numberOfPlayers,
+							arcadeList[i].maximumTokens,
+							arcadeList[i].idSalon,
+							arcadeList[i].gameName);
+					contador++;
+				}
+			}
+
+		} if(contador==0)
+		{
+			printf("\nEste salon no tiene ningún arcade asociado\n");
+			retorno=0;
+		}
+
+		if(contador>0)
+		{
+			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+							"Error, dato ingresado inválido\n")==0)
+					{
+						if(userChoice=='s')
+						{
+							for(int i=0;i<lenghtArcade;i++)
+							{
+								if(idIngresada==arcadeList[i].idSalon)
+								{
+									arcadeList[i].flagEmpty=INACTIVO;
+								}
+
+							}
+
+							printf("Arcades borrados exitosamente.\n");
+							retorno=0;
+						} else
+						{
+							if(userChoice=='n')
+							{
+								printf("No se borrará el arcade. Volviendo al menú principal...\n");
+								retorno=-1;
+							}
+						}
+
+					}
+				}
+
+
+			}
+
+		if(retorno==-2)
+		{
+			printf("\nNo se pudo realizar la acción\n");
+		}
+
+	return retorno;
+
 }
 
 

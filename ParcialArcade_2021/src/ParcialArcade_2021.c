@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include "Salon.h"
 #include "Arcade.h"
+#include "Informes.h"
 #include "biblioteca_input.h"
 #define INACTIVO  1
 #define ACTIVO  0
@@ -27,7 +28,7 @@ int main(void) {
 	int posicionLibre;
 	int idSolicitada;
 	int eleccionUsuario;
-	//float cuitAux;
+	char subEleccionUsuario;
 	char llaveDeCierre;
 	//float totalFacturacion;
 	llaveDeCierre='n';
@@ -46,12 +47,19 @@ int main(void) {
 	salon_altaForzada(salonList,"Juego.com","Alsina 500", 2, 15, 5);
 
 	arc_altaForzada(arcadeList,"USA", 1, 4, 2000, 11,"WonderBoy",1000, 0);
-	arc_altaForzada(arcadeList,"Tokyo", 2, 2, 3000, 10,"Sonic",1001, 1);
-	arc_altaForzada(arcadeList,"Alemania", 2, 6, 1500, 15,"Tetris",1002, 2);
+	arc_altaForzada(arcadeList,"Tokyo", 2, 2, 3000, 11,"Sonic",1001, 1);
+	arc_altaForzada(arcadeList,"Alemania", 2, 6, 1500, 11,"Tetris",1002, 2);
 	arc_altaForzada(arcadeList,"USA", 1, 1, 3500, 14,"Pacman",1003, 3);
 	arc_altaForzada(arcadeList,"Argentina", 2, 4, 2100, 11,"Rayman",1004, 4);
 	arc_altaForzada(arcadeList,"Rusia", 2, 6, 1000, 13,"Metal Slug",1005, 5);
-	arc_altaForzada(arcadeList,"USA", 1, 1, 2600, 11,"Daytona",1006, 6);
+	arc_altaForzada(arcadeList,"Holanda", 1, 1, 2600, 11,"Daytona",1006, 6);
+	arc_altaForzada(arcadeList,"USA", 2, 4, 100, 13,"Street Fighter",1007, 7);
+	arc_altaForzada(arcadeList,"Portugal", 2, 2, 3000, 14,"Booger Man",1008, 8);
+	arc_altaForzada(arcadeList,"Finlandia", 2, 6, 1500, 14,"Looney Toons",1009, 9);
+	arc_altaForzada(arcadeList,"USA", 1, 1, 3500, 14,"Prince of Persia",1010, 10);
+	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 15,"Capcom",1011,11);
+	arc_altaForzada(arcadeList,"Rusia", 2, 6, 1000, 13,"Megaman",1012, 12);
+	arc_altaForzada(arcadeList,"Alemania", 1, 1, 2600, 14,"Daytona",1013, 13);
 
 
 	eleccionUsuario=menuOperaciones();
@@ -73,7 +81,11 @@ int main(void) {
 			idSolicitada=salon_askForId();
 			if(idSolicitada>0)
 			{
-				salon_remove (salonList,SALON_LEN,idSolicitada);
+				if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+				{
+					salon_remove (salonList,SALON_LEN,idSolicitada);
+				}
+
 			}
 			eleccionUsuario=menuOperaciones();
 			break;
@@ -131,6 +143,14 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 9:
+			subEleccionUsuario=info_subMenuReports ();
+			switch (subEleccionUsuario)
+			{
+				case 'a':
+					info_contarArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+					break;
+			}
+
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 10:

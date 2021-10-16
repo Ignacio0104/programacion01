@@ -28,7 +28,6 @@ int salon_loadSalon(eSalon *pSalon);
 int salon_buscarDisponible(eSalon *salonList, int lenghtSalon);
 int salon_askForId (void);
 int salon_buscarPorId (eSalon *salonList, int lenghtSalon, int idIngresada);
-int menuOperaciones (void);
 int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon);
 int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada);
 void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id, int indice);

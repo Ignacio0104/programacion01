@@ -40,6 +40,8 @@ int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada);
 int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
 int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida);
 int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade);
+int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order);
+int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada);
 
 
 #endif /* ARCADE_H_ */

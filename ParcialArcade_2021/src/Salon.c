@@ -65,6 +65,13 @@ int salon_loadSalon(eSalon *pSalon)
 					pSalon->idSalon=dameUnIdNuevo();
 					pSalon->flagEmpty=ACTIVO;
 					retorno=0;
+					printf("Arcade cargado con exito:\n"
+							"Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
+														pSalon->name,
+														pSalon->address,
+														pSalon->type,
+														pSalon->idSalon);
+
 				}
 
 			}
@@ -234,26 +241,6 @@ int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon)
 
 }
 
-int menuOperaciones (void)
-{
-	int eleccion;
-
-	printf("Opciones:\n\n"
-			"1)Alta de Salon\n"
-			"2)Eliminar Salon\n"
-			"3)Imprimir Salones\n"
-			"4)Incorporar Arcade\n"
-			"5)Modificar Arcade\n"
-			"6)Eliminar Arcade\n"
-			"7)Imprimir Arcades\n"
-			"8)Imprimir Juegos\n"
-			"9)Informes\n"
-			"10)Salir\n");
-
-	pedirIntIntentosRango(&eleccion, 1, 11, 20, "Ingrese aquí su elección", "Error");
-
-	return eleccion;
-}
 
 
 void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id, int indice)
