@@ -5,10 +5,8 @@
  *      Author: Nacho
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "Salon.h"
-#include "biblioteca_input.h"
+#include <limits.h>
 #define INACTIVO  1
 #define ACTIVO  0
 
@@ -109,7 +107,7 @@ int salon_askForId (void)
 	int retorno;
 	int requestedId;
 
-	if(pedirIntIntentosRango(&requestedId, 0, 100000, 3, "Ingrese el ID del salon: ", "Error, dato ingresado invalido")==0)
+	if(pedirIntIntentosRango(&requestedId, 0, INT_MAX, 3, "Ingrese el ID del salon: ", "Error, dato ingresado invalido")==0)
 	{
 		retorno=requestedId;
 	} else

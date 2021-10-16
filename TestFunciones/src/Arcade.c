@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Salon.h"
+#include "Arcade.h"
 #include "biblioteca_input.h"
 #define INACTIVO  1
 #define ACTIVO  0
@@ -22,25 +22,25 @@ static int dameUnIdNuevo (void)
 }
 
 
-int salon_initList(eSalon *salonList,int lenghtSalon)
+int arc_initList(eArcade *arcadeList,int lengtArcade)
 {
 	int retorno;
 
 	retorno=-1;
 
-	if(salonList!=NULL&&lenghtSalon>0)
+	if(arcadeList!=NULL&&lengtArcade>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenghtSalon;i++)
+		for(int i=0;i<lengtArcade;i++)
 		{
-			salonList[i].flagEmpty=INACTIVO;
+			arcadeList[i].flagEmpty=INACTIVO;
 		}
 	}
 
 	return retorno;
 }
 
-int salon_loadSalon(eSalon *pSalon)
+int arc_loadSalon(eArcade *pArcade)
 {
 	int retorno;
 
@@ -51,7 +51,7 @@ int salon_loadSalon(eSalon *pSalon)
 	int typeAux;
 
 
-	if(pSalon!=NULL)
+	if(pArcade!=NULL)
 	{
 		if(pedirTexto(nameAux,sizeof(nameAux), 3, "Ingrese el nombre del salon: ", "Error")==0)
 		{
@@ -61,11 +61,11 @@ int salon_loadSalon(eSalon *pSalon)
 															"1)Shopping\n"
 															"2)Local\n", "Error")==0)
 				{
-					strncpy(pSalon->name,nameAux,sizeof(pSalon->name));
-					strncpy(pSalon->address,addressAux,sizeof(pSalon->address));
-					pSalon->type=typeAux;
-					pSalon->idSalon=dameUnIdNuevo();
-					pSalon->flagEmpty=ACTIVO;
+					strncpy(pArcade->name,nameAux,sizeof(pArcade->name));
+					strncpy(pArcade->address,addressAux,sizeof(pArcade->address));
+					pArcade->type=typeAux;
+					pArcade->idSalon=dameUnIdNuevo();
+					pArcade->flagEmpty=ACTIVO;
 					retorno=0;
 				}
 
@@ -77,17 +77,17 @@ int salon_loadSalon(eSalon *pSalon)
 
 }
 
-int salon_buscarDisponible(eSalon *salonList, int lenghtSalon)
+int arc_buscarDisponible(eArcade *arcadeList, int lengtArcade)
 {
 	int retorno;
 	retorno=-1;
 
-	if(salonList!=NULL&&lenghtSalon>0)
+	if(arcadeList!=NULL&&lengtArcade>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenghtSalon;i++)
+		for(int i=0;i<lengtArcade;i++)
 		{
-			if(salonList[i].flagEmpty==INACTIVO)
+			if(arcadeList[i].flagEmpty==INACTIVO)
 			{
 				retorno=i;
 				break;
@@ -104,7 +104,7 @@ int salon_buscarDisponible(eSalon *salonList, int lenghtSalon)
 
 }
 
-int salon_askForId (void)
+int arc_askForId (void)
 {
 	int retorno;
 	int requestedId;
@@ -122,20 +122,20 @@ int salon_askForId (void)
 }
 
 
-int salon_buscarPorId (eSalon *salonList, int lenghtSalon, int idIngresada)
+int arc_buscarPorId (eArcade *arcadeList, int lengtArcade, int idIngresada)
 {
 	int retorno;
 	retorno=-1;
 
-	if(salonList!=NULL&&lenghtSalon>0)
+	if(arcadeList!=NULL&&lengtArcade>0)
 	{
 
-		for(int i=0;i<lenghtSalon;i++)
+		for(int i=0;i<lengtArcade;i++)
 		{
-			if(salonList[i].idSalon==idIngresada)
+			if(arcadeList[i].idSalon==idIngresada)
 			{
 
-				if(salonList[i].flagEmpty==ACTIVO)
+				if(arcadeList[i].flagEmpty==ACTIVO)
 				{
 					retorno=i;
 					break;
@@ -152,7 +152,7 @@ int salon_buscarPorId (eSalon *salonList, int lenghtSalon, int idIngresada)
 	return retorno;
 }
 
-int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
+int arc_remove (eArcade *arcadeList, int lengtArcade, int idIngresada)
 {
 	int retorno;
 	char userChoice;
@@ -160,27 +160,27 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 
 	retorno=-1;
 
-	if(salonList!=NULL&&lenghtSalon>0)
+	if(arcadeList!=NULL&&lengtArcade>0)
 	{
 		retorno=-2;
 
-		posicionSolicitada=salon_buscarPorId (salonList,lenghtSalon, idIngresada);
+		posicionSolicitada=arc_buscarPorId (arcadeList,lengtArcade, idIngresada);
 
 		if(posicionSolicitada>=0)
 		{
-			printf("\nSe va a eliminar el siguiente salon: \n\n"
-							"Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
-							salonList[posicionSolicitada].name,
-							salonList[posicionSolicitada].address,
-							salonList[posicionSolicitada].type,
-							salonList[posicionSolicitada].idSalon);
+			printf("\nSe va a eliminar el siguiente arcade: \n\n"
+							"Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
+							arcadeList[posicionSolicitada].name,
+							arcadeList[posicionSolicitada].address,
+							TXT_TIPOS[arcadeList[posicionSolicitada].type-1],
+							arcadeList[posicionSolicitada].idSalon);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
 						{
-							salonList[posicionSolicitada].flagEmpty=INACTIVO;
+							arcadeList[posicionSolicitada].flagEmpty=INACTIVO;
 							printf("Salon borrado exitosamente.\n");
 							retorno=0;
 						} else
@@ -206,25 +206,25 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 
 }
 
-int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon)
+int arc_imprimirCompleto(eArcade *arcadeList, int lengtArcade)
 {
 	int retorno;
 	retorno=-1;
 
-	if(salonList!=NULL&&lenghtSalon>0)
+	if(arcadeList!=NULL&&lengtArcade>0)
 	{
 		retorno=0;
-		for(int i=0;i<lenghtSalon;i++)
+		for(int i=0;i<lengtArcade;i++)
 		{
 
-			if(salonList[i].flagEmpty==ACTIVO)
+			if(arcadeList[i].flagEmpty==ACTIVO)
 			{
 
-				printf("\n- Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
-						salonList[i].name,
-						salonList[i].address,
-						salonList[i].type,
-						salonList[i].idSalon);
+				printf("\n- Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
+						arcadeList[i].name,
+						arcadeList[i].address,
+						TXT_TIPOS[arcadeList[i].type-1],
+						arcadeList[i].idSalon);
 
 			}
 
@@ -258,13 +258,13 @@ int menuOperaciones (void)
 }
 
 
-void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id, int indice)
+void arc_altaForzada(eArcade *pArcade,char nombre[],char direccion[], int tipo, int id, int indice)
 {
-	strncpy(pSalon[indice].name,nombre,sizeof(pSalon[indice].name));
-	strncpy(pSalon[indice].address,direccion,sizeof(pSalon[indice].address));
-	pSalon[indice].type=tipo;
-	pSalon[indice].idSalon=id;
-	pSalon[indice].flagEmpty=ACTIVO;
+	strncpy(pArcade[indice].name,nombre,sizeof(pArcade[indice].name));
+	strncpy(pArcade[indice].address,direccion,sizeof(pArcade[indice].address));
+	pArcade[indice].type=tipo;
+	pArcade[indice].idSalon=id;
+	pArcade[indice].flagEmpty=ACTIVO;
 
 }
 

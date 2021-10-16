@@ -1,161 +1,572 @@
-02:45:16 **** Rebuild of configuration Debug for project Parcial01_2021 ****
+10:43:54 **** Clean-only build of configuration Debug for project ParcialArcade_2021 ****
+rm -rf src/ParcialArcade_2021.o src/biblioteca_input.o src/Salon.d src/ParcialArcade_2021.d src/Arcade.o src/Arcade.d src/biblioteca_input.d src/Salon.o ParcialArcade_2021.exe 
+10:43:58 **** Rebuild of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-..\src\Salon.c: In function 'salon_remove':
-..\src\Salon.c:168:22: warning: implicit declaration of function 'disp_buscarPorId'; did you mean 'salon_buscarPorId'? [-Wimplicit-function-declaration]
-  168 |   posicionSolicitada=disp_buscarPorId (salonList,lenghtSalon, idIngresada);
-      |                      ^~~~~~~~~~~~~~~~
-      |                      salon_buscarPorId
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-..\src\Parcial01_2021.c: In function 'main':
-..\src\Parcial01_2021.c:51:6: warning: implicit declaration of function 'salon_loadDisplay'; did you mean 'salon_loadSalon'? [-Wimplicit-function-declaration]
-   51 |      salon_loadDisplay(&salonList[posicionLibre]);
-      |      ^~~~~~~~~~~~~~~~~
-      |      salon_loadSalon
-..\src\Parcial01_2021.c:56:17: warning: implicit declaration of function 'disp_askForId' [-Wimplicit-function-declaration]
-   56 |    idSolicitada=disp_askForId();
-      |                 ^~~~~~~~~~~~~
-..\src\Parcial01_2021.c:59:5: warning: implicit declaration of function 'disp_modificarPantalla' [-Wimplicit-function-declaration]
-   59 |     disp_modificarPantalla(salonList,SALON_LEN, idSolicitada);
-      |     ^~~~~~~~~~~~~~~~~~~~~~
-..\src\Parcial01_2021.c:67:5: warning: implicit declaration of function 'disp_remove' [-Wimplicit-function-declaration]
-   67 |     disp_remove (salonList,SALON_LEN,idSolicitada);
-      |     ^~~~~~~~~~~
-..\src\Parcial01_2021.c:32:8: warning: unused variable 'totalFacturacion' [-Wunused-variable]
-   32 |  float totalFacturacion;
-      |        ^~~~~~~~~~~~~~~~
-..\src\Parcial01_2021.c:30:8: warning: unused variable 'cuitAux' [-Wunused-variable]
-   30 |  float cuitAux;
-      |        ^~~~~~~
-..\src\Parcial01_2021.c:28:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
-   28 |  int posicionSolicitada;
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+10:56:22 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:10:15 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c:40:5: error: conflicting types for 'arc_loadArcade'
+   40 | int arc_loadArcade(eArcade *pArcade, int idIngresada)
+      |     ^~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:29:5: note: previous declaration of 'arc_loadArcade' was here
+   29 | int arc_loadArcade(eArcade *pArcade);
+      |     ^~~~~~~~~~~~~~
+..\src\Arcade.c: In function 'arc_remove':
+..\src\Arcade.c:179:11: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  179 |    printf("\nSe va a eliminar el siguiente arcade: \n\n"
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+  184 |        arcadeList[posicionSolicitada].soundType,
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |
+      |                                      int
+..\src\Arcade.c:180:63: note: format string is defined here
+  180 |        "ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+      |                                                              ~^
+      |                                                               |
+      |                                                               char *
+      |                                                              %d
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:234:18: warning: implicit declaration of function 'cont_buscarPorId'; did you mean 'arc_buscarPorId'? [-Wimplicit-function-declaration]
+  234 |   posicionPedida=cont_buscarPorId (arcadeList,lenghtArcade, idIngresada);
+      |                  ^~~~~~~~~~~~~~~~
+      |                  arc_buscarPorId
+..\src\Arcade.c:257:10: warning: implicit declaration of function 'arc_imprimirJuegos'; did you mean 'arc_imprimirCompleto'? [-Wimplicit-function-declaration]
+  257 |          arc_imprimirJuegos(arcadeList,lenghtArcade);
+      |          ^~~~~~~~~~~~~~~~~~
+      |          arc_imprimirCompleto
+..\src\Arcade.c:258:24: warning: passing argument 1 of 'pedirTexto' makes pointer from integer without a cast [-Wint-conversion]
+  258 |          if(pedirTexto(gameAux,sizeof(gameAux), 3, "Ingrese el nuevo nombre del juego: ", "Error")==0)
+      |                        ^~~~~~~
+      |                        |
+      |                        int
+In file included from ..\src\Arcade.h:13,
+                 from ..\src\Arcade.c:8:
+..\src\biblioteca_input.h:85:21: note: expected 'char *' but argument is of type 'int'
+   85 | int pedirTexto(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+      |                ~~~~~^~~~~~~~~~~~
+..\src\Arcade.c:260:63: warning: passing argument 3 of 'arc_validarNombreRepetido' from incompatible pointer type [-Wincompatible-pointer-types]
+  260 |           arc_validarNombreRepetido (arcadeList,lenghtArcade, &gameAux, posicionPedida);
+      |                                                               ^~~~~~~~
+      |                                                               |
+      |                                                               int *
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:76: note: expected 'char *' but argument is of type 'int *'
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida);
+      |                                                                       ~~~~~^~~~~~~~~~~~~
+..\src\Arcade.c: In function 'arc_imprimirCompleto':
+..\src\Arcade.c:301:67: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  301 |     printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+      |                                                                  ~^
+      |                                                                   |
+      |                                                                   char *
+      |                                                                  %d
+......
+  305 |       arcadeList[i].soundType,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~                                      
+      |                    |
+      |                    int
+12:12:37 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:228:7: error: array size missing in 'gameAux'
+  228 |  char gameAux[];
+      |       ^~~~~~~
+..\src\Arcade.c:260:63: warning: passing argument 3 of 'arc_validarNombreRepetido' from incompatible pointer type [-Wincompatible-pointer-types]
+  260 |           arc_validarNombreRepetido (arcadeList,lenghtArcade, &gameAux, posicionPedida);
+      |                                                               ^~~~~~~~
+      |                                                               |
+      |                                                               char (*)[1]
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:76: note: expected 'char *' but argument is of type 'char (*)[1]'
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida);
+      |                                                                       ~~~~~^~~~~~~~~~~~~
+..\src\Arcade.c: In function 'arc_imprimirCompleto':
+..\src\Arcade.c:301:67: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  301 |     printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+      |                                                                  ~^
+      |                                                                   |
+      |                                                                   char *
+      |                                                                  %d
+......
+  305 |       arcadeList[i].soundType,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~                                      
+      |                    |
+      |                    int
+12:12:51 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:260:63: warning: passing argument 3 of 'arc_validarNombreRepetido' from incompatible pointer type [-Wincompatible-pointer-types]
+  260 |           arc_validarNombreRepetido (arcadeList,lenghtArcade, &gameAux, posicionPedida);
+      |                                                               ^~~~~~~~
+      |                                                               |
+      |                                                               char (*)[63]
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:76: note: expected 'char *' but argument is of type 'char (*)[63]'
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida);
+      |                                                                       ~~~~~^~~~~~~~~~~~~
+..\src\Arcade.c: In function 'arc_imprimirCompleto':
+..\src\Arcade.c:301:67: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  301 |     printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+      |                                                                  ~^
+      |                                                                   |
+      |                                                                   char *
+      |                                                                  %d
+......
+  305 |       arcadeList[i].soundType,
+      |       ~~~~~~~~~~~~~~~~~~~~~~~                                      
+      |                    |
+      |                    int
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:114:5: warning: implicit declaration of function 'arc_modificarArcade'; did you mean 'arc_loadArcade'? [-Wimplicit-function-declaration]
+  114 |     arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     arc_loadArcade
+..\src\ParcialArcade_2021.c:29:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   29 |  int posicionSolicitada;
       |      ^~~~~~~~~~~~~~~~~~
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Parcial01_2021.o: in function `main':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:51: undefined reference to `salon_loadDisplay'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:56: undefined reference to `disp_askForId'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:59: undefined reference to `disp_modificarPantalla'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:64: undefined reference to `disp_askForId'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Parcial01_2021.c:67: undefined reference to `disp_remove'
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Salon.o: in function `salon_remove':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Salon.c:168: undefined reference to `disp_buscarPorId'
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:13:13 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+12:16:16 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:50:2: error: too many arguments to function 'arc_altaForzada'
+   50 |  arc_altaForzada(arcadeList,"USA", 1, 4, 2000, 11,"WonderBoy",1000, 0);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:51:2: error: too many arguments to function 'arc_altaForzada'
+   51 |  arc_altaForzada(arcadeList,"Tokyo", 2, 2, 3000, 10,"Sonic",1001, 1);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:52:2: error: too many arguments to function 'arc_altaForzada'
+   52 |  arc_altaForzada(arcadeList,"Alemania", 2, 6, 1500, 15,"Tetris",1002, 2);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:53:2: error: too many arguments to function 'arc_altaForzada'
+   53 |  arc_altaForzada(arcadeList,"USA", 1, 1, 3500, 14,"Pacman",1003, 3);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:54:2: error: too many arguments to function 'arc_altaForzada'
+   54 |  arc_altaForzada(arcadeList,"Argentina", 2, 4, 2100, 11,"Rayman",1004, 4);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:55:2: error: too many arguments to function 'arc_altaForzada'
+   55 |  arc_altaForzada(arcadeList,"Rusia", 2, 6, 1000, 13,"Metal Slug",1005, 5);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:56:2: error: too many arguments to function 'arc_altaForzada'
+   56 |  arc_altaForzada(arcadeList,"USA", 1, 1, 2600, 11,"Daytona",1006, 6);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:36:6: note: declared here
+   36 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:114:5: warning: implicit declaration of function 'arc_modificarArcade'; did you mean 'arc_loadArcade'? [-Wimplicit-function-declaration]
+  114 |     arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     arc_loadArcade
+..\src\ParcialArcade_2021.c:29:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   29 |  int posicionSolicitada;
+      |      ^~~~~~~~~~~~~~~~~~
+12:16:40 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:114:5: warning: implicit declaration of function 'arc_modificarArcade'; did you mean 'arc_loadArcade'? [-Wimplicit-function-declaration]
+  114 |     arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     arc_loadArcade
+..\src\ParcialArcade_2021.c:29:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   29 |  int posicionSolicitada;
+      |      ^~~~~~~~~~~~~~~~~~
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:17:08 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:29:6: warning: unused variable 'posicionSolicitada' [-Wunused-variable]
+   29 |  int posicionSolicitada;
+      |      ^~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+12:17:25 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-02:46:19 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+12:17:28 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Salon.o: in function `salon_remove':
-C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\Parcial01_2021\Debug/../src/Salon.c:168: undefined reference to `disp_buscarPorId'
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+12:26:41 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-02:46:37 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+12:26:47 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:46:58 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:27:34 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Parcial01_2021
-02:48:30 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-02:48:33 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+12:27:37 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:49:12 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:33:27 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-..\src\Parcial01_2021.c:21:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
-   21 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
-      |                   ^~~~~~~~~
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-02:50:20 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+15:16:23 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:50:58 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-02:51:02 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
-Info: Internal Builder is used for build
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:51:36 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-..\src\Salon.c: In function 'salon_imprimirCompleto':
-..\src\Salon.c:224:51: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
-  224 |     printf("Nombre: %15s. Direccion: %15s. Tipo: %s. ID de Salon: %d.  \n\n",
-      |                                                  ~^
-      |                                                   |
-      |                                                   char *
-      |                                                  %d
-......
-  227 |       salonList[i].type,
-      |       ~~~~~~~~~~~~~~~~~                            
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:293:13: error: too few arguments to function 'validarSiNo'
+  293 |             validarSiNo (arcadeList,lenghtArcade, gameAux),posicionPedida);
+      |             ^~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:41:5: note: declared here
+   41 | int validarSiNo (eArcade *arcadeList, int lenghtArcade, char nombreJuego[],int posicionPedida);
+      |     ^~~~~~~~~~~
+..\src\Arcade.c:293:59: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  293 |             validarSiNo (arcadeList,lenghtArcade, gameAux),posicionPedida);
+      |                                                           ^
+..\src\Arcade.c:293:13: warning: statement with no effect [-Wunused-value]
+  293 |             validarSiNo (arcadeList,lenghtArcade, gameAux),posicionPedida);
+      |             ^~~~~~~~~~~
+..\src\Arcade.c:293:74: error: expected ';' before ')' token
+  293 |             validarSiNo (arcadeList,lenghtArcade, gameAux),posicionPedida);
+      |                                                                          ^
+      |                                                                          ;
+..\src\Arcade.c:293:74: error: expected statement before ')' token
+..\src\Arcade.c: In function 'arc_validarNombreRepetido':
+..\src\Arcade.c:422:7: warning: unused variable 'userChoice' [-Wunused-variable]
+  422 |  char userChoice;
+      |       ^~~~~~~~~~
+..\src\Arcade.c: In function 'validarSiNo':
+..\src\Arcade.c:453:19: warning: passing argument 1 of 'pedirCharSiNo' from incompatible pointer type [-Wincompatible-pointer-types]
+  453 |  if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+      |                   ^~~~~~~~~~~
       |                   |
-      |                   int
-At top level:
-..\src\Salon.c:15:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
-   15 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
-      |                   ^~~~~~~~~
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-02:51:40 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+      |                   int *
+In file included from ..\src\Arcade.h:13,
+                 from ..\src\Arcade.c:8:
+..\src\biblioteca_input.h:109:25: note: expected 'char *' but argument is of type 'int *'
+  109 | int pedirCharSiNo(char* pResultado, char opcion1, char opcion2, int reintentos, char* variableTexto, char* textoError);
+      |                   ~~~~~~^~~~~~~~~~
+15:17:02 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:53:29 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-..\src\Salon.c: In function 'salon_imprimirCompleto':
-..\src\Salon.c:224:51: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
-  224 |     printf("Nombre: %15s. Direccion: %15s. Tipo: %s. ID de Salon: %d.  \n\n",
-      |                                                  ~^
-      |                                                   |
-      |                                                   char *
-      |                                                  %d
-......
-  227 |       salonList[i].type,
-      |       ~~~~~~~~~~~~~~~~~                            
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'validarSiNo':
+..\src\Arcade.c:452:19: warning: passing argument 1 of 'pedirCharSiNo' from incompatible pointer type [-Wincompatible-pointer-types]
+  452 |  if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+      |                   ^~~~~~~~~~~
       |                   |
-      |                   int
-At top level:
-..\src\Salon.c:15:19: warning: 'TXT_TIPOS' defined but not used [-Wunused-const-variable=]
-   15 | static const char TXT_TIPOS [2][15]= {"Shopping","Local"};
-      |                   ^~~~~~~~~
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:55:04 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+      |                   int *
+In file included from ..\src\Arcade.h:13,
+                 from ..\src\Arcade.c:8:
+..\src\biblioteca_input.h:109:25: note: expected 'char *' but argument is of type 'int *'
+  109 | int pedirCharSiNo(char* pResultado, char opcion1, char opcion2, int reintentos, char* variableTexto, char* textoError);
+      |                   ~~~~~~^~~~~~~~~~
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:17:12 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2021.o" "..\\src\\Parcial01_2021.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-Info: Nothing to build for Parcial01_2021
-Info: Nothing to build for Parcial01_2021
-02:56:02 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+15:19:19 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-02:56:05 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+15:19:22 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-02:56:37 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:20:54 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial01_2021.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:291:12: error: too many arguments to function 'arc_validarNombreRepetido'
+  291 |            arc_validarNombreRepetido (arcadeList,lenghtArcade, gameAux, posicionPedida);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:5: note: declared here
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c: At top level:
+..\src\Arcade.c:421:5: error: conflicting types for 'arc_validarNombreRepetido'
+  421 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:5: note: previous declaration of 'arc_validarNombreRepetido' was here
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:466:1: error: expected identifier or '(' at end of input
+  466 | int
+      | ^~~
+..\src\Arcade.c: In function 'generarListaDeJuegosSinRepetir':
+..\src\Arcade.c:388:1: warning: control reaches end of non-void function [-Wreturn-type]
+  388 | }
+      | ^
+15:21:12 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:291:12: error: too many arguments to function 'arc_validarNombreRepetido'
+  291 |            arc_validarNombreRepetido (arcadeList,lenghtArcade, gameAux, posicionPedida);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:5: note: declared here
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c: At top level:
+..\src\Arcade.c:466:1: error: expected identifier or '(' at end of input
+  466 | int
+      | ^~~
+..\src\Arcade.c: In function 'generarListaDeJuegosSinRepetir':
+..\src\Arcade.c:388:1: warning: control reaches end of non-void function [-Wreturn-type]
+  388 | }
+      | ^
+15:21:27 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:291:12: error: too many arguments to function 'arc_validarNombreRepetido'
+  291 |            arc_validarNombreRepetido (arcadeList,lenghtArcade, gameAux, posicionPedida);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:5: note: declared here
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c: At top level:
+..\src\Arcade.c:421:5: error: conflicting types for 'arc_validarNombreRepetido'
+  421 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:38:5: note: previous declaration of 'arc_validarNombreRepetido' was here
+   38 | int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:466:1: error: expected identifier or '(' at end of input
+  466 | int
+      | ^~~
+..\src\Arcade.c: In function 'generarListaDeJuegosSinRepetir':
+..\src\Arcade.c:388:1: warning: control reaches end of non-void function [-Wreturn-type]
+  388 | }
+      | ^
+15:21:44 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c:466:1: error: expected identifier or '(' at end of input
+  466 | int
+      | ^~~
+..\src\Arcade.c: In function 'generarListaDeJuegosSinRepetir':
+..\src\Arcade.c:388:1: warning: control reaches end of non-void function [-Wreturn-type]
+  388 | }
+      | ^
+15:22:06 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-02:56:41 **** Incremental Build of configuration Debug for project Parcial01_2021 ****
+15:22:10 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
-gcc -o Parcial01_2021.exe "src\\Parcial01_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:44:21 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'imprimirJuegosSinRepetir':
+..\src\Arcade.c:516:1: warning: control reaches end of non-void function [-Wreturn-type]
+  516 | }
+      | ^
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:48:06 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:41:30: error: unknown type name 'eJuegos'
+   41 | int imprimirJuegosSinRepetir(eJuegos*listJuegos,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade);
+      |                              ^~~~~~~
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:41:2: error: unknown type name 'eJuegos'
+   41 |  eJuegos juegosList[ARCADE_LEN];
+      |  ^~~~~~~
+..\src\ParcialArcade_2021.c:42:2: warning: implicit declaration of function 'game_initList'; did you mean 'arc_initList'? [-Wimplicit-function-declaration]
+   42 |  game_initList(arcadeList,ARCADE_LEN);
+      |  ^~~~~~~~~~~~~
+      |  arc_initList
+..\src\ParcialArcade_2021.c:133:4: warning: implicit declaration of function 'imprimirJuegosSinRepetir' [-Wimplicit-function-declaration]
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:133:40: error: expected expression before 'int'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                        ^~~
+..\src\ParcialArcade_2021.c:133:95: error: expected ';' before 'eleccionUsuario'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                                                                               ^
+      |                                                                                               ;
+  134 |    eleccionUsuario=menuOperaciones();
+      |    ~~~~~~~~~~~~~~~                                                                             
+15:50:48 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+In file included from ..\src\ParcialArcade_2021.c:15:
+..\src\Arcade.h:41:30: error: unknown type name 'eJuegos'
+   41 | int imprimirJuegosSinRepetir(eJuegos*listJuegos,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade);
+      |                              ^~~~~~~
+..\src\Arcade.h:42:19: error: unknown type name 'eJuegos'
+   42 | int game_initList(eJuegos*listaJuegos,int lenghtJuegos);
+      |                   ^~~~~~~
+..\src\Arcade.h:43:24: error: unknown type name 'eJuegos'
+   43 | int generaListaJuegos (eJuegos*listaJuegos,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade);
+      |                        ^~~~~~~
+..\src\Arcade.h:44:26: error: unknown type name 'eJuegos'
+   44 | int juego_estaEnLaLista (eJuegos*listaJuegos,int lenghtJuegos, char nombreJuego[]);
+      |                          ^~~~~~~
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:41:2: error: unknown type name 'eJuegos'
+   41 |  eJuegos juegosList [ARCADE_LEN];
+      |  ^~~~~~~
+..\src\ParcialArcade_2021.c:42:2: warning: implicit declaration of function 'game_initList'; did you mean 'arc_initList'? [-Wimplicit-function-declaration]
+   42 |  game_initList(arcadeList,ARCADE_LEN);
+      |  ^~~~~~~~~~~~~
+      |  arc_initList
+..\src\ParcialArcade_2021.c:133:4: warning: implicit declaration of function 'imprimirJuegosSinRepetir' [-Wimplicit-function-declaration]
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:133:40: error: expected expression before 'int'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                        ^~~
+..\src\ParcialArcade_2021.c:133:95: error: expected ';' before 'eleccionUsuario'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                                                                               ^
+      |                                                                                               ;
+  134 |    eleccionUsuario=menuOperaciones();
+      |    ~~~~~~~~~~~~~~~                                                                             
+16:05:36 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:41:2: error: unknown type name 'eJuegos'
+   41 |  eJuegos juegosList [ARCADE_LEN];
+      |  ^~~~~~~
+..\src\ParcialArcade_2021.c:42:2: warning: implicit declaration of function 'game_initList'; did you mean 'arc_initList'? [-Wimplicit-function-declaration]
+   42 |  game_initList(arcadeList,ARCADE_LEN);
+      |  ^~~~~~~~~~~~~
+      |  arc_initList
+..\src\ParcialArcade_2021.c:133:4: warning: implicit declaration of function 'imprimirJuegosSinRepetir' [-Wimplicit-function-declaration]
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~
+..\src\ParcialArcade_2021.c:133:40: error: expected expression before 'int'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                        ^~~
+..\src\ParcialArcade_2021.c:133:95: error: expected ';' before 'eleccionUsuario'
+  133 |    imprimirJuegosSinRepetir(juegosList,int lenghtJuegos,eArcade *arcadeList, int lenghtArcade)
+      |                                                                                               ^
+      |                                                                                               ;
+  134 |    eleccionUsuario=menuOperaciones();
+      |    ~~~~~~~~~~~~~~~                                                                             
+16:05:56 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_validarNombreRepetido':
+..\src\Arcade.c:440:7: warning: unused variable 'userChoice' [-Wunused-variable]
+  440 |  char userChoice;
+      |       ^~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+16:06:23 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+16:10:16 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+16:10:45 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:10:47 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+16:11:52 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:11:58 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+16:12:54 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+16:13:31 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:13:33 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 

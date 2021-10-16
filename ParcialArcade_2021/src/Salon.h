@@ -9,6 +9,7 @@
 #define SALON_H_
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "biblioteca_input.h"
 
 typedef struct {
