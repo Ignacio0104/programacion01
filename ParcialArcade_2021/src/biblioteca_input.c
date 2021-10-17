@@ -111,7 +111,7 @@ int pedirFloatIntentosRango(float* pResultado, float min, float max, int reinten
 
 			if (myGets(bufferCadenaAux,sizeof(bufferCadenaAux))==0)
 			{
-				if(esNumerica(bufferCadenaAux)==0)
+				if(esFloat(bufferCadenaAux)==0)
 				{
 					buffer=atof(bufferCadenaAux);
 					if(buffer>=min&&buffer<=max)

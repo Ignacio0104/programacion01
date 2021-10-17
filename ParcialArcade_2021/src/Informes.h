@@ -25,6 +25,8 @@ int info_imprimirSalonPorId (eArcade *arcadeList, int lenghtArcade,eSalon *salon
 int info_imprimirArcadePorId (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon, int idIngresada);
 int info_imprimirSalonMasArcade (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
 int info_calcularFichasTotal (int idIngresada, eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+float info_calcularGananciaTotal (int idIngresada, float valorFicha,eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+int info_juegoEnArcades (eArcade *arcadeList, int lenghtArcade, char nombreJuego[]);
 
 
 #endif /* INFORMES_H_ */

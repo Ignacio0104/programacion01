@@ -388,29 +388,84 @@ int info_calcularFichasTotal (int idIngresada, eArcade *arcadeList, int lenghtAr
 
 	retorno=-1;
 	acumuladorDeFichas=0;
-
-	posicionSolicitada=salon_buscarPorId(salonList,lenghtSalon, idIngresada);
-
-	if(posicionSolicitada>=0)
+	if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lenghtSalon>0)
 	{
-		retorno=0;
-		for(int i=0;i<lenghtArcade;i++)
+		posicionSolicitada=salon_buscarPorId(salonList,lenghtSalon, idIngresada);
+
+		if(posicionSolicitada>=0)
 		{
-			if(arcadeList[i].flagEmpty==ACTIVO)
+			retorno=0;
+			for(int i=0;i<lenghtArcade;i++)
 			{
-				if(arcadeList[i].idSalon==idIngresada)
+				if(arcadeList[i].flagEmpty==ACTIVO)
 				{
-					acumuladorDeFichas=acumuladorDeFichas + arcadeList[i].maximumTokens;
-					retorno=acumuladorDeFichas;
+					if(arcadeList[i].idSalon==idIngresada)
+					{
+						acumuladorDeFichas=acumuladorDeFichas + arcadeList[i].maximumTokens;
+						retorno=acumuladorDeFichas;
+					}
 				}
 			}
+
 		}
 
 	}
 
 	return retorno;
+}
+
+float info_calcularGananciaTotal (int idIngresada, float valorFicha,eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon)
+{
+	float retorno;
+	int cantidadFichasMax;
+	int gananciaPesos;
+
+	retorno=-1;
+	if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lenghtSalon>0)
+	{
+		cantidadFichasMax=info_calcularFichasTotal (idIngresada, arcadeList, lenghtArcade,salonList,lenghtSalon);
+
+		if(cantidadFichasMax>=0)
+		{
+			gananciaPesos=cantidadFichasMax*valorFicha;
+		}
+
+		retorno=gananciaPesos;
+	}
+
+	return retorno;
 
 }
+
+int info_juegoEnArcades (eArcade *arcadeList, int lenghtArcade, char nombreJuego[])
+{
+	int retorno;
+	int contadorDeArcades;
+	retorno=-1;
+	contadorDeArcades=0;
+
+	if(arcadeList!=NULL&&lenghtArcade>0)
+	{
+		retorno=0;
+		for (int i=0;i<lenghtArcade;i++)
+		{
+			if(arcadeList[i].flagEmpty==ACTIVO)
+			{
+				if(strncmp(arcadeList[i].gameName,nombreJuego,63)==0)
+				{
+					contadorDeArcades++;
+				}
+			}
+		}
+
+		retorno=contadorDeArcades;
+	}
+
+	return retorno;
+}
+
+
+
 
 
 

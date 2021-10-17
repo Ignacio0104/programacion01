@@ -30,7 +30,10 @@ int main(void) {
 	int eleccionUsuario;
 	char subEleccionUsuario;
 	char llaveDeCierre;
-	int fichasTotales;
+	float gananciaTotal;
+	float valorFicha;
+	int juegoEnArcades;
+	char nombreJuegoPedido[63];
 	llaveDeCierre='n';
 
 	eSalon salonList [SALON_LEN];
@@ -48,14 +51,14 @@ int main(void) {
 
 	arc_altaForzada(arcadeList,"USA", 1, 4, 2000, 11,"WonderBoy",1000, 0);
 	arc_altaForzada(arcadeList,"Tokyo", 2, 5, 3000, 11,"Sonic",1001, 1);
-	arc_altaForzada(arcadeList,"Alemania", 2, 6, 1500, 11,"Tetris",1002, 2);
+	arc_altaForzada(arcadeList,"Alemania", 2, 6, 1500, 11,"Pacman",1002, 2);
 	arc_altaForzada(arcadeList,"Holanda", 1, 5, 2600, 11,"Daytona",1006, 6);
-	arc_altaForzada(arcadeList,"Argentina", 2, 3, 2100, 11,"Rayman",1004, 4);
+	arc_altaForzada(arcadeList,"Argentina", 2, 3, 2100, 11,"Pacman",1004, 4);
 	arc_altaForzada(arcadeList,"USA", 2, 6, 100, 11,"Street Fighter",1007, 7);
 	arc_altaForzada(arcadeList,"Rusia", 2, 1, 1000, 13,"Metal Slug",1005, 5);
 	arc_altaForzada(arcadeList,"Rusia", 2, 5, 1000, 13,"Megaman",1012, 12);
 	arc_altaForzada(arcadeList,"Portugal", 2, 4, 3000, 14,"Booger Man",1008, 8);
-	arc_altaForzada(arcadeList,"Finlandia", 2, 3, 1500, 14,"Looney Toons",1009, 9);
+	arc_altaForzada(arcadeList,"Finlandia", 2, 3, 1500, 14,"Pacman",1009, 9);
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Prince of Persia",1010, 10);
 	arc_altaForzada(arcadeList,"Alemania", 1, 6, 2600, 14,"Daytona",1013, 13);
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Pacman",1003, 3);
@@ -176,12 +179,26 @@ int main(void) {
 				case 'f':
 					salon_imprimirCompleto(salonList,SALON_LEN);
 					idSolicitada=salon_askForId();
+					pedirFloatIntentosRango(&valorFicha, 1, 1000, 5, "Ingrese el valor de la ficha", "Error, dato ingresado invalido");
 					if(idSolicitada>0)
 					{
-						fichasTotales=info_calcularFichasTotal (idSolicitada,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
-						printf("%s   \n",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name);
-						printf("Las fichas totales son %d\n\n",fichasTotales);
+						gananciaTotal=info_calcularGananciaTotal (idSolicitada, valorFicha,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+
+						printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name,
+																			gananciaTotal);
 					}
+					break;
+				case 'g':
+					pedirTexto(nombreJuegoPedido,63, 5, "Ingrese el número del juego","Error, dato ingresado invalido");
+					juegoEnArcades=info_juegoEnArcades (arcadeList, ARCADE_LEN, nombreJuegoPedido);
+					if(juegoEnArcades==0)
+					{
+						printf("No se encontró el juego en nuestros arcades");
+					}else
+					{
+						printf("El juego %s se encuentra en %d arcades",nombreJuegoPedido,juegoEnArcades);
+					}
+					break;
 
 			}
 
