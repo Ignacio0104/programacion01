@@ -20,6 +20,11 @@
 int menuOperaciones (void);
 char info_subMenuReports (void);
 int info_contarArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+int info_contarJugadores (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+int info_imprimirSalonPorId (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon, int idIngresada);
+int info_imprimirArcadePorId (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon, int idIngresada);
+int info_imprimirSalonMasArcade (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+int info_calcularFichasTotal (int idIngresada, eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
 
 
 #endif /* INFORMES_H_ */

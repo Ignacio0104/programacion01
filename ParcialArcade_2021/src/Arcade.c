@@ -11,6 +11,8 @@
 #define ACTIVO  0
 #define ARCADE_LEN 1000
 
+#define TIPO_MONO 1
+#define TIPO_ESTEREO 2
 
 
 static int dameUnIdNuevo (void);
@@ -64,14 +66,14 @@ int arc_loadArcade(eArcade *pArcade, int idIngresada)
 			{
 				if(pedirIntIntentosRango(&jugadoresAux,1, 6, 5, "Ingrese la cantidad de jugadores: \n", "Error")==0)
 				{
-					if(pedirIntIntentosRango(&fichasAux,1, 3000, 5, "Ingrese la capacidad máxima de fichas: \n", "Error")==0)
+					if(pedirIntIntentosRango(&fichasAux,1, 5000, 5, "Ingrese la capacidad máxima de fichas: \n", "Error")==0)
 					{
 						if(pedirTexto(gameAux,sizeof(gameAux), 3, "Ingrese el nombre del juego: ", "Error")==0)
 						{
 								strncpy(pArcade->nationality,nationalityAux,sizeof(pArcade->nationality));
 								pArcade->soundType=typeAux;
 								pArcade->numberOfPlayers=jugadoresAux;
-								pArcade->maximumTokens=fichasAux;;
+								pArcade->maximumTokens=fichasAux;
 								pArcade->idSalon=idIngresada;
 								strncpy(pArcade->gameName,gameAux,sizeof(pArcade->gameName));
 								pArcade->idArcade=dameUnIdNuevo();
@@ -168,6 +170,7 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 	int retorno;
 	char userChoice;
 	int posicionSolicitada;
+	char cadenaAux[32];
 
 	retorno=-1;
 
@@ -179,12 +182,21 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 		if(posicionSolicitada>=0)
 		{
+			switch(arcadeList[posicionSolicitada].soundType)
+			{
+				case TIPO_MONO:
+					strncpy(cadenaAux,"Mono",32);
+					break;
+				case TIPO_ESTEREO:
+					strncpy(cadenaAux,"Estereo",32);
+					break;
+			}
 			printf("\nSe va a eliminar el siguiente arcade: \n\n"
-							"ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %d. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+							"ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
 							"ID del Salon: %d Nombre del juego %s\n\n",
 							arcadeList[posicionSolicitada].idArcade,
 							arcadeList[posicionSolicitada].nationality,
-							arcadeList[posicionSolicitada].soundType,
+							cadenaAux,
 							arcadeList[posicionSolicitada].numberOfPlayers,
 							arcadeList[posicionSolicitada].maximumTokens,
 							arcadeList[posicionSolicitada].idSalon,
@@ -301,6 +313,7 @@ int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
 {
 	int retorno;
 	retorno=-1;
+	char cadenaAux[32];
 
 	if(arcadeList!=NULL&&lenghtArcade>0)
 	{
@@ -310,12 +323,21 @@ int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
 
 			if(arcadeList[i].flagEmpty==ACTIVO)
 			{
+				switch(arcadeList[i].soundType)
+						{
+							case TIPO_MONO:
+								strncpy(cadenaAux,"Mono",32);
+								break;
+							case TIPO_ESTEREO:
+								strncpy(cadenaAux,"Estereo",32);
+								break;
+						}
 
-				printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %d. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+				printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
 						"ID del Salon: %d Nombre del juego %s\n\n",
 						arcadeList[i].idArcade,
 						arcadeList[i].nationality,
-						arcadeList[i].soundType,
+						cadenaAux,
 						arcadeList[i].numberOfPlayers,
 						arcadeList[i].maximumTokens,
 						arcadeList[i].idSalon,
@@ -541,6 +563,7 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 	int retorno;
 	char userChoice;
 	int contador;
+	char cadenaAux[32];
 
 	contador=0;
 
@@ -557,12 +580,22 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 			{
 				if(idIngresada==arcadeList[i].idSalon)
 				{
+					switch(arcadeList[i].soundType)
+					{
+						case TIPO_MONO:
+							strncpy(cadenaAux,"Mono",32);
+							break;
+						case TIPO_ESTEREO:
+							strncpy(cadenaAux,"Estereo",32);
+							break;
+					}
 
-					printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %d. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+
+					printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
 							"ID del Salon: %d Nombre del juego %s\n\n",
 							arcadeList[i].idArcade,
 							arcadeList[i].nationality,
-							arcadeList[i].soundType,
+							cadenaAux,
 							arcadeList[i].numberOfPlayers,
 							arcadeList[i].maximumTokens,
 							arcadeList[i].idSalon,

@@ -807,3 +807,297 @@ collect2.exe: error: ld returned 1 exit status
 20:26:06 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
 Info: Internal Builder is used for build
 gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:34:19 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:128:6: warning: variable 'contadorArcades' set but not used [-Wunused-but-set-variable]
+  128 |  int contadorArcades;
+      |      ^~~~~~~~~~~~~~~
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:34:28 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:132:2: error: 'contadorArcades' undeclared (first use in this function)
+  132 |  contadorArcades=1;
+      |  ^~~~~~~~~~~~~~~
+..\src\Informes.c:132:2: note: each undeclared identifier is reported only once for each function it appears in
+22:34:36 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+22:38:40 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+22:39:16 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+22:54:25 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:136:56: error: 'lengtSalon' undeclared (first use in this function); did you mean 'lenghtSalon'?
+  136 |  if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lengtSalon>0)
+      |                                                        ^~~~~~~~~~
+      |                                                        lenghtSalon
+..\src\Informes.c:136:56: note: each undeclared identifier is reported only once for each function it appears in
+22:54:49 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:136:56: error: 'lengthSalon' undeclared (first use in this function); did you mean 'lenghtSalon'?
+  136 |  if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lengthSalon>0)
+      |                                                        ^~~~~~~~~~~
+      |                                                        lenghtSalon
+..\src\Informes.c:136:56: note: each undeclared identifier is reported only once for each function it appears in
+22:55:29 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+22:56:54 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+23:13:18 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_imprimirCompleto':
+..\src\Arcade.c:336:67: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  336 |     printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %d. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
+      |                                                                  ~^
+      |                                                                   |
+      |                                                                   int
+      |                                                                  %s
+......
+  340 |       cadenaAux,
+      |       ~~~~~~~~~                                                    
+      |       |
+      |       char *
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+23:13:25 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+23:15:58 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+Info: Nothing to build for ParcialArcade_2021
+23:20:48 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarArcades':
+..\src\Informes.c:126:48: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  126 |      printf("Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %s
+......
+  129 |              cadenaAux,
+      |              ~~~~~~~~~                          
+      |              |
+      |              char *
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:21:00 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:21:04 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+23:35:00 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:35:04 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:02:40 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:357:34: warning: passing argument 1 of 'arc_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+  357 |  posicionMaximo=arc_buscarPorId (salonList,lenghtSalon, idSalonMaximo);
+      |                                  ^~~~~~~~~
+      |                                  |
+      |                                  eSalon * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:32:31: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   32 | int arc_buscarPorId (eArcade *arcadeList, int lenghtArcade, int idIngresada);
+      |                      ~~~~~~~~~^~~~~~~~~~
+..\src\Informes.c:359:18: warning: 'posicionBuscada' is used uninitialized in this function [-Wuninitialized]
+  359 |  switch(salonList[posicionBuscada].type)
+      |                  ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:03:43 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:359:18: warning: 'posicionBuscada' is used uninitialized in this function [-Wuninitialized]
+  359 |  switch(salonList[posicionBuscada].type)
+      |                  ^
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:04:00 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:320:6: warning: unused variable 'posicionBuscada' [-Wunused-variable]
+  320 |  int posicionBuscada;
+      |      ^~~~~~~~~~~~~~~
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:04:12 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:04:54 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:174:6: error: too many arguments to function 'info_imprimirSalonMasArcade'
+  174 |      info_imprimirSalonMasArcade (arcadeList, ARCADE_LEN,salonList,SALON_LEN, idSolicitada);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:16:
+..\src\Informes.h:26:5: note: declared here
+   26 | int info_imprimirSalonMasArcade (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+00:05:14 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'info_imprimirSalonMasArcade':
+..\src\ParcialArcade_2021.c:24:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   24 | int main(void) {
+      |                ^
+..\src\ParcialArcade_2021.c:190: error: expected '{' at end of input
+  190 | }
+      | 
+..\src\ParcialArcade_2021.c:190:1: warning: control reaches end of non-void function [-Wreturn-type]
+  190 | }
+      | ^
+00:05:20 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+..\src\ParcialArcade_2021.c: In function 'main':
+..\src\ParcialArcade_2021.c:174:6: error: too many arguments to function 'info_imprimirSalonMasArcade'
+  174 |      info_imprimirSalonMasArcade (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ParcialArcade_2021.c:16:
+..\src\Informes.h:26:5: note: declared here
+   26 | int info_imprimirSalonMasArcade (eArcade *arcadeList, int lenghtArcade,eSalon *salonList);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+00:05:40 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+00:07:06 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:07:09 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:07:54 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:07:56 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:08:24 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:08:27 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:25:45 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_calcularFichasTotal':
+..\src\Informes.c:387:7: warning: unused variable 'cadenaAux' [-Wunused-variable]
+  387 |  char cadenaAux[32];
+      |       ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ParcialArcade_2021
+00:28:48 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialArcade_2021.o" "..\\src\\ParcialArcade_2021.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:28:51 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:29:21 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:29:23 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:33:28 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:33:31 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:34:38 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:34:43 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:36:46 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialArcade_2021.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:36:52 **** Incremental Build of configuration Debug for project ParcialArcade_2021 ****
+Info: Internal Builder is used for build
+gcc -o ParcialArcade_2021.exe "src\\Arcade.o" "src\\Informes.o" "src\\ParcialArcade_2021.o" "src\\Salon.o" "src\\biblioteca_input.o" 

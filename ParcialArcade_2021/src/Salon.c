@@ -10,6 +10,8 @@
 #define INACTIVO  1
 #define ACTIVO  0
 
+#define TIPO_SHOPPING 1
+#define TIPO_LOCAL 2
 
 static int dameUnIdNuevo (void);
 
@@ -162,6 +164,7 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 	int retorno;
 	char userChoice;
 	int posicionSolicitada;
+	char cadenaAux [32];
 
 	retorno=-1;
 
@@ -173,11 +176,21 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 
 		if(posicionSolicitada>=0)
 		{
+
+			switch(salonList[posicionSolicitada].type)
+			{
+				case TIPO_SHOPPING:
+					strncpy(cadenaAux,"Shopping",32);
+					break;
+				case TIPO_LOCAL:
+					strncpy(cadenaAux,"Local",32);
+					break;
+			}
 			printf("\nSe va a eliminar el siguiente salon: \n\n"
-							"Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
+							"Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
 							salonList[posicionSolicitada].name,
 							salonList[posicionSolicitada].address,
-							salonList[posicionSolicitada].type,
+							cadenaAux,
 							salonList[posicionSolicitada].idSalon);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
@@ -215,6 +228,7 @@ int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon)
 {
 	int retorno;
 	retorno=-1;
+	char cadenaAux[32];
 
 	if(salonList!=NULL&&lenghtSalon>0)
 	{
@@ -224,11 +238,20 @@ int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon)
 
 			if(salonList[i].flagEmpty==ACTIVO)
 			{
+				switch(salonList[i].type)
+				{
+					case TIPO_SHOPPING:
+						strncpy(cadenaAux,"Shopping",32);
+						break;
+					case TIPO_LOCAL:
+						strncpy(cadenaAux,"Local",32);
+						break;
+				}
 
-				printf("\n- Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
+				printf("\n- Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
 						salonList[i].name,
 						salonList[i].address,
-						salonList[i].type,
+						cadenaAux,
 						salonList[i].idSalon);
 
 			}
