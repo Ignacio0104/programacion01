@@ -207,7 +207,7 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 					cadenaAux,
 					salonList[posicionSolicitada].idSalon);
 
-					if(pedirCharSiNo(&userChoice, 's', 'n', 5, " ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
+					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "\n\n ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
@@ -303,6 +303,37 @@ int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[]
 
 	return retorno;
 }
+
+int salon_occupancy (eSalon *salonList, int lenghtSalon, int* pNotEmpty)
+{
+	int retorno;
+	int empty;
+	int notEmpty;
+	int i;
+
+	retorno=-1;
+	empty=0;
+	notEmpty=0;
+
+	if(salonList!=NULL&&lenghtSalon>0)
+		{
+			retorno=0;
+
+			for (i=0;i<lenghtSalon;i++)
+			{
+				if(salonList[i].flagEmpty==ACTIVO)
+				{
+					notEmpty++;
+				}
+
+			}
+		}
+
+	*pNotEmpty=notEmpty;
+
+	return retorno;
+}
+
 
 
 

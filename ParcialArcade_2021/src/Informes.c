@@ -26,7 +26,7 @@ int menuOperaciones (void)
 {
 	int eleccion;
 
-	printf("\nMenu:\n\n"
+	printf("\n	|Menu|\n\n"
 			"1)Alta de Salon\n"
 			"2)Eliminar Salon\n"
 			"3)Imprimir Salones\n"
@@ -478,7 +478,81 @@ int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]
 	return retorno;
 }
 
+int info_imprimirInformes (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon, char eleccionUsuario)
+{
+	int retorno;
+	int idSolicitada;
+	float valorFicha;
+	float gananciaTotal;
+	char nombreJuegoPedido[63];
+	int juegoEnArcades;
 
+	retorno=-2;
+	if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lenghtSalon>0)
+	{
+		retorno=0;
+		switch (eleccionUsuario)
+		{
+			case 'a':
+				info_contarArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+				break;
+
+			case 'b':
+				info_contarJugadores (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+				break;
+			case 'c':
+				salon_imprimirCompleto(salonList,SALON_LEN);
+				idSolicitada=salon_askForId();
+				if(idSolicitada>0)
+				{
+					info_imprimirSalonPorId(arcadeList, ARCADE_LEN,salonList,SALON_LEN, idSolicitada);
+				}
+
+				break;
+			case 'd':
+				salon_imprimirCompleto(salonList,SALON_LEN);
+				idSolicitada=salon_askForId();
+				if(idSolicitada>0)
+				{
+					info_imprimirArcadePorId (arcadeList, ARCADE_LEN,salonList,SALON_LEN, idSolicitada);
+				}
+				break;
+			case 'e':
+				info_imprimirSalonMasArcade (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+				break;
+			case 'f':
+				salon_imprimirCompleto(salonList,SALON_LEN);
+				idSolicitada=salon_askForId();
+				pedirFloatIntentosRango(&valorFicha, 1, 1000, 5, "Ingrese el valor de la ficha", "Error, dato ingresado invalido");
+				if(idSolicitada>0)
+				{
+					gananciaTotal=info_calcularGananciaTotal (idSolicitada, valorFicha,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+
+					printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name,
+																		gananciaTotal);
+				}
+				break;
+			case 'g':
+				pedirTexto(nombreJuegoPedido,63, 5, "Ingrese el número del juego","Error, dato ingresado invalido");
+				juegoEnArcades=info_juegoEnArcades (arcadeList, ARCADE_LEN, nombreJuegoPedido);
+				if(juegoEnArcades==0)
+				{
+					printf("No se encontró el juego en nuestros arcades");
+				}else
+				{
+					printf("El juego %s se encuentra en %d arcades",nombreJuegoPedido,juegoEnArcades);
+				}
+				break;
+
+		}
+
+
+	}
+
+	return retorno;
+
+
+}
 
 
 

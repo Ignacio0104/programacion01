@@ -24,7 +24,6 @@ static int dameUnIdNuevo (void)
 	return (contador++);
 }
 
-
 int arc_initList(eArcade *arcadeList,int lenghtArcade)
 {
 	int retorno;
@@ -67,7 +66,7 @@ int arc_loadArcade(eArcade *pArcade, int idIngresada)
 			{
 				if(pedirIntIntentosRango(&jugadoresAux,1, 6, 5, "Ingrese la cantidad de jugadores: \n", "Error")==0)
 				{
-					if(pedirIntIntentosRango(&fichasAux,1, 5000, 5, "Ingrese la capacidad máxima de fichas: \n", "Error")==0)
+					if(pedirIntIntentosRango(&fichasAux,1, 10000, 5, "Ingrese la capacidad máxima de fichas: \n", "Error")==0)
 					{
 						if(pedirTexto(gameAux,sizeof(gameAux), 3, "Ingrese el nombre del juego: ", "Error")==0)
 						{
@@ -197,7 +196,7 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 					arcadeList[posicionSolicitada].idSalon,
 					arcadeList[posicionSolicitada].gameName);
 
-					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "\n\n ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
@@ -649,6 +648,39 @@ int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]
 
 	return retorno;
 }
+
+int arc_occupancy (eArcade *arcadeList, int lenghtArcade, int* pNotEmpty)
+{
+	int retorno;
+	int empty;
+	int notEmpty;
+	int i;
+
+	retorno=-1;
+	empty=0;
+	notEmpty=0;
+
+	if(arcadeList!=NULL&&lenghtArcade>0)
+		{
+			retorno=0;
+
+			for (i=0;i<lenghtArcade;i++)
+			{
+				if(arcadeList[i].flagEmpty==ACTIVO)
+				{
+					notEmpty++;
+				}
+
+			}
+		}
+
+	*pNotEmpty=notEmpty;
+
+	return retorno;
+}
+
+
+
 
 
 

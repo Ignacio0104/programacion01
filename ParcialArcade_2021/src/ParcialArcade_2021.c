@@ -30,10 +30,8 @@ int main(void) {
 	int eleccionUsuario;
 	char subEleccionUsuario;
 	char llaveDeCierre;
-	float gananciaTotal;
-	float valorFicha;
-	int juegoEnArcades;
-	char nombreJuegoPedido[63];
+	int salonesOcupados;
+	int arcadesOcupados;
 	llaveDeCierre='n';
 
 	eSalon salonList [SALON_LEN];
@@ -80,26 +78,35 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 2:
-			salon_imprimirCompleto(salonList,SALON_LEN);
-			idSolicitada=salon_askForId();
-			if(idSolicitada>0)
+			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
+			if(salonesOcupados>0)
 			{
-				if(salon_buscarPorId (salonList,SALON_LEN, idSolicitada)>=0)
+				salon_imprimirCompleto(salonList,SALON_LEN);
+				idSolicitada=salon_askForId();
+				if(idSolicitada>0)
 				{
-					if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+					if(salon_buscarPorId (salonList,SALON_LEN, idSolicitada)>=0)
 					{
-						salon_remove (salonList,SALON_LEN,idSolicitada);
+						if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+						{
+							salon_remove (salonList,SALON_LEN,idSolicitada);
+						}
+					} else
+					{
+						printf("La ID ingresada no coincide con ninguno de nuestro sistema\n");
 					}
-				} else
-				{
-					printf("La ID ingresada no coincide con ninguno de nuestro sistema\n");
+
+
 				}
-
-
+			} else
+			{
+				printf("\nNo hay ningún salón cargado para borrar\n");
 			}
+
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 3:
+			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
 			salon_imprimirCompleto(salonList,SALON_LEN);
 			eleccionUsuario=menuOperaciones();
 			break;
@@ -127,6 +134,7 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 5:
+			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
 			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
 			idSolicitada=arc_askForId();
 			if(idSolicitada>0)
@@ -136,6 +144,7 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 6:
+			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
 			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
 			idSolicitada=arc_askForId();
 			if(idSolicitada>0)
@@ -145,70 +154,19 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 7:
+			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
 			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 8:
+			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
 			arc_imprimirJuegosSinRepetir (arcadeList, ARCADE_LEN);
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 9:
+			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
 			subEleccionUsuario=info_subMenuReports ();
-			switch (subEleccionUsuario)
-			{
-				case 'a':
-					info_contarArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
-					break;
-
-				case 'b':
-					info_contarJugadores (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
-					break;
-				case 'c':
-					salon_imprimirCompleto(salonList,SALON_LEN);
-					idSolicitada=salon_askForId();
-					if(idSolicitada>0)
-					{
-						info_imprimirSalonPorId(arcadeList, ARCADE_LEN,salonList,SALON_LEN, idSolicitada);
-					}
-
-					break;
-				case 'd':
-					salon_imprimirCompleto(salonList,SALON_LEN);
-					idSolicitada=salon_askForId();
-					if(idSolicitada>0)
-					{
-						info_imprimirArcadePorId (arcadeList, ARCADE_LEN,salonList,SALON_LEN, idSolicitada);
-					}
-					break;
-				case 'e':
-					info_imprimirSalonMasArcade (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
-					break;
-				case 'f':
-					salon_imprimirCompleto(salonList,SALON_LEN);
-					idSolicitada=salon_askForId();
-					pedirFloatIntentosRango(&valorFicha, 1, 1000, 5, "Ingrese el valor de la ficha", "Error, dato ingresado invalido");
-					if(idSolicitada>0)
-					{
-						gananciaTotal=info_calcularGananciaTotal (idSolicitada, valorFicha,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
-
-						printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name,
-																			gananciaTotal);
-					}
-					break;
-				case 'g':
-					pedirTexto(nombreJuegoPedido,63, 5, "Ingrese el número del juego","Error, dato ingresado invalido");
-					juegoEnArcades=info_juegoEnArcades (arcadeList, ARCADE_LEN, nombreJuegoPedido);
-					if(juegoEnArcades==0)
-					{
-						printf("No se encontró el juego en nuestros arcades");
-					}else
-					{
-						printf("El juego %s se encuentra en %d arcades",nombreJuegoPedido,juegoEnArcades);
-					}
-					break;
-
-			}
-
+			info_imprimirInformes (arcadeList, ARCADE_LEN,salonList,SALON_LEN, subEleccionUsuario);
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 10:
