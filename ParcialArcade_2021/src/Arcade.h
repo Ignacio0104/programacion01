@@ -44,4 +44,5 @@ int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order);
 int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada);
 
 
+
 #endif /* ARCADE_H_ */

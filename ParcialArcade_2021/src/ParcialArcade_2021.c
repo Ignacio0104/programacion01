@@ -56,13 +56,13 @@ int main(void) {
 	arc_altaForzada(arcadeList,"Argentina", 2, 3, 2100, 11,"Pacman",1004, 4);
 	arc_altaForzada(arcadeList,"USA", 2, 6, 100, 11,"Street Fighter",1007, 7);
 	arc_altaForzada(arcadeList,"Rusia", 2, 1, 1000, 13,"Metal Slug",1005, 5);
-	arc_altaForzada(arcadeList,"Rusia", 2, 5, 1000, 13,"Megaman",1012, 12);
-	arc_altaForzada(arcadeList,"Portugal", 2, 4, 3000, 14,"Booger Man",1008, 8);
-	arc_altaForzada(arcadeList,"Finlandia", 2, 3, 1500, 14,"Pacman",1009, 9);
+	arc_altaForzada(arcadeList,"Rusia", 2, 2, 1000, 13,"Megaman",1012, 12);
+	arc_altaForzada(arcadeList,"Portugal", 2, 2, 3000, 14,"Booger Man",1008, 8);
+	arc_altaForzada(arcadeList,"Finlandia", 2, 2, 1500, 14,"Pacman",1009, 9);
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Prince of Persia",1010, 10);
 	arc_altaForzada(arcadeList,"Alemania", 1, 6, 2600, 14,"Daytona",1013, 13);
-	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Pacman",1003, 3);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 15,"Capcom",1011,11);
+	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 13,"Pacman",1003, 3);
+	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1011,11);
 
 
 	eleccionUsuario=menuOperaciones();
@@ -84,10 +84,17 @@ int main(void) {
 			idSolicitada=salon_askForId();
 			if(idSolicitada>0)
 			{
-				if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+				if(salon_buscarPorId (salonList,SALON_LEN, idSolicitada)>=0)
 				{
-					salon_remove (salonList,SALON_LEN,idSolicitada);
+					if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+					{
+						salon_remove (salonList,SALON_LEN,idSolicitada);
+					}
+				} else
+				{
+					printf("La ID ingresada no coincide con ninguno de nuestro sistema\n");
 				}
+
 
 			}
 			eleccionUsuario=menuOperaciones();

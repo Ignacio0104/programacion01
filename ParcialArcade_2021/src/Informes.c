@@ -19,11 +19,14 @@
 #define TIPO_MONO 1
 #define TIPO_ESTEREO 2
 
+static int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]);
+static int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[]);
+
 int menuOperaciones (void)
 {
 	int eleccion;
 
-	printf("Opciones:\n\n"
+	printf("\nMenu:\n\n"
 			"1)Alta de Salon\n"
 			"2)Eliminar Salon\n"
 			"3)Imprimir Salones\n"
@@ -35,7 +38,7 @@ int menuOperaciones (void)
 			"9)Informes\n"
 			"10)Salir\n");
 
-	pedirIntIntentosRango(&eleccion, 1, 11, 20, "Ingrese aquí su elección", "Error");
+	pedirIntIntentosRango(&eleccion, 1, 11, 20, "Ingrese aquí su elección: \n", "Error");
 
 	return eleccion;
 }
@@ -45,14 +48,14 @@ char info_subMenuReports (void)
 	char eleccion;
 
 	printf("Opciones:\n\n"
-			"a)Salones con mas de 4 arcades\n"
-			"b)Arcades para mas de 2 jugadores\n"
-			"c)Información de arcade por ID de Arcade\n"
-			"d)Información de arcades por ID de Salon\n"
-			"e)Salon con mayor cantidad de arcades\n"
-			"f)Monto maximo en pesos por ID de Salon\n"
-			"g)Cantidad de arcades que tienen un juego (por nombre)\n"
-			"h)Volver al menu principal");
+			"	a)Salones con mas de 4 arcades\n"
+			"	b)Arcades para mas de 2 jugadores\n"
+			"	c)Información de arcade por ID de Arcade\n"
+			"	d)Información de arcades por ID de Salon\n"
+			"	e)Salon con mayor cantidad de arcades\n"
+			"	f)Monto maximo en pesos por ID de Salon\n"
+			"	g)Cantidad de arcades que tienen un juego (por nombre)\n"
+			"	h)Volver al menu principal");
 
 	pedirCharAUsuarioIntentosRango(&eleccion, 'a', 'h', 5, "\n\nIngrese su elección: ", "Error");
 
@@ -83,10 +86,11 @@ int info_contarArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,
 				{
 					contadorSalones++;
 
-					if(contadorSalones>4)
+					if(contadorSalones==5)
 					{
 						listaDeId[indiceDeId]=arcadeList[i].idSalon;
 						indiceDeId++;
+
 						if(contadorSalones>5)
 						{
 							continue;
@@ -113,15 +117,7 @@ int info_contarArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,
 				if(salonList[i].idSalon==listaDeId[j])
 				{
 
-					switch(salonList[i].type)
-					{
-						case TIPO_SHOPPING:
-							strncpy(cadenaAux,"Shopping",32);
-							break;
-						case TIPO_LOCAL:
-							strncpy(cadenaAux,"Local",32);
-							break;
-					}
+					salon_cambiarTexto (salonList, i, cadenaAux);
 
 					printf("Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
 													salonList[i].name,
@@ -169,7 +165,7 @@ int info_contarJugadores (eArcade *arcadeList, int lenghtArcade,eSalon *salonLis
 
 	}
 
-
+	printf("%15s %15s %25s %15s \n\n","ID del Arcade","Jugadores","Juego","Salon" );
 	for(int i=0;i<lenghtArcade;i++)
 	{
 		for(int j=0;j<indiceDeArcades;j++)
@@ -179,11 +175,11 @@ int info_contarJugadores (eArcade *arcadeList, int lenghtArcade,eSalon *salonLis
 				if(arcadeList[i].idArcade==listaDeArcades[j])
 				{
 					posicionSalon=salon_buscarPorId (salonList,lenghtSalon, arcadeList[i].idSalon);
-					printf("ID arcade: %d. Cantidad Jugadores: %d. Nombre del juego: %s. Nombre Salon: %s.  \n\n",
-													arcadeList[i].idArcade,
-													arcadeList[i].numberOfPlayers,
-													arcadeList[i].gameName,
-													salonList[posicionSalon].name);
+					printf("%15d %15d %25s %15s\n",
+							arcadeList[i].idArcade,
+							arcadeList[i].numberOfPlayers,
+							arcadeList[i].gameName,
+							salonList[posicionSalon].name);
 					banderaExiste='s';
 				}
 			}
@@ -233,20 +229,13 @@ int info_imprimirSalonPorId (eArcade *arcadeList, int lenghtArcade,eSalon *salon
 	retorno=contadorArcades;
 
 
-	switch(salonList[posicionBuscada].type)
-	{
-		case TIPO_SHOPPING:
-			strncpy(cadenaAux,"Shopping",32);
-			break;
-		case TIPO_LOCAL:
-			strncpy(cadenaAux,"Local",32);
-			break;
-	}
-	printf("Nombre: %s. Tipo: %s. Direccion: %s. Cantidad de arcades: %d.  \n\n",
-									salonList[posicionBuscada].name,
-									cadenaAux,
-									salonList[posicionBuscada].address,
-									contadorArcades);
+	salon_cambiarTexto (salonList, posicionBuscada, cadenaAux);
+	printf("%15s %15s %15s %15s \n\n","Nombre", "Tipo","Direccion","Arcades");
+	printf("%15s %15s %15s %15d \n",
+			salonList[posicionBuscada].name,
+			cadenaAux,
+			salonList[posicionBuscada].address,
+			contadorArcades);
 
 	return retorno;
 }
@@ -268,36 +257,19 @@ int info_imprimirArcadePorId (eArcade *arcadeList, int lenghtArcade,eSalon *salo
 
 		if(posicionBuscada>=0)
 		{
-			switch(salonList[posicionBuscada].type)
-			{
-				case TIPO_SHOPPING:
-					strncpy(cadenaAux,"Shopping",32);
-					break;
-				case TIPO_LOCAL:
-					strncpy(cadenaAux,"Local",32);
-					break;
-			}
+			salon_cambiarTexto (salonList, posicionBuscada, cadenaAux);
 			printf("Salon %s. Tipo %s\n\n",salonList[posicionBuscada].name,cadenaAux);
 
 			for (int i=0;i<lenghtArcade;i++)
 			{
 				if(arcadeList[i].idSalon==idIngresada)
 				{
-					switch(arcadeList[i].soundType)
-					{
-						case TIPO_MONO:
-							strncpy(cadenaAuxDos,"Mono",32);
-							break;
-						case TIPO_ESTEREO:
-							strncpy(cadenaAuxDos,"Estereo",32);
-							break;
-					}
-
+					arc_cambiarTexto (arcadeList, i, cadenaAuxDos);
 					printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
 							"ID del Salon: %d Nombre del juego %s\n\n",
 							arcadeList[i].idArcade,
 							arcadeList[i].nationality,
-							cadenaAux,
+							cadenaAuxDos,
 							arcadeList[i].numberOfPlayers,
 							arcadeList[i].maximumTokens,
 							arcadeList[i].idSalon,
@@ -465,6 +437,46 @@ int info_juegoEnArcades (eArcade *arcadeList, int lenghtArcade, char nombreJuego
 }
 
 
+int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[])
+{
+	int retorno;
+
+	retorno=-1;
+	switch(salonList[posicion].type)
+	{
+		case TIPO_SHOPPING:
+			retorno=0;
+			strncpy(pTextoConvertido,"Shopping",32);
+			break;
+		case TIPO_LOCAL:
+			strncpy(pTextoConvertido,"Local",32);
+			retorno=0;
+			break;
+	}
+
+	return retorno;
+}
+
+
+int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[])
+{
+	int retorno;
+
+	retorno=-1;
+	switch(arcadeList[posicion].soundType)
+	{
+		case TIPO_MONO:
+			retorno=0;
+			strncpy(pTextoConvertido,"Mono",32);
+			break;
+		case TIPO_ESTEREO:
+			strncpy(pTextoConvertido,"Estereo",32);
+			retorno=0;
+			break;
+	}
+
+	return retorno;
+}
 
 
 

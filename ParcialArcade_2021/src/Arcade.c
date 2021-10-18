@@ -14,6 +14,7 @@
 #define TIPO_MONO 1
 #define TIPO_ESTEREO 2
 
+static int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]);
 
 static int dameUnIdNuevo (void);
 
@@ -182,25 +183,19 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 		if(posicionSolicitada>=0)
 		{
-			switch(arcadeList[posicionSolicitada].soundType)
-			{
-				case TIPO_MONO:
-					strncpy(cadenaAux,"Mono",32);
-					break;
-				case TIPO_ESTEREO:
-					strncpy(cadenaAux,"Estereo",32);
-					break;
-			}
-			printf("\nSe va a eliminar el siguiente arcade: \n\n"
-							"ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
-							"ID del Salon: %d Nombre del juego %s\n\n",
-							arcadeList[posicionSolicitada].idArcade,
-							arcadeList[posicionSolicitada].nationality,
-							cadenaAux,
-							arcadeList[posicionSolicitada].numberOfPlayers,
-							arcadeList[posicionSolicitada].maximumTokens,
-							arcadeList[posicionSolicitada].idSalon,
-							arcadeList[posicionSolicitada].gameName);
+
+			arc_cambiarTexto (arcadeList, posicionSolicitada, cadenaAux);
+
+			printf("\nSe va a eliminar el siguiente arcade: \n\n");
+			printf("%15s %15s %15s %15s %15s %15s %15s\n\n","ID del Arcade", "Nacionalidad","Sonido","Jugadores","Fichas máximas","ID de Salon", "Juego");
+			printf("%15d %15s %15s %15d %15d %15d %15s\n",
+					arcadeList[posicionSolicitada].idArcade,
+					arcadeList[posicionSolicitada].nationality,
+					cadenaAux,
+					arcadeList[posicionSolicitada].numberOfPlayers,
+					arcadeList[posicionSolicitada].maximumTokens,
+					arcadeList[posicionSolicitada].idSalon,
+					arcadeList[posicionSolicitada].gameName);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
 							"Error, dato ingresado inválido\n")==0)
@@ -300,7 +295,7 @@ int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada)
 					{
 						printf("ID ingresada no coincide con ningún Arcade\n");
 					}
-			}
+			}printf("ID ingresada no coincide con ningún Arcade\n");
 
 
 	}
@@ -317,24 +312,17 @@ int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
 
 	if(arcadeList!=NULL&&lenghtArcade>0)
 	{
+		printf("%15s %15s %15s %15s %15s %15s %25s\n\n","ID del Arcade", "Nacionalidad","Sonido","Jugadores","Fichas máximas","ID de Salon", "Juego");
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
 
 			if(arcadeList[i].flagEmpty==ACTIVO)
 			{
-				switch(arcadeList[i].soundType)
-						{
-							case TIPO_MONO:
-								strncpy(cadenaAux,"Mono",32);
-								break;
-							case TIPO_ESTEREO:
-								strncpy(cadenaAux,"Estereo",32);
-								break;
-						}
+				arc_cambiarTexto (arcadeList, i, cadenaAux);
 
-				printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
-						"ID del Salon: %d Nombre del juego %s\n\n",
+
+				printf("%15d %15s %15s %15d %15d %15d %25s\n",
 						arcadeList[i].idArcade,
 						arcadeList[i].nationality,
 						cadenaAux,
@@ -367,8 +355,7 @@ int arc_imprimirJuegos(eArcade *arcadeList, int lenghtArcade)
 			if(arcadeList[i].flagEmpty==ACTIVO)
 			{
 
-				printf("Nombre del juego %s\n\n",arcadeList[i].gameName);
-
+				printf("- Nombre del juego:		%s\n",arcadeList[i].gameName);
 			}
 
 		}
@@ -400,9 +387,9 @@ int arc_subMenuModificaciones (void)
 	int eleccion;
 
 	printf("Elija qué opción desea modificar: \n"
-			"1)Cantidad de jugadores\n"
-			"2)Nombre del juego\n"
-			"3)Volver al menú\n");
+			"	1)Cantidad de jugadores\n"
+			"	2)Nombre del juego\n"
+			"	3)Volver al menú\n");
 
 	pedirIntIntentosRango(&eleccion, 1, 3, 20, "Ingrese aquí su elección", "Error");
 
@@ -443,9 +430,9 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 
 	if(arc_validarNombreRepetido(arcadeList,lenghtArcade,nombreJuego)==1)
 	{
-		printf("Este juego ya se encuentra ingresado en el sistema. Desea volver a cargarlo?");
+		printf("\nEste juego ya se encuentra ingresado en el sistema. Desea volver a cargarlo?");
 
-		if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+		if(pedirCharSiNo(&userChoice, 's', 'n', 5, "\nPresione [s] para confirmar o [n] para volver al menu principal\n",
 				"Error, dato ingresado inválido\n")==0)
 		{
 			if(userChoice=='s')
@@ -530,7 +517,6 @@ int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
 
 	arc_ordenarArcades (arcadeList, lenghtArcade,1);
 
-
 	if(arcadeList!=NULL&&lenghtArcade>0)
 	{
 		retorno=0;
@@ -544,7 +530,7 @@ int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
 
 				}else
 				{
-					printf("Nombre del juego %s\n\n",arcadeList[i].gameName);
+					printf("- Nombre del juego:		%s\n\n",arcadeList[i].gameName);
 				}
 
 			}
@@ -567,10 +553,11 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 	contador=0;
 
+	retorno=-2;
 
 	if(arcadeList!=NULL&&lenghtArcade>0)
 	{
-		retorno=-2;
+		retorno=0;
 
 		printf("\n >>>Se van a eliminar a los siguientes arcades asociados: <<< \n");
 
@@ -580,19 +567,9 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 			{
 				if(idIngresada==arcadeList[i].idSalon)
 				{
-					switch(arcadeList[i].soundType)
-					{
-						case TIPO_MONO:
-							strncpy(cadenaAux,"Mono",32);
-							break;
-						case TIPO_ESTEREO:
-							strncpy(cadenaAux,"Estereo",32);
-							break;
-					}
+					arc_cambiarTexto (arcadeList, i, cadenaAux);
 
-
-					printf("ID del Arcade: %d. Nacionalidad: %s. Tipo de Sonido: %s. Cantidad de Jugadores: %d. Capacidad máxima de fichas: %d.  "
-							"ID del Salon: %d Nombre del juego %s\n\n",
+					printf("%15d %15s %15s %15d %15d %15d %25s\n",
 							arcadeList[i].idArcade,
 							arcadeList[i].nationality,
 							cadenaAux,
@@ -612,7 +589,7 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 		if(contador>0)
 		{
-			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
@@ -638,6 +615,7 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 						}
 
 					}
+
 				}
 
 
@@ -651,6 +629,27 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 	return retorno;
 
 }
+
+int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[])
+{
+	int retorno;
+
+	retorno=-1;
+	switch(arcadeList[posicion].soundType)
+	{
+		case TIPO_MONO:
+			retorno=0;
+			strncpy(pTextoConvertido,"Mono",32);
+			break;
+		case TIPO_ESTEREO:
+			strncpy(pTextoConvertido,"Estereo",32);
+			retorno=0;
+			break;
+	}
+
+	return retorno;
+}
+
 
 
 

@@ -13,6 +13,9 @@
 #define TIPO_SHOPPING 1
 #define TIPO_LOCAL 2
 
+
+int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[]);
+
 static int dameUnIdNuevo (void);
 
 static int dameUnIdNuevo (void)
@@ -48,6 +51,8 @@ int salon_loadSalon(eSalon *pSalon)
 
 	char nameAux[128];
 	char addressAux[128];
+	char cadenaAuxUno[128]={"Shopping"};
+	char cadenaAuxDos[128]={"Local"};
 	int typeAux;
 
 
@@ -58,21 +63,38 @@ int salon_loadSalon(eSalon *pSalon)
 			if(pedirDireccion(addressAux,sizeof(addressAux), 3, "Ingrese la direccion del salon: ", "Error, ingrese calle y altura")==0)
 			{
 				if(pedirIntIntentosRango(&typeAux,1, 2, 5, "Ingrese el tipo:\n"
-															"1)Shopping\n"
-															"2)Local\n", "Error")==0)
+															"	1)Shopping\n"
+															"	2)Local\n", "Error")==0)
 				{
+
+
 					strncpy(pSalon->name,nameAux,sizeof(pSalon->name));
 					strncpy(pSalon->address,addressAux,sizeof(pSalon->address));
 					pSalon->type=typeAux;
 					pSalon->idSalon=dameUnIdNuevo();
 					pSalon->flagEmpty=ACTIVO;
 					retorno=0;
-					printf("Arcade cargado con exito:\n"
-							"Nombre: %s. Direccion: %s. Tipo: %d. ID de Salon: %d.  \n\n",
-														pSalon->name,
-														pSalon->address,
-														pSalon->type,
-														pSalon->idSalon);
+
+					if(pSalon->type==1)
+					{
+						printf("Arcade cargado con exito:\n");
+						printf("%-15s %15s %15s %15s\n\n","Nombre", "Direccion","Tipo de Salon","ID de Salon");
+						printf("%-15s %15s %15s  %15d  \n",
+								pSalon->name,
+								pSalon->address,
+								cadenaAuxUno,
+								pSalon->idSalon);
+					} else
+					{
+						printf("Arcade cargado con exito:\n");
+						printf("%-15s %15s %15s %15s\n\n","Nombre", "Direccion","Tipo de Salon","ID de Salon");
+						printf("%-15s %15s %15s  %15d  \n",
+									pSalon->name,
+									pSalon->address,
+									cadenaAuxDos,
+									pSalon->idSalon);
+					}
+
 
 				}
 
@@ -176,24 +198,16 @@ int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada)
 
 		if(posicionSolicitada>=0)
 		{
+			salon_cambiarTexto (salonList, posicionSolicitada, cadenaAux);
 
-			switch(salonList[posicionSolicitada].type)
-			{
-				case TIPO_SHOPPING:
-					strncpy(cadenaAux,"Shopping",32);
-					break;
-				case TIPO_LOCAL:
-					strncpy(cadenaAux,"Local",32);
-					break;
-			}
-			printf("\nSe va a eliminar el siguiente salon: \n\n"
-							"Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
-							salonList[posicionSolicitada].name,
-							salonList[posicionSolicitada].address,
-							cadenaAux,
-							salonList[posicionSolicitada].idSalon);
+			printf("\nSe va a eliminar el siguiente salon: \n\n");
+			printf("%-15s %15s %15s  %15d  \n",
+					salonList[posicionSolicitada].name,
+					salonList[posicionSolicitada].address,
+					cadenaAux,
+					salonList[posicionSolicitada].idSalon);
 
-					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
+					if(pedirCharSiNo(&userChoice, 's', 'n', 5, " ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
@@ -233,22 +247,16 @@ int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon)
 	if(salonList!=NULL&&lenghtSalon>0)
 	{
 		retorno=0;
+		printf("%-15s %15s %15s %15s\n\n","Nombre", "Direccion","Tipo de Salon","ID de Salon");
 		for(int i=0;i<lenghtSalon;i++)
 		{
 
 			if(salonList[i].flagEmpty==ACTIVO)
 			{
-				switch(salonList[i].type)
-				{
-					case TIPO_SHOPPING:
-						strncpy(cadenaAux,"Shopping",32);
-						break;
-					case TIPO_LOCAL:
-						strncpy(cadenaAux,"Local",32);
-						break;
-				}
+				salon_cambiarTexto (salonList, i, cadenaAux);
 
-				printf("\n- Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
+
+				printf("%-15s %15s %15s  %15d  \n",
 						salonList[i].name,
 						salonList[i].address,
 						cadenaAux,
@@ -275,6 +283,32 @@ void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, 
 	pSalon[indice].flagEmpty=ACTIVO;
 
 }
+
+int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[])
+{
+	int retorno;
+
+	retorno=-1;
+	switch(salonList[posicion].type)
+	{
+		case TIPO_SHOPPING:
+			retorno=0;
+			strncpy(pTextoConvertido,"Shopping",32);
+			break;
+		case TIPO_LOCAL:
+			strncpy(pTextoConvertido,"Local",32);
+			retorno=0;
+			break;
+	}
+
+	return retorno;
+}
+
+
+
+
+
+
 
 
 
