@@ -31,7 +31,6 @@ int salon_buscarPorId (eSalon *salonList, int lenghtSalon, int idIngresada);
 int salon_imprimirCompleto(eSalon *salonList, int lenghtSalon);
 int salon_remove (eSalon *salonList, int lenghtSalon, int idIngresada);
 void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id, int indice);
-int salon_occupancy (eSalon *salonList, int lenghtSalon, int* pEmpty, int* pNotEmpty);
 int salon_occupancy (eSalon *salonList, int lenghtSalon, int* pNotEmpty);
 
 #endif /* SALON_H_ */

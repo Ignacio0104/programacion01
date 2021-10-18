@@ -652,12 +652,10 @@ int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]
 int arc_occupancy (eArcade *arcadeList, int lenghtArcade, int* pNotEmpty)
 {
 	int retorno;
-	int empty;
 	int notEmpty;
 	int i;
 
 	retorno=-1;
-	empty=0;
 	notEmpty=0;
 
 	if(arcadeList!=NULL&&lenghtArcade>0)

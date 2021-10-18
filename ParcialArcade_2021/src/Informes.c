@@ -108,6 +108,7 @@ int info_contarArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,
 
 	}
 
+	contadorSalones=0;
 	for(int i=0;i<lenghtSalon;i++)
 	{
 		for(int j=0;j<indiceDeId;j++)
@@ -124,10 +125,15 @@ int info_contarArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,
 													salonList[i].address,
 													cadenaAux,
 													salonList[i].idSalon);
+					contadorSalones++;
 				}
 			}
 
 		}
+	}
+	if(contadorSalones==0)
+	{
+		printf("Ningún salon tiene mas de 4 arcades");
 	}
 
 	return retorno;

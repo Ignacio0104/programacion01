@@ -307,12 +307,10 @@ int salon_cambiarTexto (eSalon *salonList, int posicion, char pTextoConvertido[]
 int salon_occupancy (eSalon *salonList, int lenghtSalon, int* pNotEmpty)
 {
 	int retorno;
-	int empty;
 	int notEmpty;
 	int i;
 
 	retorno=-1;
-	empty=0;
 	notEmpty=0;
 
 	if(salonList!=NULL&&lenghtSalon>0)

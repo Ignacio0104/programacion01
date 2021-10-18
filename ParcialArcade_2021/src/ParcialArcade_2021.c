@@ -40,7 +40,7 @@ int main(void) {
 	eArcade arcadeList[ARCADE_LEN];
 	arc_initList(arcadeList,ARCADE_LEN);
 
-	salon_altaForzada(salonList,"Sacoa","Maipu 225", 1, 10, 0);
+	/*salon_altaForzada(salonList,"Sacoa","Maipu 225", 1, 10, 0);
 	salon_altaForzada(salonList,"Showcase","Peatonal 14", 2, 11, 1);
 	salon_altaForzada(salonList,"Juguelandia","Paseo 15", 1, 12, 2);
 	salon_altaForzada(salonList,"Travalcase","Guemes 678", 1, 13, 3);
@@ -60,7 +60,7 @@ int main(void) {
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Prince of Persia",1010, 10);
 	arc_altaForzada(arcadeList,"Alemania", 1, 6, 2600, 14,"Daytona",1013, 13);
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 13,"Pacman",1003, 3);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1011,11);
+	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1011,11);*/
 
 
 	eleccionUsuario=menuOperaciones();
@@ -107,66 +107,110 @@ int main(void) {
 			break;
 		case 3:
 			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
-			salon_imprimirCompleto(salonList,SALON_LEN);
+			if(salonesOcupados>0)
+			{
+				salon_imprimirCompleto(salonList,SALON_LEN);
+			} else
+			{
+				printf("\nNo hay salones para mostrar");
+			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 4:
-			salon_imprimirCompleto(salonList,SALON_LEN);
-			idSolicitada=salon_askForId();
-			if(idSolicitada>0)
+			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
+			if(salonesOcupados>0)
 			{
-				if(salon_buscarPorId(salonList,SALON_LEN,idSolicitada)>=0)
+				salon_imprimirCompleto(salonList,SALON_LEN);
+				idSolicitada=salon_askForId();
+				if(idSolicitada>0)
 				{
-					posicionLibre=arc_buscarDisponible(arcadeList, ARCADE_LEN);
+					if(salon_buscarPorId(salonList,SALON_LEN,idSolicitada)>=0)
+					{
+						posicionLibre=arc_buscarDisponible(arcadeList, ARCADE_LEN);
 
-					if(posicionLibre>=0)
+						if(posicionLibre>=0)
+						{
+							arc_loadArcade(&arcadeList[posicionLibre],idSolicitada);
+						}else
+						{
+							printf("No hay lugar disponible");
+						}
+					} else
 					{
-						arc_loadArcade(&arcadeList[posicionLibre],idSolicitada);
-					}else
-					{
-						printf("No hay lugar disponible");
+						printf("El ID no coincide con ningún salón");
 					}
-				} else
-				{
-					printf("El ID no coincide con ningún salón");
 				}
+			}else
+			{
+				printf("\nNo hay salones cargados. Favor ingresar un salón y luego cargar el arcade\n");
 			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 5:
 			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
-			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
-			idSolicitada=arc_askForId();
-			if(idSolicitada>0)
+			if(arcadesOcupados>0)
 			{
-				arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+				arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+				idSolicitada=arc_askForId();
+				if(idSolicitada>0)
+				{
+					arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+				}
+			}else
+			{
+				printf("\nNo hay arcades cargados en el sistema\n");
 			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 6:
 			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
-			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
-			idSolicitada=arc_askForId();
-			if(idSolicitada>0)
+			if(arcadesOcupados>0)
 			{
-				arc_remove (arcadeList,ARCADE_LEN,idSolicitada);
+				arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+				idSolicitada=arc_askForId();
+				if(idSolicitada>0)
+				{
+					arc_remove (arcadeList,ARCADE_LEN,idSolicitada);
+				}
+			}else
+			{
+				printf("\nNo hay arcades cargados en el sistema\n");
 			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 7:
 			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
-			arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+			if(arcadesOcupados>0)
+			{
+				arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+			}else
+			{
+				printf("\nNo hay arcades cargados en el sistema\n");
+			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 8:
 			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
-			arc_imprimirJuegosSinRepetir (arcadeList, ARCADE_LEN);
+			if(arcadesOcupados>0)
+			{
+				arc_imprimirJuegosSinRepetir (arcadeList, ARCADE_LEN);
+			}else
+			{
+				printf("\nNo hay juegos cargados en el sistema\n");
+			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 9:
 			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
-			subEleccionUsuario=info_subMenuReports ();
-			info_imprimirInformes (arcadeList, ARCADE_LEN,salonList,SALON_LEN, subEleccionUsuario);
+			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+			if(salonesOcupados>0&&arcadesOcupados>0)
+			{
+				subEleccionUsuario=info_subMenuReports ();
+				info_imprimirInformes (arcadeList, ARCADE_LEN,salonList,SALON_LEN, subEleccionUsuario);
+			}else
+			{
+				printf("\nError, faltan cargar datos. Favor realizar la carga completa de por lo menos 1 salon y 1 arcade");
+			}
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 10:
