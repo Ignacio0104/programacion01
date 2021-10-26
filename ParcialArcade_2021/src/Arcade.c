@@ -449,6 +449,11 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 			}
 
 		}
+	}else
+	{
+		strncpy(arcadeList[posicionPedida].gameName,nombreJuego,sizeof(arcadeList[posicionPedida].gameName));
+		printf("Juego modificado exitosamente.\n");
+		printf("Modificado sin repetir\n\n");
 	}
 
 	return retorno;

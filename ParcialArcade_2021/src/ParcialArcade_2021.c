@@ -40,7 +40,7 @@ int main(void) {
 	eArcade arcadeList[ARCADE_LEN];
 	arc_initList(arcadeList,ARCADE_LEN);
 
-	/*salon_altaForzada(salonList,"Sacoa","Maipu 225", 1, 10, 0);
+	salon_altaForzada(salonList,"Sacoa","Maipu 225", 1, 10, 0);
 	salon_altaForzada(salonList,"Showcase","Peatonal 14", 2, 11, 1);
 	salon_altaForzada(salonList,"Juguelandia","Paseo 15", 1, 12, 2);
 	salon_altaForzada(salonList,"Travalcase","Guemes 678", 1, 13, 3);
@@ -60,7 +60,7 @@ int main(void) {
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Prince of Persia",1010, 10);
 	arc_altaForzada(arcadeList,"Alemania", 1, 6, 2600, 14,"Daytona",1013, 13);
 	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 13,"Pacman",1003, 3);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1011,11);*/
+	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1011,11);
 
 
 	eleccionUsuario=menuOperaciones();
