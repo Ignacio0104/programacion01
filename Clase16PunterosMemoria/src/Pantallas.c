@@ -137,7 +137,7 @@ int disp_askForId (void)
 	return retorno;
 }
 
-int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada)
+int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada) //Modificado
 {
 	int retorno;
 	retorno=-1;
@@ -147,10 +147,10 @@ int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada)
 
 		for(int i=0;i<lenght;i++)
 		{
-			if(displaysList[i].id==idIngresada)
+			if(displaysList[i]->id==idIngresada)
 			{
 
-				if(displaysList[i].flagEmpty==ACTIVO)
+				if(displaysList[i]!=NULL)
 				{
 					retorno=i;
 					break;
@@ -168,7 +168,7 @@ int disp_buscarPorId (eDisplay *displaysList, int lenght, int idIngresada)
 
 }
 
-int disp_remove (eDisplay *displaysList, int lenght, int idIngresada)
+int disp_remove (eDisplay *displaysList[], int lenght, int idIngresada) //Modificada
 {
 	int retorno;
 	char userChoice;
@@ -182,18 +182,20 @@ int disp_remove (eDisplay *displaysList, int lenght, int idIngresada)
 
 		posicionSolicitada=disp_buscarPorId (displaysList,lenght, idIngresada);
 
-		if(posicionSolicitada>0)
+		if(posicionSolicitada>=0)
 		{
 			printf("\nSe va a eliminar la siguiente pantalla: \n\n"
 							"Tipo: %02d. Precio: %18.2f. ID: %d.   Nombre: %15s.  Direccion: %15s.\n\n",
-							displaysList[posicionSolicitada].type,displaysList[posicionSolicitada].pricePerDay,displaysList[posicionSolicitada].id ,displaysList[posicionSolicitada].name,displaysList[posicionSolicitada].address);
+							displaysList[posicionSolicitada]->type,displaysList[posicionSolicitada]->pricePerDay,
+							displaysList[posicionSolicitada]->id ,displaysList[posicionSolicitada]->name,displaysList[posicionSolicitada]->address);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "Presione [s] para confirmar o [n] para volver al menu principal\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
 						{
-							displaysList[posicionSolicitada].flagEmpty=INACTIVO;
+							free(displaysList[posicionSolicitada]); //Libero el lugar SIEMPRE ESTO PRIMERO
+							displaysList[posicionSolicitada]=NULL; // Lo paso a NULL para que aparezca como libre
 							printf("Empleado borrado exitosamente.\n");
 							retorno=0;
 						} else
