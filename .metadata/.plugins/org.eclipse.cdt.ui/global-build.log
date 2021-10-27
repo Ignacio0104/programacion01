@@ -358,3 +358,129 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantalla
   140 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada) //Modificado
       |                       ~~~~~~~~~~^~~~~~~~~~~~~~
 gcc -o Clase16PunterosMemoria.exe "src\\Clase16PunterosMemoria.o" "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\biblioteca_input.o" 
+22:09:31 **** Incremental Build of configuration Debug for project Clase16PunterosMemoria ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase16PunterosMemoria.o" "..\\src\\Clase16PunterosMemoria.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:225:5: error: conflicting types for 'disp_modificarPantalla'
+  225 | int disp_modificarPantalla(eDisplay *displaysList[],int lenght, int idIngresada)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:9:
+..\src\Pantallas.h:32:5: note: previous declaration of 'disp_modificarPantalla' was here
+   32 | int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:237:35: error: '*(displaysList + (sizetype)((unsigned int)posicionPedida * 4))' is a pointer; did you mean to use '->'?
+  237 |    if(displaysList[posicionPedida].flagEmpty==ACTIVO)
+      |                                   ^
+      |                                   ->
+..\src\Pantallas.c:241:22: warning: passing argument 1 of 'disp_loadDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  241 |     disp_loadDisplay(&displaysList[posicionPedida]);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      eDisplay ** {aka struct <anonymous> **}
+..\src\Pantallas.c:47:32: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'eDisplay **' {aka 'struct <anonymous> **'}
+   47 | int disp_loadDisplay(eDisplay *pDisplay)
+      |                      ~~~~~~~~~~^~~~~~~~
+22:10:13 **** Incremental Build of configuration Debug for project Clase16PunterosMemoria ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'imprimirPantallasPorCuit':
+..\src\Informes.c:58:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+   58 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Informes.c: In function 'calcularFacturacionPorCuit':
+..\src\Informes.c:93:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+   93 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Informes.c: In function 'info_calcularDeudaCliente':
+..\src\Informes.c:192:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:225:5: error: conflicting types for 'disp_modificarPantalla'
+  225 | int disp_modificarPantalla(eDisplay *displaysList[],int lenght, int idIngresada)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:9:
+..\src\Pantallas.h:32:5: note: previous declaration of 'disp_modificarPantalla' was here
+   32 | int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+..\src\Pantallas.c: In function 'disp_modificarPantalla':
+..\src\Pantallas.c:241:22: warning: passing argument 1 of 'disp_loadDisplay' makes pointer from integer without a cast [-Wint-conversion]
+  241 |     disp_loadDisplay(posicionPedida);
+      |                      ^~~~~~~~~~~~~~
+      |                      |
+      |                      int
+..\src\Pantallas.c:47:32: note: expected 'eDisplay *' {aka 'struct <anonymous> *'} but argument is of type 'int'
+   47 | int disp_loadDisplay(eDisplay *pDisplay)
+      |                      ~~~~~~~~~~^~~~~~~~
+22:11:22 **** Incremental Build of configuration Debug for project Clase16PunterosMemoria ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+..\src\Pantallas.c:225:5: error: conflicting types for 'disp_modificarPantalla'
+  225 | int disp_modificarPantalla(eDisplay *displaysList[],int lenght, int idIngresada)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Pantallas.c:9:
+..\src\Pantallas.h:32:5: note: previous declaration of 'disp_modificarPantalla' was here
+   32 | int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+22:11:35 **** Incremental Build of configuration Debug for project Clase16PunterosMemoria ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase16PunterosMemoria.o" "..\\src\\Clase16PunterosMemoria.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Pantallas.o" "..\\src\\Pantallas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'imprimirPantallasPorCuit':
+..\src\Informes.c:58:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+   58 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Informes.c: In function 'calcularFacturacionPorCuit':
+..\src\Informes.c:93:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+   93 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Informes.c: In function 'info_calcularDeudaCliente':
+..\src\Informes.c:192:44: warning: passing argument 1 of 'disp_buscarPorId' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |      indiceArrayPantalla=disp_buscarPorId (displaysList, lenghtDisplay, idPantalla);
+      |                                            ^~~~~~~~~~~~
+      |                                            |
+      |                                            eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:9:
+..\src\Pantallas.h:31:33: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarPorId (eDisplay *displaysList[], int lenght, int idIngresada);
+      |                       ~~~~~~~~~~^~~~~~~~~~~~~~
+gcc -o Clase16PunterosMemoria.exe "src\\Clase16PunterosMemoria.o" "src\\Contratacion.o" "src\\Informes.o" "src\\Pantallas.o" "src\\biblioteca_input.o" 

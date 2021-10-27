@@ -222,7 +222,7 @@ int disp_remove (eDisplay *displaysList[], int lenght, int idIngresada) //Modifi
 }
 
 
-int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada)
+int disp_modificarPantalla(eDisplay *displaysList[],int lenght, int idIngresada)
 {
 	int retorno;
 	int posicionPedida;
@@ -234,11 +234,11 @@ int disp_modificarPantalla(eDisplay *displaysList,int lenght, int idIngresada)
 		posicionPedida=disp_buscarPorId (displaysList,lenght, idIngresada);
 		if(posicionPedida>=0)
 		{
-			if(displaysList[posicionPedida].flagEmpty==ACTIVO)
+			if(displaysList[posicionPedida]!=NULL)
 			{
 				printf("Se van a modificar los datos del ID %d\n",posicionPedida);
 
-				disp_loadDisplay(&displaysList[posicionPedida]);
+				disp_loadDisplay(displaysList[posicionPedida]);
 			} else
 			{
 				printf("Aca está fallando");

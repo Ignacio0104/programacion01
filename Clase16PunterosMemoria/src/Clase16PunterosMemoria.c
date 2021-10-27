@@ -22,7 +22,7 @@ int main(void) {
 
 	int posLibre;
 	eDisplay* pAuxiliarDisplay;
-	int idABorrar;
+	int idPedida;
 
 	//Array de punteros estatico
 
@@ -59,14 +59,20 @@ int main(void) {
 
 	//>>>>>>ELIMIAR POR ID<<<<<<//
 
-	idABorrar=disp_askForId ();
+	idPedida=disp_askForId ();
 
-	if(idABorrar>=0)
+	if(idPedida>=0)
 	{
-		disp_remove (arrayDisplays, 1000,idABorrar);
+		disp_remove (arrayDisplays, 1000,idPedida);
 	}
 
 	//>>>>>MODIFICAR<<<<<<//
+
+	idPedida=disp_askForId ();
+	if(idPedida>=0)
+	{
+		disp_modificarPantalla(arrayDisplays, 1000,idPedida);
+	}
 
 
 	return EXIT_SUCCESS;
