@@ -1824,3 +1824,931 @@ collect2.exe: error: ld returned 1 exit status
 22:14:23 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
 Info: Internal Builder is used for build
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:28:01 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:52:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   52 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:56:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   56 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:59:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   59 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:63:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   63 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:67:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   67 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:71:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   71 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_altaForzada':
+..\src\Salon.c:291:24: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  291 |  strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
+      |                        ^~
+..\src\Salon.c:291:59: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  291 |  strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
+      |                                                           ^~
+..\src\Salon.c:292:24: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  292 |  strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
+      |                        ^~
+..\src\Salon.c:292:65: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  292 |  strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
+      |                                                                 ^~
+..\src\Salon.c:293:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  293 |  pSalon[indice]->type=tipo;
+      |                ^~
+..\src\Salon.c:294:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  294 |  pSalon[indice]->idSalon=id;
+      |                ^~
+..\src\Salon.c:295:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  295 |  pSalon[indice]->flagEmpty=ACTIVO;
+      |                ^~
+22:29:10 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_altaForzada':
+..\src\Salon.c:291:24: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  291 |  strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
+      |                        ^~
+..\src\Salon.c:291:59: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  291 |  strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
+      |                                                           ^~
+..\src\Salon.c:292:24: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  292 |  strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
+      |                        ^~
+..\src\Salon.c:292:65: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  292 |  strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
+      |                                                                 ^~
+..\src\Salon.c:293:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  293 |  pSalon[indice]->type=tipo;
+      |                ^~
+..\src\Salon.c:294:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  294 |  pSalon[indice]->idSalon=id;
+      |                ^~
+..\src\Salon.c:295:16: error: invalid type argument of '->' (have 'eSalon' {aka 'struct <anonymous>'})
+  295 |  pSalon[indice]->flagEmpty=ACTIVO;
+      |                ^~
+22:31:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+22:31:56 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+22:33:35 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:33:38 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+14:22:38 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_nuevo':
+..\src\Salon.c:35:10: warning: returning 'int' from a function with return type 'eSalon *' {aka 'struct <anonymous> *'} makes pointer from integer without a cast [-Wint-conversion]
+   35 |   return -1;
+      |          ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:321:20: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  321 |     if(salonList[i]->flagEmpty==ACTIVO&&arcadeList[j].flagEmpty==ACTIVO)
+      |                    ^~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:603:19: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  603 |    if(salonList[i]->flagEmpty==ACTIVO)
+      |                   ^~
+..\src\Informes.c: In function 'info_promedioDeArcades':
+..\src\Informes.c:652:19: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  652 |    if(salonList[i]->flagEmpty==ACTIVO)
+      |                   ^~
+14:25:59 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:321:20: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  321 |     if(salonList[i]->flagEmpty==ACTIVO&&arcadeList[j].flagEmpty==ACTIVO)
+      |                    ^~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:603:19: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  603 |    if(salonList[i]->flagEmpty==ACTIVO)
+      |                   ^~
+..\src\Informes.c: In function 'info_promedioDeArcades':
+..\src\Informes.c:652:19: error: 'eSalon' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  652 |    if(salonList[i]->flagEmpty==ACTIVO)
+      |                   ^~
+14:26:52 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+14:42:36 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarArcades':
+..\src\Informes.c:85:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+   85 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:162:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  162 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c:181:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  181 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c: In function 'info_imprimirSalonPorId':
+..\src\Informes.c:226:21: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  226 |     if(arcadeList[i].flagEmpty==ACTIVO)
+      |                     ^
+..\src\Informes.c: In function 'info_imprimirSalonMasArcade':
+..\src\Informes.c:321:41: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  321 |     if(salonList[i]!=NULL&&arcadeList[j].flagEmpty==ACTIVO)
+      |                                         ^
+..\src\Informes.c: In function 'info_calcularFichasTotal':
+..\src\Informes.c:377:21: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  377 |     if(arcadeList[i].flagEmpty==ACTIVO)
+      |                     ^
+..\src\Informes.c: In function 'info_juegoEnArcades':
+..\src\Informes.c:429:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  429 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:567:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  567 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c: In function 'info_promedioDeArcades':
+..\src\Informes.c:643:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  643 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+15:13:49 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_ordenarArcades':
+..\src\Arcade.c:467:13: error: incompatible types when assigning to type 'eArcade' {aka 'struct <anonymous>'} from type 'eArcade *' {aka 'struct <anonymous> *'}
+  467 |       aux = arcadeList[i];
+      |             ^~~~~~~~~~
+..\src\Arcade.c:469:23: error: incompatible types when assigning to type 'eArcade *' {aka 'struct <anonymous> *'} from type 'eArcade' {aka 'struct <anonymous>'}
+  469 |       arcadeList[j] = aux;
+      |                       ^~~
+..\src\Arcade.c:486:14: error: incompatible types when assigning to type 'eArcade' {aka 'struct <anonymous>'} from type 'eArcade *' {aka 'struct <anonymous> *'}
+  486 |        aux = arcadeList[i];
+      |              ^~~~~~~~~~
+..\src\Arcade.c:488:24: error: incompatible types when assigning to type 'eArcade *' {aka 'struct <anonymous> *'} from type 'eArcade' {aka 'struct <anonymous>'}
+  488 |        arcadeList[j] = aux;
+      |                        ^~~
+15:26:39 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_imprimirInformes':
+..\src\Informes.c:532:28: warning: passing argument 1 of 'info_arcadesCompletos' from incompatible pointer type [-Wincompatible-pointer-types]
+  532 |     info_arcadesCompletos (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                            ^~~~~~~~~~
+      |                            |
+      |                            eArcade ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:30:37: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade **' {aka 'struct <anonymous> **'}
+   30 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon);
+      |                            ~~~~~~~~~^~~~~~~~~~
+..\src\Informes.c:535:29: warning: passing argument 1 of 'info_promedioDeArcades' from incompatible pointer type [-Wincompatible-pointer-types]
+  535 |     info_promedioDeArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             eArcade ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:31:40: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade **' {aka 'struct <anonymous> **'}
+   31 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon);
+      |                               ~~~~~~~~~^~~~~~~~~~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:557:22: warning: passing argument 1 of 'arc_ordenarArcades' from incompatible pointer type [-Wincompatible-pointer-types]
+  557 |  arc_ordenarArcades (arcadeList, lenghtArcade,2);
+      |                      ^~~~~~~~~~
+      |                      |
+      |                      eArcade * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:41:34: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   41 | int arc_ordenarArcades (eArcade *arcadeList[], int lenghtArcade, int order);
+      |                         ~~~~~~~~~^~~~~~~~~~~~
+..\src\Informes.c:566:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  566 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c:566:32: error: 'ACTIVO' undeclared (first use in this function)
+  566 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                                ^~~~~~
+..\src\Informes.c:566:32: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Informes.c: In function 'info_promedioDeArcades':
+..\src\Informes.c:642:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'flagEmpty'
+  642 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                    ^
+..\src\Informes.c:642:32: error: 'ACTIVO' undeclared (first use in this function)
+  642 |    if(arcadeList[i].flagEmpty==ACTIVO)
+      |                                ^~~~~~
+15:28:18 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:43:15: warning: passing argument 1 of 'arc_initList' from incompatible pointer type [-Wincompatible-pointer-types]
+   43 |  arc_initList(arcadeList,ARCADE_LEN);
+      |               ^~~~~~~~~~
+      |               |
+      |               eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:28:27: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   28 | int arc_initList(eArcade *arcadeList[],int lenghtArcade);
+      |                  ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:132:29: warning: passing argument 1 of 'arc_removePorSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  132 |       if(arc_removePorSalon(arcadeList,ARCADE_LEN, idSolicitada)==0)
+      |                             ^~~~~~~~~~
+      |                             |
+      |                             eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:42:34: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   42 | int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada);
+      |                         ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:171:42: warning: passing argument 1 of 'arc_buscarDisponible' from incompatible pointer type [-Wincompatible-pointer-types]
+  171 |       posicionLibre=arc_buscarDisponible(arcadeList, ARCADE_LEN);
+      |                                          ^~~~~~~~~~
+      |                                          |
+      |                                          eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:30:35: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   30 | int arc_buscarDisponible(eArcade *arcadeList[], int lenghtArcade);
+      |                          ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:192:19: warning: passing argument 1 of 'arc_occupancy' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |    arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:43:29: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   43 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
+      |                    ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:195:26: warning: passing argument 1 of 'arc_imprimirCompleto' from incompatible pointer type [-Wincompatible-pointer-types]
+  195 |     arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+      |                          ^~~~~~~~~~
+      |                          |
+      |                          eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:33:35: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   33 | int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade);
+      |                          ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:199:26: warning: passing argument 1 of 'arc_modificarArcade' from incompatible pointer type [-Wincompatible-pointer-types]
+  199 |      arc_modificarArcade(arcadeList,ARCADE_LEN, idSolicitada);
+      |                          ^~~~~~~~~~
+      |                          |
+      |                          eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:37:34: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   37 | int arc_modificarArcade(eArcade *arcadeList[],int lenghtArcade, int idIngresada);
+      |                         ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:211:19: warning: passing argument 1 of 'arc_occupancy' from incompatible pointer type [-Wincompatible-pointer-types]
+  211 |    arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:43:29: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   43 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
+      |                    ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:214:26: warning: passing argument 1 of 'arc_imprimirCompleto' from incompatible pointer type [-Wincompatible-pointer-types]
+  214 |     arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+      |                          ^~~~~~~~~~
+      |                          |
+      |                          eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:33:35: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   33 | int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade);
+      |                          ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:218:18: warning: passing argument 1 of 'arc_remove' from incompatible pointer type [-Wincompatible-pointer-types]
+  218 |      arc_remove (arcadeList,ARCADE_LEN,idSolicitada);
+      |                  ^~~~~~~~~~
+      |                  |
+      |                  eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:34:26: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   34 | int arc_remove (eArcade *arcadeList[], int lenghtArcade, int idIngresada);
+      |                 ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:227:19: warning: passing argument 1 of 'arc_occupancy' from incompatible pointer type [-Wincompatible-pointer-types]
+  227 |    arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:43:29: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   43 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
+      |                    ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:230:26: warning: passing argument 1 of 'arc_imprimirCompleto' from incompatible pointer type [-Wincompatible-pointer-types]
+  230 |     arc_imprimirCompleto(arcadeList, ARCADE_LEN);
+      |                          ^~~~~~~~~~
+      |                          |
+      |                          eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:33:35: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   33 | int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade);
+      |                          ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:238:19: warning: passing argument 1 of 'arc_occupancy' from incompatible pointer type [-Wincompatible-pointer-types]
+  238 |    arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:43:29: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   43 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
+      |                    ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:241:35: warning: passing argument 1 of 'arc_imprimirJuegosSinRepetir' from incompatible pointer type [-Wincompatible-pointer-types]
+  241 |     arc_imprimirJuegosSinRepetir (arcadeList, ARCADE_LEN);
+      |                                   ^~~~~~~~~~
+      |                                   |
+      |                                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:40:44: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   40 | int arc_imprimirJuegosSinRepetir (eArcade *arcadeList[], int lenghtArcade);
+      |                                   ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:250:19: warning: passing argument 1 of 'arc_occupancy' from incompatible pointer type [-Wincompatible-pointer-types]
+  250 |    arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+      |                   ^~~~~~~~~~
+      |                   |
+      |                   eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:43:29: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   43 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
+      |                    ~~~~~~~~~^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:254:28: warning: passing argument 1 of 'info_imprimirInformes' from incompatible pointer type [-Wincompatible-pointer-types]
+  254 |     info_imprimirInformes (arcadeList, ARCADE_LEN,salonList,SALON_LEN, subEleccionUsuario);
+      |                            ^~~~~~~~~~
+      |                            |
+      |                            eArcade * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:16:
+..\src\Informes.h:29:37: note: expected 'eArcade **' {aka 'struct <anonymous> **'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   29 | int info_imprimirInformes (eArcade *arcadeList[], int lenghtArcade,eSalon *salonList [],int lenghtSalon, char eleccionUsuario);
+      |                            ~~~~~~~~~^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_ordenarArcades':
+..\src\Arcade.c:467:13: error: incompatible types when assigning to type 'eArcade' {aka 'struct <anonymous>'} from type 'eArcade *' {aka 'struct <anonymous> *'}
+  467 |       aux = arcadeList[i];
+      |             ^~~~~~~~~~
+..\src\Arcade.c:469:23: error: incompatible types when assigning to type 'eArcade *' {aka 'struct <anonymous> *'} from type 'eArcade' {aka 'struct <anonymous>'}
+  469 |       arcadeList[j] = aux;
+      |                       ^~~
+..\src\Arcade.c:486:14: error: incompatible types when assigning to type 'eArcade' {aka 'struct <anonymous>'} from type 'eArcade *' {aka 'struct <anonymous> *'}
+  486 |        aux = arcadeList[i];
+      |              ^~~~~~~~~~
+..\src\Arcade.c:488:24: error: incompatible types when assigning to type 'eArcade *' {aka 'struct <anonymous> *'} from type 'eArcade' {aka 'struct <anonymous>'}
+  488 |        arcadeList[j] = aux;
+      |                        ^~~
+15:28:54 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:41:12 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:82:2: error: too few arguments to function 'arc_altaForzada'
+   82 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 11,"WonderBoy",1000);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:86:2: error: too few arguments to function 'arc_altaForzada'
+   86 |  arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 11,"Sonic",1001);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:90:2: error: too few arguments to function 'arc_altaForzada'
+   90 |  arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 11,"Pacman",1002);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:94:2: error: too few arguments to function 'arc_altaForzada'
+   94 |  arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 11,"Daytona",1006);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:98:2: error: too few arguments to function 'arc_altaForzada'
+   98 |  arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 11,"Pacman",1004);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:102:2: error: too few arguments to function 'arc_altaForzada'
+  102 |  arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 11,"Street Fighter",1007);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:106:2: error: too few arguments to function 'arc_altaForzada'
+  106 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:110:2: error: too few arguments to function 'arc_altaForzada'
+  110 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 11,"Megaman",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:114:2: error: too few arguments to function 'arc_altaForzada'
+  114 |  arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 11,"Booger Man",1008);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:118:2: error: too few arguments to function 'arc_altaForzada'
+  118 |  arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 14,"Pacman",1009);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:122:2: error: too few arguments to function 'arc_altaForzada'
+  122 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 14,"Prince of Persia",1010);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:126:2: error: too few arguments to function 'arc_altaForzada'
+  126 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 13,"Pacman",1003);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:130:2: error: too few arguments to function 'arc_altaForzada'
+  130 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:134:2: error: too few arguments to function 'arc_altaForzada'
+  134 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1013);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:138:2: error: too few arguments to function 'arc_altaForzada'
+  138 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1014);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:142:2: error: too few arguments to function 'arc_altaForzada'
+  142 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1015);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:223:23: warning: assignment to 'eArcade *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+  223 |        pArcadeAuxiliar=salon_nuevo ();
+      |                       ^
+..\src\ArcadesPunteros.c:227:35: error: 'pArcardeAuxiliar' undeclared (first use in this function); did you mean 'pArcadeAuxiliar'?
+  227 |         arcadeList[posicionLibre]=pArcardeAuxiliar;
+      |                                   ^~~~~~~~~~~~~~~~
+      |                                   pArcadeAuxiliar
+..\src\ArcadesPunteros.c:227:35: note: each undeclared identifier is reported only once for each function it appears in
+15:41:19 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:82:2: error: too few arguments to function 'arc_altaForzada'
+   82 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 11,"WonderBoy",1000);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:86:2: error: too few arguments to function 'arc_altaForzada'
+   86 |  arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 11,"Sonic",1001);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:90:2: error: too few arguments to function 'arc_altaForzada'
+   90 |  arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 11,"Pacman",1002);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:94:2: error: too few arguments to function 'arc_altaForzada'
+   94 |  arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 11,"Daytona",1006);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:98:2: error: too few arguments to function 'arc_altaForzada'
+   98 |  arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 11,"Pacman",1004);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:102:2: error: too few arguments to function 'arc_altaForzada'
+  102 |  arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 11,"Street Fighter",1007);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:106:2: error: too few arguments to function 'arc_altaForzada'
+  106 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:110:2: error: too few arguments to function 'arc_altaForzada'
+  110 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 11,"Megaman",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:114:2: error: too few arguments to function 'arc_altaForzada'
+  114 |  arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 11,"Booger Man",1008);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:118:2: error: too few arguments to function 'arc_altaForzada'
+  118 |  arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 14,"Pacman",1009);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:122:2: error: too few arguments to function 'arc_altaForzada'
+  122 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 14,"Prince of Persia",1010);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:126:2: error: too few arguments to function 'arc_altaForzada'
+  126 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 13,"Pacman",1003);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:130:2: error: too few arguments to function 'arc_altaForzada'
+  130 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:134:2: error: too few arguments to function 'arc_altaForzada'
+  134 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1013);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:138:2: error: too few arguments to function 'arc_altaForzada'
+  138 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1014);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:142:2: error: too few arguments to function 'arc_altaForzada'
+  142 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1015);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:223:23: warning: assignment to 'eArcade *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+  223 |        pArcadeAuxiliar=salon_nuevo ();
+      |                       ^
+15:41:27 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:82:2: error: too few arguments to function 'arc_altaForzada'
+   82 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 11,"WonderBoy",1000);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:86:2: error: too few arguments to function 'arc_altaForzada'
+   86 |  arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 11,"Sonic",1001);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:90:2: error: too few arguments to function 'arc_altaForzada'
+   90 |  arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 11,"Pacman",1002);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:94:2: error: too few arguments to function 'arc_altaForzada'
+   94 |  arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 11,"Daytona",1006);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:98:2: error: too few arguments to function 'arc_altaForzada'
+   98 |  arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 11,"Pacman",1004);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:102:2: error: too few arguments to function 'arc_altaForzada'
+  102 |  arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 11,"Street Fighter",1007);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:106:2: error: too few arguments to function 'arc_altaForzada'
+  106 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:110:2: error: too few arguments to function 'arc_altaForzada'
+  110 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 11,"Megaman",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:114:2: error: too few arguments to function 'arc_altaForzada'
+  114 |  arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 11,"Booger Man",1008);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:118:2: error: too few arguments to function 'arc_altaForzada'
+  118 |  arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 14,"Pacman",1009);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:122:2: error: too few arguments to function 'arc_altaForzada'
+  122 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 14,"Prince of Persia",1010);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:126:2: error: too few arguments to function 'arc_altaForzada'
+  126 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 13,"Pacman",1003);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:130:2: error: too few arguments to function 'arc_altaForzada'
+  130 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:134:2: error: too few arguments to function 'arc_altaForzada'
+  134 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1013);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:138:2: error: too few arguments to function 'arc_altaForzada'
+  138 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1014);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:142:2: error: too few arguments to function 'arc_altaForzada'
+  142 |  arc_altaForzada(pArcadeAuxiliar,"China", 2, 4, 2100, 13,"Capcom",1015);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice);
+      |      ^~~~~~~~~~~~~~~
+15:42:39 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+15:44:20 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:44:23 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:55:56 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:57:26 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+15:59:13 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+16:01:56 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:02:00 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:02:52 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:669:1: error: expected declaration or statement at end of input
+  669 | }
+      | ^
+..\src\Arcade.c:247:7: warning: unused variable 'llaveDeCierre' [-Wunused-variable]
+  247 |  char llaveDeCierre='n';
+      |       ^~~~~~~~~~~~~
+..\src\Arcade.c:246:7: warning: unused variable 'gameAux' [-Wunused-variable]
+  246 |  char gameAux[63];
+      |       ^~~~~~~
+..\src\Arcade.c:245:6: warning: unused variable 'eleccionUsuario' [-Wunused-variable]
+  245 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\Arcade.c:244:6: warning: unused variable 'cantidadJuegosAux' [-Wunused-variable]
+  244 |  int cantidadJuegosAux;
+      |      ^~~~~~~~~~~~~~~~~
+..\src\Arcade.c:669:1: warning: control reaches end of non-void function [-Wreturn-type]
+  669 | }
+      | ^
+At top level:
+..\src\Arcade.c:643:5: warning: 'arc_occupancy' defined but not used [-Wunused-function]
+  643 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty) //MODIFICADA
+      |     ^~~~~~~~~~~~~
+..\src\Arcade.c:623:5: warning: 'arc_cambiarTexto' defined but not used [-Wunused-function]
+  623 | int arc_cambiarTexto (eArcade *arcadeList[], int posicion, char pTextoConvertido[]) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~
+..\src\Arcade.c:536:5: warning: 'arc_removePorSalon' defined but not used [-Wunused-function]
+  536 | int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:502:5: warning: 'arc_imprimirJuegosSinRepetir' defined but not used [-Wunused-function]
+  502 | int arc_imprimirJuegosSinRepetir (eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:408:5: warning: 'arc_modificarNombreRepetido' defined but not used [-Wunused-function]
+  408 | int arc_modificarNombreRepetido(eArcade *arcadeList[], int lenghtArcade, char nombreJuego[], int posicionPedida) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:368:5: warning: 'arc_subMenuModificaciones' defined but not used [-Wunused-function]
+  368 | int arc_subMenuModificaciones (void)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:355:6: warning: 'arc_altaForzada' defined but not used [-Wunused-function]
+  355 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade)
+      |      ^~~~~~~~~~~~~~~
+..\src\Arcade.c:318:5: warning: 'arc_imprimirCompleto' defined but not used [-Wunused-function]
+  318 | int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~
+16:03:01 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:669:1: error: expected declaration or statement at end of input
+  669 | }
+      | ^
+..\src\Arcade.c:247:7: warning: unused variable 'llaveDeCierre' [-Wunused-variable]
+  247 |  char llaveDeCierre='n';
+      |       ^~~~~~~~~~~~~
+..\src\Arcade.c:246:7: warning: unused variable 'gameAux' [-Wunused-variable]
+  246 |  char gameAux[63];
+      |       ^~~~~~~
+..\src\Arcade.c:245:6: warning: unused variable 'eleccionUsuario' [-Wunused-variable]
+  245 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\Arcade.c:244:6: warning: unused variable 'cantidadJuegosAux' [-Wunused-variable]
+  244 |  int cantidadJuegosAux;
+      |      ^~~~~~~~~~~~~~~~~
+..\src\Arcade.c:669:1: warning: control reaches end of non-void function [-Wreturn-type]
+  669 | }
+      | ^
+At top level:
+..\src\Arcade.c:643:5: warning: 'arc_occupancy' defined but not used [-Wunused-function]
+  643 | int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty) //MODIFICADA
+      |     ^~~~~~~~~~~~~
+..\src\Arcade.c:623:5: warning: 'arc_cambiarTexto' defined but not used [-Wunused-function]
+  623 | int arc_cambiarTexto (eArcade *arcadeList[], int posicion, char pTextoConvertido[]) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~
+..\src\Arcade.c:536:5: warning: 'arc_removePorSalon' defined but not used [-Wunused-function]
+  536 | int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:502:5: warning: 'arc_imprimirJuegosSinRepetir' defined but not used [-Wunused-function]
+  502 | int arc_imprimirJuegosSinRepetir (eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:408:5: warning: 'arc_modificarNombreRepetido' defined but not used [-Wunused-function]
+  408 | int arc_modificarNombreRepetido(eArcade *arcadeList[], int lenghtArcade, char nombreJuego[], int posicionPedida) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:368:5: warning: 'arc_subMenuModificaciones' defined but not used [-Wunused-function]
+  368 | int arc_subMenuModificaciones (void)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Arcade.c:355:6: warning: 'arc_altaForzada' defined but not used [-Wunused-function]
+  355 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade)
+      |      ^~~~~~~~~~~~~~~
+..\src\Arcade.c:318:5: warning: 'arc_imprimirCompleto' defined but not used [-Wunused-function]
+  318 | int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~
+16:03:18 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+16:07:14 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+16:10:37 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+16:11:18 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+16:12:10 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:12:13 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+16:14:44 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros

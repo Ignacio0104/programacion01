@@ -33,62 +33,96 @@ int main(void) {
 	int salonesOcupados;
 	int arcadesOcupados;
 	eSalon* pSalonAuxiliar;
+	eArcade* pArcadeAuxiliar;
 	llaveDeCierre='n';
 
 
 	eSalon* salonList [SALON_LEN];
 	salon_initList(salonList,SALON_LEN);
 
-	eArcade arcadeList[ARCADE_LEN];
+	eArcade* arcadeList[ARCADE_LEN];
 	arc_initList(arcadeList,ARCADE_LEN);
 
 
 
 
 
-	//Hardcode
-/*
+	//Hardcodeo Salones
+
 	eSalon* pSalonAuxiliarAltaForzada;
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10, 0);
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10);
+	salonList[0]=pSalonAuxiliarAltaForzada;
 
 
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11, 1);
-
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12, 2);
-
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13, 3);
-
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14, 4);
-
-	pSalonAuxiliarAltaForzada=salon_nuevo;
-
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15, 5);
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11);
+	salonList[0]=pSalonAuxiliarAltaForzada;
 
 
-	arc_altaForzada(arcadeList,"USA", 1, 4, 2000, 11,"WonderBoy",1000, 0);
-	arc_altaForzada(arcadeList,"Tokyo", 2, 5, 3000, 11,"Sonic",1001, 1);
-	arc_altaForzada(arcadeList,"Alemania", 4, 1, 1500, 11,"Pacman",1002, 2);
-	arc_altaForzada(arcadeList,"Holanda", 1, 1, 2600, 11,"Daytona",1006, 6);
-	arc_altaForzada(arcadeList,"Argentina", 1, 3, 2100, 11,"Pacman",1004 , 4);
-	arc_altaForzada(arcadeList,"USA", 2, 6, 100, 11,"Street Fighter",1007, 7);
-	arc_altaForzada(arcadeList,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005, 5);
-	arc_altaForzada(arcadeList,"Rusia", 2, 3, 1000, 11,"Megaman",1012, 12);
-	arc_altaForzada(arcadeList,"Portugal", 2, 3, 3000, 11,"Booger Man",1008, 8);
-	arc_altaForzada(arcadeList,"Finlandia", 2, 2, 1500, 14,"Pacman",1009, 9);
-	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 14,"Prince of Persia",1010, 10);
-	arc_altaForzada(arcadeList,"USA", 1, 3, 3500, 13,"Pacman",1003, 3);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1012,20);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1013,21);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1014,23);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1015,25);*/
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12);
+	salonList[1]=pSalonAuxiliarAltaForzada;
+
+
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13);
+	salonList[2]=pSalonAuxiliarAltaForzada;
+
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14);
+	salonList[3]=pSalonAuxiliarAltaForzada;
+
+	pSalonAuxiliarAltaForzada=salon_nuevo();
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15);
+	salonList[4]=pSalonAuxiliarAltaForzada;
+
+	//Hardcodeo Arcades
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 11,"WonderBoy",1000);
+	arcadeList[0]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 11,"Sonic",1001);
+	arcadeList[1]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 11,"Pacman",1002);
+	arcadeList[2]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 11,"Daytona",1006);
+	arcadeList[3]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 11,"Pacman",1004);
+	arcadeList[4]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 11,"Street Fighter",1007);
+	arcadeList[5]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005);
+	arcadeList[6]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 11,"Megaman",1012);
+	arcadeList[7]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 11,"Booger Man",1008);
+	arcadeList[8]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 14,"Pacman",1009);
+	arcadeList[9]=pArcadeAuxiliar;
+
+	pArcadeAuxiliar=arcade_nuevo();
+	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 14,"Prince of Persia",1010);
+	arcadeList[10]=pArcadeAuxiliar;
+
+
 
 	eleccionUsuario=menuOperaciones();
 
@@ -167,7 +201,13 @@ int main(void) {
 
 						if(posicionLibre>=0)
 						{
-							arc_loadArcade(&arcadeList[posicionLibre],idSolicitada);
+							pArcadeAuxiliar=arcade_nuevo ();
+							if(pArcadeAuxiliar!=NULL)
+							{
+								arc_loadArcade(pArcadeAuxiliar,idSolicitada);
+								arcadeList[posicionLibre]=pArcadeAuxiliar;
+							}
+
 						}else
 						{
 							printf("No hay lugar disponible");
@@ -231,6 +271,7 @@ int main(void) {
 			break;
 		case 8:
 			arc_occupancy (arcadeList, ARCADE_LEN, &arcadesOcupados);
+
 			if(arcadesOcupados>0)
 			{
 				arc_imprimirJuegosSinRepetir (arcadeList, ARCADE_LEN);

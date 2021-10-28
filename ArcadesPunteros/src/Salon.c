@@ -7,8 +7,7 @@
 
 #include "Salon.h"
 #include <limits.h>
-#define INACTIVO  1
-#define ACTIVO  0
+
 
 #define TIPO_SHOPPING 1
 #define TIPO_LOCAL 2
@@ -25,13 +24,8 @@ static int dameUnIdNuevo (void)
 
 eSalon* salon_nuevo (void) //MODIFICADA
 {
+
 	eSalon* pSalon=malloc(sizeof(eSalon));
-
-	if(pSalon!=NULL)
-	{
-		pSalon->flagEmpty=ACTIVO;
-	}
-
 	return pSalon;
 }
 
@@ -82,7 +76,6 @@ int salon_loadSalon(eSalon *pSalon) //MODIFICADA (QUEDA IGUAL)
 					strncpy(pSalon->address,addressAux,sizeof(pSalon->address));
 					pSalon->type=typeAux;
 					pSalon->idSalon=dameUnIdNuevo();
-					pSalon->flagEmpty=ACTIVO;
 					retorno=0;
 
 					if(pSalon->type==1)
@@ -171,10 +164,10 @@ int salon_buscarPorId (eSalon *salonList[], int lenghtSalon, int idIngresada) //
 
 		for(int i=0;i<lenghtSalon;i++)
 		{
-			if(salonList[i]->idSalon==idIngresada)
+			if(salonList[i]!=NULL)
 			{
 
-				if(salonList[i]!=NULL)
+				if(salonList[i]->idSalon==idIngresada)
 				{
 					retorno=i;
 					break;
@@ -285,15 +278,13 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 
 
 
-void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice) //MODIFICADA
+void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id) //MODIFICADA
 {
 
-	strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
-	strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
-	pSalon[indice]->type=tipo;
-	pSalon[indice]->idSalon=id;
-	pSalon[indice]->flagEmpty=ACTIVO;
-
+	strncpy(pSalon->name,nombre,sizeof(pSalon->name));
+	strncpy(pSalon->address,direccion,sizeof(pSalon->address));
+	pSalon->type=tipo;
+	pSalon->idSalon=id;
 }
 
 int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]) //MODIFICADA

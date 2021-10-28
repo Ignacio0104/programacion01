@@ -7,14 +7,12 @@
 
 #include "Arcade.h"
 #include <limits.h>
-#define INACTIVO  1
-#define ACTIVO  0
+
 #define ARCADE_LEN 1000
 
 #define TIPO_MONO 1
 #define TIPO_ESTEREO 2
 
-static int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]);
 
 static int dameUnIdNuevo (void);
 
@@ -24,7 +22,15 @@ static int dameUnIdNuevo (void)
 	return (contador++);
 }
 
-int arc_initList(eArcade *arcadeList,int lenghtArcade)
+eArcade* arcade_nuevo (void) //MODIFICADA
+{
+
+	eArcade* pArcade=malloc(sizeof(eArcade));
+	return pArcade;
+}
+
+
+int arc_initList(eArcade *arcadeList[],int lenghtArcade) //MODIFICADA
 {
 	int retorno;
 
@@ -35,14 +41,14 @@ int arc_initList(eArcade *arcadeList,int lenghtArcade)
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			arcadeList[i].flagEmpty=INACTIVO;
+			arcadeList[i]=NULL;
 		}
 	}
 
 	return retorno;
 }
 
-int arc_loadArcade(eArcade *pArcade, int idIngresada)
+int arc_loadArcade(eArcade *pArcade, int idIngresada) //MODIFICADA
 {
 	int retorno;
 
@@ -77,7 +83,6 @@ int arc_loadArcade(eArcade *pArcade, int idIngresada)
 								pArcade->idSalon=idIngresada;
 								strncpy(pArcade->gameName,gameAux,sizeof(pArcade->gameName));
 								pArcade->idArcade=dameUnIdNuevo();
-								pArcade->flagEmpty=ACTIVO;
 								retorno=0;
 
 								printf("\nArcade ingresado con éxito!\n");
@@ -92,7 +97,7 @@ int arc_loadArcade(eArcade *pArcade, int idIngresada)
 
 }
 
-int arc_buscarDisponible(eArcade *arcadeList, int lenghtArcade)
+int arc_buscarDisponible(eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -102,7 +107,7 @@ int arc_buscarDisponible(eArcade *arcadeList, int lenghtArcade)
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i].flagEmpty==INACTIVO)
+			if(arcadeList[i]==NULL)
 			{
 				retorno=i;
 				break;
@@ -137,7 +142,7 @@ int arc_askForId (void)
 }
 
 
-int arc_buscarPorId (eArcade *arcadeList, int lenghtArcade, int idIngresada)
+int arc_buscarPorId (eArcade *arcadeList[], int lenghtArcade, int idIngresada) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -147,10 +152,10 @@ int arc_buscarPorId (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i].idArcade==idIngresada)
+			if(arcadeList[i]!=NULL)
 			{
 
-				if(arcadeList[i].flagEmpty==ACTIVO)
+				if(arcadeList[i]->idArcade==idIngresada)
 				{
 					retorno=i;
 					break;
@@ -167,7 +172,7 @@ int arc_buscarPorId (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 	return retorno;
 }
 
-int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
+int arc_remove (eArcade *arcadeList[], int lenghtArcade, int idIngresada) //MODIFICADA
 {
 	int retorno;
 	char userChoice;
@@ -190,20 +195,21 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 			printf("\nSe va a eliminar el siguiente arcade: \n\n");
 			printf("%15s %15s %15s %15s %15s %15s %15s\n\n","ID del Arcade", "Nacionalidad","Sonido","Jugadores","Fichas máximas","ID de Salon", "Juego");
 			printf("%15d %15s %15s %15d %15d %15d %15s\n",
-					arcadeList[posicionSolicitada].idArcade,
-					arcadeList[posicionSolicitada].nationality,
+					arcadeList[posicionSolicitada]->idArcade,
+					arcadeList[posicionSolicitada]->nationality,
 					cadenaAux,
-					arcadeList[posicionSolicitada].numberOfPlayers,
-					arcadeList[posicionSolicitada].maximumTokens,
-					arcadeList[posicionSolicitada].idSalon,
-					arcadeList[posicionSolicitada].gameName);
+					arcadeList[posicionSolicitada]->numberOfPlayers,
+					arcadeList[posicionSolicitada]->maximumTokens,
+					arcadeList[posicionSolicitada]->idSalon,
+					arcadeList[posicionSolicitada]->gameName);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "\n\n ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
 						if(userChoice=='s')
 						{
-							arcadeList[posicionSolicitada].flagEmpty=INACTIVO;
+							free(arcadeList[posicionSolicitada]);
+							arcadeList[posicionSolicitada]=NULL;
 							printf("Arcade borrado exitosamente.\n");
 							retorno=0;
 						} else
@@ -231,7 +237,7 @@ int arc_remove (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 
 
-int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada)
+int arc_modificarArcade(eArcade *arcadeList[],int lenghtArcade, int idIngresada) //MODIFICADA
 {
 	int retorno;
 	int posicionPedida;
@@ -246,11 +252,10 @@ int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada)
 		retorno=0;
 		posicionPedida=arc_buscarPorId (arcadeList,lenghtArcade, idIngresada);
 		if(posicionPedida>=0)
-
 		{
-			if(idIngresada==arcadeList[posicionPedida].idArcade)
+			if(arcadeList[posicionPedida]!=NULL)
 			{
-				if(arcadeList[posicionPedida].flagEmpty==ACTIVO)
+				if(idIngresada==arcadeList[posicionPedida]->idArcade)
 						{
 
 							eleccionUsuario=arc_subMenuModificaciones ();
@@ -261,7 +266,7 @@ int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada)
 									case 1:
 										if(pedirIntIntentosRango(&cantidadJuegosAux,1, 6, 5, "Ingrese la nueva cantidad de jugadores:  ", "Error")==0)
 										{
-											arcadeList[posicionPedida].numberOfPlayers=cantidadJuegosAux;
+											arcadeList[posicionPedida]->numberOfPlayers=cantidadJuegosAux;
 										} else
 										{
 											printf("Error");
@@ -309,7 +314,7 @@ int arc_modificarArcade(eArcade *arcadeList,int lenghtArcade, int idIngresada)
 }
 
 
-int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
+int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -321,18 +326,18 @@ int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i].flagEmpty==ACTIVO)
+			if(arcadeList[i]!=NULL)
 			{
 				arc_cambiarTexto (arcadeList, i, cadenaAux);
 
 				printf("%15d %15s %15s %15d %15d %15d %25s\n",
-						arcadeList[i].idArcade,
-						arcadeList[i].nationality,
+						arcadeList[i]->idArcade,
+						arcadeList[i]->nationality,
 						cadenaAux,
-						arcadeList[i].numberOfPlayers,
-						arcadeList[i].maximumTokens,
-						arcadeList[i].idSalon,
-						arcadeList[i].gameName);
+						arcadeList[i]->numberOfPlayers,
+						arcadeList[i]->maximumTokens,
+						arcadeList[i]->idSalon,
+						arcadeList[i]->gameName);
 
 			}
 
@@ -346,17 +351,16 @@ int arc_imprimirCompleto(eArcade *arcadeList, int lenghtArcade)
 
 
 
-void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade, int indice)
+void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade)
+//MODIFICADA
 {
-
-	strncpy(pArcade[indice].nationality,nacionalidad,sizeof(pArcade[indice].nationality));
-	pArcade[indice].soundType=tipoSonido;
-	pArcade[indice].numberOfPlayers=jugadores;
-	pArcade[indice].maximumTokens=capacidad;
-	pArcade[indice].idSalon=idSalon;
-	pArcade[indice].idArcade=idArcade;
-	strncpy(pArcade[indice].gameName,nombre,sizeof(pArcade[indice].gameName));
-	pArcade[indice].flagEmpty=ACTIVO;
+	strncpy(pArcade->nationality,nacionalidad,sizeof(pArcade->nationality));
+	pArcade->soundType=tipoSonido;
+	pArcade->numberOfPlayers=jugadores;
+	pArcade->maximumTokens=capacidad;
+	pArcade->idSalon=idSalon;
+	pArcade->idArcade=idArcade;
+	strncpy(pArcade->gameName,nombre,sizeof(pArcade->gameName));
 
 }
 
@@ -374,7 +378,7 @@ int arc_subMenuModificaciones (void)
 	return eleccion;
 }
 
-int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombreJuego[])
+int arc_validarNombreRepetido (eArcade *arcadeList[], int lenghtArcade, char nombreJuego[]) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -384,15 +388,19 @@ int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombr
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(strncmp(arcadeList[i].gameName,nombreJuego,63)==0)
+			if(arcadeList[i]!=NULL)
 			{
-				retorno=1;
-				break;
+				if(strncmp(arcadeList[i]->gameName,nombreJuego,63)==0)
+					{
+						retorno=1;
+						break;
 
-			} else
-			{
-				retorno=-1;
+					} else
+					{
+						retorno=-1;
+					}
 			}
+
 
 		}
 	}
@@ -400,7 +408,7 @@ int arc_validarNombreRepetido (eArcade *arcadeList, int lenghtArcade, char nombr
 	return retorno;
 }
 
-int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nombreJuego[], int posicionPedida)
+int arc_modificarNombreRepetido(eArcade *arcadeList[], int lenghtArcade, char nombreJuego[], int posicionPedida) //MODIFICADA
 {
 	int retorno;
 	char userChoice;
@@ -415,7 +423,7 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 		{
 			if(userChoice=='s')
 			{
-				strncpy(arcadeList[posicionPedida].gameName,nombreJuego,sizeof(arcadeList[posicionPedida].gameName));
+				strncpy(arcadeList[posicionPedida]->gameName,nombreJuego,sizeof(arcadeList[posicionPedida]->gameName));
 				printf("Juego modificado exitosamente.\n");
 				retorno=0;
 			} else
@@ -430,7 +438,7 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 		}
 	}else
 	{
-		strncpy(arcadeList[posicionPedida].gameName,nombreJuego,sizeof(arcadeList[posicionPedida].gameName));
+		strncpy(arcadeList[posicionPedida]->gameName,nombreJuego,sizeof(arcadeList[posicionPedida]->gameName));
 		printf("Juego modificado exitosamente.\n");
 		retorno=0;
 	}
@@ -439,11 +447,11 @@ int arc_modificarNombreRepetido(eArcade *arcadeList, int lenghtArcade, char nomb
 }
 
 
-int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order)
+int arc_ordenarArcades (eArcade *arcadeList[], int lenghtArcade, int order) //MODIFICADA
 {
 	int i;
 	int retorno;
-	eArcade aux;
+	eArcade* aux;
 	int j;
 
 	retorno=-1;
@@ -457,12 +465,19 @@ int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order)
 			{
 				for(j=i+1;j<lenghtArcade;j++)
 				{
-					if(strncmp(arcadeList[i].gameName,arcadeList[j].gameName,63)>0)
+					if(arcadeList[i]!=NULL&&arcadeList[j]!=NULL)
 					{
-						aux = arcadeList[i];
-						arcadeList[i] = arcadeList[j];
-						arcadeList[j] = aux;
+						if(strncmp(arcadeList[i]->gameName,arcadeList[j]->gameName,63)>0)
+						{
+							aux = arcadeList[i];
+							arcadeList[i] = arcadeList[j];
+							arcadeList[j] = aux;
+						}
+					} else
+					{
+						continue;
 					}
+
 
 				}
 			}
@@ -476,12 +491,20 @@ int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order)
 				{
 					for(j=i+1;j<lenghtArcade;j++)
 					{
-						if(arcadeList[i].idSalon>arcadeList[j].idSalon)
+						if(arcadeList[i]!=NULL&&arcadeList[j]!=NULL)
 						{
-							aux = arcadeList[i];
-							arcadeList[i] = arcadeList[j];
-							arcadeList[j] = aux;
+							if(arcadeList[i]->idSalon>arcadeList[j]->idSalon)
+								{
+									aux = arcadeList[i];
+									arcadeList[i] = arcadeList[j];
+									arcadeList[j] = aux;
+								}
+						} else
+						{
+							continue;
 						}
+
+
 
 					}
 				}
@@ -494,7 +517,7 @@ int arc_ordenarArcades (eArcade *arcadeList, int lenghtArcade, int order)
 	return retorno;
 }
 
-int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
+int arc_imprimirJuegosSinRepetir (eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -506,17 +529,20 @@ int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i].flagEmpty==ACTIVO)
+			if(arcadeList[i]!=NULL&&arcadeList[i+1]!=NULL)
 			{
-				if(strncmp(arcadeList[i].gameName,arcadeList[i+1].gameName,63)==0)
+				if(strncmp(arcadeList[i]->gameName,arcadeList[i+1]->gameName,63)==0)
 				{
 					continue;
 
 				}else
 				{
-					printf("- Nombre del juego:		%s\n\n",arcadeList[i].gameName);
+					printf("- Nombre del juego:		%s\n\n",arcadeList[i]->gameName);
 				}
 
+			}else
+			{
+				continue;
 			}
 
 		}
@@ -528,7 +554,7 @@ int arc_imprimirJuegosSinRepetir (eArcade *arcadeList, int lenghtArcade)
 
 }
 
-int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
+int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada) //MODIFICADA
 {
 	int retorno;
 	char userChoice;
@@ -547,20 +573,20 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i].flagEmpty==ACTIVO)
+			if(arcadeList[i]!=NULL)
 			{
-				if(idIngresada==arcadeList[i].idSalon)
+				if(idIngresada==arcadeList[i]->idSalon)
 				{
 					arc_cambiarTexto (arcadeList, i, cadenaAux);
 
 					printf("%15d %15s %15s %15d %15d %15d %25s\n",
-							arcadeList[i].idArcade,
-							arcadeList[i].nationality,
+							arcadeList[i]->idArcade,
+							arcadeList[i]->nationality,
 							cadenaAux,
-							arcadeList[i].numberOfPlayers,
-							arcadeList[i].maximumTokens,
-							arcadeList[i].idSalon,
-							arcadeList[i].gameName);
+							arcadeList[i]->numberOfPlayers,
+							arcadeList[i]->maximumTokens,
+							arcadeList[i]->idSalon,
+							arcadeList[i]->gameName);
 					contador++;
 				}
 			}
@@ -580,9 +606,10 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 						{
 							for(int i=0;i<lenghtArcade;i++)
 							{
-								if(idIngresada==arcadeList[i].idSalon)
+								if(idIngresada==arcadeList[i]->idSalon)
 								{
-									arcadeList[i].flagEmpty=INACTIVO;
+									free(arcadeList[i]);
+									arcadeList[i]=NULL;
 								}
 
 							}
@@ -614,12 +641,12 @@ int arc_removePorSalon (eArcade *arcadeList, int lenghtArcade, int idIngresada)
 
 }
 
-int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[])
+int arc_cambiarTexto (eArcade *arcadeList[], int posicion, char pTextoConvertido[]) //MODIFICADA
 {
 	int retorno;
 
 	retorno=-1;
-	switch(arcadeList[posicion].soundType)
+	switch(arcadeList[posicion]->soundType)
 	{
 		case TIPO_MONO:
 			retorno=0;
@@ -634,7 +661,7 @@ int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]
 	return retorno;
 }
 
-int arc_occupancy (eArcade *arcadeList, int lenghtArcade, int* pNotEmpty)
+int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty) //MODIFICADA
 {
 	int retorno;
 	int notEmpty;
@@ -649,7 +676,7 @@ int arc_occupancy (eArcade *arcadeList, int lenghtArcade, int* pNotEmpty)
 
 			for (i=0;i<lenghtArcade;i++)
 			{
-				if(arcadeList[i].flagEmpty==ACTIVO)
+				if(arcadeList[i]!=NULL)
 				{
 					notEmpty++;
 				}
