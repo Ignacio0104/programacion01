@@ -1421,3 +1421,406 @@ In file included from ..\src\Informes.c:8:
 ..\src\Informes.c:445:33: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
   445 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[])
       |                         ~~~~~~~~^~~~~~~~~~~
+22:00:52 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c:23:12: error: static declaration of 'salon_cambiarTexto' follows non-static declaration
+   23 | static int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]); //MODIFICADA
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:36:5: note: previous declaration of 'salon_cambiarTexto' was here
+   36 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Informes.c: In function 'info_imprimirInformes':
+..\src\Informes.c:536:122: error: '*(salonList + (sizetype)((unsigned int)salon_buscarPorId(salonList, 100,  idSolicitada) * 4))' is a pointer; did you mean to use '->'?
+  536 |      printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name,
+      |                                                                                                                          ^
+      |                                                                                                                          ->
+..\src\Informes.c:553:51: warning: passing argument 3 of 'info_arcadesCompletos' from incompatible pointer type [-Wincompatible-pointer-types]
+  553 |     info_arcadesCompletos (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:31:74: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   31 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                  ~~~~~~~~^~~~~~~~~
+..\src\Informes.c:556:52: warning: passing argument 3 of 'info_promedioDeArcades' from incompatible pointer type [-Wincompatible-pointer-types]
+  556 |     info_promedioDeArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                    ^~~~~~~~~
+      |                                                    |
+      |                                                    eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:32:77: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   32 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                     ~~~~~~~~^~~~~~~~~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:628:26: warning: passing argument 1 of 'salon_cambiarTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+  628 |      salon_cambiarTexto (salonList, i, cadenaAux);
+      |                          ^~~~~~~~~
+      |                          |
+      |                          eSalon * {aka struct <anonymous> *}
+..\src\Informes.c:445:33: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+  445 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[])
+      |                         ~~~~~~~~^~~~~~~~~~~
+22:02:10 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c:23:12: error: static declaration of 'salon_cambiarTexto' follows non-static declaration
+   23 | static int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]); //MODIFICADA
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:36:5: note: previous declaration of 'salon_cambiarTexto' was here
+   36 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Informes.c: In function 'info_imprimirInformes':
+..\src\Informes.c:553:51: warning: passing argument 3 of 'info_arcadesCompletos' from incompatible pointer type [-Wincompatible-pointer-types]
+  553 |     info_arcadesCompletos (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:31:74: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   31 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                  ~~~~~~~~^~~~~~~~~
+..\src\Informes.c:556:52: warning: passing argument 3 of 'info_promedioDeArcades' from incompatible pointer type [-Wincompatible-pointer-types]
+  556 |     info_promedioDeArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                    ^~~~~~~~~
+      |                                                    |
+      |                                                    eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:32:77: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   32 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                     ~~~~~~~~^~~~~~~~~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:628:26: warning: passing argument 1 of 'salon_cambiarTexto' from incompatible pointer type [-Wincompatible-pointer-types]
+  628 |      salon_cambiarTexto (salonList, i, cadenaAux);
+      |                          ^~~~~~~~~
+      |                          |
+      |                          eSalon * {aka struct <anonymous> *}
+..\src\Informes.c:445:33: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+  445 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]) //MODIFICADA
+      |                         ~~~~~~~~^~~~~~~~~~~
+22:03:47 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c:23:12: error: static declaration of 'salon_cambiarTexto' follows non-static declaration
+   23 | static int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]); //MODIFICADA
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:36:5: note: previous declaration of 'salon_cambiarTexto' was here
+   36 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Informes.c: In function 'info_imprimirInformes':
+..\src\Informes.c:553:51: warning: passing argument 3 of 'info_arcadesCompletos' from incompatible pointer type [-Wincompatible-pointer-types]
+  553 |     info_arcadesCompletos (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                   ^~~~~~~~~
+      |                                                   |
+      |                                                   eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:31:74: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   31 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                  ~~~~~~~~^~~~~~~~~
+..\src\Informes.c:556:52: warning: passing argument 3 of 'info_promedioDeArcades' from incompatible pointer type [-Wincompatible-pointer-types]
+  556 |     info_promedioDeArcades (arcadeList, ARCADE_LEN,salonList,SALON_LEN);
+      |                                                    ^~~~~~~~~
+      |                                                    |
+      |                                                    eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:32:77: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   32 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |                                                                     ~~~~~~~~^~~~~~~~~
+..\src\Informes.c: At top level:
+..\src\Informes.c:569:5: error: conflicting types for 'info_arcadesCompletos'
+  569 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon) //MODIFICADA
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:31:5: note: previous declaration of 'info_arcadesCompletos' was here
+   31 | int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Informes.c:648:7: error: conflicting types for 'info_promedioDeArcades'
+  648 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon) //MODIFICADA
+      |       ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.c:8:
+..\src\Informes.h:32:7: note: previous declaration of 'info_promedioDeArcades' was here
+   32 | float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon);
+      |       ^~~~~~~~~~~~~~~~~~~~~~
+22:04:09 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c:23:12: error: static declaration of 'salon_cambiarTexto' follows non-static declaration
+   23 | static int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]); //MODIFICADA
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:36:5: note: previous declaration of 'salon_cambiarTexto' was here
+   36 | int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
+      |     ^~~~~~~~~~~~~~~~~~
+22:04:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Salon.o: in function `salon_cambiarTexto':
+C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\ArcadesPunteros\Debug/../src/Salon.c:299: multiple definition of `salon_cambiarTexto'; src\Informes.o:C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\ArcadesPunteros\Debug/../src/Informes.c:446: first defined here
+collect2.exe: error: ld returned 1 exit status
+22:05:53 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:06:04 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+22:06:38 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+22:07:44 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_altaForzada':
+..\src\Salon.c:292:16: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+  292 |  pSalonAuxiliar=salon_nuevo;
+      |                ^
+..\src\Salon.c:294:16: error: array subscript is not an integer
+  294 |  strncpy(pSalon[pSalonAuxiliar]->name,nombre,sizeof(pSalon[indice]->name));
+      |                ^
+..\src\Salon.c:295:16: error: array subscript is not an integer
+  295 |  strncpy(pSalon[pSalonAuxiliar]->address,direccion,sizeof(pSalon[indice]->address));
+      |                ^
+..\src\Salon.c:296:8: error: array subscript is not an integer
+  296 |  pSalon[pSalonAuxiliar]->type=tipo;
+      |        ^
+..\src\Salon.c:297:8: error: array subscript is not an integer
+  297 |  pSalon[pSalonAuxiliar]->idSalon=id;
+      |        ^
+..\src\Salon.c:298:8: error: array subscript is not an integer
+  298 |  pSalon[pSalonAuxiliar]->flagEmpty=ACTIVO;
+      |        ^
+..\src\Salon.c:290:10: warning: variable 'pSalonAuxiliar' set but not used [-Wunused-but-set-variable]
+  290 |  eSalon* pSalonAuxiliar;
+      |          ^~~~~~~~~~~~~~
+22:10:47 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:52:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   52 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:53:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   53 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10, 0);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:56:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   56 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:57:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11, 1);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:59:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   59 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:61:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   61 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12, 2);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:63:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   63 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:65:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13, 3);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:67:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   67 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:69:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14, 4);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:71:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   71 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:73:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   73 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15, 5);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:11:13 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:52:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   52 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:53:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   53 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10, 0);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:56:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   56 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:57:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   57 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11, 1);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:59:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   59 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:61:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   61 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12, 2);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:63:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   63 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:65:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13, 3);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:67:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   67 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:69:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   69 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14, 4);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:71:27: warning: assignment to 'eSalon *' {aka 'struct <anonymous> *'} from incompatible pointer type 'eSalon * (*)(void)' {aka 'struct <anonymous> * (*)(void)'} [-Wincompatible-pointer-types]
+   71 |  pSalonAuxiliarAltaForzada=salon_nuevo;
+      |                           ^
+..\src\ArcadesPunteros.c:73:20: warning: passing argument 1 of 'salon_altaForzada' from incompatible pointer type [-Wincompatible-pointer-types]
+   73 |  salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15, 5);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    eSalon * {aka struct <anonymous> *}
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:33:32: note: expected 'eSalon **' {aka 'struct <anonymous> **'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   33 | void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice);
+      |                        ~~~~~~~~^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:11:35 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+22:11:45 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+22:12:30 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:157:19: warning: comparison between pointer and integer
+  157 |    salon_occupancy==5//(salonList,SALON_LEN, &salonesOcupados);
+      |                   ^~
+..\src\ArcadesPunteros.c:157:19: warning: statement with no effect [-Wunused-value]
+  157 |    salon_occupancy==5//(salonList,SALON_LEN, &salonesOcupados);
+      |    ~~~~~~~~~~~~~~~^~~
+..\src\ArcadesPunteros.c:157:22: error: expected ';' before 'if'
+  157 |    salon_occupancy==5//(salonList,SALON_LEN, &salonesOcupados);
+      |                      ^
+      |                      ;
+  158 |    if(salonesOcupados>0)
+      |    ~~                 
+22:12:34 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:157:19: error: lvalue required as left operand of assignment
+  157 |    salon_occupancy=5//(salonList,SALON_LEN, &salonesOcupados);
+      |                   ^
+..\src\ArcadesPunteros.c:157:21: error: expected ';' before 'if'
+  157 |    salon_occupancy=5//(salonList,SALON_LEN, &salonesOcupados);
+      |                     ^
+      |                     ;
+  158 |    if(salonesOcupados>0)
+      |    ~~                
+22:12:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:157:19: error: lvalue required as left operand of assignment
+  157 |    salon_occupancy=5;//(salonList,SALON_LEN, &salonesOcupados);
+      |                   ^
+22:13:05 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+22:14:19 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:14:23 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 

@@ -20,7 +20,7 @@
 #define TIPO_ESTEREO 2
 
 static int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]);
-static int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]); //MODIFICADA
+
 
 int menuOperaciones (void)
 {
@@ -442,26 +442,6 @@ int info_juegoEnArcades (eArcade *arcadeList, int lenghtArcade, char nombreJuego
 }
 
 
-int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[])
-{
-	int retorno;
-
-	retorno=-1;
-	switch(salonList[posicion]->type)
-	{
-		case TIPO_SHOPPING:
-			retorno=0;
-			strncpy(pTextoConvertido,"Shopping",32);
-			break;
-		case TIPO_LOCAL:
-			strncpy(pTextoConvertido,"Local",32);
-			retorno=0;
-			break;
-	}
-
-	return retorno;
-}
-
 
 int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[])
 {
@@ -483,7 +463,7 @@ int arc_cambiarTexto (eArcade *arcadeList, int posicion, char pTextoConvertido[]
 	return retorno;
 }
 
-int info_imprimirInformes (eArcade *arcadeList, int lenghtArcade,eSalon *salonList [],int lenghtSalon, char eleccionUsuario)
+int info_imprimirInformes (eArcade *arcadeList, int lenghtArcade,eSalon *salonList [],int lenghtSalon, char eleccionUsuario) //MODIFICADA
 {
 	int retorno;
 	int idSolicitada;
@@ -533,7 +513,7 @@ int info_imprimirInformes (eArcade *arcadeList, int lenghtArcade,eSalon *salonLi
 				{
 					gananciaTotal=info_calcularGananciaTotal (idSolicitada, valorFicha,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
 
-					printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)].name,
+					printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)]->name,
 																		gananciaTotal);
 				}
 				break;
@@ -566,7 +546,7 @@ int info_imprimirInformes (eArcade *arcadeList, int lenghtArcade,eSalon *salonLi
 
 }
 
-int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon)
+int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon) //MODIFICADA
 {
 	int retorno;
 	retorno=-1;
@@ -620,18 +600,17 @@ int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonLi
 	{
 		for(int j=0;j<indiceDeId;j++)
 		{
-			if(salonList[i].flagEmpty==ACTIVO)
+			if(salonList[i]->flagEmpty==ACTIVO)
 			{
-				if(salonList[i].idSalon==listaDeId[j])
+				if(salonList[i]->idSalon==listaDeId[j])
 				{
-
 					salon_cambiarTexto (salonList, i, cadenaAux);
 
 					printf("Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
-													salonList[i].name,
-													salonList[i].address,
+													salonList[i]->name,
+													salonList[i]->address,
 													cadenaAux,
-													salonList[i].idSalon);
+													salonList[i]->idSalon);
 
 				}
 			}
@@ -646,7 +625,7 @@ int info_arcadesCompletos (eArcade *arcadeList, int lenghtArcade,eSalon *salonLi
 	return retorno;
 }
 
-float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList,int lenghtSalon)
+float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salonList[],int lenghtSalon) //MODIFICADA
 {
 	float retorno;
 	retorno=-1;
@@ -670,7 +649,7 @@ float info_promedioDeArcades (eArcade *arcadeList, int lenghtArcade,eSalon *salo
 
 		for(int i=0;i<lenghtSalon;i++)
 		{
-			if(salonList[i].flagEmpty==ACTIVO)
+			if(salonList[i]->flagEmpty==ACTIVO)
 			{
 				contadorSalonesTotal++;
 			}

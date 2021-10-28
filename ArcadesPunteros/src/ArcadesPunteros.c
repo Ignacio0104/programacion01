@@ -43,13 +43,35 @@ int main(void) {
 	arc_initList(arcadeList,ARCADE_LEN);
 
 
+
+
+
 	//Hardcode
-	salon_altaForzada(salonList,"Sacoa","Maipu 225", 1, 10, 0);
-	salon_altaForzada(salonList,"Showcase","Peatonal 14", 2, 11, 1);
-	salon_altaForzada(salonList,"Juguelandia","Paseo 15", 1, 12, 2);
-	salon_altaForzada(salonList,"Travalcase","Guemes 678", 1, 13, 3);
-	salon_altaForzada(salonList,"Fichines","Arenales 1965", 2, 14, 4);
-	salon_altaForzada(salonList,"Juego.com","Alsina 500", 2, 15, 5);
+/*
+	eSalon* pSalonAuxiliarAltaForzada;
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10, 0);
+
+
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11, 1);
+
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12, 2);
+
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13, 3);
+
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14, 4);
+
+	pSalonAuxiliarAltaForzada=salon_nuevo;
+
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15, 5);
+
 
 	arc_altaForzada(arcadeList,"USA", 1, 4, 2000, 11,"WonderBoy",1000, 0);
 	arc_altaForzada(arcadeList,"Tokyo", 2, 5, 3000, 11,"Sonic",1001, 1);
@@ -66,7 +88,7 @@ int main(void) {
 	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1012,20);
 	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1013,21);
 	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1014,23);
-	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1015,25);
+	arc_altaForzada(arcadeList,"China", 2, 4, 2100, 13,"Capcom",1015,25);*/
 
 	eleccionUsuario=menuOperaciones();
 
@@ -132,7 +154,7 @@ int main(void) {
 			eleccionUsuario=menuOperaciones();
 			break;
 		case 4:
-			salon_occupancy (salonList,SALON_LEN, &salonesOcupados);
+			salon_occupancy(salonList,SALON_LEN, &salonesOcupados);
 			if(salonesOcupados>0)
 			{
 				salon_imprimirCompleto(salonList,SALON_LEN);

@@ -287,6 +287,7 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 
 void salon_altaForzada(eSalon *pSalon[],char nombre[],char direccion[], int tipo, int id, int indice) //MODIFICADA
 {
+
 	strncpy(pSalon[indice]->name,nombre,sizeof(pSalon[indice]->name));
 	strncpy(pSalon[indice]->address,direccion,sizeof(pSalon[indice]->address));
 	pSalon[indice]->type=tipo;
@@ -330,7 +331,7 @@ int salon_occupancy (eSalon *salonList[], int lenghtSalon, int* pNotEmpty) //MOD
 
 			for (i=0;i<lenghtSalon;i++)
 			{
-				if(salonList[i]->flagEmpty==ACTIVO)
+				if(salonList[i]!=NULL)
 				{
 					notEmpty++;
 				}
