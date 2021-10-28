@@ -351,7 +351,7 @@ int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade) //MODIFICADA
 
 
 
-void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade)
+void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[])
 //MODIFICADA
 {
 	strncpy(pArcade->nationality,nacionalidad,sizeof(pArcade->nationality));
@@ -359,7 +359,7 @@ void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int j
 	pArcade->numberOfPlayers=jugadores;
 	pArcade->maximumTokens=capacidad;
 	pArcade->idSalon=idSalon;
-	pArcade->idArcade=idArcade;
+	pArcade->idArcade=dameUnIdNuevo();
 	strncpy(pArcade->gameName,nombre,sizeof(pArcade->gameName));
 
 }

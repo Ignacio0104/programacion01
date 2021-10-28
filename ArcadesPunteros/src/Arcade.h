@@ -32,7 +32,7 @@ int arc_askForId (void);
 int arc_buscarPorId (eArcade *arcadeList[], int lenghtArcade, int idIngresada);
 int arc_imprimirCompleto(eArcade *arcadeList[], int lenghtArcade);
 int arc_remove (eArcade *arcadeList[], int lenghtArcade, int idIngresada);
-void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[], int idArcade);
+void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
 int arc_subMenuModificaciones (void);
 int arc_modificarArcade(eArcade *arcadeList[],int lenghtArcade, int idIngresada);
 int arc_validarNombreRepetido (eArcade *arcadeList[], int lenghtArcade, char nombreJuego[]);

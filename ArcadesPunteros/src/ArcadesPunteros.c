@@ -15,8 +15,6 @@
 #include "Arcade.h"
 #include "Informes.h"
 #include "biblioteca_input.h"
-#define INACTIVO  1
-#define ACTIVO  0
 #define SALON_LEN 100
 #define ARCADE_LEN 1000
 
@@ -51,75 +49,75 @@ int main(void) {
 
 	eSalon* pSalonAuxiliarAltaForzada;
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1, 10);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1);
 	salonList[0]=pSalonAuxiliarAltaForzada;
 
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2, 11);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2);
 	salonList[0]=pSalonAuxiliarAltaForzada;
 
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1, 12);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1);
 	salonList[1]=pSalonAuxiliarAltaForzada;
 
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1, 13);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1);
 	salonList[2]=pSalonAuxiliarAltaForzada;
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2, 14);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Fichines","Arenales 1965", 2);
 	salonList[3]=pSalonAuxiliarAltaForzada;
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
-	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2, 15);
+	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juego.com","Alsina 500", 2);
 	salonList[4]=pSalonAuxiliarAltaForzada;
 
 	//Hardcodeo Arcades
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 11,"WonderBoy",1000);
+	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 1,"WonderBoy");
 	arcadeList[0]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 11,"Sonic",1001);
+	arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 1,"Sonic");
 	arcadeList[1]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 11,"Pacman",1002);
+	arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 1,"Pacman");
 	arcadeList[2]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 11,"Daytona",1006);
+	arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 1,"Daytona");
 	arcadeList[3]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 11,"Pacman",1004);
+	arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 1,"Pacman");
 	arcadeList[4]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 11,"Street Fighter",1007);
+	arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 2,"Street Fighter");
 	arcadeList[5]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 11,"Metal Slug",1005);
+	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 3,"Metal Slug");
 	arcadeList[6]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 11,"Megaman",1012);
+	arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 2,"Megaman");
 	arcadeList[7]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 11,"Booger Man",1008);
+	arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 3,"Booger Man");
 	arcadeList[8]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 14,"Pacman",1009);
+	arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 4,"Pacman");
 	arcadeList[9]=pArcadeAuxiliar;
 
 	pArcadeAuxiliar=arcade_nuevo();
-	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 14,"Prince of Persia",1010);
+	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 4,"Prince of Persia");
 	arcadeList[10]=pArcadeAuxiliar;
 
 

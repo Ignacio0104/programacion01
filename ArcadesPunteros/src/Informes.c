@@ -81,7 +81,7 @@ int info_contarArcades (eArcade *arcadeList[], int lenghtArcade,eSalon *salonLis
 		retorno=0;
 		for(int i=0;i<lenghtArcade;i++)
 		{
-			if(arcadeList[i]!=NULL)
+			if(arcadeList[i]!=NULL&&arcadeList[i+1]!=NULL)
 			{
 				if(arcadeList[i]->idSalon == arcadeList[i+1]->idSalon)
 				{

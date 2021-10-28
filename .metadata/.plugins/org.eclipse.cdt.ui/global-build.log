@@ -2752,3 +2752,111 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
 Info: Nothing to build for ArcadesPunteros
+18:24:17 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:82:2: error: too many arguments to function 'arc_altaForzada'
+   82 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 4, 2000, 1,"WonderBoy",1000);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:86:2: error: too many arguments to function 'arc_altaForzada'
+   86 |  arc_altaForzada(pArcadeAuxiliar,"Tokyo", 2, 5, 3000, 1,"Sonic",1001);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:90:2: error: too many arguments to function 'arc_altaForzada'
+   90 |  arc_altaForzada(pArcadeAuxiliar,"Alemania", 4, 1, 1500, 1,"Pacman",1002);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:94:2: error: too many arguments to function 'arc_altaForzada'
+   94 |  arc_altaForzada(pArcadeAuxiliar,"Holanda", 1, 1, 2600, 1,"Daytona",1006);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:98:2: error: too many arguments to function 'arc_altaForzada'
+   98 |  arc_altaForzada(pArcadeAuxiliar,"Argentina", 1, 3, 2100, 1,"Pacman",1004);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:102:2: error: too many arguments to function 'arc_altaForzada'
+  102 |  arc_altaForzada(pArcadeAuxiliar,"USA", 2, 6, 100, 2,"Street Fighter",1007);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:106:2: error: too many arguments to function 'arc_altaForzada'
+  106 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 4, 1000, 3,"Metal Slug",1005);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:110:2: error: too many arguments to function 'arc_altaForzada'
+  110 |  arc_altaForzada(pArcadeAuxiliar,"Rusia", 2, 3, 1000, 2,"Megaman",1012);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:114:2: error: too many arguments to function 'arc_altaForzada'
+  114 |  arc_altaForzada(pArcadeAuxiliar,"Portugal", 2, 3, 3000, 3,"Booger Man",1008);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:118:2: error: too many arguments to function 'arc_altaForzada'
+  118 |  arc_altaForzada(pArcadeAuxiliar,"Finlandia", 2, 2, 1500, 4,"Pacman",1009);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:122:2: error: too many arguments to function 'arc_altaForzada'
+  122 |  arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 4,"Prince of Persia",1010);
+      |  ^~~~~~~~~~~~~~~
+In file included from ..\src\ArcadesPunteros.c:15:
+..\src\Arcade.h:35:6: note: declared here
+   35 | void arc_altaForzada(eArcade *pArcade,char nacionalidad[], int tipoSonido, int jugadores, int capacidad, int idSalon,char nombre[]);
+      |      ^~~~~~~~~~~~~~~
+18:24:44 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+18:25:07 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+18:26:18 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+18:26:46 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+18:38:02 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 

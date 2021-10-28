@@ -18,7 +18,7 @@ static int dameUnIdNuevo (void);
 
 static int dameUnIdNuevo (void)
 {
-	static int contador=1;
+	static int contador=0;
 	return (contador++);
 }
 
@@ -278,13 +278,13 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 
 
 
-void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id) //MODIFICADA
+void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo) //MODIFICADA
 {
 
 	strncpy(pSalon->name,nombre,sizeof(pSalon->name));
 	strncpy(pSalon->address,direccion,sizeof(pSalon->address));
 	pSalon->type=tipo;
-	pSalon->idSalon=id;
+	pSalon->idSalon=dameUnIdNuevo();
 }
 
 int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]) //MODIFICADA

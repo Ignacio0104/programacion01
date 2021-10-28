@@ -29,7 +29,7 @@ int salon_askForId (void);
 int salon_buscarPorId (eSalon *salonList[], int lenghtSalon, int idIngresada);
 int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon);
 int salon_remove (eSalon *salonList[], int lenghtSalon, int idIngresada);
-void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo, int id);
+void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo);
 int salon_occupancy (eSalon *salonList[], int lenghtSalon, int* pNotEmpty);
 eSalon* salon_nuevo (void);
 int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
