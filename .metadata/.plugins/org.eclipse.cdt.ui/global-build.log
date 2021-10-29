@@ -2860,3 +2860,38 @@ Info: Nothing to build for ArcadesPunteros
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+18:49:43 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+18:57:36 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+19:57:58 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+21:12:49 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_nuevo':
+..\src\Salon.c:28:2: error: conversion to non-scalar type requested
+   28 |  eSalon* pSalon=(eSalon)malloc(sizeof(eSalon));
+      |  ^~~~~~
+21:13:22 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+21:14:39 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+21:23:28 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 

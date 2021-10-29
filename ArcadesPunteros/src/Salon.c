@@ -25,7 +25,7 @@ static int dameUnIdNuevo (void)
 eSalon* salon_nuevo (void) //MODIFICADA
 {
 
-	eSalon* pSalon=malloc(sizeof(eSalon));
+	eSalon* pSalon=(eSalon*)malloc(sizeof(eSalon));
 	return pSalon;
 }
 

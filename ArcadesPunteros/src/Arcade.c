@@ -24,8 +24,7 @@ static int dameUnIdNuevo (void)
 
 eArcade* arcade_nuevo (void) //MODIFICADA
 {
-
-	eArcade* pArcade=malloc(sizeof(eArcade));
+	eArcade* pArcade=(eArcade*)malloc(sizeof(eArcade));
 	return pArcade;
 }
 
@@ -59,7 +58,6 @@ int arc_loadArcade(eArcade *pArcade, int idIngresada) //MODIFICADA
 	int jugadoresAux;
 	int fichasAux;
 	char gameAux[63];
-
 
 
 	if(pArcade!=NULL)

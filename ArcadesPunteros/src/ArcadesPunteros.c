@@ -43,25 +43,22 @@ int main(void) {
 
 
 
-
-
 	//Hardcodeo Salones
 
 	eSalon* pSalonAuxiliarAltaForzada;
+
 	pSalonAuxiliarAltaForzada=salon_nuevo();
 	salon_altaForzada(pSalonAuxiliarAltaForzada,"Sacoa","Maipu 225", 1);
 	salonList[0]=pSalonAuxiliarAltaForzada;
 
-
 	pSalonAuxiliarAltaForzada=salon_nuevo();
 	salon_altaForzada(pSalonAuxiliarAltaForzada,"Showcase","Peatonal 14", 2);
-	salonList[0]=pSalonAuxiliarAltaForzada;
+	salonList[5]=pSalonAuxiliarAltaForzada;
 
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
 	salon_altaForzada(pSalonAuxiliarAltaForzada,"Juguelandia","Paseo 15", 1);
 	salonList[1]=pSalonAuxiliarAltaForzada;
-
 
 	pSalonAuxiliarAltaForzada=salon_nuevo();
 	salon_altaForzada(pSalonAuxiliarAltaForzada,"Travalcase","Guemes 678", 1);
@@ -121,7 +118,6 @@ int main(void) {
 	arcadeList[10]=pArcadeAuxiliar;
 
 
-
 	eleccionUsuario=menuOperaciones();
 
 	while(llaveDeCierre!='s')
@@ -132,7 +128,7 @@ int main(void) {
 			posicionLibre=salon_buscarDisponible(salonList,SALON_LEN);
 			if(posicionLibre>=0)
 				{
-					pSalonAuxiliar=salon_nuevo ();
+					pSalonAuxiliar=salon_nuevo();
 					if(pSalonAuxiliar!=NULL)
 					{
 						salon_loadSalon(pSalonAuxiliar);
