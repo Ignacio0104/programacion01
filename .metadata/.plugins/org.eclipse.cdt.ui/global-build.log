@@ -3445,3 +3445,329 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c"
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
 Info: Nothing to build for ArcadesPunteros
 Info: Nothing to build for ArcadesPunteros
+11:30:23 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_getIdArcade':
+..\src\Arcade.c:875:3: error: invalid type argument of unary '*' (have 'int')
+  875 |   *idArcade=pArcade->idArcade;
+      |   ^~~~~~~~~
+11:30:46 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c:870:5: error: conflicting types for 'arc_getIdArcade'
+  870 | int arc_getIdArcade(eArcade* pArcade, int* idArcade)
+      |     ^~~~~~~~~~~~~~~
+In file included from ..\src\Arcade.c:8:
+..\src\Arcade.h:67:5: note: previous declaration of 'arc_getIdArcade' was here
+   67 | int arc_getIdArcade(eArcade* pArcade, int idArcade);
+      |     ^~~~~~~~~~~~~~~
+11:30:57 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+11:53:30 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_remove':
+..\src\Arcade.c:187:6: warning: unused variable 'typeAux' [-Wunused-variable]
+  187 |  int typeAux;
+      |      ^~~~~~~
+..\src\Arcade.c: In function 'arc_modificarArcade':
+..\src\Arcade.c:266:7: error: redeclaration of 'gameAux' with no linkage
+  266 |  char gameAux[63];
+      |       ^~~~~~~
+..\src\Arcade.c:258:7: note: previous declaration of 'gameAux' was here
+  258 |  char gameAux[63];
+      |       ^~~~~~~
+..\src\Arcade.c:265:6: warning: unused variable 'fichasAux' [-Wunused-variable]
+  265 |  int fichasAux;
+      |      ^~~~~~~~~
+..\src\Arcade.c:264:6: warning: unused variable 'jugadoresAux' [-Wunused-variable]
+  264 |  int jugadoresAux;
+      |      ^~~~~~~~~~~~
+..\src\Arcade.c:263:6: warning: unused variable 'typeAux' [-Wunused-variable]
+  263 |  int typeAux;
+      |      ^~~~~~~
+..\src\Arcade.c:262:6: warning: unused variable 'idSalonAux' [-Wunused-variable]
+  262 |  int idSalonAux;
+      |      ^~~~~~~~~~
+..\src\Arcade.c:261:7: warning: unused variable 'nationalityAux' [-Wunused-variable]
+  261 |  char nationalityAux[128];
+      |       ^~~~~~~~~~~~~~
+12:13:01 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+12:20:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+15:34:00 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarArcades':
+..\src\Informes.c:131:29: warning: passing argument 1 of 'arc_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |     arc_getIdSalon(salonList[i],&idSalonAuxUno);
+      |                    ~~~~~~~~~^~~
+      |                             |
+      |                             eSalon * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:61:30: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   61 | int arc_getIdSalon (eArcade* pArcade, int* id);
+      |                     ~~~~~~~~~^~~~~~~
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:202:35: warning: passing argument 2 of 'arc_getIdArcade' makes pointer from integer without a cast [-Wint-conversion]
+  202 |     arc_getIdArcade(arcadeList[i],idArcadeAux);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:67:44: note: expected 'int *' but argument is of type 'int'
+   67 | int arc_getIdArcade(eArcade* pArcade, int* idArcade);
+      |                                       ~~~~~^~~~~~~~
+..\src\Informes.c: In function 'info_imprimirArcadePorId':
+..\src\Informes.c:319:33: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  319 |      salon_getIdSalon(arcadeList[i],&idSalonAux);
+      |                       ~~~~~~~~~~^~~
+      |                                 |
+      |                                 eArcade * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:600:7: warning: unused variable 'addressAux' [-Wunused-variable]
+  600 |  char addressAux[ADDRESS_LEN];
+      |       ^~~~~~~~~~
+..\src\Informes.c:599:7: warning: unused variable 'nameAux' [-Wunused-variable]
+  599 |  char nameAux[NAME_LEN];
+      |       ^~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:34:01 **** Rebuild of configuration Debug for project Parcial01_2017 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial01_2017.o" "..\\src\\Parcial01_2017.c" 
+In file included from ..\src\Parcial01_2017.c:16:
+..\src\Pantallas.h:28:1: warning: data definition has no type or storage class
+   28 | disp_initList(eDisplay *displaysList[],int lenght);
+      | ^~~~~~~~~~~~~
+..\src\Pantallas.h:28:1: warning: type defaults to 'int' in declaration of 'disp_initList' [-Wimplicit-int]
+..\src\Pantallas.h:37:5: error: conflicting types for 'disp_imprimirCompleto'
+   37 | int disp_imprimirCompleto(eDisplay *displaysList, int lenght);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Pantallas.h:34:5: note: previous declaration of 'disp_imprimirCompleto' was here
+   34 | int disp_imprimirCompleto(eDisplay *displaysList[], int lenght);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\src\Parcial01_2017.c: In function 'main':
+..\src\Parcial01_2017.c:41:16: warning: passing argument 1 of 'disp_initList' from incompatible pointer type [-Wincompatible-pointer-types]
+   41 |  disp_initList(displaysList,DISPLAYS_LEN);
+      |                ^~~~~~~~~~~~
+      |                |
+      |                eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Parcial01_2017.c:16:
+..\src\Pantallas.h:28:25: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   28 | disp_initList(eDisplay *displaysList[],int lenght);
+      |               ~~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Parcial01_2017.c:67:40: warning: passing argument 1 of 'disp_buscarDisponible' from incompatible pointer type [-Wincompatible-pointer-types]
+   67 |    posicionLibre=disp_buscarDisponible(displaysList,DISPLAYS_LEN);
+      |                                        ^~~~~~~~~~~~
+      |                                        |
+      |                                        eDisplay * {aka struct <anonymous> *}
+In file included from ..\src\Parcial01_2017.c:16:
+..\src\Pantallas.h:31:37: note: expected 'eDisplay **' {aka 'struct <anonymous> **'} but argument is of type 'eDisplay *' {aka 'struct <anonymous> *'}
+   31 | int disp_buscarDisponible(eDisplay *displaysList[], int lenght);
+      |                           ~~~~~~~~~~^~~~~~~~~~~~~~
+15:34:01 **** Rebuild of configuration Debug for project PracticaVideoPunterosMemoria ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PracticaVideoPunterosMemoria.o" "..\\src\\PracticaVideoPunterosMemoria.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o PracticaVideoPunterosMemoria.exe "src\\PracticaVideoPunterosMemoria.o" "src\\biblioteca_input.o" 
+15:34:03 **** Rebuild of configuration Debug for project TestFunciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_calculadora.o" "..\\src\\biblioteca_calculadora.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TestFunciones.o" "..\\src\\TestFunciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+..\src\Arcade.c: In function 'arc_loadSalon':
+..\src\Arcade.c:58:7: warning: implicit declaration of function 'pedirDireccion' [-Wimplicit-function-declaration]
+   58 |    if(pedirDireccion(addressAux,sizeof(addressAux), 3, "Ingrese la direccion del salon: ", "Error, ingrese calle y altura")==0)
+      |       ^~~~~~~~~~~~~~
+..\src\Arcade.c:64:21: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+   64 |      strncpy(pArcade->name,nameAux,sizeof(pArcade->name));
+      |                     ^~
+..\src\Arcade.c:64:50: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+   64 |      strncpy(pArcade->name,nameAux,sizeof(pArcade->name));
+      |                                                  ^~
+..\src\Arcade.c:65:21: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+   65 |      strncpy(pArcade->address,addressAux,sizeof(pArcade->address));
+      |                     ^~
+..\src\Arcade.c:65:56: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+   65 |      strncpy(pArcade->address,addressAux,sizeof(pArcade->address));
+      |                                                        ^~
+..\src\Arcade.c:66:13: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'type'
+   66 |      pArcade->type=typeAux;
+      |             ^~
+..\src\Arcade.c: In function 'arc_remove':
+..\src\Arcade.c:173:38: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+  173 |        arcadeList[posicionSolicitada].name,
+      |                                      ^
+..\src\Arcade.c:174:38: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+  174 |        arcadeList[posicionSolicitada].address,
+      |                                      ^
+..\src\Arcade.c:175:8: error: 'TXT_TIPOS' undeclared (first use in this function)
+  175 |        TXT_TIPOS[arcadeList[posicionSolicitada].type-1],
+      |        ^~~~~~~~~
+..\src\Arcade.c:175:8: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Arcade.c:175:48: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'type'
+  175 |        TXT_TIPOS[arcadeList[posicionSolicitada].type-1],
+      |                                                ^
+..\src\Arcade.c: In function 'arc_imprimirCompleto':
+..\src\Arcade.c:224:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+  224 |       arcadeList[i].name,
+      |                    ^
+..\src\Arcade.c:225:20: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+  225 |       arcadeList[i].address,
+      |                    ^
+..\src\Arcade.c:226:7: error: 'TXT_TIPOS' undeclared (first use in this function)
+  226 |       TXT_TIPOS[arcadeList[i].type-1],
+      |       ^~~~~~~~~
+..\src\Arcade.c:226:30: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'type'
+  226 |       TXT_TIPOS[arcadeList[i].type-1],
+      |                              ^
+..\src\Arcade.c: In function 'arc_altaForzada':
+..\src\Arcade.c:263:25: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+  263 |  strncpy(pArcade[indice].name,nombre,sizeof(pArcade[indice].name));
+      |                         ^
+..\src\Arcade.c:263:60: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'name'
+  263 |  strncpy(pArcade[indice].name,nombre,sizeof(pArcade[indice].name));
+      |                                                            ^
+..\src\Arcade.c:264:25: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+  264 |  strncpy(pArcade[indice].address,direccion,sizeof(pArcade[indice].address));
+      |                         ^
+..\src\Arcade.c:264:66: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'address'
+  264 |  strncpy(pArcade[indice].address,direccion,sizeof(pArcade[indice].address));
+      |                                                                  ^
+..\src\Arcade.c:265:17: error: 'eArcade' {aka 'struct <anonymous>'} has no member named 'type'
+  265 |  pArcade[indice].type=tipo;
+      |                 ^
+15:34:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarArcades':
+..\src\Informes.c:131:29: warning: passing argument 1 of 'arc_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |     arc_getIdSalon(salonList[i],&idSalonAuxUno);
+      |                    ~~~~~~~~~^~~
+      |                             |
+      |                             eSalon * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:61:30: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   61 | int arc_getIdSalon (eArcade* pArcade, int* id);
+      |                     ~~~~~~~~~^~~~~~~
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:202:35: warning: passing argument 2 of 'arc_getIdArcade' makes pointer from integer without a cast [-Wint-conversion]
+  202 |     arc_getIdArcade(arcadeList[i],idArcadeAux);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:67:44: note: expected 'int *' but argument is of type 'int'
+   67 | int arc_getIdArcade(eArcade* pArcade, int* idArcade);
+      |                                       ~~~~~^~~~~~~~
+..\src\Informes.c: In function 'info_imprimirArcadePorId':
+..\src\Informes.c:319:33: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  319 |      salon_getIdSalon(arcadeList[i],&idSalonAux);
+      |                       ~~~~~~~~~~^~~
+      |                                 |
+      |                                 eArcade * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+..\src\Informes.c: In function 'info_arcadesCompletos':
+..\src\Informes.c:600:7: warning: unused variable 'addressAux' [-Wunused-variable]
+  600 |  char addressAux[ADDRESS_LEN];
+      |       ^~~~~~~~~~
+..\src\Informes.c:599:7: warning: unused variable 'nameAux' [-Wunused-variable]
+  599 |  char nameAux[NAME_LEN];
+      |       ^~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:37:21 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarArcades':
+..\src\Informes.c:131:29: warning: passing argument 1 of 'arc_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |     arc_getIdSalon(salonList[i],&idSalonAuxUno);
+      |                    ~~~~~~~~~^~~
+      |                             |
+      |                             eSalon * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:61:30: note: expected 'eArcade *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon *' {aka 'struct <anonymous> *'}
+   61 | int arc_getIdSalon (eArcade* pArcade, int* id);
+      |                     ~~~~~~~~~^~~~~~~
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:202:35: warning: passing argument 2 of 'arc_getIdArcade' makes pointer from integer without a cast [-Wint-conversion]
+  202 |     arc_getIdArcade(arcadeList[i],idArcadeAux);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:67:44: note: expected 'int *' but argument is of type 'int'
+   67 | int arc_getIdArcade(eArcade* pArcade, int* idArcade);
+      |                                       ~~~~~^~~~~~~~
+..\src\Informes.c: In function 'info_imprimirArcadePorId':
+..\src\Informes.c:319:33: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  319 |      salon_getIdSalon(arcadeList[i],&idSalonAux);
+      |                       ~~~~~~~~~~^~~
+      |                                 |
+      |                                 eArcade * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:38:20 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'info_contarJugadores':
+..\src\Informes.c:201:35: warning: passing argument 2 of 'arc_getIdArcade' makes pointer from integer without a cast [-Wint-conversion]
+  201 |     arc_getIdArcade(arcadeList[i],idArcadeAux);
+      |                                   ^~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\src\Informes.h:11,
+                 from ..\src\Informes.c:8:
+..\src\Arcade.h:67:44: note: expected 'int *' but argument is of type 'int'
+   67 | int arc_getIdArcade(eArcade* pArcade, int* idArcade);
+      |                                       ~~~~~^~~~~~~~
+..\src\Informes.c: In function 'info_imprimirArcadePorId':
+..\src\Informes.c:318:33: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  318 |      salon_getIdSalon(arcadeList[i],&idSalonAux);
+      |                       ~~~~~~~~~~^~~
+      |                                 |
+      |                                 eArcade * {aka struct <anonymous> *}
+In file included from ..\src\Informes.h:12,
+                 from ..\src\Informes.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eArcade *' {aka 'struct <anonymous> *'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+15:38:49 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros

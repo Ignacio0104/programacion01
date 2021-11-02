@@ -43,6 +43,27 @@ int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada
 int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty);
 int arc_cambiarTexto (eArcade *arcadeList[], int posicion, char pTextoConvertido[]);
 
+/// Setters y Getters ///
 
+int arc_setNationality (eArcade* pArcade, char nationality[]);
+int arc_getNationality (eArcade* pArcade, char nationality[]);
+
+int arc_setType (eArcade* pArcade, int tipo);
+int arc_getType (eArcade* pArcade, int* tipo);
+
+int arc_setNumPlayers (eArcade* pArcade, int numero);
+int arc_getNumPlayers (eArcade* pArcade, int* numero);
+
+int arc_setMaxTokens(eArcade* pArcade, int numero);
+int arc_getMaxTokens (eArcade* pArcade, int* numero);
+
+int arc_setIdSalon(eArcade* pArcade, int id);
+int arc_getIdSalon (eArcade* pArcade, int* id);
+
+int arc_setGameName(eArcade* pArcade, char nombre[]);
+int arc_getGameName (eArcade* pArcade, char nombre[]);
+
+int arc_setIdArcade(eArcade* pArcade, int idArcade);
+int arc_getIdArcade(eArcade* pArcade, int* idArcade);
 
 #endif /* ARCADE_H_ */

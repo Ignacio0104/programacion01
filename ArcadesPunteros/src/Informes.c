@@ -12,6 +12,10 @@
 
 #define SALON_LEN 100
 #define ARCADE_LEN 1000
+#define NATION_LEN 128
+#define GAME_LEN 63
+#define NAME_LEN 128
+#define ADDRESS_LEN 128
 
 #define TIPO_SHOPPING 1
 #define TIPO_LOCAL 2
@@ -72,6 +76,11 @@ int info_contarArcades (eArcade *arcadeList[], int lenghtArcade,eSalon *salonLis
 	int indiceDeId;
 	char cadenaAux[32];
 
+	int idSalonAuxUno;
+	int idSalonAuxDos;
+	char nombreAux[NAME_LEN];
+	char addressAux[ADDRESS_LEN];
+
 	arc_ordenarArcades (arcadeList, lenghtArcade,2);
 	contadorSalones=1;
 	indiceDeId=0;
@@ -83,13 +92,16 @@ int info_contarArcades (eArcade *arcadeList[], int lenghtArcade,eSalon *salonLis
 		{
 			if(arcadeList[i]!=NULL&&arcadeList[i+1]!=NULL)
 			{
-				if(arcadeList[i]->idSalon == arcadeList[i+1]->idSalon)
+				arc_getIdSalon(arcadeList[i],&idSalonAuxUno);
+				arc_getIdSalon(arcadeList[i+1],&idSalonAuxDos);
+
+				if(idSalonAuxUno == idSalonAuxDos)
 				{
 					contadorSalones++;
 
 					if(contadorSalones==5)
 					{
-						listaDeId[indiceDeId]=arcadeList[i]->idSalon;
+						listaDeId[indiceDeId]=idSalonAuxUno;
 						indiceDeId++;
 
 						if(contadorSalones>5)
@@ -116,16 +128,15 @@ int info_contarArcades (eArcade *arcadeList[], int lenghtArcade,eSalon *salonLis
 		{
 			if(salonList[i]!=NULL)
 			{
-				if(salonList[i]->idSalon==listaDeId[j])
+				salon_getIdSalon(salonList[i],&idSalonAuxUno);
+				if(idSalonAuxUno==listaDeId[j])
 				{
-
 					salon_cambiarTexto (salonList, i, cadenaAux);
+					salon_getName(salonList[i],nombreAux);
+					salon_getAddress(salonList[i],addressAux);
 
 					printf("Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
-													salonList[i]->name,
-													salonList[i]->address,
-													cadenaAux,
-													salonList[i]->idSalon);
+							nombreAux,addressAux,cadenaAux,idSalonAuxUno);
 
 				}
 			}
@@ -150,6 +161,12 @@ int info_contarJugadores (eArcade *arcadeList[], int lenghtArcade,eSalon *salonL
 	int posicionSalon;
 	char banderaExiste;
 
+	int jugadoresAux;
+	int idArcadeAux;
+	int idSalonAux;
+	char gameNameAux[GAME_LEN];
+	char salonNameAux[NAME_LEN];
+
 	indiceDeArcades=0;
 	banderaExiste='n';
 
@@ -160,9 +177,11 @@ int info_contarJugadores (eArcade *arcadeList[], int lenghtArcade,eSalon *salonL
 		{
 			if(arcadeList[i]!=NULL)
 			{
-				if(arcadeList[i]->numberOfPlayers>2)
+				arc_getNumPlayers(arcadeList[i],&jugadoresAux);
+				if(jugadoresAux>2)
 				{
-					listaDeArcades[indiceDeArcades]=arcadeList[i]->idArcade;
+					arc_getIdArcade(arcadeList[i],&idArcadeAux);
+					listaDeArcades[indiceDeArcades]=idArcadeAux;
 					indiceDeArcades++;
 				}
 
@@ -179,14 +198,19 @@ int info_contarJugadores (eArcade *arcadeList[], int lenghtArcade,eSalon *salonL
 		{
 			if(arcadeList[i]!=NULL)
 			{
-				if(arcadeList[i]->idArcade==listaDeArcades[j])
+				arc_getIdArcade(arcadeList[i],&idArcadeAux);
+				if(idArcadeAux==listaDeArcades[j])
 				{
-					posicionSalon=salon_buscarPorId (salonList,lenghtSalon, arcadeList[i]->idSalon);
+					arc_getIdSalon(arcadeList[i],&idSalonAux);
+					posicionSalon=salon_buscarPorId (salonList,lenghtSalon, idSalonAux);
+
+					arc_getIdArcade(arcadeList[i],&idArcadeAux);
+					arc_getNumPlayers(arcadeList[i],&jugadoresAux);
+					arc_getGameName(arcadeList[i],gameNameAux);
+					salon_getName(salonList[posicionSalon],salonNameAux);
+
 					printf("%15d %15d %25s %15s\n",
-							arcadeList[i]->idArcade,
-							arcadeList[i]->numberOfPlayers,
-							arcadeList[i]->gameName,
-							salonList[posicionSalon]->name);
+							idArcadeAux,jugadoresAux,gameNameAux,salonNameAux);
 					banderaExiste='s';
 				}
 			}
@@ -209,6 +233,10 @@ int info_imprimirSalonPorId (eArcade *arcadeList[], int lenghtArcade,eSalon *sal
 	int contadorArcades;
 	char cadenaAux[32];
 
+	int idSalonAux;
+	char nameAux[NAME_LEN];
+	char addressAux [ADDRESS_LEN];
+
 	retorno=-1;
 	contadorArcades=0;
 
@@ -224,7 +252,8 @@ int info_imprimirSalonPorId (eArcade *arcadeList[], int lenghtArcade,eSalon *sal
 			{
 				if(arcadeList[i]!=NULL)
 				{
-					if(arcadeList[i]->idSalon==idIngresada)
+					arc_getIdSalon(arcadeList[i],&idSalonAux);
+					if(idSalonAux==idIngresada)
 						{
 							contadorArcades++;
 						}
@@ -241,12 +270,13 @@ int info_imprimirSalonPorId (eArcade *arcadeList[], int lenghtArcade,eSalon *sal
 
 
 	salon_cambiarTexto (salonList, posicionBuscada, cadenaAux);
+
+	salon_getName(salonList[posicionBuscada],nameAux);
+	salon_getAddress(salonList[posicionBuscada],addressAux);
+
 	printf("%15s %15s %15s %15s \n\n","Nombre", "Tipo","Direccion","Arcades");
 	printf("%15s %15s %15s %15d \n",
-			salonList[posicionBuscada]->name,
-			cadenaAux,
-			salonList[posicionBuscada]->address,
-			contadorArcades);
+			nameAux,cadenaAux,addressAux,contadorArcades);
 
 	return retorno;
 }
@@ -258,6 +288,14 @@ int info_imprimirArcadePorId (eArcade *arcadeList[], int lenghtArcade,eSalon *sa
 	char cadenaAux[32];
 	char cadenaAuxDos[32];
 
+	char nameAux[NAME_LEN];
+	int idSalonAux;
+	int idArcadeAux;
+	char nationalityAux[NATION_LEN];
+	int jugadoresAux;
+	int tokensAux;
+	char gameNameAux[GAME_LEN];
+
 	retorno=-1;
 
 	if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lenghtSalon>0)
@@ -268,23 +306,27 @@ int info_imprimirArcadePorId (eArcade *arcadeList[], int lenghtArcade,eSalon *sa
 
 		if(posicionBuscada>=0)
 		{
+			salon_getName(salonList[posicionBuscada],nameAux);
 			salon_cambiarTexto (salonList, posicionBuscada, cadenaAux);
-			printf("\n\nSalon %s. Tipo %s\n\n",salonList[posicionBuscada]->name,cadenaAux);
+			printf("\n\nSalon %s. Tipo %s\n\n",nameAux,cadenaAux);
 
 			printf("%15s %15s %15s %15s %15s %15s %15s\n\n","ID del Arcade", "Nacionalidad","Sonido","Jugadores","Fichas máximas","ID de Salon", "Juego");
 			for (int i=0;i<lenghtArcade;i++)
 			{
-				if(arcadeList[i]->idSalon==idIngresada)
+				if(arcadeList[i]!=NULL)
 				{
-					arc_cambiarTexto (arcadeList, i, cadenaAuxDos);
-					printf("%15d %15s %15s %15d %15d %15d %15s\n",
-							arcadeList[i]->idArcade,
-							arcadeList[i]->nationality,
-							cadenaAux,
-							arcadeList[i]->numberOfPlayers,
-							arcadeList[i]->maximumTokens,
-							arcadeList[i]->idSalon,
-							arcadeList[i]->gameName);
+					arc_getIdSalon(arcadeList[i],&idSalonAux);
+					if(idSalonAux==idIngresada)
+					{
+						arc_cambiarTexto (arcadeList, i, cadenaAuxDos);
+						arc_getIdArcade(arcadeList[i],&idArcadeAux);
+						arc_getNationality(arcadeList[i],nationalityAux);
+						arc_getNumPlayers(arcadeList[i],&jugadoresAux);
+						arc_getMaxTokens(arcadeList[i], &tokensAux);
+						arc_getGameName(arcadeList[i],gameNameAux);
+						printf("%15d %15s %15s %15d %15d %15d %15s\n",
+								idArcadeAux,nationalityAux,cadenaAux,jugadoresAux,tokensAux,idSalonAux,gameNameAux);
+					}
 				}
 			}
 		} else
@@ -306,6 +348,11 @@ int info_imprimirSalonMasArcade (eArcade *arcadeList[], int lenghtArcade,eSalon 
 	int idSalonMaximo;
 	int posicionMaximo;
 
+	int idSalonAuxUno;
+	int idSalonAuxDos;
+	char addressAux[ADDRESS_LEN];
+	char nameAux[NAME_LEN];
+
 	retorno=-1;
 	contadorDeArcades=0;
 	maximo=0;
@@ -319,13 +366,15 @@ int info_imprimirSalonMasArcade (eArcade *arcadeList[], int lenghtArcade,eSalon 
 			{
 				if(salonList[i]!=NULL&&arcadeList[j]!=NULL)
 				{
-					if(salonList[i]->idSalon==arcadeList[j]->idSalon)
+					arc_getIdSalon(arcadeList[i],&idSalonAuxUno);
+					arc_getIdSalon(arcadeList[j],&idSalonAuxDos);
+					if(idSalonAuxUno==idSalonAuxDos)
 					{
 						contadorDeArcades++;
 
 						if(contadorDeArcades>maximo)
 						{
-							idSalonMaximo=salonList[i]->idSalon;
+							idSalonMaximo=idSalonAuxUno;
 							maximo=contadorDeArcades;
 						}
 
@@ -343,15 +392,13 @@ int info_imprimirSalonMasArcade (eArcade *arcadeList[], int lenghtArcade,eSalon 
 	posicionMaximo=salon_buscarPorId(salonList,lenghtSalon, idSalonMaximo);
 
 	salon_cambiarTexto (salonList, posicionMaximo, cadenaAux);
+	salon_getName(salonList[posicionMaximo],nameAux);
+	salon_getAddress(salonList[posicionMaximo],addressAux);
+	salon_getIdSalon(salonList[posicionMaximo],&idSalonAuxUno);
 
 	printf("El salon con mas cantidad de arcades es:\n\n"
 			"Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d. Arcades: %d \n\n",
-			salonList[posicionMaximo]->name,
-			salonList[posicionMaximo]->address,
-			cadenaAux,
-			salonList[posicionMaximo]->idSalon,
-			maximo);
-
+			nameAux,addressAux,cadenaAux,idSalonAuxUno,maximo);
 
 	return retorno;
 }
@@ -361,6 +408,9 @@ int info_calcularFichasTotal (int idIngresada, eArcade *arcadeList[], int lenght
 	int retorno;
 	int acumuladorDeFichas;
 	int posicionSolicitada;
+
+	int idSalonAux;
+	int tokensAux;
 
 	retorno=-1;
 	acumuladorDeFichas=0;
@@ -375,9 +425,11 @@ int info_calcularFichasTotal (int idIngresada, eArcade *arcadeList[], int lenght
 			{
 				if(arcadeList[i]!=NULL)
 				{
-					if(arcadeList[i]->idSalon==idIngresada)
+					arc_getIdSalon(arcadeList[i],&idSalonAux);
+					if(idSalonAux==idIngresada)
 					{
-						acumuladorDeFichas=acumuladorDeFichas + arcadeList[i]->maximumTokens;
+						arc_getMaxTokens(arcadeList[i],&tokensAux);
+						acumuladorDeFichas=acumuladorDeFichas + tokensAux;
 						retorno=acumuladorDeFichas;
 					}
 				}
@@ -420,6 +472,8 @@ int info_juegoEnArcades (eArcade *arcadeList[], int lenghtArcade, char nombreJue
 	retorno=-1;
 	contadorDeArcades=0;
 
+	char gameNameAux[GAME_LEN];
+
 	if(arcadeList!=NULL&&lenghtArcade>0)
 	{
 		retorno=0;
@@ -427,7 +481,8 @@ int info_juegoEnArcades (eArcade *arcadeList[], int lenghtArcade, char nombreJue
 		{
 			if(arcadeList[i]!=NULL)
 			{
-				if(strncmp(arcadeList[i]->gameName,nombreJuego,63)==0)
+				arc_getGameName(arcadeList[i],gameNameAux);
+				if(strncmp(gameNameAux,nombreJuego,GAME_LEN)==0)
 				{
 					contadorDeArcades++;
 				}
@@ -442,26 +497,6 @@ int info_juegoEnArcades (eArcade *arcadeList[], int lenghtArcade, char nombreJue
 
 
 
-/*int arc_cambiarTexto (eArcade *arcadeList[], int posicion, char pTextoConvertido[])//MODIFICADA
-{
-	int retorno;
-
-	retorno=-1;
-	switch(arcadeList[posicion]->soundType)
-	{
-		case TIPO_MONO:
-			retorno=0;
-			strncpy(pTextoConvertido,"Mono",32);
-			break;
-		case TIPO_ESTEREO:
-			strncpy(pTextoConvertido,"Estereo",32);
-			retorno=0;
-			break;
-	}
-
-	return retorno;
-}*/
-
 int info_imprimirInformes (eArcade *arcadeList[], int lenghtArcade,eSalon *salonList [],int lenghtSalon, char eleccionUsuario) //MODIFICADA
 {
 	int retorno;
@@ -470,6 +505,8 @@ int info_imprimirInformes (eArcade *arcadeList[], int lenghtArcade,eSalon *salon
 	float gananciaTotal;
 	char nombreJuegoPedido[63];
 	int juegoEnArcades;
+	int posicionSolicitada;
+	char nameAux[NAME_LEN];
 
 	retorno=-2;
 	if(arcadeList!=NULL&&lenghtArcade>0&&salonList!=NULL&&lenghtSalon>0)
@@ -512,8 +549,9 @@ int info_imprimirInformes (eArcade *arcadeList[], int lenghtArcade,eSalon *salon
 				{
 					gananciaTotal=info_calcularGananciaTotal (idSolicitada, valorFicha,arcadeList, ARCADE_LEN,salonList,SALON_LEN);
 
-					printf("La ganancia total del salon %s es de $ %.2f",salonList[salon_buscarPorId(salonList,SALON_LEN, idSolicitada)]->name,
-																		gananciaTotal);
+					posicionSolicitada=salon_buscarPorId(salonList,SALON_LEN, idSolicitada);
+					salon_getName(salonList[posicionSolicitada],nameAux);
+					printf("La ganancia total del salon %s es de $ %.2f",nameAux,gananciaTotal);
 				}
 				break;
 			case 'g':
@@ -554,6 +592,12 @@ int info_arcadesCompletos (eArcade *arcadeList[], int lenghtArcade,eSalon *salon
 	int indiceDeId;
 	char cadenaAux[32];
 
+	int idSalonAuxUno;
+	int idSalonAuxDos;
+	int jugadoresAux;
+	char nameAux[NAME_LEN];
+	char addressAux[ADDRESS_LEN];
+
 	arc_ordenarArcades (arcadeList, lenghtArcade,2);
 	contadorSalonesCompletos=0;
 	indiceDeId=0;
@@ -565,15 +609,18 @@ int info_arcadesCompletos (eArcade *arcadeList[], int lenghtArcade,eSalon *salon
 		{
 			if(arcadeList[i]!=NULL)
 			{
-				if(arcadeList[i]->idSalon == arcadeList[i+1]->idSalon)
+				arc_getIdSalon(arcadeList[i],&idSalonAuxUno);
+				arc_getIdSalon(arcadeList[i+1],&idSalonAuxDos);
+				if(idSalonAuxUno == idSalonAuxDos)
 				{
-					if(arcadeList[i]->numberOfPlayers>2)
+					arc_getNumPlayers(arcadeList[i],&jugadoresAux);
+					if(jugadoresAux>2)
 					{
 						contadorSalonesCompletos++;
 						if(contadorSalonesCompletos==7)
 						{
-
-							listaDeId[indiceDeId]=arcadeList[i]->idSalon;
+							arc_getIdSalon(arcadeList[i],&idSalonAuxUno);
+							listaDeId[indiceDeId]=idSalonAuxUno;
 							indiceDeId++;
 
 							if(contadorSalonesCompletos>7)
@@ -601,15 +648,15 @@ int info_arcadesCompletos (eArcade *arcadeList[], int lenghtArcade,eSalon *salon
 		{
 			if(salonList[i]!=NULL)
 			{
-				if(salonList[i]->idSalon==listaDeId[j])
+				salon_getIdSalon(salonList[i],&idSalonAuxUno);
+				if(idSalonAuxUno==listaDeId[j])
 				{
 					salon_cambiarTexto (salonList, i, cadenaAux);
+					salon_getName(salonList[i],nameAux);
+					salon_getAddress(salonList[i],addressAux);
 
-					printf("Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",
-													salonList[i]->name,
-													salonList[i]->address,
-													cadenaAux,
-													salonList[i]->idSalon);
+					printf("Nombre: %s. Direccion: %s. Tipo: %s. ID de Salon: %d.  \n\n",nameAux,addressAux,cadenaAux,idSalonAuxUno);
+
 
 				}
 			}
