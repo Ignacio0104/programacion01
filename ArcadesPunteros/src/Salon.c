@@ -7,8 +7,10 @@
 
 #include "Salon.h"
 #include <limits.h>
+#include <string.h>
 
-
+#define NAME_LEN 128
+#define ADDRESS_LEN 128
 #define TIPO_SHOPPING 1
 #define TIPO_LOCAL 2
 
@@ -18,7 +20,7 @@ static int dameUnIdNuevo (void);
 
 static int dameUnIdNuevo (void)
 {
-	static int contador=0;
+	static int contador=1;
 	return (contador++);
 }
 
@@ -58,6 +60,7 @@ int salon_loadSalon(eSalon *pSalon) //MODIFICADA (QUEDA IGUAL)
 	char addressAux[128];
 	char cadenaAuxUno[128]={"Shopping"};
 	char cadenaAuxDos[128]={"Local"};
+	int idAux;
 	int typeAux;
 
 	if(pSalon!=NULL)
@@ -70,32 +73,37 @@ int salon_loadSalon(eSalon *pSalon) //MODIFICADA (QUEDA IGUAL)
 															"	1)Shopping\n"
 															"	2)Local\n", "Error")==0)
 				{
+					idAux=dameUnIdNuevo();
 
-
-					strncpy(pSalon->name,nameAux,sizeof(pSalon->name));
-					strncpy(pSalon->address,addressAux,sizeof(pSalon->address));
-					pSalon->type=typeAux;
-					pSalon->idSalon=dameUnIdNuevo();
+					salon_setName(pSalon, nameAux);
+					salon_setAddress(pSalon,addressAux);
+					salon_setType(pSalon,typeAux);
+					salon_setIdSalon(pSalon,idAux);
 					retorno=0;
 
-					if(pSalon->type==1)
+					salon_getName(pSalon,nameAux);
+					salon_getAddress(pSalon,addressAux);
+					salon_getType(pSalon,&typeAux);
+					salon_getIdSalon(pSalon,&idAux);
+
+					if(typeAux==1)
 					{
 						printf("Arcade cargado con exito:\n");
 						printf("%-15s %15s %15s %15s\n\n","Nombre", "Direccion","Tipo de Salon","ID de Salon");
 						printf("%-15s %15s %15s  %15d  \n",
-								pSalon->name,
-								pSalon->address,
+								nameAux,
+								addressAux,
 								cadenaAuxUno,
-								pSalon->idSalon);
+								idAux);
 					} else
 					{
 						printf("Arcade cargado con exito:\n");
 						printf("%-15s %15s %15s %15s\n\n","Nombre", "Direccion","Tipo de Salon","ID de Salon");
 						printf("%-15s %15s %15s  %15d  \n",
-									pSalon->name,
-									pSalon->address,
-									cadenaAuxDos,
-									pSalon->idSalon);
+								nameAux,
+								addressAux,
+								cadenaAuxDos,
+								idAux);
 					}
 
 
@@ -157,6 +165,7 @@ int salon_askForId (void) //MODIFICADA (QUEDA IGUAL)
 int salon_buscarPorId (eSalon *salonList[], int lenghtSalon, int idIngresada) //MODIFICADA
 {
 	int retorno;
+	int idSalonAux;
 	retorno=-1;
 
 	if(salonList!=NULL&&lenghtSalon>0)
@@ -166,8 +175,8 @@ int salon_buscarPorId (eSalon *salonList[], int lenghtSalon, int idIngresada) //
 		{
 			if(salonList[i]!=NULL)
 			{
-
-				if(salonList[i]->idSalon==idIngresada)
+				salon_getIdSalon(salonList[i],&idSalonAux);
+				if(idSalonAux==idIngresada)
 				{
 					retorno=i;
 					break;
@@ -190,6 +199,9 @@ int salon_remove (eSalon *salonList[], int lenghtSalon, int idIngresada) //MODIF
 	char userChoice;
 	int posicionSolicitada;
 	char cadenaAux [32];
+	char nameAux[128];
+	char addressAux[128];
+	int idAux;
 
 	retorno=-1;
 
@@ -202,13 +214,13 @@ int salon_remove (eSalon *salonList[], int lenghtSalon, int idIngresada) //MODIF
 		if(posicionSolicitada>=0)
 		{
 			salon_cambiarTexto (salonList, posicionSolicitada, cadenaAux);
+			salon_getName(salonList[posicionSolicitada],nameAux);
+			salon_getAddress(salonList[posicionSolicitada],addressAux);
+			salon_getIdSalon(salonList[posicionSolicitada],&idAux);
 
 			printf("\nSe va a eliminar el siguiente salon: \n\n");
 			printf("%-15s %15s %15s  %15d  \n",
-					salonList[posicionSolicitada]->name,
-					salonList[posicionSolicitada]->address,
-					cadenaAux,
-					salonList[posicionSolicitada]->idSalon);
+					nameAux,addressAux,cadenaAux,idAux);
 
 					if(pedirCharSiNo(&userChoice, 's', 'n', 5, "\n\n ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
@@ -247,6 +259,9 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 	int retorno;
 	retorno=-1;
 	char cadenaAux[32];
+	char nameAux[128];
+	char addressAux[128];
+	int idAux;
 
 	if(salonList!=NULL&&lenghtSalon>0)
 	{
@@ -258,13 +273,12 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 			if(salonList[i]!=NULL)
 			{
 				salon_cambiarTexto (salonList, i, cadenaAux);
-
+				salon_getName(salonList[i],nameAux);
+				salon_getAddress(salonList[i],addressAux);
+				salon_getIdSalon(salonList[i],&idAux);
 
 				printf("%-15s %15s %15s  %15d  \n",
-						salonList[i]->name,
-						salonList[i]->address,
-						cadenaAux,
-						salonList[i]->idSalon);
+						nameAux,addressAux,cadenaAux,idAux);
 
 			}
 
@@ -280,19 +294,25 @@ int salon_imprimirCompleto(eSalon *salonList[], int lenghtSalon) //MODIFICADA
 
 void salon_altaForzada(eSalon *pSalon,char nombre[],char direccion[], int tipo) //MODIFICADA
 {
+	int idAux;
+	idAux=dameUnIdNuevo();
 
-	strncpy(pSalon->name,nombre,sizeof(pSalon->name));
-	strncpy(pSalon->address,direccion,sizeof(pSalon->address));
-	pSalon->type=tipo;
-	pSalon->idSalon=dameUnIdNuevo();
+	salon_setName(pSalon, nombre);
+	salon_setAddress(pSalon,direccion);
+	salon_setType(pSalon,tipo);
+	salon_setIdSalon(pSalon,idAux);
+
 }
 
 int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]) //MODIFICADA
 {
 	int retorno;
+	int typeAux;
 
 	retorno=-1;
-	switch(salonList[posicion]->type)
+	salon_getType(salonList[posicion],&typeAux);
+
+	switch(typeAux)
 	{
 		case TIPO_SHOPPING:
 			retorno=0;
@@ -334,6 +354,116 @@ int salon_occupancy (eSalon *salonList[], int lenghtSalon, int* pNotEmpty) //MOD
 
 	return retorno;
 }
+
+////// SETTERS Y GETTERS //////
+
+int salon_setName (eSalon* pSalon, char nombre[])
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		strncpy(pSalon->name,nombre,sizeof(pSalon->name));
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getName (eSalon* pSalon, char* nombre)
+{
+	int retorno=-1;
+	if(pSalon!=NULL&&nombre!=NULL)
+	{
+		strncpy(nombre,pSalon->name,NAME_LEN);
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+int salon_setAddress (eSalon* pSalon, char direccion[])
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		strncpy(pSalon->address,direccion,sizeof(pSalon->address));
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getAddress (eSalon* pSalon, char* direccion)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		strncpy(direccion,pSalon->address,ADDRESS_LEN);
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_setType (eSalon* pSalon, int tipo)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		pSalon->type=tipo;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getType (eSalon* pSalon, int* tipo)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		*tipo=pSalon->type;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_setIdSalon(eSalon* pSalon, int idSalon)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		pSalon->idSalon=idSalon;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getIdSalon (eSalon* pSalon, int* idSalon)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		*idSalon=pSalon->idSalon;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+
+
+
+
 
 
 

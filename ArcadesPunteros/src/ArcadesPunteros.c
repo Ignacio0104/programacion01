@@ -23,6 +23,8 @@ int main(void) {
 
 	setbuf(stdout,NULL);
 
+
+
 	int posicionLibre;
 	int idSolicitada;
 	int eleccionUsuario;
@@ -116,7 +118,6 @@ int main(void) {
 	pArcadeAuxiliar=arcade_nuevo();
 	arc_altaForzada(pArcadeAuxiliar,"USA", 1, 3, 3500, 4,"Prince of Persia");
 	arcadeList[10]=pArcadeAuxiliar;
-
 
 	eleccionUsuario=menuOperaciones();
 

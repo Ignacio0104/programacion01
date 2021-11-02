@@ -2895,3 +2895,553 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+17:40:43 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:358:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  358 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:353:41: note: declared here
+  353 | int salon_getName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c:358:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  358 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:383:43: warning: 'sizeof' on array function parameter 'direccion' will return size of 'char *' [-Wsizeof-array-argument]
+  383 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+..\src\Salon.c:378:44: note: declared here
+  378 | int salon_getAddress (eSalon* pSalon, char direccion[])
+      |                                       ~~~~~^~~~~~~~~~~
+..\src\Salon.c:383:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  383 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+17:46:15 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:358:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  358 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:353:41: note: declared here
+  353 | int salon_getName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c:358:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  358 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:383:43: warning: 'sizeof' on array function parameter 'direccion' will return size of 'char *' [-Wsizeof-array-argument]
+  383 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+..\src\Salon.c:378:44: note: declared here
+  378 | int salon_getAddress (eSalon* pSalon, char direccion[])
+      |                                       ~~~~~^~~~~~~~~~~
+..\src\Salon.c:383:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  383 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+17:48:58 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:354:41: note: declared here
+  354 | int salon_getName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:384:43: warning: 'sizeof' on array function parameter 'direccion' will return size of 'char *' [-Wsizeof-array-argument]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+..\src\Salon.c:379:44: note: declared here
+  379 | int salon_getAddress (eSalon* pSalon, char direccion[])
+      |                                       ~~~~~^~~~~~~~~~~
+..\src\Salon.c:384:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+17:50:55 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:354:41: note: declared here
+  354 | int salon_getName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:16:37 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:354:41: note: declared here
+  354 | int salon_getName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:384:43: warning: 'sizeof' on array function parameter 'direccion' will return size of 'char *' [-Wsizeof-array-argument]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+..\src\Salon.c:379:44: note: declared here
+  379 | int salon_getAddress (eSalon* pSalon, char direccion[])
+      |                                       ~~~~~^~~~~~~~~~~
+..\src\Salon.c:384:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:19:59 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:384:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:21:57 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:384:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:23:24 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:23:41 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:24:06 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:25:37 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+13:26:12 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:384:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  384 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+13:38:34 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+13:40:04 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+14:08:09 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:385:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  385 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:123:31: warning: passing argument 2 of 'salon_getName' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |  salon_getName (salonList[3], &nombreAuxiliar);
+      |                               ^~~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[70]
+In file included from ..\src\ArcadesPunteros.c:14:
+..\src\Salon.h:40:41: note: expected 'char *' but argument is of type 'char (*)[70]'
+   40 | int salon_getName (eSalon* pSalon, char nombre[]);
+      |                                    ~~~~~^~~~~~~~
+..\src\ArcadesPunteros.c:35:10: warning: unused variable 'pSalonAuxiliar' [-Wunused-variable]
+   35 |  eSalon* pSalonAuxiliar;
+      |          ^~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:34:6: warning: unused variable 'arcadesOcupados' [-Wunused-variable]
+   34 |  int arcadesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:33:6: warning: unused variable 'salonesOcupados' [-Wunused-variable]
+   33 |  int salonesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:32:7: warning: variable 'llaveDeCierre' set but not used [-Wunused-but-set-variable]
+   32 |  char llaveDeCierre;
+      |       ^~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:31:7: warning: unused variable 'subEleccionUsuario' [-Wunused-variable]
+   31 |  char subEleccionUsuario;
+      |       ^~~~~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:30:6: warning: unused variable 'eleccionUsuario' [-Wunused-variable]
+   30 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:29:6: warning: unused variable 'idSolicitada' [-Wunused-variable]
+   29 |  int idSolicitada;
+      |      ^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:28:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   28 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+14:08:38 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:35:10: warning: unused variable 'pSalonAuxiliar' [-Wunused-variable]
+   35 |  eSalon* pSalonAuxiliar;
+      |          ^~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:34:6: warning: unused variable 'arcadesOcupados' [-Wunused-variable]
+   34 |  int arcadesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:33:6: warning: unused variable 'salonesOcupados' [-Wunused-variable]
+   33 |  int salonesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:32:7: warning: variable 'llaveDeCierre' set but not used [-Wunused-but-set-variable]
+   32 |  char llaveDeCierre;
+      |       ^~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:31:7: warning: unused variable 'subEleccionUsuario' [-Wunused-variable]
+   31 |  char subEleccionUsuario;
+      |       ^~~~~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:30:6: warning: unused variable 'eleccionUsuario' [-Wunused-variable]
+   30 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:29:6: warning: unused variable 'idSolicitada' [-Wunused-variable]
+   29 |  int idSolicitada;
+      |      ^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:28:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   28 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+14:09:05 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:385:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  385 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+14:09:12 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:359:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  359 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:385:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  385 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+16:54:39 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:360:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  360 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:386:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  386 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+..\src\ArcadesPunteros.c: In function 'main':
+..\src\ArcadesPunteros.c:35:10: warning: unused variable 'pSalonAuxiliar' [-Wunused-variable]
+   35 |  eSalon* pSalonAuxiliar;
+      |          ^~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:34:6: warning: unused variable 'arcadesOcupados' [-Wunused-variable]
+   34 |  int arcadesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:33:6: warning: unused variable 'salonesOcupados' [-Wunused-variable]
+   33 |  int salonesOcupados;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:32:7: warning: variable 'llaveDeCierre' set but not used [-Wunused-but-set-variable]
+   32 |  char llaveDeCierre;
+      |       ^~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:31:7: warning: unused variable 'subEleccionUsuario' [-Wunused-variable]
+   31 |  char subEleccionUsuario;
+      |       ^~~~~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:30:6: warning: unused variable 'eleccionUsuario' [-Wunused-variable]
+   30 |  int eleccionUsuario;
+      |      ^~~~~~~~~~~~~~~
+..\src\ArcadesPunteros.c:29:6: warning: unused variable 'idSolicitada' [-Wunused-variable]
+   29 |  int idSolicitada;
+      |      ^~~~~~~~~~~~
+..\src\ArcadesPunteros.c:28:6: warning: unused variable 'posicionLibre' [-Wunused-variable]
+   28 |  int posicionLibre;
+      |      ^~~~~~~~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+16:55:06 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_setName':
+..\src\Salon.c:347:37: warning: 'sizeof' on array function parameter 'nombre' will return size of 'char *' [-Wsizeof-array-argument]
+  347 |   printf("El tamano es %d.\n",sizeof(nombre));
+      |                                     ^
+..\src\Salon.c:341:41: note: declared here
+  341 | int salon_setName (eSalon* pSalon, char nombre[])
+      |                                    ~~~~~^~~~~~~~
+..\src\Salon.c: In function 'salon_getName':
+..\src\Salon.c:360:37: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  360 |   strncpy(nombre,pSalon->name,sizeof(nombre));
+      |                                     ^
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:386:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  386 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+16:55:34 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:385:43: warning: argument to 'sizeof' in 'strncpy' call is the same expression as the destination; did you mean to provide an explicit length? [-Wsizeof-pointer-memaccess]
+  385 |   strncpy(direccion,pSalon->address,sizeof(direccion));
+      |                                           ^
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+23:51:54 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:01:27 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_loadSalon':
+..\src\Salon.c:81:30: warning: passing argument 2 of 'salon_getIdSalon' makes pointer from integer without a cast [-Wint-conversion]
+   81 |      salon_getIdSalon(pSalon,idAux);
+      |                              ^~~~~
+      |                              |
+      |                              int
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:49:44: note: expected 'int *' but argument is of type 'int'
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                                       ~~~~~^~~~~~~
+..\src\Salon.c:92:30: warning: passing argument 2 of 'salon_getIdSalon' makes pointer from integer without a cast [-Wint-conversion]
+   92 |      salon_getIdSalon(pSalon,idAux);
+      |                              ^~~~~
+      |                              |
+      |                              int
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:49:44: note: expected 'int *' but argument is of type 'int'
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                                       ~~~~~^~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:02:09 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_loadSalon':
+..\src\Salon.c:91:27: warning: passing argument 2 of 'salon_setType' makes integer from pointer without a cast [-Wint-conversion]
+   91 |      salon_setType(pSalon,&typeAux);
+      |                           ^~~~~~~~
+      |                           |
+      |                           int *
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:45:40: note: expected 'int' but argument is of type 'int *'
+   45 | int salon_setType (eSalon* pSalon, int tipo);
+      |                                    ~~~~^~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:02:21 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:02:57 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_loadSalon':
+..\src\Salon.c:81:30: warning: passing argument 2 of 'salon_setIdSalon' makes integer from pointer without a cast [-Wint-conversion]
+   81 |      salon_setIdSalon(pSalon,&idAux);
+      |                              ^~~~~~
+      |                              |
+      |                              int *
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:48:42: note: expected 'int' but argument is of type 'int *'
+   48 | int salon_setIdSalon(eSalon* pSalon, int idSalon);
+      |                                      ~~~~^~~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:07 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:09 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros
+00:13:02 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_remove':
+..\src\Salon.c:217:18: warning: passing argument 1 of 'salon_getName' from incompatible pointer type [-Wincompatible-pointer-types]
+  217 |    salon_getName(salonList,nameAux);
+      |                  ^~~~~~~~~
+      |                  |
+      |                  eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:40:28: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   40 | int salon_getName (eSalon* pSalon, char nombre[]);
+      |                    ~~~~~~~~^~~~~~
+..\src\Salon.c:218:21: warning: passing argument 1 of 'salon_getAddress' from incompatible pointer type [-Wincompatible-pointer-types]
+  218 |    salon_getAddress(salonList,addressAux);
+      |                     ^~~~~~~~~
+      |                     |
+      |                     eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:43:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   43 | int salon_getAddress (eSalon* pSalon, char direccion[]);
+      |                       ~~~~~~~~^~~~~~
+..\src\Salon.c:219:21: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  219 |    salon_getIdSalon(salonList,&idAux);
+      |                     ^~~~~~~~~
+      |                     |
+      |                     eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+..\src\Salon.c: In function 'salon_imprimirCompleto':
+..\src\Salon.c:276:19: warning: passing argument 1 of 'salon_getName' from incompatible pointer type [-Wincompatible-pointer-types]
+  276 |     salon_getName(salonList,nameAux);
+      |                   ^~~~~~~~~
+      |                   |
+      |                   eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:40:28: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   40 | int salon_getName (eSalon* pSalon, char nombre[]);
+      |                    ~~~~~~~~^~~~~~
+..\src\Salon.c:277:22: warning: passing argument 1 of 'salon_getAddress' from incompatible pointer type [-Wincompatible-pointer-types]
+  277 |     salon_getAddress(salonList,addressAux);
+      |                      ^~~~~~~~~
+      |                      |
+      |                      eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:43:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   43 | int salon_getAddress (eSalon* pSalon, char direccion[]);
+      |                       ~~~~~~~~^~~~~~
+..\src\Salon.c:278:22: warning: passing argument 1 of 'salon_getIdSalon' from incompatible pointer type [-Wincompatible-pointer-types]
+  278 |     salon_getIdSalon(salonList,&idAux);
+      |                      ^~~~~~~~~
+      |                      |
+      |                      eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:49:31: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   49 | int salon_getIdSalon (eSalon* pSalon, int* idSalon);
+      |                       ~~~~~~~~^~~~~~
+..\src\Salon.c: In function 'salon_cambiarTexto':
+..\src\Salon.c:313:16: warning: passing argument 1 of 'salon_getType' from incompatible pointer type [-Wincompatible-pointer-types]
+  313 |  salon_getType(salonList,&typeAux);
+      |                ^~~~~~~~~
+      |                |
+      |                eSalon ** {aka struct <anonymous> **}
+In file included from ..\src\Salon.c:8:
+..\src\Salon.h:46:28: note: expected 'eSalon *' {aka 'struct <anonymous> *'} but argument is of type 'eSalon **' {aka 'struct <anonymous> **'}
+   46 | int salon_getType (eSalon* pSalon, int* tipo);
+      |                    ~~~~~~~~^~~~~~
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:14:14 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:14:55 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ArcadesPunteros.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:14:57 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+00:16:29 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:17:43 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:19:29 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:21:01 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:21:20 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:22:39 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+00:23:25 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+Info: Nothing to build for ArcadesPunteros
+Info: Nothing to build for ArcadesPunteros

@@ -9,7 +9,8 @@
 #include <limits.h>
 
 #define ARCADE_LEN 1000
-
+#define NATION_LEN 128
+#define GAME_LEN 63
 #define TIPO_MONO 1
 #define TIPO_ESTEREO 2
 
@@ -597,18 +598,24 @@ int arc_removePorSalon (eArcade *arcadeList[], int lenghtArcade, int idIngresada
 
 		if(contador>0)
 		{
+
 			if(pedirCharSiNo(&userChoice, 's', 'n', 5, "---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
 							"Error, dato ingresado inválido\n")==0)
 					{
+
 						if(userChoice=='s')
 						{
 							for(int i=0;i<lenghtArcade;i++)
 							{
-								if(idIngresada==arcadeList[i]->idSalon)
+								if(arcadeList[i]!=NULL)
 								{
-									free(arcadeList[i]);
-									arcadeList[i]=NULL;
+									if(idIngresada==arcadeList[i]->idSalon)
+									{
+										free(arcadeList[i]);
+										arcadeList[i]=NULL;
+									}
 								}
+
 
 							}
 
@@ -686,6 +693,122 @@ int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty) //MO
 
 	return retorno;
 }
+
+
+
+///////// Setters y Getters /////////
+
+
+int arc_setNationality (eArcade* pArcade, char nationality[])
+{
+	int retorno=-1;
+	if(pArcade!=NULL)
+	{
+		strncpy(pArcade->nationality,nationality,sizeof(pArcade->nationality));
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int arc_getNationality (eArcade* pArcade, char nationality[])
+{
+	int retorno=-1;
+	if(pArcade!=NULL&&nationality!=NULL)
+	{
+		strncpy(nationality,pArcade->nationality,NATION_LEN);
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+int salon_setType (eSalon* pSalon, int tipo)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		pSalon->type=tipo;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getType (eSalon* pSalon, int* tipo)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		*tipo=pSalon->type;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_setAddress (eSalon* pSalon, char direccion[])
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		strncpy(pSalon->address,direccion,sizeof(pSalon->address));
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getAddress (eSalon* pSalon, char* direccion)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		strncpy(direccion,pSalon->address,ADDRESS_LEN);
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+
+
+int salon_setIdSalon(eSalon* pSalon, int idSalon)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		pSalon->idSalon=idSalon;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+int salon_getIdSalon (eSalon* pSalon, int* idSalon)
+{
+	int retorno=-1;
+	if(pSalon!=NULL)
+	{
+		*idSalon=pSalon->idSalon;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
+
+
+
+
+
+
 
 
 

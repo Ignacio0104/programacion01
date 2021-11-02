@@ -34,6 +34,18 @@ int salon_occupancy (eSalon *salonList[], int lenghtSalon, int* pNotEmpty);
 eSalon* salon_nuevo (void);
 int salon_cambiarTexto (eSalon *salonList[], int posicion, char pTextoConvertido[]);
 
+///Setters y getters///
 
+int salon_setName (eSalon* pSalon, char nombre[]);
+int salon_getName (eSalon* pSalon, char nombre[]);
+
+int salon_setAddress (eSalon* pSalon, char direccion[]);
+int salon_getAddress (eSalon* pSalon, char direccion[]);
+
+int salon_setType (eSalon* pSalon, int tipo);
+int salon_getType (eSalon* pSalon, int* tipo);
+
+int salon_setIdSalon(eSalon* pSalon, int idSalon);
+int salon_getIdSalon (eSalon* pSalon, int* idSalon);
 
 #endif /* SALON_H_ */
