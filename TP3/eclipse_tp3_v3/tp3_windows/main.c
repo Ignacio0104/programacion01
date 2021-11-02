@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "biblioteca_input.h"
 
 /****************************************************
     Menu:
@@ -22,9 +23,10 @@
 
 int main()
 {
+	setbuf(stdout,NULL);
     int option = 0;
-
     LinkedList* listaEmpleados = ll_newLinkedList();
+
     do{
         switch(option)
         {

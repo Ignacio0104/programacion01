@@ -8,7 +8,6 @@
  ============================================================================
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "Salon.h"
@@ -18,12 +17,9 @@
 #define SALON_LEN 100
 #define ARCADE_LEN 1000
 
-
 int main(void) {
 
 	setbuf(stdout,NULL);
-
-
 
 	int posicionLibre;
 	int idSolicitada;
@@ -36,14 +32,11 @@ int main(void) {
 	eArcade* pArcadeAuxiliar;
 	llaveDeCierre='n';
 
-
 	eSalon* salonList [SALON_LEN];
 	salon_initList(salonList,SALON_LEN);
 
 	eArcade* arcadeList[ARCADE_LEN];
 	arc_initList(arcadeList,ARCADE_LEN);
-
-
 
 	//Hardcodeo Salones
 
