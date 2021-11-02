@@ -11,11 +11,9 @@
 #include <string.h>
 
 
-static int esNumerica (char cadena[]);
+
 static int myGets(char pResultado[], int len);
-static int esFloat (char cadena[]);
-static int esTexto (char cadena[]);
-static int esAlfaNumerica (char cadena[]);
+
 
 int pedirFloat(float* pResultado, int reintentos, char* variableTexto, char* textoError)
 {
@@ -375,7 +373,7 @@ int pedirCharAUsuarioIntentosRango(char* pResultado, char min, char max, int rei
 
 
 
-static int esNumerica (char cadena[])
+int esNumerica (char cadena[])
 {
 	int retorno;
 	int i;
@@ -406,7 +404,7 @@ static int esNumerica (char cadena[])
 
 }
 
-static int esFloat (char cadena[])
+int esFloat (char cadena[])
 {
 	int retorno;
 	int i;
@@ -448,7 +446,7 @@ static int esFloat (char cadena[])
 
 }
 
-static int esTexto (char cadena[])
+int esTexto (char cadena[])
 {
 	int retorno;
 	int i;
@@ -505,7 +503,7 @@ static int myGets(char pResultado[], int len)
 }
 
 
-static int esAlfaNumerica (char cadena[])
+int esAlfaNumerica (char cadena[])
 {
 	int retorno;
 	int i;

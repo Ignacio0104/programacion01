@@ -3771,3 +3771,70 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.
 gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
 Info: Nothing to build for ArcadesPunteros
 Info: Nothing to build for ArcadesPunteros
+18:17:54 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:412:11: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  412 |  if(pSalon!=NULL&direccion!=NULL)
+      |           ^
+..\src\Salon.c: In function 'salon_setType':
+..\src\Salon.c:431:17: warning: passing argument 1 of 'esNumerica' makes pointer from integer without a cast [-Wint-conversion]
+  431 |   if(esNumerica(tipo)==0)
+      |                 ^~~~
+      |                 |
+      |                 int
+In file included from ..\src\Salon.h:13,
+                 from ..\src\Salon.c:8:
+..\src\biblioteca_input.h:115:22: note: expected 'char *' but argument is of type 'int'
+  115 | int esNumerica (char cadena[]);
+      |                 ~~~~~^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c:15:12: error: static declaration of 'myGets' follows non-static declaration
+   15 | static int myGets(char pResultado[], int len);
+      |            ^~~~~~
+In file included from ..\src\biblioteca_input.c:8:
+..\src\biblioteca_input.h:116:5: note: previous declaration of 'myGets' was here
+  116 | int myGets(char pResultado[], int len);
+      |     ^~~~~~
+18:18:24 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+..\src\Salon.c: In function 'salon_getAddress':
+..\src\Salon.c:412:11: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  412 |  if(pSalon!=NULL&direccion!=NULL)
+      |           ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c:15:12: error: static declaration of 'myGets' follows non-static declaration
+   15 | static int myGets(char pResultado[], int len);
+      |            ^~~~~~
+In file included from ..\src\biblioteca_input.c:8:
+..\src\biblioteca_input.h:116:5: note: previous declaration of 'myGets' was here
+  116 | int myGets(char pResultado[], int len);
+      |     ^~~~~~
+18:18:48 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+..\src\biblioteca_input.c:15:12: error: static declaration of 'myGets' follows non-static declaration
+   15 | static int myGets(char pResultado[], int len);
+      |            ^~~~~~
+In file included from ..\src\biblioteca_input.c:8:
+..\src\biblioteca_input.h:116:5: note: previous declaration of 'myGets' was here
+  116 | int myGets(char pResultado[], int len);
+      |     ^~~~~~
+18:19:16 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\biblioteca_input.o" "..\\src\\biblioteca_input.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArcadesPunteros.o" "..\\src\\ArcadesPunteros.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 
+18:31:05 **** Incremental Build of configuration Debug for project ArcadesPunteros ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salon.o" "..\\src\\Salon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade.o" "..\\src\\Arcade.c" 
+gcc -o ArcadesPunteros.exe "src\\Arcade.o" "src\\ArcadesPunteros.o" "src\\Informes.o" "src\\Salon.o" "src\\biblioteca_input.o" 

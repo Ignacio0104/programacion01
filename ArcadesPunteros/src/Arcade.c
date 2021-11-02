@@ -756,10 +756,14 @@ int arc_occupancy (eArcade *arcadeList[], int lenghtArcade, int* pNotEmpty) //MO
 int arc_setNationality (eArcade* pArcade, char nationality[])
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&nationality!=NULL)
 	{
-		strncpy(pArcade->nationality,nationality,sizeof(pArcade->nationality));
-		retorno=0;
+		if(esTexto(nationality)==0)
+		{
+			strncpy(pArcade->nationality,nationality,sizeof(pArcade->nationality));
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -771,8 +775,11 @@ int arc_getNationality (eArcade* pArcade, char nationality[])
 	int retorno=-1;
 	if(pArcade!=NULL&&nationality!=NULL)
 	{
-		strncpy(nationality,pArcade->nationality,NATION_LEN);
-		retorno=0;
+		if(esTexto(pArcade->nationality)==0)
+		{
+			strncpy(nationality,pArcade->nationality,NATION_LEN);
+			retorno=0;
+		}
 	}
 
 	return retorno;
@@ -783,8 +790,11 @@ int arc_setType (eArcade* pArcade, int tipo)
 	int retorno=-1;
 	if(pArcade!=NULL)
 	{
-		pArcade->soundType=tipo;
-		retorno=0;
+		if(tipo==1||tipo==2)
+		{
+			pArcade->soundType=tipo;
+			retorno=0;
+		}
 	}
 
 	return retorno;
@@ -794,10 +804,14 @@ int arc_setType (eArcade* pArcade, int tipo)
 int arc_getType (eArcade* pArcade, int* tipo)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&tipo!=NULL)
 	{
-		*tipo=pArcade->soundType;
-		retorno=0;
+		if(pArcade->soundType==1 ||pArcade->soundType==2)
+		{
+			*tipo=pArcade->soundType;
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -807,7 +821,7 @@ int arc_getType (eArcade* pArcade, int* tipo)
 int arc_setNumPlayers (eArcade* pArcade, int numero)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&numero>=0&&numero<=6)
 	{
 		pArcade->numberOfPlayers=numero;
 		retorno=0;
@@ -820,7 +834,7 @@ int arc_setNumPlayers (eArcade* pArcade, int numero)
 int arc_getNumPlayers (eArcade* pArcade, int* numero)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&numero!=NULL)
 	{
 		*numero=pArcade->numberOfPlayers;
 		retorno=0;
@@ -832,7 +846,7 @@ int arc_getNumPlayers (eArcade* pArcade, int* numero)
 int arc_setMaxTokens(eArcade* pArcade, int numero)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&numero>0)
 	{
 		pArcade->maximumTokens=numero;
 		retorno=0;
@@ -845,7 +859,7 @@ int arc_setMaxTokens(eArcade* pArcade, int numero)
 int arc_getMaxTokens (eArcade* pArcade, int* numero)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&numero!=NULL)
 	{
 		*numero=pArcade->maximumTokens;
 		retorno=0;
@@ -857,7 +871,7 @@ int arc_getMaxTokens (eArcade* pArcade, int* numero)
 int arc_setIdSalon(eArcade* pArcade, int id)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&id>=0)
 	{
 		pArcade->idSalon=id;
 		retorno=0;
@@ -870,7 +884,7 @@ int arc_setIdSalon(eArcade* pArcade, int id)
 int arc_getIdSalon (eArcade* pArcade, int* id)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&id!=NULL)
 	{
 		*id=pArcade->idSalon;
 		retorno=0;
@@ -886,8 +900,12 @@ int arc_setGameName(eArcade* pArcade, char nombre[])
 	int retorno=-1;
 	if(pArcade!=NULL&&nombre!=NULL)
 	{
-		strncpy(pArcade->gameName,nombre,GAME_LEN);
-		retorno=0;
+		if(esTexto(nombre)==0)
+		{
+			strncpy(pArcade->gameName,nombre,GAME_LEN);
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -911,7 +929,7 @@ int arc_getGameName (eArcade* pArcade, char nombre[])
 int arc_setIdArcade(eArcade* pArcade, int idArcade)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&idArcade>=0)
 	{
 		pArcade->idArcade=idArcade;
 		retorno=0;
@@ -924,7 +942,7 @@ int arc_setIdArcade(eArcade* pArcade, int idArcade)
 int arc_getIdArcade(eArcade* pArcade, int* idArcade)
 {
 	int retorno=-1;
-	if(pArcade!=NULL)
+	if(pArcade!=NULL&&idArcade!=NULL)
 	{
 		*idArcade=pArcade->idArcade;
 		retorno=0;

@@ -360,10 +360,14 @@ int salon_occupancy (eSalon *salonList[], int lenghtSalon, int* pNotEmpty) //MOD
 int salon_setName (eSalon* pSalon, char nombre[])
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&nombre!=NULL)
 	{
-		strncpy(pSalon->name,nombre,sizeof(pSalon->name));
-		retorno=0;
+		if(esTexto(nombre)==0)
+		{
+			strncpy(pSalon->name,nombre,sizeof(pSalon->name));
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -375,8 +379,11 @@ int salon_getName (eSalon* pSalon, char* nombre)
 	int retorno=-1;
 	if(pSalon!=NULL&&nombre!=NULL)
 	{
-		strncpy(nombre,pSalon->name,NAME_LEN);
-		retorno=0;
+		if(esTexto(pSalon->name)==0)
+		{
+			strncpy(nombre,pSalon->name,NAME_LEN);
+			retorno=0;
+		}
 	}
 
 	return retorno;
@@ -385,10 +392,14 @@ int salon_getName (eSalon* pSalon, char* nombre)
 int salon_setAddress (eSalon* pSalon, char direccion[])
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&direccion!=NULL)
 	{
-		strncpy(pSalon->address,direccion,sizeof(pSalon->address));
-		retorno=0;
+		if(esAlfaNumerica(direccion)==0)
+		{
+			strncpy(pSalon->address,direccion,sizeof(pSalon->address));
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -398,10 +409,14 @@ int salon_setAddress (eSalon* pSalon, char direccion[])
 int salon_getAddress (eSalon* pSalon, char* direccion)
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&direccion!=NULL)
 	{
-		strncpy(direccion,pSalon->address,ADDRESS_LEN);
-		retorno=0;
+		if(esAlfaNumerica(pSalon->address)==0)
+		{
+			strncpy(direccion,pSalon->address,ADDRESS_LEN);
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -413,8 +428,12 @@ int salon_setType (eSalon* pSalon, int tipo)
 	int retorno=-1;
 	if(pSalon!=NULL)
 	{
-		pSalon->type=tipo;
-		retorno=0;
+		if(tipo==1||tipo==2)
+		{
+			pSalon->type=tipo;
+			retorno=0;
+		}
+
 	}
 
 	return retorno;
@@ -424,7 +443,7 @@ int salon_setType (eSalon* pSalon, int tipo)
 int salon_getType (eSalon* pSalon, int* tipo)
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&tipo!=NULL)
 	{
 		*tipo=pSalon->type;
 		retorno=0;
@@ -437,7 +456,7 @@ int salon_getType (eSalon* pSalon, int* tipo)
 int salon_setIdSalon(eSalon* pSalon, int idSalon)
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&idSalon>=0)
 	{
 		pSalon->idSalon=idSalon;
 		retorno=0;
@@ -450,7 +469,7 @@ int salon_setIdSalon(eSalon* pSalon, int idSalon)
 int salon_getIdSalon (eSalon* pSalon, int* idSalon)
 {
 	int retorno=-1;
-	if(pSalon!=NULL)
+	if(pSalon!=NULL&&idSalon!=NULL)
 	{
 		*idSalon=pSalon->idSalon;
 		retorno=0;
