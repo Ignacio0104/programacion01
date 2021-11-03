@@ -11,7 +11,6 @@ Employee* employee_new()
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldoStr)
 {
 	int idAux;
-	char nombreAux[NOMBRE_LEN];
 	int horasAux;
 	int sueldoAux;
 	Employee* pEmployee=employee_new();
@@ -69,6 +68,18 @@ int employee_setId(Employee* this,int id)
 	return retorno;
 }
 
+int employee_getId(Employee* this,int* id)
+{
+	int retorno=-1;
+	if(this!=NULL&&id!=NULL)
+	{
+		*id=this->id;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
 int employee_setNombre(Employee* this,char* nombre)
 {
 	int retorno=-1;
@@ -76,7 +87,22 @@ int employee_setNombre(Employee* this,char* nombre)
 	{
 		if(esTexto(nombre)==0)
 		{
-			strncpy(this->nombre,nombre,sizeof(this->nombre));
+			strncpy(this->nombre,nombre,NOMBRE_LEN);
+			retorno=0;
+		}
+	}
+
+	return retorno;
+}
+
+int employee_getNombre(Employee* this,char* nombre)
+{
+	int retorno=-1;
+	if(this!=NULL&&nombre!=NULL)
+	{
+		if(esTexto(this->nombre)==0)
+		{
+			strncpy(nombre,this->nombre,NOMBRE_LEN);
 			retorno=0;
 		}
 	}
@@ -96,6 +122,18 @@ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 	return retorno;
 }
 
+int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
+{
+	int retorno=-1;
+	if(this!=NULL&&horasTrabajadas!=NULL)
+	{
+		*horasTrabajadas=this->horasTrabajadas;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
 int employee_setSueldo(Employee* this,int sueldo)
 {
 	int retorno=-1;
@@ -108,14 +146,44 @@ int employee_setSueldo(Employee* this,int sueldo)
 	return retorno;
 }
 
+int employee_getSueldo(Employee* this,int* sueldo)
+{
+	int retorno=-1;
+	if(this!=NULL&&sueldo!=NULL)
+	{
+		*sueldo=this->sueldo;
+		retorno=0;
+	}
+
+	return retorno;
+}
+
 int employee_findById(LinkedList* listEmployee,int id)
 {
 	int retorno;
+	Employee* pElemento;
+	int idLista;
+	int indice;
+	int longitud;
 
 	retorno=-1;
 
 	if(listEmployee!=NULL&&id>=0)
 	{
+		longitud=ll_len(listEmployee);
+		for(int i=0;i<longitud;i++)
+		{
+			pElemento=ll_get(listEmployee, i);
+
+			employee_getId(pElemento,&idLista);
+			if(idLista==id)
+			{
+				retorno=i;
+				break;
+			}
+		}
 
 	}
+
+	return retorno;
 }
