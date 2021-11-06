@@ -25,7 +25,6 @@ int main()
     int eleccionUsuario = 0;
     char banderaCierre='n';
     LinkedList* listaEmpleados = ll_newLinkedList();
-    Employee * employeeAux;
 
 
     pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,
@@ -47,39 +46,39 @@ int main()
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 2:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 3:
             	controller_addEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 4:
-            	controller_ListEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	controller_editEmployee(listaEmpleados);
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 5:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 6:
-            	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	controller_ListEmployee(listaEmpleados);
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 7:
-            	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	controller_sortEmployee(listaEmpleados);
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 8:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 9:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
+            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
                 break;
             case 10:
                 printf("Saliendo...");

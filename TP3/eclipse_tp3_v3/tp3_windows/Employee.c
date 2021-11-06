@@ -157,7 +157,7 @@ int employee_modify(Employee* this)
 			"3)Sueldo\n"
 			"4)Salir\n");
 
-	pedirIntIntentosRango(&userChoice, 1, 3, 5, "Ingrese aquí su opción: ", "Error");
+	pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
 
 	while(banderaSalir!='s')
 	{
@@ -180,6 +180,14 @@ int employee_modify(Employee* this)
 						printf("Error al ingresar los datos");
 					}
 
+					printf("Que dato desea modificar?\n"
+								"1)Nombre\n"
+								"2)Horas trabajadas\n"
+								"3)Sueldo\n"
+								"4)Salir\n");
+
+						pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
+
 					break;
 				case 2:
 
@@ -198,6 +206,14 @@ int employee_modify(Employee* this)
 					{
 						printf("Error al ingresar los datos");
 					}
+
+					printf("Que dato desea modificar?\n"
+								"1)Nombre\n"
+								"2)Horas trabajadas\n"
+								"3)Sueldo\n"
+								"4)Salir\n");
+
+						pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
 					break;
 				case 3:
 
@@ -216,6 +232,13 @@ int employee_modify(Employee* this)
 					{
 						printf("Error al ingresar los datos");
 					}
+					printf("Que dato desea modificar?\n"
+								"1)Nombre\n"
+								"2)Horas trabajadas\n"
+								"3)Sueldo\n"
+								"4)Salir\n");
+
+						pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
 
 					break;
 				case 4:
@@ -228,6 +251,118 @@ int employee_modify(Employee* this)
 
 	return retorno;
 }
+
+int employee_compareName(Employee* empleadoUno,Employee* empleadoDos)
+{
+    int retorno;
+
+    char nombreAuxUno[NOMBRE_LEN];
+    char nombreAuxDos[NOMBRE_LEN];
+
+    employee_getNombre(empleadoUno,nombreAuxUno);
+    employee_getNombre(empleadoDos,nombreAuxDos);
+
+    int comparacion = strcmp(nombreAuxUno,nombreAuxDos);
+    if (comparacion<0)
+    {
+        retorno=1;
+    }
+    else
+	{
+		if (comparacion>0)
+		{
+			retorno=-1;
+		} else
+		{
+			retorno=0;
+		}
+	}
+
+    return retorno;
+}
+
+int employee_compareId(Employee* empleadoUno,Employee* empleadoDos)
+{
+    int retorno;
+    int idAuxUno;
+    int idAuxDos;
+
+    employee_getId(empleadoUno,&idAuxUno);
+    employee_getId(empleadoDos,&idAuxDos);
+
+    if (idAuxUno<idAuxDos)
+    {
+        retorno=1;
+    }
+    else
+	{
+		if (idAuxUno>idAuxDos)
+		{
+			retorno=-1;
+		} else
+		{
+			retorno=0;
+		}
+	}
+
+    return retorno;
+}
+
+int employee_compareHoras(Employee* empleadoUno,Employee* empleadoDos)
+{
+    int retorno;
+    int horasAuxUno;
+    int horasAuxDos;
+
+    employee_getId(empleadoUno,&horasAuxUno);
+    employee_getId(empleadoDos,&horasAuxDos);
+
+    if (horasAuxUno<horasAuxDos)
+    {
+        retorno=1;
+    }
+    else
+	{
+		if (horasAuxUno>horasAuxDos)
+		{
+			retorno=-1;
+		} else
+		{
+			retorno=0;
+		}
+	}
+
+    return retorno;
+}
+
+int employee_compareSueldo(Employee* empleadoUno,Employee* empleadoDos)
+{
+    int retorno;
+    int sueldoAuxUno;
+    int sueldoAuxDos;
+
+    employee_getId(empleadoUno,&sueldoAuxUno);
+    employee_getId(empleadoDos,&sueldoAuxDos);
+
+    if (sueldoAuxUno<sueldoAuxDos)
+    {
+        retorno=1;
+    }
+    else
+	{
+		if (sueldoAuxUno>sueldoAuxDos)
+		{
+			retorno=-1;
+		} else
+		{
+			retorno=0;
+		}
+	}
+
+    return retorno;
+}
+
+
 
 void employee_delete(Employee* this)
 {

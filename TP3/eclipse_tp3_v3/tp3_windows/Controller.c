@@ -65,17 +65,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     return retorno;
 }
 
-/** \brief Modificar datos de empleado
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
- */
-int controller_editEmployee(LinkedList* pArrayListEmployee)
-{
-    return 1;
-}
+
 
 /** \brief Baja de empleado
  *
@@ -103,8 +93,6 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 	int length;
 	Employee * pEmpleadoAux;
 
-
-
 	if (pArrayListEmployee!=NULL)
 	{
 		retorno=0;
@@ -130,6 +118,42 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 	return retorno;
 }
 
+/** \brief Modificar datos de empleado
+ *
+ * \param path char*
+ * \param pArrayListEmployee LinkedList*
+ * \return int
+ *
+ */
+int controller_editEmployee(LinkedList* pArrayListEmployee)
+{
+	int retorno=-1;
+	int idPedida;
+	int posicionPedida;
+	Employee * empleadoAux;
+
+	controller_ListEmployee(pArrayListEmployee);
+
+	pedirInt(&idPedida, 5, "Ingrese el ID que del empleado que desea modificar", "Error");
+
+	posicionPedida=employee_findById(pArrayListEmployee,idPedida);
+
+	if(posicionPedida>=0)
+	{
+		empleadoAux=ll_get(pArrayListEmployee, posicionPedida);
+
+		if(empleadoAux!=NULL)
+		{
+			if(employee_modify(empleadoAux)==0)
+			{
+				retorno=0;
+				printf("Modificación realizada con exito\n");
+			}
+		}
+	}
+
+    return retorno;
+}
 /** \brief Ordenar empleados
  *
  * \param path char*
@@ -139,7 +163,40 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int retorno=-1;
+	int userChoice;
+
+
+	printf("Que criterio quiere utilizar para ordenar?\n"
+			"1)ID\n"
+			"2)Nombre\n"
+			"3)Horas trabajadas\n"
+			"4)Sueldo\n");
+
+	pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
+    if (pArrayListEmployee!=NULL)
+    {
+    	switch (userChoice)
+    	{
+    	case 1:
+    		ll_sort(pArrayListEmployee,employee_compareId,1);
+    		retorno=0;
+    		break;
+    	case 2:
+    		ll_sort(pArrayListEmployee,employee_compareName,1);
+    		retorno=0;
+    		break;
+    	case 3:
+    		ll_sort(pArrayListEmployee,employee_compareHoras,1);
+    		retorno=0;
+    		break;
+    	case 4:
+    		ll_sort(pArrayListEmployee,employee_compareSueldo,1);
+    		retorno=0;
+    		break;
+    	}
+    }
+    return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
