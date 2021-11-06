@@ -15,8 +15,9 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 void employee_delete(Employee* this);
 int employee_findById(LinkedList* listEmployee,int id);
 int employee_findEmpty(LinkedList* listEmployee);
-int askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo);
-int printEmployee(Employee* this);
+int employee_askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo);
+int employee_modify(Employee* this);
+int employee_printEmployee(Employee* this);
 
 
 /// Setters y Getters ///

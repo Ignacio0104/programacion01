@@ -26,10 +26,7 @@ int main()
     char banderaCierre='n';
     LinkedList* listaEmpleados = ll_newLinkedList();
     Employee * employeeAux;
-    char nombreAux[128];
-    char idAuxTxt[128];
-    char sueldoAuxTxt[128];
-    char horasAuxTxt[128];
+
 
     pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,
     		"1)Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n "
@@ -57,23 +54,11 @@ int main()
             	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
                 break;
             case 3:
-				if(askForInformation(idAuxTxt, nombreAux, horasAuxTxt, sueldoAuxTxt)==0)
-				{
-					printf("%s %s %s %s",idAuxTxt,nombreAux,horasAuxTxt,sueldoAuxTxt);
-
-					employeeAux=employee_newParametros(idAuxTxt,nombreAux,horasAuxTxt, sueldoAuxTxt);
-
-					if(employeeAux!=NULL)
-					{
-						printf("Se cargo exitosamente");
-						ll_add(listaEmpleados,employeeAux);
-						printEmployee(employeeAux);
-					}
-				}
+            	controller_addEmployee(listaEmpleados);
             	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
                 break;
             case 4:
-            	printf("En construcción....\n");
+            	controller_ListEmployee(listaEmpleados);
             	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"Ingresa otra opción","Error");
                 break;
             case 5:

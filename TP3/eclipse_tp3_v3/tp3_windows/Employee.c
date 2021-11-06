@@ -8,7 +8,7 @@ Employee* employee_new()
 	return pEmployee;
 }
 
-int askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo)
+int employee_askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo)
 {
 	int retorno=-1;
 	char idAux[256];
@@ -24,10 +24,10 @@ int askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo)
 			{
 				if(pedirNumeroTxt(sueldoAux,256, 3, "Ingrese el salario","Error")==0)
 				{
-					strncpy(pId,idAux,256);
-					strncpy(pNombre,nombreAux,NOMBRE_LEN);
 					strncpy(pHoras,horasAux,256);
 					strncpy(pSueldo,sueldoAux,256);
+					strncpy(pId,idAux,256);
+					strncpy(pNombre,nombreAux,NOMBRE_LEN);
 					retorno=0;
 				}
 			}
@@ -116,6 +116,7 @@ int employee_findById(LinkedList* listEmployee,int id)
 }
 
 
+
 int employee_findEmpty(LinkedList* listEmployee)
 {
 	int retorno=-1;
@@ -139,6 +140,95 @@ int employee_findEmpty(LinkedList* listEmployee)
 	return retorno;
 }
 
+int employee_modify(Employee* this)
+{
+	int retorno=-1;
+	char nombreAux[256];
+	char horasAux[256];
+	char sueldoAux[256];
+	char banderaSalir='n';
+
+
+	int userChoice;
+
+	printf("Que dato desea modificar?\n"
+			"1)Nombre\n"
+			"2)Horas trabajadas\n"
+			"3)Sueldo\n"
+			"4)Salir\n");
+
+	pedirIntIntentosRango(&userChoice, 1, 3, 5, "Ingrese aquí su opción: ", "Error");
+
+	while(banderaSalir!='s')
+	{
+		switch (userChoice)
+			{
+				case 1:
+					if(pedirTexto(nombreAux,NOMBRE_LEN, 3, "Ingrese el nuevo nombre", "Error")==0)
+					{
+						if(employee_setNombre(this,nombreAux)==0)
+						{
+							printf("Nombre modificado con éxito");
+							retorno=0;
+						} else
+						{
+							printf("No se pudo modificar");
+
+						}
+					}else
+					{
+						printf("Error al ingresar los datos");
+					}
+
+					break;
+				case 2:
+
+					if(pedirNumeroTxt(horasAux,256, 3, "Ingrese las nuevas horas","Error")==0)
+					{
+						if(employee_setHorasTrabajadasTxt(this,horasAux)==0)
+						{
+							printf("Horas trabajadas modificadas con éxito");
+							retorno=0;
+						}else
+						{
+							printf("No se pudo modificar");
+
+						}
+					}else
+					{
+						printf("Error al ingresar los datos");
+					}
+					break;
+				case 3:
+
+					if(pedirNumeroTxt(sueldoAux,256, 3, "Ingrese el nuevo sueldo","Error")==0)
+					{
+						if(employee_setSueldoTxt(this,sueldoAux)==0)
+						{
+							printf("Sueldo modificado con éxito");
+							retorno=0;
+						}else
+						{
+							printf("No se pudo modificar");
+
+						}
+					}else
+					{
+						printf("Error al ingresar los datos");
+					}
+
+					break;
+				case 4:
+					printf("Volviendo al menú principal");
+					banderaSalir='s';
+					break;
+			}
+	}
+
+
+	return retorno;
+}
+
 void employee_delete(Employee* this)
 {
 	free(this);
@@ -146,7 +236,7 @@ void employee_delete(Employee* this)
 	printf("Empleado borrado exitosamente");
 }
 
-int printEmployee(Employee* this)
+int employee_printEmployee(Employee* this)
 {
 	int retorno;
 	int idAux;
@@ -162,7 +252,7 @@ int printEmployee(Employee* this)
 		employee_getNombre(this,nombreAux);
 		employee_getHorasTrabajadas(this,&horasAux);
 		employee_getSueldo(this,&sueldoAux);
-		printf("Empleado ID: %d - Nombre: %s - Horas trabajadas: %d - Sueldo: %d",idAux,nombreAux,horasAux,sueldoAux);
+		printf("Empleado ID: %d - Nombre: %s - Horas trabajadas: %d - Sueldo: %d\n",idAux,nombreAux,horasAux,sueldoAux);
 		retorno=0;
 	}
 
@@ -178,15 +268,12 @@ int employee_setIdTxt(Employee* this,char* id)
 	if(this!=NULL&&id!=NULL)
 	{
 		retorno=-2;
-		printf("Antes de Es Numerica\n\n");
+
 
 		if(esNumerica(id)==0)
 		{
-			printf("La cadena es %s",id);
-			printf("Despues de Es Numerica\n\n");
 			idAux=atoi(id);
 			this->id=idAux;
-			printf("Se cargo la ID %d",this->id);
 			retorno=0;
 
 		}
