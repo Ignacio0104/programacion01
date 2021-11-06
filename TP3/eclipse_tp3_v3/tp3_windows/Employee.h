@@ -18,10 +18,11 @@ int employee_findEmpty(LinkedList* listEmployee);
 int employee_askForInformation(char* pId, char *pNombre, char *pHoras, char* pSueldo);
 int employee_modify(Employee* this);
 int employee_printEmployee(Employee* this);
-int employee_compareName(Employee* empleadoUno,Employee* empleadoDos);
-int employee_compareId(Employee* empleadoUno,Employee* empleadoDos);
-int employee_compareSueldo(Employee* empleadoUno,Employee* empleadoDos);
-int employee_compareHoras(Employee* empleadoUno,Employee* empleadoDos);
+int employee_compareName(void* empleadoUno,void* empleadoDos);
+int employee_compareId(void* empleadoUno,void* empleadoDos);
+int employee_compareHoras(void* empleadoUno,void* empleadoDos);
+int employee_compareSueldo(void* empleadoUno,void* empleadoDos);
+int emplooyee_findLastId(LinkedList* listEmployee);
 
 
 /// Setters y Getters ///

@@ -174,8 +174,11 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 			"4)Sueldo\n");
 
 	pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
+
+
     if (pArrayListEmployee!=NULL)
     {
+
     	switch (userChoice)
     	{
     	case 1:

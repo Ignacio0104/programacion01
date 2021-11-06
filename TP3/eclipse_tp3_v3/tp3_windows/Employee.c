@@ -2,6 +2,8 @@
 #include <string.h>
 #define NOMBRE_LEN 128
 
+static int employee_createNewId (LinkedList* listEmployee);
+
 Employee* employee_new()
 {
 	Employee* pEmployee=(Employee*)malloc(sizeof(Employee));
@@ -77,6 +79,53 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 
 
 	return pEmployee;
+}
+
+int emplooyee_findLastId(LinkedList* listEmployee)
+{
+	Employee* pElemento;
+	int idLista;
+	int longitud;
+	int idMaxima=-1;
+
+	if(listEmployee!=NULL)
+	{
+		idMaxima=0;
+		longitud=ll_len(listEmployee);
+		for(int i=0;i<longitud;i++)
+		{
+			if(ll_get(listEmployee, i)!=NULL)
+			{
+				pElemento=ll_get(listEmployee, i);
+
+				employee_getId(pElemento,&idLista);
+
+				if(idLista>idMaxima)
+				{
+					idMaxima=idLista;
+				}
+
+			}
+
+		}
+
+	}
+
+	return idMaxima;
+}
+
+static int employee_createNewId (LinkedList* listEmployee)
+{
+	int idAnterior;
+	int idNueva;
+	idAnterior=emplooyee_findLastId(listEmployee);
+
+	if(idAnterior>=0)
+	{
+		idNueva=idAnterior+1;
+	}
+
+	return idNueva;
 }
 
 int employee_findById(LinkedList* listEmployee,int id)
@@ -252,7 +301,7 @@ int employee_modify(Employee* this)
 	return retorno;
 }
 
-int employee_compareName(Employee* empleadoUno,Employee* empleadoDos)
+int employee_compareName(void* empleadoUno,void* empleadoDos)
 {
     int retorno;
 
@@ -281,7 +330,7 @@ int employee_compareName(Employee* empleadoUno,Employee* empleadoDos)
     return retorno;
 }
 
-int employee_compareId(Employee* empleadoUno,Employee* empleadoDos)
+int employee_compareId(void* empleadoUno,void* empleadoDos)
 {
     int retorno;
     int idAuxUno;
@@ -308,14 +357,14 @@ int employee_compareId(Employee* empleadoUno,Employee* empleadoDos)
     return retorno;
 }
 
-int employee_compareHoras(Employee* empleadoUno,Employee* empleadoDos)
+int employee_compareHoras(void* empleadoUno,void* empleadoDos)
 {
     int retorno;
     int horasAuxUno;
     int horasAuxDos;
 
-    employee_getId(empleadoUno,&horasAuxUno);
-    employee_getId(empleadoDos,&horasAuxDos);
+    employee_getHorasTrabajadas(empleadoUno,&horasAuxUno);
+    employee_getHorasTrabajadas(empleadoDos,&horasAuxDos);
 
     if (horasAuxUno<horasAuxDos)
     {
@@ -335,14 +384,14 @@ int employee_compareHoras(Employee* empleadoUno,Employee* empleadoDos)
     return retorno;
 }
 
-int employee_compareSueldo(Employee* empleadoUno,Employee* empleadoDos)
+int employee_compareSueldo(void* empleadoUno,void* empleadoDos)
 {
     int retorno;
     int sueldoAuxUno;
     int sueldoAuxDos;
 
-    employee_getId(empleadoUno,&sueldoAuxUno);
-    employee_getId(empleadoDos,&sueldoAuxDos);
+    employee_getSueldo(empleadoUno,&sueldoAuxUno);
+    employee_getSueldo(empleadoDos,&sueldoAuxDos);
 
     if (sueldoAuxUno<sueldoAuxDos)
     {
