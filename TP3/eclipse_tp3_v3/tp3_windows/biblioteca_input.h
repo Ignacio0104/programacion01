@@ -111,6 +111,8 @@ int pedirCharSiNo(char* pResultado, char opcion1, char opcion2, int reintentos, 
 
 int pedirDireccion(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
 
+int pedirNumeroTxt(char pResultado[],int lenght, int reintentos, char* variableTexto, char* textoError);
+
 
 int esNumerica (char cadena[]);
 int esFloat (char cadena[]);
