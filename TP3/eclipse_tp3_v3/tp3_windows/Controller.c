@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "validaciones.h"
+#include "biblioteca_input.h"
 
 
 int controller_MainMenu (void)
@@ -9,7 +11,7 @@ int controller_MainMenu (void)
 	int userChoice=0;
 
 	 pedirIntIntentosRango(&userChoice, 1, 10, 5,
-	"1)Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n "
+	"\n\n1)Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n "
 	"2)Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
 	"3)Alta de empleado\n"
 	"4)Modificar datos de empleado\n"
@@ -18,7 +20,7 @@ int controller_MainMenu (void)
 	"7)Ordenar empleados\n"
 	"8)Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
 	"9)Guardar los datos de los empleados en el archivo data.csv (modo binario).\n"
-	"10)Salir", "Error, dato ingresado inválido");
+	"10)Salir\n\n", "Error, dato ingresado inválido");
 
 	 return userChoice;
 }
@@ -128,7 +130,55 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int retorno=-1;
+
+    Employee* pEmpleadoAux;
+    int posicionEmpleado;
+    int idPedida;
+	char nombreAux[256];
+	int horasAux;
+	int sueldoAux;
+	char userChoice;
+
+    pedirInt(&idPedida, 5, "Ingrese el ID del empleado que desea borrar\n", "Error, ID ingresada inválida\n");
+
+    posicionEmpleado=employee_findById(pArrayListEmployee,idPedida);
+    if(posicionEmpleado>=0)
+    {
+    	pEmpleadoAux=ll_get(pArrayListEmployee, posicionEmpleado);
+
+    	if(pEmpleadoAux!=NULL)
+    	{
+    		employee_getNombre(pEmpleadoAux,nombreAux);
+    		employee_getHorasTrabajadas(pEmpleadoAux,&horasAux);
+    		employee_getSueldo(pEmpleadoAux,&sueldoAux);
+
+    		printf("Se va a eliminar al empleado:\n"
+    				"ID: %d, Nombre: %s, Horas trabajadas: %d, Sueldo %d",idPedida,nombreAux,horasAux,sueldoAux);
+
+    		pedirCharSiNo(&userChoice, 's', 'n', 5, "\n\n ---------Presione [s] para confirmar o [n] para volver al menu principal---------\n",
+    									"Error, dato ingresado inválido\n");
+    		if(userChoice=='s')
+			{
+    			ll_remove(pArrayListEmployee,posicionEmpleado);
+    			printf("Empleado borrado del sistema\n");
+    			retorno=0;
+			}
+    		else
+    		{
+    			printf("No se borrará al empleado\n");
+    			retorno=0;
+    		}
+    	}
+
+
+    }
+    else
+    {
+    	printf("No se encontró al empleado en la lista\n");
+    }
+
+    return retorno;
 }
 
 /** \brief Listar empleados
@@ -275,6 +325,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 
     if(f!=NULL)
     {
+    	retorno=0
         fprintf(f,"id,nombre,horasTrabajadas,sueldo\n");
         for(int i=0; i<ll_len(pArrayListEmployee); i++)
         {
@@ -303,4 +354,5 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
     return 1;
 }
+
 

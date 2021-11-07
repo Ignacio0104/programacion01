@@ -4,6 +4,7 @@
 #include "Controller.h"
 #include "Employee.h"
 #include "biblioteca_input.h"
+#include "validaciones.h"
 
 /****************************************************
     Menu:
@@ -24,6 +25,7 @@ int main()
 	setbuf(stdout,NULL);
     int eleccionUsuario = 0;
     char banderaCierre='n';
+    char fileNameAux[128];
     LinkedList* listaEmpleados = ll_newLinkedList();
 
 
@@ -35,10 +37,17 @@ int main()
         {
             case 1:
 
-                if(controller_loadFromText("dataGenerado.csv",listaEmpleados)==0)
-                {
-                	printf("Carga realizada con éxito");
-                }
+            	if(pedirTextoFile(fileNameAux,128, 5, "Ingrese el nombre del archivo que desea abrir.", "Error, nombre ingresado inválido")==0)
+            	{
+                    if(controller_loadFromText(fileNameAux,listaEmpleados)==0)
+					  {
+						printf("Carga realizada con éxito");
+					  } else
+					  {
+						  printf("Error, no se pudo realizaro la carga");
+					  }
+            	}
+
                 eleccionUsuario=controller_MainMenu();
                 break;
             case 2:
@@ -54,7 +63,7 @@ int main()
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 5:
-            	printf("En construcción....\n");
+            	controller_removeEmployee(listaEmpleados);
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 6:
@@ -66,7 +75,17 @@ int main()
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 8:
-            	controller_saveAsText("dataGenerado.csv", listaEmpleados);
+             	if(pedirTextoFile(fileNameAux,128, 5, "Ingrese el nombre del archivo donde desea guardar.", "Error, nombre ingresado inválido")==0)
+                 {
+             		if(controller_saveAsText(fileNameAux, listaEmpleados)==0)
+					{
+             			printf("Archivo guardado con exito");
+					} else
+					{
+						printf("No pudo guardarse el archivo");
+					}
+                 }
+
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 9:
