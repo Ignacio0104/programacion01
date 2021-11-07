@@ -27,58 +27,51 @@ int main()
     LinkedList* listaEmpleados = ll_newLinkedList();
 
 
-    pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,
-    		"1)Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n "
-    		"2)Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
-    		"3)Alta de empleado\n"
-    		"4)Modificar datos de empleado\n"
-    		"5)Baja de empleado\n"
-    		"6)Listar empleados\n"
-    		"7)Ordenar empleados\n"
-    		"8)Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
-    		"9)Guardar los datos de los empleados en el archivo data.csv (modo binario).\n"
-    		"10)Salir", "Error, dato ingresado inválido");
+   eleccionUsuario=controller_MainMenu();
 
     while(banderaCierre!='s')
     {
         switch(eleccionUsuario)
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-            	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+
+                if(controller_loadFromText("dataGenerado.csv",listaEmpleados)==0)
+                {
+                	printf("Carga realizada con éxito");
+                }
+                eleccionUsuario=controller_MainMenu();
                 break;
             case 2:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 3:
             	controller_addEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 4:
             	controller_editEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 5:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 6:
             	controller_ListEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 7:
             	controller_sortEmployee(listaEmpleados);
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 8:
-            	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	controller_saveAsText("dataGenerado.csv", listaEmpleados);
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 9:
             	printf("En construcción....\n");
-            	pedirIntIntentosRango(&eleccionUsuario, 1, 10, 5,"\nIngresa otra opción","Error");
+            	eleccionUsuario=controller_MainMenu();
                 break;
             case 10:
                 printf("Saliendo...");

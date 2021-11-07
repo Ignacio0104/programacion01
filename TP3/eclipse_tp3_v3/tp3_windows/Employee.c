@@ -61,13 +61,12 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 					{
 						if(employee_setSueldoTxt(pEmployee,sueldoStr)==0)
 						{
-							printf("Carga exitosa\n");
 
 							employee_getId(pEmployee,&idAux);
 							employee_getNombre(pEmployee,nombreAux);
 							employee_getHorasTrabajadas(pEmployee,&horasAux);
 							employee_getSueldo(pEmployee,&sueldoAux);
-							printf("Empleado ID: %d - Nombre: %s - Horas trabajadas: %d - Sueldo: %d",idAux,nombreAux,horasAux,sueldoAux);
+							//printf("Empleado ID: %d - Nombre: %s - Horas trabajadas: %d - Sueldo: %d",idAux,nombreAux,horasAux,sueldoAux);
 
 
 						}

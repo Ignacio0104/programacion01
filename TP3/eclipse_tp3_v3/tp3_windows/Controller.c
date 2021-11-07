@@ -4,6 +4,25 @@
 #include "Employee.h"
 
 
+int controller_MainMenu (void)
+{
+	int userChoice=0;
+
+	 pedirIntIntentosRango(&userChoice, 1, 10, 5,
+	"1)Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n "
+	"2)Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
+	"3)Alta de empleado\n"
+	"4)Modificar datos de empleado\n"
+	"5)Baja de empleado\n"
+	"6)Listar empleados\n"
+	"7)Ordenar empleados\n"
+	"8)Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
+	"9)Guardar los datos de los empleados en el archivo data.csv (modo binario).\n"
+	"10)Salir", "Error, dato ingresado inválido");
+
+	 return userChoice;
+}
+
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
  * \param path char*
@@ -13,7 +32,40 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	Employee* pEmpleadoAux;
+	char idAux[256];
+	char nombreAux[256];
+	char horasAux[256];
+	char sueldoAux[256];
+
+	int retorno=-1;
+
+	FILE* f = fopen(path,"r");
+	if(f!=NULL)
+	{
+		retorno=-2;
+		fscanf(f,"%[^,],%[^,],%[^,],%[^\n]\n",idAux,nombreAux,horasAux,sueldoAux); // salteo la 1era
+		do
+		{
+			if(fscanf(f,"%[^,],%[^,],%[^,],%[^\n]\n",idAux,nombreAux,horasAux,sueldoAux)>=1)
+			{
+				pEmpleadoAux = employee_newParametros(idAux,nombreAux,horasAux,sueldoAux);
+				if(pEmpleadoAux!=NULL)
+				{
+					ll_add(pArrayListEmployee,pEmpleadoAux);
+					retorno=0;
+				}
+
+			}
+			else
+			{
+				employee_delete(pEmpleadoAux);
+				break;
+			}
+		}while(feof(f)==0);
+	}
+
+	return retorno;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -211,7 +263,33 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	Employee* pEmpleadoAux;
+	int idAux;
+	char nombreAux[256];
+	int horasAux;
+	int sueldoAux;
+
+	int retorno=-1;
+
+	FILE* f = fopen(path,"w");
+
+    if(f!=NULL)
+    {
+        fprintf(f,"id,nombre,horasTrabajadas,sueldo\n");
+        for(int i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+        	pEmpleadoAux = ll_get(pArrayListEmployee,i);
+			employee_getId(pEmpleadoAux,&idAux);
+			employee_getNombre(pEmpleadoAux,nombreAux);
+			employee_getHorasTrabajadas(pEmpleadoAux,&horasAux);
+			employee_getSueldo(pEmpleadoAux,&sueldoAux);
+
+            fprintf(f,"%d,%s,%d,%d\n",idAux,nombreAux,horasAux,sueldoAux);
+        }
+        fclose(f);
+    }
+
+    return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
