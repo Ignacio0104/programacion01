@@ -416,7 +416,6 @@ void employee_delete(Employee* this)
 {
 	free(this);
 	this=NULL;
-	printf("Empleado borrado exitosamente");
 }
 
 int employee_printEmployee(Employee* this)

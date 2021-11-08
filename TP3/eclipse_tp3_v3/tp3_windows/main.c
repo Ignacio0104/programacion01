@@ -44,14 +44,23 @@ int main()
 						printf("Carga realizada con éxito");
 					  } else
 					  {
-						  printf("Error, no se pudo realizaro la carga");
+						  printf("Error, no se pudo realizar la carga");
 					  }
             	}
 
                 eleccionUsuario=controller_MainMenu();
                 break;
             case 2:
-            	printf("En construcción....\n");
+            	if(pedirTextoFile(fileNameAux,128, 5, "Ingrese el nombre del archivo que desea abrir.", "Error, nombre ingresado inválido")==0)
+            	{
+                    if(controller_loadFromBinary(fileNameAux,listaEmpleados)==0)
+					  {
+						printf("Carga realizada con éxito");
+					  } else
+					  {
+						  printf("Error, no se pudo realizaro la carga");
+					  }
+            	}
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 3:
@@ -89,7 +98,18 @@ int main()
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 9:
-            	printf("En construcción....\n");
+             	if(pedirTextoFile(fileNameAux,128, 5, "Ingrese el nombre del archivo donde desea guardar.", "Error, nombre ingresado inválido")==0)
+                     {
+                 		if(controller_saveAsBinary(fileNameAux, listaEmpleados)==0)
+    					{
+                 			printf("Archivo guardado con exito");
+    					} else
+    					{
+    						printf("No pudo guardarse el archivo");
+    					}
+                     }
+
+
             	eleccionUsuario=controller_MainMenu();
                 break;
             case 10:

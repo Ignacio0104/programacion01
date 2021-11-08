@@ -4,6 +4,7 @@
 #include "Employee.h"
 #include "validaciones.h"
 #include "biblioteca_input.h"
+#include "parser.h"
 
 
 int controller_MainMenu (void)
@@ -34,38 +35,16 @@ int controller_MainMenu (void)
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-	Employee* pEmpleadoAux;
-	char idAux[256];
-	char nombreAux[256];
-	char horasAux[256];
-	char sueldoAux[256];
 
 	int retorno=-1;
 
 	FILE* f = fopen(path,"r");
-	if(f!=NULL)
+	if(f!=NULL&&parser_EmployeeFromText(f, pArrayListEmployee)==0)
 	{
-		retorno=-2;
-		fscanf(f,"%[^,],%[^,],%[^,],%[^\n]\n",idAux,nombreAux,horasAux,sueldoAux); // salteo la 1era
-		do
-		{
-			if(fscanf(f,"%[^,],%[^,],%[^,],%[^\n]\n",idAux,nombreAux,horasAux,sueldoAux)>=1)
-			{
-				pEmpleadoAux = employee_newParametros(idAux,nombreAux,horasAux,sueldoAux);
-				if(pEmpleadoAux!=NULL)
-				{
-					ll_add(pArrayListEmployee,pEmpleadoAux);
-					retorno=0;
-				}
+		retorno=0;
 
-			}
-			else
-			{
-				employee_delete(pEmpleadoAux);
-				break;
-			}
-		}while(feof(f)==0);
 	}
+	fclose(f);
 
 	return retorno;
 }
@@ -79,7 +58,16 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+
+		FILE* f = fopen(path,"rb");
+		if(f!=NULL&&parser_EmployeeFromBinary(f, pArrayListEmployee)==0)
+		{
+			retorno=0;
+		}
+		fclose(f);
+
+	return retorno;
 }
 
 /** \brief Alta de empleados
@@ -273,9 +261,10 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 			"1)ID\n"
 			"2)Nombre\n"
 			"3)Horas trabajadas\n"
-			"4)Sueldo\n");
+			"4)Sueldo\n"
+			"5)Volver al menu principal\n");
 
-	pedirIntIntentosRango(&userChoice, 1, 4, 5, "Ingrese aquí su opción: ", "Error");
+	pedirIntIntentosRango(&userChoice, 1, 5, 5, "Ingrese aquí su opción: ", "Error");
 
 
     if (pArrayListEmployee!=NULL)
@@ -297,6 +286,9 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     		break;
     	case 4:
     		ll_sort(pArrayListEmployee,employee_compareSueldo,1);
+    		break;
+    	case 5:
+    		printf("Volviendo al menú");
     		retorno=0;
     		break;
     	}
@@ -325,17 +317,21 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 
     if(f!=NULL)
     {
-    	retorno=0
+    	retorno=0;
         fprintf(f,"id,nombre,horasTrabajadas,sueldo\n");
         for(int i=0; i<ll_len(pArrayListEmployee); i++)
         {
         	pEmpleadoAux = ll_get(pArrayListEmployee,i);
-			employee_getId(pEmpleadoAux,&idAux);
-			employee_getNombre(pEmpleadoAux,nombreAux);
-			employee_getHorasTrabajadas(pEmpleadoAux,&horasAux);
-			employee_getSueldo(pEmpleadoAux,&sueldoAux);
+        	if(pEmpleadoAux!=NULL)
+        	{
+    			employee_getId(pEmpleadoAux,&idAux);
+    			employee_getNombre(pEmpleadoAux,nombreAux);
+    			employee_getHorasTrabajadas(pEmpleadoAux,&horasAux);
+    			employee_getSueldo(pEmpleadoAux,&sueldoAux);
 
-            fprintf(f,"%d,%s,%d,%d\n",idAux,nombreAux,horasAux,sueldoAux);
+                fprintf(f,"%d,%s,%d,%d\n",idAux,nombreAux,horasAux,sueldoAux);
+        	}
+
         }
         fclose(f);
     }
@@ -352,7 +348,30 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	Employee * pEmpleadoAux;
+	int length;
+
+	int retorno=-1;
+
+	FILE* f = fopen(path,"w+b");
+
+	if(f!=NULL)
+	{
+		length= ll_len(pArrayListEmployee);
+		retorno=0;
+		for(int i=0; i<length; i++)
+		{
+			pEmpleadoAux=ll_get(pArrayListEmployee,i);
+			if(pEmpleadoAux!=NULL)
+			{
+				 fwrite(pEmpleadoAux,sizeof(Employee),1,f);
+			}
+
+		}
+		fclose(f);
+	}
+
+	return retorno;
 }
 
 
