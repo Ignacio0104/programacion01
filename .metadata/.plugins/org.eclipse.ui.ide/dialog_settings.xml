@@ -19,6 +19,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\PruebaLinkedListTP3"/>
+			<item value="C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TrabajosPracticos\TP_3"/>
 			<item value="C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\TP4\likedList"/>
 			<item value="C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno\tp4_windows"/>
 			<item value="C:\Users\Nacho\Desktop\Programacion\UTN\ProgramacionUno"/>
@@ -34,5 +36,7 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
